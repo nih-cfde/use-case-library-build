@@ -12,6 +12,11 @@ prefixes = {'EPIC': 'EPIC',
             'PER': 'PERSONA',
             'NARRATIVE': 'NARRATIVE'}
 
+templates = {'EPIC': 'epic_page.md',
+             'USER STORY': 'basic_page.md',
+             'PERSONA': 'basic_page.md',
+             'NARRATIVE': 'narrative_page.md'}
+
 def process_identifier(x):
     return "-".join(x.split('-')[:2])
 
@@ -56,7 +61,9 @@ class Narrative(object):
     def resolve_references(self, obj_dict):
         x = []
         for epic in self.epics_str:
-            x.append(obj_dict[process_identifier(epic)])
+            epic_obj = obj_dict[process_identifier(epic)]
+            epic_obj.set_narrative(self)
+            x.append(epic_obj)
         self.epics = x
 
     def set_content(self, content):
@@ -71,12 +78,18 @@ class Epic(object):
         self.title = title
         self.blurb = blurb
         self.user_stories_str = user_stories_str
+        self.narrative = None
 
     def resolve_references(self, obj_dict):
         x = []
         for story in self.user_stories_str:
             x.append(obj_dict[process_identifier(story)])
         self.user_stories = x
+
+    def set_narrative(self, obj):
+        if self.narrative:
+            assert self.narrative == obj, obj.ident
+        self.narrative = obj
 
     def set_content(self, content):
         self.content = content
@@ -98,8 +111,10 @@ def validate_header(filename, header):
     elif filetype == 'USER STORY':
         return UserStory(ident, header['title'], header['blurb'])
     elif filetype == 'NARRATIVE':
-        return Narrative(ident, header['title'], header['blurb'],
-                         header['epics'])
+        epics = header.get('epics', [])
+        if not epics:
+            print('WARNING: narrative {} has no epics.'.format(ident))
+        return Narrative(ident, header['title'], header['blurb'], epics)
     elif filetype == 'EPIC':
         return Epic(ident, header['title'], header['blurb'],
                     header['user-stories'])
@@ -186,7 +201,8 @@ def main(argv=sys.argv[1:]):
 
     for obj in obj_dict.values():
         filename = os.path.join('../output/docs', obj.ident + '.md')
-        render_template('basic_page.md', filename, obj=obj)
+        template_name = templates[obj.obj_type]
+        render_template(template_name, filename, obj=obj)
 
 
 if __name__ == '__main__':

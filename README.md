@@ -1,9 +1,19 @@
-Goals:
+## Getting started
 
-* stable URL structure
+```
+cd library
+../scripts/process.py *.md
+cd ../output
+mkdocs serve
+```
+
+## Goals:
+
+* stable URL structure and permalinks
 * free text markdown editing & display for descriptions
-* formal metadata structure for linking between
+* formal metadata structure for linking between use case elements
 
-Questions:
-* how do we specify links within markdown? => full jinja2 templating.
+## TODO:
 
+* add spell checer
+* add internal link checker
