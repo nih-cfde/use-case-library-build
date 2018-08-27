@@ -1,8 +1,6 @@
 # {{ obj.title }}
 
-**ID: {{ obj.ident }}**
-
-Permalink: ...
+**ID: {{ obj.ident }}** [(permalink)](...)
 
 ## Description:
 

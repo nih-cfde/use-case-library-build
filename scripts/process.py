@@ -14,7 +14,7 @@ prefixes = {'EPIC': 'EPIC',
 
 templates = {'EPIC': 'epic_page.md',
              'USER STORY': 'basic_page.md',
-             'PERSONA': 'basic_page.md',
+             'PERSONA': 'persona_page.md',
              'NARRATIVE': 'narrative_page.md'}
 
 def process_identifier(x):
@@ -28,11 +28,16 @@ class Persona(object):
         self.ident = ident
         self.title = title
         self.blurb = blurb
+        self.narratives = []
 
     def resolve_references(self, obj_dict): pass
 
     def set_content(self, content):
         self.content = content
+
+    def add_narrative(self, obj):
+        assert obj.obj_type == 'NARRATIVE'
+        self.narratives.append(obj)
 
 
 class UserStory(object):
@@ -52,11 +57,12 @@ class UserStory(object):
 class Narrative(object):
     obj_type = 'NARRATIVE'
 
-    def __init__(self, ident, title, blurb, epics_str):
+    def __init__(self, ident, title, blurb, persona_str, epics_str):
         self.ident = ident
         self.title = title
         self.blurb = blurb
-        self.epics_str = epics_str
+        self.persona_str = persona_str
+        self.epics_str = epics_str        # epics that belong to this narrative
 
     def resolve_references(self, obj_dict):
         x = []
@@ -65,6 +71,10 @@ class Narrative(object):
             epic_obj.set_narrative(self)
             x.append(epic_obj)
         self.epics = x
+
+        persona = obj_dict[process_identifier(self.persona_str)]
+        self.persona = persona
+        persona.add_narrative(self)
 
     def set_content(self, content):
         self.content = content
@@ -78,7 +88,7 @@ class Epic(object):
         self.title = title
         self.blurb = blurb
         self.user_stories_str = user_stories_str
-        self.narrative = None
+        self.narrative = None             # parent narrative object
 
     def resolve_references(self, obj_dict):
         x = []
@@ -114,7 +124,8 @@ def validate_header(filename, header):
         epics = header.get('epics', [])
         if not epics:
             print('WARNING: narrative {} has no epics.'.format(ident))
-        return Narrative(ident, header['title'], header['blurb'], epics)
+        return Narrative(ident, header['title'], header['blurb'],
+                         header['persona'], epics)
     elif filetype == 'EPIC':
         return Epic(ident, header['title'], header['blurb'],
                     header['user-stories'])

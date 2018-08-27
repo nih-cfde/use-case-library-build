@@ -1,8 +1,8 @@
 # {{ obj.title }}
 
-**ID: {{ obj.ident }}**
+**ID: {{ obj.ident }}** [(permalink)](...)
 
-<!-- Permalink: ... -->
+Persona: {{ make_title_link(obj.persona) }}
 
 ## Description:
 

@@ -1,8 +1,8 @@
 ---
 title: Biological data scientist
-blurb: Someone who is familiar with R and the command line.
+blurb: A researcher with some scripting skills.
 ---
 
-This is just, like, a biological data scientist, dude.
-
-Lots more details go here.
+A bioinformatician or researcher with some scripting skills, capable
+of using and combining pre-established pipelines, and doing
+exploratory data analysis in R/RStudio or Python/Jupyter Notebook.
