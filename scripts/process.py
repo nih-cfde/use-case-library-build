@@ -134,11 +134,12 @@ def main(argv=sys.argv[1:]):
         header = lines[0:i+1]
         rest = lines[i+2:]
 
-        #print(header)
-        #print(rest)
         yyheader = yaml.load("\n".join(header))
 
         obj = validate_header(filename, yyheader)
+        if obj.ident in obj_dict:
+            raise Exception("duplicate identity: " + obj.ident)
+
         obj_dict[obj.ident] = obj
         obj.set_content("\n".join(rest))
 
@@ -148,18 +149,6 @@ def main(argv=sys.argv[1:]):
     for obj in obj_dict.values():
         obj.resolve_references(obj_dict)
 
-    for obj in obj_dict.values():
-        print(obj.obj_type)
-        if obj.obj_type == 'NARRATIVE':
-            print(obj.ident, obj.title)
-            for epic in obj.epics:
-                print('\t', epic.ident, epic.title)
-
-        if obj.obj_type == 'EPIC':
-            print(obj.ident, obj.title)
-            for story in obj.user_stories:
-                print('\t', story.ident, story.title)
-
     def yield_objects(obj_type):
         x = []
         for obj in obj_dict.values():
@@ -167,7 +156,6 @@ def main(argv=sys.argv[1:]):
                 x.append((obj.ident, obj))
 
         for _, obj in sorted(x):
-            print(_)
             yield obj
 
     try:
@@ -181,26 +169,24 @@ def main(argv=sys.argv[1:]):
         pass
     os.mkdir('../output/docs')
 
-    for obj in obj_dict.values():
-        filename = os.path.join('../output/docs', obj.ident + '.md')
-        print('creating', filename)
-        with open(filename, 'wt') as fp:
-            print('# {}'.format(obj.title), file=fp)
-            print(obj.content, file=fp)
-
     def make_title_link(obj):
         return "[{}]({})".format(obj.title, obj.ident + '.md')
 
-    def render_template(filename, outpath=None):
+    def render_template(filename, outpath=None, **kw):
         if not outpath:
             outpath = os.path.join('../output/docs', filename)
 
         template = jinja_env.get_template(filename)
         with open(outpath, 'wt') as fp:
-            print(template.render(yield_objects=yield_objects, make_title_link=make_title_link), file=fp)
+            print('creating:', outpath)
+            print(template.render(yield_objects=yield_objects, make_title_link=make_title_link, **kw), file=fp)
 
     render_template('intro.md')
     render_template('mkdocs.yml', '../output/mkdocs.yml')
+
+    for obj in obj_dict.values():
+        filename = os.path.join('../output/docs', obj.ident + '.md')
+        render_template('basic_page.md', filename, obj=obj)
 
 
 if __name__ == '__main__':
