@@ -5,6 +5,7 @@ import yaml
 import os
 import shutil
 
+from jinja2 import Environment, FileSystemLoader
 
 prefixes = {'EPIC': 'EPIC',
             'USERSTORY': 'USER STORY',
@@ -111,6 +112,10 @@ def main(argv=sys.argv[1:]):
     p.add_argument('inputfiles', nargs='+')
     args = p.parse_args(argv)
 
+    jinja_env = Environment(
+        loader=FileSystemLoader('../templates')
+    )
+
     obj_dict = {}
     for filename in args.inputfiles:
         lines = open(filename, 'rt').readlines()
@@ -183,24 +188,19 @@ def main(argv=sys.argv[1:]):
             print('# {}'.format(obj.title), file=fp)
             print(obj.content, file=fp)
 
-    filename = os.path.join('../output', 'mkdocs.yml')
-    with open(filename, 'wt') as fp:
-        print('site_name: Use Case Library vXX', file=fp)
+    def make_title_link(obj):
+        return "[{}]({})".format(obj.title, obj.ident + '.md')
 
-        print('pages:', file=fp)
+    def render_template(filename, outpath=None):
+        if not outpath:
+            outpath = os.path.join('../output/docs', filename)
 
-        print('  - User Narratives:', file=fp)
-        for obj in yield_objects('NARRATIVE'):
-            print('    - {}: {}'.format(obj.title, obj.ident + '.md'), file=fp)
+        template = jinja_env.get_template(filename)
+        with open(outpath, 'wt') as fp:
+            print(template.render(yield_objects=yield_objects, make_title_link=make_title_link), file=fp)
 
-        print('  - Personas:', file=fp)
-        for obj in yield_objects('PERSONA'):
-            print('    - {}: {}'.format(obj.title, obj.ident + '.md'), file=fp)
-
-        print('  - User Stories:', file=fp)
-        for obj in yield_objects('USER STORY'):
-            print('    - {}: {}'.format(obj.title, obj.ident + '.md'), file=fp)
-
+    render_template('intro.md')
+    render_template('mkdocs.yml', '../output/mkdocs.yml')
 
 
 if __name__ == '__main__':
