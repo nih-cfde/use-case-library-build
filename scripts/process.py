@@ -156,15 +156,24 @@ def main(argv=sys.argv[1:]):
                 print('\t', story.ident, story.title)
 
     def yield_objects(obj_type):
+        x = []
         for obj in obj_dict.values():
             if obj.obj_type == obj_type:
-                yield obj
+                x.append((obj.ident, obj))
+
+        for _, obj in sorted(x):
+            print(_)
+            yield obj
 
     try:
-        shutil.rmtree('../output')
+        shutil.rmtree('../output/docs')
     except FileNotFoundError:
         pass
-    os.mkdir('../output')
+
+    try:
+        os.mkdir('../output')
+    except FileExistsError:
+        pass
     os.mkdir('../output/docs')
 
     for obj in obj_dict.values():
