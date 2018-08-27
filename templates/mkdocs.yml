@@ -1,0 +1,46 @@
+site_name: Use Case Library vXX
+pages:
+  - Introduction: intro.md
+  - User Narratives:
+{% for obj in yield_objects('NARRATIVE') %}
+    - {{ obj.title }}: {{ obj.ident }}.md
+{% endfor %}
+  - Personas:
+{% for obj in yield_objects('PERSONA') %}
+    - {{ obj.title }}: {{ obj.ident }}.md
+{% endfor %}
+  - User Stories:
+{% for obj in yield_objects('USER STORY') %}
+    - {{ obj.title }}: {{ obj.ident }}.md
+{% endfor %}
+  - Epics:
+{% for obj in yield_objects('EPIC') %}
+    - {{ obj.title }}: {{ obj.ident }}.md
+{% endfor %}
+
+
+theme:
+  name: null
+  custom_dir: 'mkdocs-material-dib/material'
+  palette:
+    primary: 'blue'
+    accent: 'blue'
+  logo:
+    icon: 'dns'
+  font:
+    text: 'Roboto Slab'
+    code: 'Roboto Mono'
+
+# Extensions
+#markdown_extensions:
+#  - admonition
+#  - codehilite:
+#      guess_lang: false
+#  - toc:
+#      permalink: true
+
+extra:
+  # annotation
+  hypothesis: true
+  # disqus
+#  disqus: dcppc-internal
