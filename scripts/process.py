@@ -2,6 +2,8 @@
 import sys
 import argparse
 import yaml
+import os
+import shutil
 
 
 prefixes = {'EPIC': 'EPIC',
@@ -9,12 +11,81 @@ prefixes = {'EPIC': 'EPIC',
             'PER': 'PERSONA',
             'NARRATIVE': 'NARRATIVE'}
 
+def process_identifier(x):
+    return "-".join(x.split('-')[:2])
+
+
+class Persona(object):
+    obj_type = 'PERSONA'
+
+    def __init__(self, ident, title, blurb):
+        self.ident = ident
+        self.title = title
+        self.blurb = blurb
+
+    def resolve_references(self, obj_dict): pass
+
+    def set_content(self, content):
+        self.content = content
+
+
+class UserStory(object):
+    obj_type = 'USER STORY'
+
+    def __init__(self, ident, title, blurb):
+        self.ident = ident
+        self.title = title
+        self.blurb = blurb
+
+    def resolve_references(self, obj_dict): pass
+
+    def set_content(self, content):
+        self.content = content
+
+
+class Narrative(object):
+    obj_type = 'NARRATIVE'
+
+    def __init__(self, ident, title, blurb, epics_str):
+        self.ident = ident
+        self.title = title
+        self.blurb = blurb
+        self.epics_str = epics_str
+
+    def resolve_references(self, obj_dict):
+        x = []
+        for epic in self.epics_str:
+            x.append(obj_dict[process_identifier(epic)])
+        self.epics = x
+
+    def set_content(self, content):
+        self.content = content
+
+
+class Epic(object):
+    obj_type = 'EPIC'
+
+    def __init__(self, ident, title, blurb, user_stories_str):
+        self.ident = ident
+        self.title = title
+        self.blurb = blurb
+        self.user_stories_str = user_stories_str
+
+    def resolve_references(self, obj_dict):
+        x = []
+        for story in self.user_stories_str:
+            x.append(obj_dict[process_identifier(story)])
+        self.user_stories = x
+
+    def set_content(self, content):
+        self.content = content
+
 
 def get_type(filename):
     for prefix in prefixes:
         if filename.startswith(prefix):
-            ident = filename.split('-', 2)
-            return prefixes[prefix], "-".join(ident[:2])
+            ident = process_identifier(filename)
+            return prefixes[prefix], ident
 
     raise ValueError("unknown file type: " + filename)
 
@@ -22,15 +93,15 @@ def get_type(filename):
 def validate_header(filename, header):
     filetype, ident = get_type(filename)
     if filetype == 'PERSONA':
-        print('persona', ident, header['name'], header['blurb'])
+        return Persona(ident, header['title'], header['blurb'])
     elif filetype == 'USER STORY':
-        print('user story', ident, header['title'], header['blurb'])
+        return UserStory(ident, header['title'], header['blurb'])
     elif filetype == 'NARRATIVE':
-        print('narrative', ident, header['title'], header['persona'], header['blurb'])
-        print('FOO', header['epics'])
+        return Narrative(ident, header['title'], header['blurb'],
+                         header['epics'])
     elif filetype == 'EPIC':
-        print('epic', header['title'], header['blurb'])
-        print('BAR', header['user-stories'])
+        return Epic(ident, header['title'], header['blurb'],
+                    header['user-stories'])
     else:
         raise ValueError('unhandled file type: ' + filetype)
 
@@ -40,6 +111,7 @@ def main(argv=sys.argv[1:]):
     p.add_argument('inputfiles', nargs='+')
     args = p.parse_args(argv)
 
+    obj_dict = {}
     for filename in args.inputfiles:
         lines = open(filename, 'rt').readlines()
         lines = [ x.rstrip() for x in lines ]
@@ -61,7 +133,65 @@ def main(argv=sys.argv[1:]):
         #print(rest)
         yyheader = yaml.load("\n".join(header))
 
-        validate_header(filename, yyheader)
+        obj = validate_header(filename, yyheader)
+        obj_dict[obj.ident] = obj
+        obj.set_content("\n".join(rest))
+
+    print('loaded {} objects'.format(len(obj_dict)))
+
+    print('resolving references')
+    for obj in obj_dict.values():
+        obj.resolve_references(obj_dict)
+
+    for obj in obj_dict.values():
+        print(obj.obj_type)
+        if obj.obj_type == 'NARRATIVE':
+            print(obj.ident, obj.title)
+            for epic in obj.epics:
+                print('\t', epic.ident, epic.title)
+
+        if obj.obj_type == 'EPIC':
+            print(obj.ident, obj.title)
+            for story in obj.user_stories:
+                print('\t', story.ident, story.title)
+
+    def yield_objects(obj_type):
+        for obj in obj_dict.values():
+            if obj.obj_type == obj_type:
+                yield obj
+
+    try:
+        shutil.rmtree('../output')
+    except FileNotFoundError:
+        pass
+    os.mkdir('../output')
+    os.mkdir('../output/docs')
+
+    for obj in obj_dict.values():
+        filename = os.path.join('../output/docs', obj.ident + '.md')
+        print('creating', filename)
+        with open(filename, 'wt') as fp:
+            print('# {}'.format(obj.title), file=fp)
+            print(obj.content, file=fp)
+
+    filename = os.path.join('../output', 'mkdocs.yml')
+    with open(filename, 'wt') as fp:
+        print('site_name: Use Case Library vXX', file=fp)
+
+        print('pages:', file=fp)
+
+        print('  - User Narratives:', file=fp)
+        for obj in yield_objects('NARRATIVE'):
+            print('    - {}: {}'.format(obj.title, obj.ident + '.md'), file=fp)
+
+        print('  - Personas:', file=fp)
+        for obj in yield_objects('PERSONA'):
+            print('    - {}: {}'.format(obj.title, obj.ident + '.md'), file=fp)
+
+        print('  - User Stories:', file=fp)
+        for obj in yield_objects('USER STORY'):
+            print('    - {}: {}'.format(obj.title, obj.ident + '.md'), file=fp)
+
 
 
 if __name__ == '__main__':

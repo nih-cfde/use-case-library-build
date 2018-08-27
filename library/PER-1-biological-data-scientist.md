@@ -1,5 +1,5 @@
 ---
-name: Biological data scientist
+title: Biological data scientist
 blurb: Someone who is familiar with R and the command line.
 ---
 
