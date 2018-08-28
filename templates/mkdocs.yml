@@ -12,11 +12,11 @@ pages:
 {% endfor %}
   - Personas:
 {% for obj in yield_objects('PERSONA') %}
-    - {{ obj.title }}: {{ obj.ident }}.md
+    - "{{ obj.title }}": {{ obj.ident }}.md
 {% endfor %}
   - User Stories:
 {% for obj in yield_objects('USER STORY') %}
-    - {{ obj.title }}: {{ obj.ident }}.md
+    - "{{ obj.title }}": {{ obj.ident }}.md
 {% endfor %}
   - Epics:
 {% for obj in yield_objects('EPIC') %}

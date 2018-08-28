@@ -20,6 +20,7 @@ def parse_library_md(filename):
     header = lines[0:i+1]
     rest = lines[i+2:]
     rest = "\n".join(rest)
+    rest = rest.strip()
 
     yyheader = yaml.load("\n".join(header))
 

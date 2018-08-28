@@ -67,7 +67,7 @@ class UserStory(object):
         self.input = inp
         self.output = output
         self.task = task
-        self.title = "use {} to generate {} to do {}".format(inp, output, task)
+        self.title = "task: {}".format(task)
 
     def resolve_references(self, obj_dict): pass
 
