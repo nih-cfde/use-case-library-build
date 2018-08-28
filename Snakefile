@@ -21,12 +21,13 @@ rule process_library:
    input:
       glob.glob('library/*.md'),
       glob.glob('templates/*.md'),
-      'templates/mkdocs.yml'
+      'templates/mkdocs.yml',
+      glob.glob('scripts/*.py')
    output:
       directory('output/docs'),
       'output/mkdocs.yml'
    shell:
-      "scripts/process.py library/*.md"
+      "scripts/process.py library"
 
 rule mkdocs:
    input:

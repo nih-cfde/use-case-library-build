@@ -1,10 +1,8 @@
 ## Getting started
 
+Run:
 ```
-cd library
-../scripts/process.py *.md
-cd ../output
-mkdocs serve
+snakemake
 ```
 
 ## Goals:
@@ -17,13 +15,13 @@ mkdocs serve
 
 * provide brief instructions for Team Copper people
 * request specific help
-
-* add comments about where files are coming from
-* link in idents in markdown descriptions
-* add next, previous?
 * KC6
 * get COPD in there/ask Team Carbon
 * add an ordering option to the YAML header (lexicographic)
+
+* add comments about where files are coming from
+* link in idents in markdown descriptions
+* add next, previous links.
 
 ## TODO medium term:
 * create an "errors" output page
