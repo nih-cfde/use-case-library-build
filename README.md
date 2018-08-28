@@ -35,17 +35,32 @@ directory `templates/
 that can be viewed or deployed.  The static site is located at
 `output/site/`, and `output/site/index.html` is the main entry point.
 
-## Goals:
+## How to contribute new contents
+
+To create a new summary, persona, etc.:
+
+* Make a new branch fom latest master.
+* Create a new SUMMARY-, PERSONA-, NARRATIVE-, USERSTORY-, or EPIC-
+  file under `library/` by copying an existing file. Make sure that
+  the filename specifies a unique ID, e.g. `SUMMARY-1-xyz` yields the
+  ID `SUMMARY-1` which is *not* unique.
+* Update the YAML metadata at the top of the file to reflect your new metadata.
+* Edit the markdown description below the YAML header.
+* Build the file using `snakemake`, check the output.
+* Iterate until you're happy.
+* Add new file to git repo, commit, push.
+* Set up a Pull Request to merge into master and tag in @ctb.
+
+## Higher order goals / why we did this:
 
 * stable URL structure and permalinks
 * free text markdown editing & display for descriptions
 * formal change process and review (pull requests etc.)
 * formal metadata structure for linking between use case elements
-* validation of said structure
+* validation of metadata structure / links.
 
 ## TODO:
 
-* provide brief instructions for Team Copper people
 * request specific help
 * KC6
 * get COPD in there/ask Team Carbon
