@@ -7,6 +7,12 @@ import shutil
 
 from jinja2 import Environment, FileSystemLoader
 
+basepath = os.path.join(os.path.dirname(__file__), '..')
+basepath = os.path.abspath(basepath)
+
+def subdir(location):
+    return os.path.join(basepath, location)
+
 prefixes = {'EPIC': 'EPIC',
             'USERSTORY': 'USER STORY',
             'PERSONA': 'PERSONA',
@@ -134,12 +140,13 @@ class Epic(object):
 
 
 def get_type(filename):
+    basefile = os.path.basename(filename)
     for prefix in prefixes:
-        if filename.startswith(prefix):
-            ident = process_identifier(filename)
+        if basefile.startswith(prefix):
+            ident = process_identifier(basefile)
             return prefixes[prefix], ident
 
-    raise ValueError("unknown file type: " + filename)
+    raise ValueError("unknown file type: " + basefile)
 
 
 def validate_header(filename, header):
@@ -176,7 +183,7 @@ def main(argv=sys.argv[1:]):
     args = p.parse_args(argv)
 
     jinja_env = Environment(
-        loader=FileSystemLoader('../templates')
+        loader=FileSystemLoader(subdir('templates'))
     )
 
     obj_dict = {}
@@ -221,36 +228,43 @@ def main(argv=sys.argv[1:]):
         return [ obj for _, obj in sorted(x) ]
 
     try:
-        shutil.rmtree('../output/docs')
+        shutil.rmtree(subdir('output/docs'))
     except FileNotFoundError:
         pass
 
     try:
-        os.mkdir('../output')
+        os.mkdir(subdir('output'))
     except FileExistsError:
         pass
-    os.mkdir('../output/docs')
+    os.mkdir(subdir('output/docs'))
 
     def make_title_link(obj):
         return "[{}]({})".format(obj.title, obj.ident + '.md')
 
+    count = 0
     def render_template(filename, outpath=None, **kw):
+        nonlocal count
         if not outpath:
-            outpath = os.path.join('../output/docs', filename)
+            outpath = os.path.join(subdir('output/docs'), filename)
 
         template = jinja_env.get_template(filename)
         with open(outpath, 'wt') as fp:
-            print('creating:', outpath)
+            print('\rcreating:', outpath, end='')
             print(template.render(yield_objects=yield_objects, make_title_link=make_title_link, len=len, **kw), file=fp)
+
+        count += 1
 
     render_template('intro.md')
     render_template('full_list.md')
-    render_template('mkdocs.yml', '../output/mkdocs.yml')
+    render_template('mkdocs.yml', subdir('output/mkdocs.yml'))
 
     for obj in obj_dict.values():
-        filename = os.path.join('../output/docs', obj.ident + '.md')
+        filename = os.path.join(subdir('output/docs'), obj.ident + '.md')
         template_name = templates[obj.obj_type]
         render_template(template_name, filename, obj=obj)
+
+    print(u'\r\033[K', end='')
+    print('\rcreated {} pages total'.format(count))
 
 
 if __name__ == '__main__':

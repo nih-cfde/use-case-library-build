@@ -15,16 +15,16 @@ mkdocs serve
 
 ## TODO:
 
+* provide brief instructions for people
+* add comments about where files are coming from
 * link in idents in markdown descriptions
 * add next, previous?
-* create an "errors" output
-* add comments about where files are coming from
-* add high level use case descriptions and links to specifics
 * KC6
 * get COPD in there/ask Team Carbon
 * add an ordering option to the YAML header (lexicographic)
 
 ## TODO medium term:
+* create an "errors" output page
 * add spell checker
 * add internal link checker
 * add use case glossary in.
