@@ -1,6 +1,6 @@
 ---
 title: Test User Narrative v2
-persona: PER-1-biological-data-scientist
+persona: PERSONA-1-biological-data-scientist
 blurb: Just, like, a test user narrative v2
 ---
 
