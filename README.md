@@ -67,11 +67,20 @@ To create a new summary, persona, etc.:
   * get COPD in there/ask Team Carbon
   * add all the personas
   
+  * ask Charles:
+    * need a canonical URL that is long-lived; suggestions?
+    * where should this be hosted? want versioning a la readthedocs, ~auto update.
+    * note, hosting it on readthedocs is possible but need to commit the output/ directory!
+    * can we put it in two places, one private (for private commenting etc.),
+      the other public (with disqus and hypothesis also)?
+    * (start by making it public.)
+
 * add an explicit ordering option to the YAML header (lexicographic)
 * add comments about where files are coming from
 * add next, previous links.
 * add use case glossary in as /glossary.md.
 * add tagging to YAML header
+* move repo under github.com/dcppc/.
 
 ## TODO medium term:
 * link in idents in markdown descriptions, e.g. USERSTORY-5-foobar should be turned into a link to that user story.
@@ -79,7 +88,3 @@ To create a new summary, persona, etc.:
 * add spell checker
 * add internal link checker
 * add author/contact info to YAML header
-
-Questions:
-* how do we get an index page at the root?
-* host this ...where? does readthedocs do versioning on mkdocs sites?
