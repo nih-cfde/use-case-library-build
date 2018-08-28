@@ -59,30 +59,8 @@ To create a new summary, persona, etc.:
 * formal metadata structure for linking between use case elements
 * validation of metadata structure / links.
 
-## TODO:
-
-* request specific help from Team Copper:
-  * finish adding TOPmed user stories
-  * KC6
-  * get COPD in there/ask Team Carbon
-  * add all the personas
-  
-  * ask Charles:
-    * need a canonical URL that is long-lived; suggestions?
-    * where should this be hosted? want versioning a la readthedocs, ~auto update.
-    * note, hosting it on readthedocs is possible but need to commit the output/ directory!
-    * can we put it in two places, one private (for private commenting etc.),
-      the other public (with disqus and hypothesis also)?
-    * (start by making it public.)
-
-* add an explicit ordering option to the YAML header (lexicographic)
-* add comments about where files are coming from
-* add next, previous links.
-* add use case glossary in as /glossary.md.
-* add tagging to YAML header
-* move repo under github.com/dcppc/.
-
 ## TODO medium term:
+* add comments about where files are coming from
 * link in idents in markdown descriptions, e.g. USERSTORY-5-foobar should be turned into a link to that user story.
 * create an "errors" output page
 * add spell checker
