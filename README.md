@@ -39,6 +39,7 @@ that can be viewed or deployed.  The static site is located at
 
 * stable URL structure and permalinks
 * free text markdown editing & display for descriptions
+* formal change process and review (pull requests etc.)
 * formal metadata structure for linking between use case elements
 * validation of said structure
 
