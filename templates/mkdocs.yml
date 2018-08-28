@@ -1,6 +1,11 @@
-site_name: Use Case Library vXX
+# this jinja2 template is filled out by process.py to build mkdocs.yml
+site_name: Use Case Library v1.0
 pages:
   - Introduction: intro.md
+  - Use Case Summaries:
+{% for obj in yield_objects('SUMMARY') %}
+    - {{ obj.title }}: {{ obj.ident }}.md
+{% endfor %}
   - User Narratives:
 {% for obj in yield_objects('NARRATIVE') %}
     - {{ obj.title }}: {{ obj.ident }}.md
@@ -17,6 +22,7 @@ pages:
 {% for obj in yield_objects('EPIC') %}
     - {{ obj.title }}: {{ obj.ident }}.md
 {% endfor %}
+  - Complete List of Contents: full_list.md
 
 
 theme:

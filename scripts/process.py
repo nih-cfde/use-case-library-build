@@ -10,15 +10,37 @@ from jinja2 import Environment, FileSystemLoader
 prefixes = {'EPIC': 'EPIC',
             'USERSTORY': 'USER STORY',
             'PER': 'PERSONA',
-            'NARRATIVE': 'NARRATIVE'}
+            'NARRATIVE': 'NARRATIVE',
+            'SUMMARY': 'SUMMARY'}
 
 templates = {'EPIC': 'epic_page.md',
              'USER STORY': 'basic_page.md',
              'PERSONA': 'persona_page.md',
-             'NARRATIVE': 'narrative_page.md'}
+             'NARRATIVE': 'narrative_page.md',
+             'SUMMARY': 'summary_page.md'}
 
 def process_identifier(x):
     return "-".join(x.split('-')[:2])
+
+
+class Summary(object):
+    obj_type = 'SUMMARY'
+
+    def __init__(self, ident, title, narratives_str):
+        self.ident = ident
+        self.title = title
+        self.narratives_str = narratives_str
+
+    def resolve_references(self, obj_dict):
+        x = []
+        for narrative_str in self.narratives_str:
+            narrative_obj = obj_dict[process_identifier(narrative_str)]
+            narrative_obj.set_summary(self)
+            x.append(narrative_obj)
+        self.narratives = x
+
+    def set_content(self, content):
+        self.content = content
 
 
 class Persona(object):
@@ -63,6 +85,7 @@ class Narrative(object):
         self.blurb = blurb
         self.persona_str = persona_str
         self.epics_str = epics_str        # epics that belong to this narrative
+        self.summary = None
 
     def resolve_references(self, obj_dict):
         x = []
@@ -78,6 +101,11 @@ class Narrative(object):
 
     def set_content(self, content):
         self.content = content
+
+    def set_summary(self, obj):
+        if self.summary:
+            assert self.summary == obj, obj.ident
+        self.summary = obj
 
 
 class Epic(object):
@@ -129,6 +157,11 @@ def validate_header(filename, header):
     elif filetype == 'EPIC':
         return Epic(ident, header['title'], header['blurb'],
                     header['user-stories'])
+    elif filetype == 'SUMMARY':
+        narratives = header.get('narratives', [])
+        if not narratives:
+            print('WARNING: summary {} has no epics.'.format(ident))
+        return Summary(ident, header['title'], narratives)
     else:
         raise ValueError('unhandled file type: ' + filetype)
 
@@ -181,8 +214,7 @@ def main(argv=sys.argv[1:]):
             if obj.obj_type == obj_type:
                 x.append((obj.ident, obj))
 
-        for _, obj in sorted(x):
-            yield obj
+        return [ obj for _, obj in sorted(x) ]
 
     try:
         shutil.rmtree('../output/docs')
@@ -205,9 +237,10 @@ def main(argv=sys.argv[1:]):
         template = jinja_env.get_template(filename)
         with open(outpath, 'wt') as fp:
             print('creating:', outpath)
-            print(template.render(yield_objects=yield_objects, make_title_link=make_title_link, **kw), file=fp)
+            print(template.render(yield_objects=yield_objects, make_title_link=make_title_link, len=len, **kw), file=fp)
 
     render_template('intro.md')
+    render_template('full_list.md')
     render_template('mkdocs.yml', '../output/mkdocs.yml')
 
     for obj in obj_dict.values():

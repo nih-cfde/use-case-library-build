@@ -1,25 +1,13 @@
-# Introduction
+# Use Case Library
 
-## User narratives
-
-{% for obj in yield_objects('NARRATIVE') %}
+{% for obj in yield_objects('SUMMARY') %}
 * {{ make_title_link(obj) }} - {{ obj.blurb }}
 {% endfor %}
 
-## Personas
+## [Full listing of library entries](full_list.md)
 
-{% for obj in yield_objects('PERSONA') %}
-* {{ make_title_link(obj) }} - {{ obj.blurb }}
-{% endfor %}
-
-## Epics
-
-{% for obj in yield_objects('EPIC') %}
-* {{ make_title_link(obj) }} - {{ obj.blurb }}
-{% endfor %}
-
-## User stories
-
-{% for obj in yield_objects('USER STORY') %}
-* {{ make_title_link(obj) }} - {{ obj.blurb }}
-{% endfor %}
+The Use Case Library contains {{ len(yield_objects('SUMMARY')) }} use
+case summaries, {{ len(yield_objects('NARRATIVE')) }} user narratives,
+{{ len(yield_objects('EPIC')) }} user epics, and 
+{{ len(yield_objects('USER STORY')) }} user stories, for 
+{{ len(yield_objects('PERSONA')) }} personas.
