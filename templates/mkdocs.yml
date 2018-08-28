@@ -23,7 +23,7 @@ pages:
     - {{ obj.title }}: {{ obj.ident }}.md
 {% endfor %}
   - Complete List of Contents: full_list.md
-
+  - Glossary of terms: glossary.md
 
 theme:
   name: null
