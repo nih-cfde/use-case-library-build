@@ -87,13 +87,16 @@ def main(argv=sys.argv[1:]):
         x = []
         for obj in obj_dict.values():
             if obj.obj_type == obj_type:
-                x.append((obj.ident, obj))
+                ot, number = obj.ident.split('-')
+                number = int(number)
+                x.append((number, ot, obj))
 
-        return [ obj for _, obj in sorted(x) ]
+        return [ obj for _, _, obj in sorted(x) ]
 
     def make_title_link(obj):
         return "[{}]({})".format(obj.title, obj.ident + '.md')
 
+    # function to render a specific template
     count = 0
     def render_template(filename, outpath=None, **kw):
         nonlocal count
@@ -118,7 +121,7 @@ def main(argv=sys.argv[1:]):
     # render all the things!
     #
 
-    render_template('intro.md')
+    render_template('index.md')
     render_template('full_list.md')
     render_template('mkdocs.yml', subdir('output/mkdocs.yml'))
 

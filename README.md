@@ -1,15 +1,46 @@
+# Use Case Library
+
 ## Getting started
+
+(You'll need to install the packages in `requirements.txt`.)
 
 Run:
 ```
 snakemake
 ```
 
+and then open `output/site/index.html`.
+
+You can see a deployed version at https://dib-lab.github.io/ucl/.
+
+## A brief overview of How This All Works.
+
+The files in `library/` define a collection of high-level summaries,
+user narratives, epics, user stories, and personas.
+
+These files provide three types of information:
+* a unique identifier, given by the TYPE-NUMBER in the filename; so `SUMMARY-1-topmed-genotype-phenotype` has the identifier `SUMMARY-1`.
+* some metadata, stored in the YAML header at the top of the file contents; this metadata links between object types.
+* markdown content describing things in more detail.
+
+The script `scripts/process.py` loads all of these files in, checks
+the metadata for correctness, and then creates a collection of output
+markdown files for a [mkdocs site](https://www.mkdocs.org/) under
+`output/docs`. The mkdocs configuration file is `output/mkdocs.yml`.
+These markdown files are created using jinja2 templating under the
+directory `templates/
+
+[mkdocs](https://www.mkdocs.org/) then takes `output/docs/` and
+`output/mkdocs.yml` and builds the mkdocs site, which is static HTML
+that can be viewed or deployed.  The static site is located at
+`output/site/`, and `output/site/index.html` is the main entry point.
+
 ## Goals:
 
 * stable URL structure and permalinks
 * free text markdown editing & display for descriptions
 * formal metadata structure for linking between use case elements
+* validation of said structure
 
 ## TODO:
 
@@ -17,7 +48,8 @@ snakemake
 * request specific help
 * KC6
 * get COPD in there/ask Team Carbon
-* add an ordering option to the YAML header (lexicographic)
+* add an explicit ordering option to the YAML header (lexicographic)
+* add all the personas
 
 * add comments about where files are coming from
 * link in idents in markdown descriptions
@@ -29,6 +61,7 @@ snakemake
 * add internal link checker
 * add use case glossary in.
 * add author/contact info to YAML header
+* add tagging to YAML header
 
 Questions:
 * how do we get an index page at the root?
