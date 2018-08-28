@@ -13,6 +13,7 @@ prefixes = {'EPIC': 'EPIC',
             'SUMMARY': 'SUMMARY'}
 
 def process_identifier(x):
+    if x.endswith('.md'): x = x[:-3]
     return "-".join(x.split('-')[:2])
 
 
@@ -61,10 +62,12 @@ class UserStory(object):
     obj_type = 'USER STORY'
     template = 'user_story_page.md'
 
-    def __init__(self, ident, title, blurb):
+    def __init__(self, ident, inp, output, task):
         self.ident = ident
-        self.title = title
-        self.blurb = blurb
+        self.input = inp
+        self.output = output
+        self.task = task
+        self.title = "use {} to generate {} to do {}".format(inp, output, task)
 
     def resolve_references(self, obj_dict): pass
 
@@ -147,10 +150,20 @@ def create_library_object(filename, header, content):
     """
     filetype, ident = get_type(filename)
     if filetype == 'PERSONA':
+        if set(header) != set(['title', 'blurb']):
+            print('WARNING: extra header components in {}'.format(ident))
+
         obj = Persona(ident, header['title'], header['blurb'])
     elif filetype == 'USER STORY':
-        obj = UserStory(ident, header['title'], header['blurb'])
+        if set(header) != set(['input', 'output', 'task']):
+            print('WARNING: extra header components in {}'.format(ident))
+            
+        obj = UserStory(ident, header['input'], header['output'],
+                        header['task'])
     elif filetype == 'NARRATIVE':
+        if not set(header).issubset(set(['title', 'blurb', 'persona', 'epics'])):
+            print('WARNING: extra header components in {}'.format(ident))
+            
         epics = header.get('epics', [])
         if not epics:
             print('WARNING: narrative {} has no epics.'.format(ident))
@@ -159,9 +172,15 @@ def create_library_object(filename, header, content):
         obj = Narrative(ident, header['title'], header['blurb'],
                          header['persona'], epics)
     elif filetype == 'EPIC':
+        if set(header) != set(['title', 'blurb', 'user-stories']):
+            print('WARNING: extra header components in {}'.format(ident))
+            
         obj = Epic(ident, header['title'], header['blurb'],
                     header['user-stories'])
     elif filetype == 'SUMMARY':
+        if not set(header).issubset(set(['title', 'narratives'])):
+            print('WARNING: extra header components in {}'.format(ident))
+            
         narratives = header.get('narratives', [])
         if not narratives:
             print('WARNING: summary {} has no narratives.'.format(ident))

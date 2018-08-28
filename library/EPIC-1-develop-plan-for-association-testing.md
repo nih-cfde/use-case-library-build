@@ -2,6 +2,7 @@
 title: Develop a plan for associating testing.
 blurb: Develop an analysis plan for association testing.
 user-stories:
-- USERSTORY-1-bif
-- USERSTORY-2-baz
+- USERSTORY-1
+- USERSTORY-2
+- USERSTORY-3
 ---
