@@ -1,6 +1,6 @@
 # Use Case Library
 
-## USe Case Summaries
+## Use Case Summaries
 
 {% for obj in yield_objects('SUMMARY') %}
 * {{ make_title_link(obj) }}
