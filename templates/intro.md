@@ -1,7 +1,9 @@
 # Use Case Library
 
+## USe Case Summaries
+
 {% for obj in yield_objects('SUMMARY') %}
-* {{ make_title_link(obj) }} - {{ obj.blurb }}
+* {{ make_title_link(obj) }}
 {% endfor %}
 
 ## [Full listing of library entries](full_list.md)

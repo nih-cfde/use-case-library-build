@@ -152,6 +152,8 @@ def validate_header(filename, header):
         epics = header.get('epics', [])
         if not epics:
             print('WARNING: narrative {} has no epics.'.format(ident))
+            epics = []
+
         return Narrative(ident, header['title'], header['blurb'],
                          header['persona'], epics)
     elif filetype == 'EPIC':
@@ -160,7 +162,9 @@ def validate_header(filename, header):
     elif filetype == 'SUMMARY':
         narratives = header.get('narratives', [])
         if not narratives:
-            print('WARNING: summary {} has no epics.'.format(ident))
+            print('WARNING: summary {} has no narratives.'.format(ident))
+            narratives = []
+
         return Summary(ident, header['title'], narratives)
     else:
         raise ValueError('unhandled file type: ' + filetype)
