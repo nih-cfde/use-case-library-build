@@ -3,7 +3,7 @@
 ## Use Case Summaries
 
 {% for obj in yield_objects('SUMMARY') %}
-* {{ obj.ident }}: {{ make_title_link(obj) }} - {{ obj.blurb }}
+* {{ obj.ident }}: {{ make_title_link(obj) }}
 {% endfor %}
 
 ## User narratives
