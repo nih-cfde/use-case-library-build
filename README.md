@@ -11,7 +11,7 @@ snakemake
 
 and then open `output/site/index.html`.
 
-You can see a deployed version at https://dib-lab.github.io/ucl/.
+You can see a deployed version at <http://nih-data-commons.us/use-case-library>.
 
 ## A brief overview of How This All Works.
 
