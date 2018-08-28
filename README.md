@@ -61,23 +61,24 @@ To create a new summary, persona, etc.:
 
 ## TODO:
 
-* request specific help
-* KC6
-* get COPD in there/ask Team Carbon
+* request specific help from Team Copper:
+  * finish adding TOPmed user stories
+  * KC6
+  * get COPD in there/ask Team Carbon
+  * add all the personas
+  
 * add an explicit ordering option to the YAML header (lexicographic)
-* add all the personas
-
 * add comments about where files are coming from
-* link in idents in markdown descriptions
 * add next, previous links.
+* add use case glossary in as /glossary.md.
+* add tagging to YAML header
 
 ## TODO medium term:
+* link in idents in markdown descriptions, e.g. USERSTORY-5-foobar should be turned into a link to that user story.
 * create an "errors" output page
 * add spell checker
 * add internal link checker
-* add use case glossary in.
 * add author/contact info to YAML header
-* add tagging to YAML header
 
 Questions:
 * how do we get an index page at the root?
