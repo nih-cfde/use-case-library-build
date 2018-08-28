@@ -15,7 +15,9 @@ mkdocs serve
 
 ## TODO:
 
-* provide brief instructions for people
+* provide brief instructions for Team Copper people
+* request specific help
+
 * add comments about where files are coming from
 * link in idents in markdown descriptions
 * add next, previous?
