@@ -1,4 +1,8 @@
-# build, build and deploy, etc.
+# Rules:
+#   build
+#   deploy
+#   serve
+
 import glob
 
 python=sys.executable
@@ -16,6 +20,14 @@ rule deploy:
       'output/mkdocs.yml'
    shell:
       "cd output && {python} -m mkdocs gh-deploy"
+
+rule serve:
+   input:
+      'output/docs',
+      'output/site',
+      'output/mkdocs.yml'
+   shell:
+      "cd output && {python} -m mkdocs serve --no-livereload"
 
 rule process_library:
    input:

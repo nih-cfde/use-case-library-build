@@ -67,12 +67,17 @@ class UserStory(object):
         self.input = inp
         self.output = output
         self.task = task
-        self.title = "task: {}".format(task)
+        self.title = task
+        self.epics = []
 
     def resolve_references(self, obj_dict): pass
 
     def set_content(self, content):
         self.content = content
+
+    def add_epic(self, epic):
+        if epic not in self.epics:
+            self.epics.append(epic)
 
 
 class Narrative(object):
@@ -121,8 +126,11 @@ class Epic(object):
 
     def resolve_references(self, obj_dict):
         x = []
-        for story in self.user_stories_str:
-            x.append(obj_dict[process_identifier(story)])
+        for story_str in self.user_stories_str:
+            story = obj_dict[process_identifier(story_str)]
+            story.add_epic(self)
+            x.append(story)
+
         self.user_stories = x
 
     def set_narrative(self, obj):

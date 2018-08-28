@@ -12,6 +12,7 @@ import argparse
 import yaml
 import os
 import shutil
+import traceback
 
 from jinja2 import Environment, FileSystemLoader
 
@@ -108,14 +109,28 @@ def main(argv=sys.argv[1:]):
                            len=len)
         input_names.update(kw)
 
-        template = jinja_env.get_template(filename)
+        try:
+            template = jinja_env.get_template(filename)
+        except:
+            traceback.print_exc()
+            print('on template:', filename)
+            return False
+
         print('\rcreating:', outpath, end='')
-        rendered = template.render(input_names)
+
+        try:
+            rendered = template.render(input_names)
+        except:
+            traceback.print_exc()
+            print('on file:', filename)
+            return False
         
         with open(outpath, 'wt') as fp:
             fp.write(rendered)
 
         count += 1
+
+        return True
 
     #
     # render all the things!
@@ -127,11 +142,15 @@ def main(argv=sys.argv[1:]):
 
     for obj in obj_dict.values():
         filename = os.path.join(subdir('output/docs'), obj.ident + '.md')
-        render_template(obj.template, filename, obj=obj)
+
+        if not render_template(obj.template, filename, obj=obj):
+            print('\nFAILED on', filename)
+            return 1
 
     print(u'\r\033[K', end='')
     print('\rcreated {} pages total'.format(count))
 
+    return 0
 
 if __name__ == '__main__':
-    main()
+    sys.exit(main())
