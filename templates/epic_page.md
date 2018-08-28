@@ -1,7 +1,5 @@
 # {{ obj.title }}
-
-**ID: {{ obj.ident }}** [(permalink)](...)
-
+(This is User Epic {{ obj.ident }}.)
 
 Parent narrative: {{ make_title_link(obj.narrative) }} - {{ obj.narrative.blurb }}
 

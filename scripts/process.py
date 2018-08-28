@@ -9,12 +9,12 @@ from jinja2 import Environment, FileSystemLoader
 
 prefixes = {'EPIC': 'EPIC',
             'USERSTORY': 'USER STORY',
-            'PER': 'PERSONA',
+            'PERSONA': 'PERSONA',
             'NARRATIVE': 'NARRATIVE',
             'SUMMARY': 'SUMMARY'}
 
 templates = {'EPIC': 'epic_page.md',
-             'USER STORY': 'basic_page.md',
+             'USER STORY': 'user_story_page.md',
              'PERSONA': 'persona_page.md',
              'NARRATIVE': 'narrative_page.md',
              'SUMMARY': 'summary_page.md'}

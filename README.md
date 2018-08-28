@@ -27,6 +27,8 @@ mkdocs serve
 ## TODO medium term:
 * add spell checker
 * add internal link checker
+* add use case glossary in.
+* add author/contact info to YAML header
 
 Questions:
 * how do we get an index page at the root?

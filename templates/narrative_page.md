@@ -1,6 +1,5 @@
 # {{ obj.title }}
-
-**ID: {{ obj.ident }}** [(permalink)](...)
+(This is User Narrative {{ obj.ident }}.)
 
 Persona: {{ make_title_link(obj.persona) }}
 

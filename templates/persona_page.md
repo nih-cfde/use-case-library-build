@@ -1,6 +1,5 @@
 # {{ obj.title }}
-
-**ID: {{ obj.ident }}** [(permalink)](...)
+(This is Persona {{ obj.ident }}.)
 
 ## Description:
 
