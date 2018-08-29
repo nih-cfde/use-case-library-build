@@ -1,9 +1,7 @@
 ---
 title: Sex as a Biological Variable
 persona: PERSONA-1-biological-data-scientist
-blurb: Sexual dimorphism is the term that refers to differences between males and females of the same species. In medicine, we study sex and gender medicine with the goal of understanding fundamental differences of biology and behaviour between women and men in order to improve health care for both sexes by tailoring diagnostic, screening, and treatment strategies for men and women.
-Our specific hypothesis in the pilot phase of the NIH Data Commons project is that we can use the model organism data resources in the Alliance of Genomic Resources and the tissue-based gene expression data in the Genotype-Tissue Expression (GTEx) project to understand some aspects of the differences between male and female biology at genome scale. An additional hypothesis is that we can use this information to inform our analysis of male and female participants in the TOPMed project. 
-The following two example projects will exemplify the approach taken to model organism and GTEx data.
+blurb: Sexual dimorphism is the term that refers to differences between males and females of the same species. In medicine, we study sex and gender medicine with the goal of understanding fundamental differences of biology and behaviour between women and men in order to improve health care for both sexes by tailoring diagnostic, screening, and treatment strategies for men and women. Our specific hypothesis in the pilot phase of the NIH Data Commons project is that we can use the model organism data resources in the Alliance of Genomic Resources and the tissue-based gene expression data in the Genotype-Tissue Expression (GTEx) project to understand some aspects of the differences between male and female biology at genome scale. An additional hypothesis is that we can use this information to inform our analysis of male and female participants in the TOPMed project. The following two example projects will exemplify the approach taken to model organism and GTEx data.
 
 epics:
 - EPIC-8
