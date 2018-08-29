@@ -6,18 +6,12 @@ Our specific hypothesis in the pilot phase of the NIH Data Commons project is th
 The following two example projects will exemplify the approach taken to model organism and GTEx data.
 
 epics:
-- EPIC-1
-- EPIC-2
-- EPIC-3
-- EPIC-4
-- EPIC-5
-- EPIC-6
-- EPIC-7
+
 ---
 
 ### Scientific Objective 
 
-TScientific Objective #1: Investigate phenotypic differences across male and female animals in large-scale screening programs of genetically modified animals.
+Scientific Objective #1: Investigate phenotypic differences across male and female animals in large-scale screening programs of genetically modified animals.
 Develop an analysis plan for phenotype analysis
 We aim to perform an analysis across the entire phenome using an ontology-based analysis. Phenotype ontologies are used to describe phenotypic outcomes of knockouts and other genetic modifications of genes in model organisms such as mouse, rat, zebrafish, xenopus, drosophila, C. elegans, and yeast. The first step is to import all of this data into an integrated ontology analysis framework. In some situations it may be desired to analyze quantitative data (e.g., IMPC mouse data).
 We decide on a statistical analysis procedure. One standard approach involves counting the genes/models that are associated with individual ontology terms. In general, the “annotation propagation rule” should be followed, which states that annotations to ontology terms are “inherited” up is_a relations. We can then perform this separately for male and female organisms, and perform a chi-squared or Fisher exact test for each ontology term.
