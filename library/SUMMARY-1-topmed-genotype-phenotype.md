@@ -15,3 +15,7 @@ Without the Commons, Geraldine would have to find and download several datasets 
 **With the Data Commons Phase I**
 
 Geraldine logs into her favorite full stack and searches for people with the disease, and age range of interest, as well as matched controls. She finds five studies that match all her requirements and that already have harmonized metadata. She can easily export them to a workspace in the cloud and run her analysis using a pre-built workflow.
+
+**With Data Commons longer vision:**
+
+Geraldine logs into her favorite full stack, and now has the ability to search hundreds more studies. She finds that there are tens of studies that seem to fit her requirements, however several are not covered by her current IRB. By looking at summary statistics for the metadata for those studies, she determines that two have the variables that she needs. Using prompts within the interface, she is able to apply for access to those studies, and her new access credentials are automatically applied to her account after she's approved.
