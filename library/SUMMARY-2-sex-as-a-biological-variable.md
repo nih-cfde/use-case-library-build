@@ -14,3 +14,7 @@ Once Brunhilda had the list of organisms she would like to test, she would have 
 **With the Data Commons Phase I**
 
 Brunhilda can log into a full stack and access both the model organism data resources in the Alliance of Genomic Resources and the tissue-based gene expression data in the Genotype-Tissue Expression (GTEx) project. These data are pre-harmonized, so Burnhilda doesn't need to manually determine how the variables in each are related to one another. After analyzing this data to find differences between male and female biology at genome scale, she can immediatly compare her resulting candidate gene list to data from TOPMed.
+
+**With Data Commons longer vision:**
+
+Brunhilda will be able to expand the scope of her study to include many more species and multiple studies of those species. As an early user of the Commons, Brunhilda is invested in improving the metadata mappings, and might also volunteer time with the Data Commons to improve harmonization of new data sets as they are onboarded. 
