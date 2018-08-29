@@ -1,6 +1,7 @@
 ---
 title: Sex as a Biological Variable
 narratives:
+- NARRATIVE-2
 ---
 
 **Scenario**
@@ -9,7 +10,7 @@ Brunhilda is interested in building a screening strategy that is tailored to the
 
 **Current Approach**
 
-Once Brunhilda had the list of organisms she would like to test, she would have to spend a great deal of time constructing a large dataset. Knock-out libraries for her organims (mouse, rat, zebrafish, xenopus, drosophila, C. elegans, and yeast) will all need to be seperated by sex, and have ontology terms mapped onto the genes so Burnhilda can eventually look for differential expression between sexes for homologous genes. This process will require not only a great deal of time, but a huge amount of domain specific knowledge. From a technology standpoint, libraries from different organisims are usually be stored in different, non-compatible, formats. From a biological standpoint, genetic events like gene and genome duplication events and gene losses will result in non-one-to-one mappings between species. 
+Once Brunhilda had the list of organisms she would like to test, she would have to spend a great deal of time constructing a large dataset. Knock-out libraries for her organims (mouse, rat, zebrafish, xenopus, drosophila, C. elegans, and yeast) will all need to be seperated by sex, and have ontology terms mapped onto the genes so Burnhilda can eventually look for differential expression between sexes for homologous genes. This process will require not only a great deal of time, but a huge amount of domain specific knowledge. From a technology standpoint, libraries from different organisims are usually be stored in different, non-compatible, formats. From a biological standpoint, genetic events like gene and genome duplication events and gene losses will result in non-one-to-one mappings between species.
 
 **With the Data Commons Phase I**
 
@@ -17,4 +18,4 @@ Brunhilda can log into a full stack and access both the model organism data reso
 
 **With Data Commons longer vision:**
 
-Brunhilda will be able to expand the scope of her study to include many more species and multiple studies of those species. As an early user of the Commons, Brunhilda is invested in improving the metadata mappings, and might also volunteer time with the Data Commons to improve harmonization of new data sets as they are onboarded. 
+Brunhilda will be able to expand the scope of her study to include many more species and multiple studies of those species. As an early user of the Commons, Brunhilda is invested in improving the metadata mappings, and might also volunteer time with the Data Commons to improve harmonization of new data sets as they are onboarded.
