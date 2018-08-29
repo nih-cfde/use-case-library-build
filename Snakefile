@@ -43,7 +43,7 @@ rule process_library:
 
 rule mkdocs:
    input:
-      'output/docs/',
+      'output/docs',
       'output/mkdocs.yml'
    output:
       directory('output/site')
