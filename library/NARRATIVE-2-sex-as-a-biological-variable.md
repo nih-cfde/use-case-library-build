@@ -8,11 +8,12 @@ epics:
 - EPIC-9
 - EPIC-10
 - EPIC-11
+- EPIC-12
 
 
 
 ---
 
-### Scientific Objective 
+### Scientific Objective
 
 Scientific Objective #1: We want to investigate phenotypic differences across male and female animals in large-scale screening programs of genetically modified animals. We aim to perform an analysis across the entire phenome using an ontology-based analysis. Phenotype ontologies are used to describe phenotypic outcomes of knockouts and other genetic modifications of genes in model organisms such as mouse, rat, zebrafish, xenopus, drosophila, C. elegans, and yeast. We'll want to generate a table of results for each ontology term with chi-square statistics, p-values, and corrected p-values; to determine the correlation of distributions of phenotypes in organ systems with expression of genes in the organs; and to generate a table of GO or other pathway analysis terms that characterize the sexually dimorphic phenotypes or gene expressions.
