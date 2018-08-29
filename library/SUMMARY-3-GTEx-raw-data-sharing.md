@@ -5,9 +5,8 @@ narratives:
 
 **Scenario**
 
-Mamie wants to use a bunch of existing raw data on GTEx for a
-undisclosed reason. Maybe methods development, or reanalysis, or
-looking for rare genes or maybe joint variant calling.
+Mamie wants to use existing raw data on GTEx
+looking for rare gene varients. 
 
 **Current Approach**
 
@@ -24,3 +23,10 @@ Mamie will log into the GTEx portal and use a simple interface to
 select data cohorts and export them to a workspace in FireCloud. Once
 her data is selected, Mamie will be given a table that maps sample IDs
 to static raw data paths
+
+**With Data Commons longer vision:**
+
+Mamie might develop new methods for variant discovery, and submit her workflow 
+to the Data Commons as a CWL. The ability to share both data and pipelines 
+within the Commons makes research faster for others, but also allows non-experts
+to run workflows that they otherwise would not have been able to code. 
