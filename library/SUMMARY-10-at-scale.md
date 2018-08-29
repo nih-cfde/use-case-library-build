@@ -23,12 +23,15 @@ on a large computing hub at my institution.
 **With Data Commons Phase 1:**
 
 Standards for interoperability of tools and harmonization of data and
-metadata will let me run this in th ecloud.
+metadata will let me run this in the cloud, and allow me to run the 
+same workflow on all of my data. Automating these processes both saves
+my time, and helps protect me from making errors.
 
 **With Data Commons longer vision:**
 
 Access to large datasets through single log-in. Data Commons will
-provide a collaborative environment for research and development. The
-new ideas and tools from the community will be consumed in the Data
-Commons and contribute to its long term value and sustainability. A
-built in user community.
+provide a collaborative environment for research and development. Instead
+of just using my idiosyncratic method, I can try validated workflows 
+created by others. This will help me ensure that my results are robust
+and reproducible, and will also allow me to try analysis that are outside
+of my abiity to program myself.
