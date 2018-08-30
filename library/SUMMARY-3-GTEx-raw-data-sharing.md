@@ -6,7 +6,7 @@ narratives:
 
 **Scenario**
 
-Mamie wants to use existing raw data on GTEx to look for design a new method.
+Mamie wants to use existing raw data on GTEx to use as input for evaluating a new computational method
 
 **Current Approach**
 
