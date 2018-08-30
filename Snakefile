@@ -29,6 +29,10 @@ rule serve:
    shell:
       "cd output && {python} -m mkdocs serve --no-livereload"
 
+rule clean:
+   shell:
+      "$(which find) output/* | $(which grep) -v mkdocs-material-dib | xargs -n1 rm -fr"
+
 rule process_library:
    input:
       glob.glob('library/*.md'),
