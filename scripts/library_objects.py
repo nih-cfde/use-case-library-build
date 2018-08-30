@@ -135,7 +135,9 @@ class Epic(object):
 
     def set_narrative(self, obj):
         if self.narrative:
-            assert self.narrative == obj, obj.ident
+            if self.narrative != obj:
+                msg = "for epic {}, narrative already set to {}; cannot set to {}".format(self.ident, self.narrative.ident, obj.ident)
+                raise ValueError(msg)
         self.narrative = obj
 
     def set_content(self, content):
