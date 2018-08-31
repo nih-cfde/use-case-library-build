@@ -14,6 +14,9 @@ import os
 import shutil
 import traceback
 
+GITHUB_LIBRARY_LOCATION="https://github.com/dcppc/use-case-library/tree/master/library/"
+GITHUB_EDIT_LOCATION="https://github.com/dcppc/use-case-library/edit/master/library/"
+
 from jinja2 import Environment, FileSystemLoader
 
 from library_objects import create_library_object
@@ -98,7 +101,21 @@ def main(argv=sys.argv[1:]):
         return [ obj for _, _, obj in sorted(x) ]
 
     def make_title_link(obj):
+        if obj is None:
+            raise ValueError("null object passed in to make_title_link!")
         return "[{}]({})".format(obj.title, obj.ident + '.md')
+
+    def make_view_link(obj, link_text):
+        if obj is None:
+            raise ValueError("null object passed in to make_edit_link!")
+        return "[{}]({})".format(link_text,
+                                 GITHUB_LIBRARY_LOCATION + obj.filename)
+
+    def make_edit_link(obj, link_text):
+        if obj is None:
+            raise ValueError("null object passed in to make_edit_link!")
+        return "[{}]({})".format(link_text,
+                                 GITHUB_EDIT_LOCATION + obj.filename)
 
     # function to render a specific template
     count = 0
@@ -109,6 +126,8 @@ def main(argv=sys.argv[1:]):
 
         input_names = dict(yield_objects=yield_objects,
                            make_title_link=make_title_link,
+                           make_view_link=make_view_link,
+                           make_edit_link=make_edit_link,
                            len=len)
         input_names.update(kw)
 

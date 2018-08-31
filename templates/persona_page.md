@@ -1,7 +1,11 @@
 # {{ obj.title }}
-(This is Persona {{ obj.ident }}.)
+(Persona {{ obj.ident }} - {{ make_view_link(obj, "view source") }} | {{ make_edit_link(obj, "edit") }})
 
-## Description:
+## Blurb
+
+{{ obj.blurb }}
+
+## Full Description:
 
 {{ obj.content }}
 
