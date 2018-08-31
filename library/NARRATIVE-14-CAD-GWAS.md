@@ -4,6 +4,7 @@ persona: PERSONA-7-statistical-geneticist
 blurb: Identify genetic risk factors for coronary artery disease.
 epics:
 - EPIC-18
+- EPIC-19
 ---
 
 ### Scientific Objective 
