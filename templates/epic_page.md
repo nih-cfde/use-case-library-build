@@ -1,7 +1,11 @@
 # {{ obj.title }}
 (This is User Epic {{ obj.ident }}.)
 
+{% if obj.narrative %}
 Parent narrative: {{ make_title_link(obj.narrative) }} - {{ obj.narrative.blurb }}
+{% else %}
+(no parent narrative)
+{% endif %}
 
 {% if obj.user_stories %}
 

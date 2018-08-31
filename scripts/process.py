@@ -64,6 +64,9 @@ def main(argv=sys.argv[1:]):
     for obj in obj_dict.values():
         obj.resolve_references(obj_dict)
 
+        if obj.obj_type == 'EPIC' and not obj.narrative:
+            print('WARNING, orphaned epic {} has no parent narrative!'.format(obj.ident))
+
     #
     # create output locations. Note, 'output/docs' is completely recreated
     # each time.
