@@ -5,7 +5,7 @@ This Library contains a collection of Use Cases for the
 Note, not all use cases are being prioritized for implementation!
 
 For the structure of the Use Case Library, please see
-[the use case glossary](./glossary.html).
+[the use case glossary](./glossary/).
 
 If you want to contribute a new user narrative, please
 [make a copy of this template document](https://docs.google.com/document/d/1bAfdDyuiZikHUUUFutoBSvsfbiSe6_PYpr8kGkHdilI/edit#),
