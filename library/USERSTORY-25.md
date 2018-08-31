@@ -1,5 +1,5 @@
 ---
 input: Analysis pipeline choice, statistical model and sample size
-output: computational requirements
+output: Computational requirements
 task: Evaluate memory and parallelization requirements of analysis plan
 ---

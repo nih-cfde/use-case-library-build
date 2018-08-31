@@ -1,5 +1,5 @@
 ---
 input: Reformatted variant-based functional annotations
-output: variant database
+output: Variant database
 task: Construct database to hold variant-based functional annotations if needed for efficiency of queries
 ---

@@ -1,5 +1,5 @@
 ---
 input: Phenotype domain knowledge
-output: list of phenotype concepts
+output: List of phenotype concepts
 task: Define phenotype concepts for primary outcome, covariates and ancillary variables
 ---

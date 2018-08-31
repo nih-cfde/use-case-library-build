@@ -1,5 +1,5 @@
 ---
 input: Domain knowledge
-output: dataset applicable to new method
+output: Dataset applicable to new method
 task: find applicable datasets
 ---

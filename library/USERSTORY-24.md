@@ -1,5 +1,5 @@
 ---
 input: Statistical analysis plan & selected analysis pipeline
-output: model parameter file
+output: Model parameter file
 task: Specify model parameters
 ---
