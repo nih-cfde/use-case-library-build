@@ -4,11 +4,8 @@ about: Suggest a new use case
 
 ---
 
-For the structure of the Use Case Library, please read the
-[the use case glossary](http://nih-data-commons.us/use-case-library/glossary/).
+<!--
+See the glossary at http://nih-data-commons.us/use-case-library/glossary.
 
-To contribute a new user use case, please
-[make a copy of this template document](https://docs.google.com/document/d/1bAfdDyuiZikHUUUFutoBSvsfbiSe6_PYpr8kGkHdilI/edit#),
-modify it, and then
-[create a new issue on GitHub under dcppc/use-case-library/](https://github.com/dcppc/use-case-library/issues). Alternatively,
-you can submit it to <dcppc.inbox@gmail.com>.
+To contribute a new user use case, please follow the guidelines in the template document https://docs.google.com/document/d/1bAfdDyuiZikHUUUFutoBSvsfbiSe6_PYpr8kGkHdilI/edit# 
+--->
