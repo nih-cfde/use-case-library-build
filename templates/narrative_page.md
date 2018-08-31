@@ -10,8 +10,15 @@ Persona: {{ make_title_link(obj.persona) }}
 {% if obj.epics %}
 
 User epics under this narrative:
+
 {% for epic in obj.epics %}
 * {{ epic.ident }}: {{ make_title_link(epic) }} - {{ epic.blurb }}
-{% endfor %}
+
+  {% if epic.user_stories %}
+  {% for story in epic.user_stories %}
+> use **{{ story.input }}** to generate **{{ story.output }}** by **{{ story.task }}** (story appears in {{ len(story.epics) }} epics total).
+  {% endfor %}
+  {% endif %}
+{%- endfor %}
 
 {% endif %}
