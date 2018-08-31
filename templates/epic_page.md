@@ -1,5 +1,5 @@
 # {{ obj.title }}
-(This is User Epic {{ obj.ident }}.)
+(User Epic {{ obj.ident }} - {{ make_view_link(obj, "view source") }} | {{ make_edit_link(obj, "edit") }})
 
 {% if obj.narrative %}
 Parent narrative: {{ make_title_link(obj.narrative) }} - {{ obj.narrative.blurb }}

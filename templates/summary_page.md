@@ -1,5 +1,5 @@
 # {{ obj.title }}
-(This is Use Case Summary {{ obj.ident }}.)
+(Use Case Summary {{ obj.ident }} - {{ make_view_link(obj, "view source") }} | {{ make_edit_link(obj, "edit") }})
 
 <!-- **ID: {{ obj.ident }}** [(permalink)](...) -->
 

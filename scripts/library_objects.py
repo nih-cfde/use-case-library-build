@@ -13,6 +13,7 @@ prefixes = {'EPIC': 'EPIC',
             'SUMMARY': 'SUMMARY'}
 
 def process_identifier(x):
+    "Isolate the ident from the filename."
     if x.endswith('.md'): x = x[:-3]
     return "-".join(x.split('-')[:2])
 
@@ -200,5 +201,6 @@ def create_library_object(filename, header, content):
     else:
         raise ValueError('unhandled file type: ' + filetype)
 
+    obj.filename = os.path.basename(filename)
     obj.set_content(content)
     return obj
