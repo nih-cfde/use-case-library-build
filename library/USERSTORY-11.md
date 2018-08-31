@@ -1,5 +1,5 @@
 ---
-input: multi-sample VCF
+input: Multi-sample VCF
 output: multi-sample GDS
 task: Reformat VCF to GDS (for GENESIS pipeline)
 ---

@@ -1,5 +1,5 @@
 ---
-input: interesting variant positions or regions
+input: Interesting variant positions or regions
 output: interactive graphical display
 task: evaluate variant characteristics
 ---

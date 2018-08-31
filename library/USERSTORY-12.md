@@ -1,5 +1,5 @@
 ---
-input: multi-sample VCF
+input: Multi-sample VCF
 output: QC metrics and filter to apply to variants
 task: variant-level QC of genotype call set
 ---
