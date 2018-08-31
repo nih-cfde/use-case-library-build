@@ -16,9 +16,13 @@ User stories belonging to this narrative:
 
 {% endif %}
 
+## Blurb
+
+{{ obj.blurb }}
+
 {% if obj.content %}
 
-## Description:
+## Full Description:
 
 {{ obj.content }}
 

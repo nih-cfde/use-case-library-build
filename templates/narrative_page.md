@@ -3,7 +3,11 @@
 
 Persona: {{ make_title_link(obj.persona) }}
 
-## Description:
+## Blurb
+
+{{ obj.blurb }}
+
+## Full Description:
 
 {{ obj.content }}
 
