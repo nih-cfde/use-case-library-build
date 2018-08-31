@@ -49,4 +49,4 @@ extra:
   # annotation
   hypothesis: true
   # disqus
-#  disqus: dcppc-internal
+  disqus: data-commons-use-case-library
