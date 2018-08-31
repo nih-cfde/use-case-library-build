@@ -43,7 +43,10 @@ rule process_library:
       directory('output/docs'),
       'output/mkdocs.yml'
    shell:
-      "scripts/process.py library"
+      """
+      scripts/process.py library 
+      scripts/copy_images.py images
+      """
 
 rule mkdocs:
    input:
