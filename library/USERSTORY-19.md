@@ -1,5 +1,5 @@
 ---
-input: variant-based functional annotations (WGSA)
-output: reformatted variant-based functional annotations
+input: Variant-based functional annotations (WGSA)
+output: Reformatted variant-based functional annotations
 task: Parse WGSA output to facilitate queries
 ---

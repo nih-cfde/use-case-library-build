@@ -1,5 +1,5 @@
 ---
-input: raw datasets matched to identifiers and metadata from studies
-output: raw datasets matched to identifiers
-task: match datasets to metadata
+input: Raw datasets matched to identifiers and metadata from studies
+output: Raw datasets matched to identifiers
+task: Match datasets to metadata
 ---
