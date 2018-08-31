@@ -4,16 +4,15 @@ import os
 from os.path import exists, isdir, join, abspath, dirname
 import subprocess
 
-basepath = join(dirname(__file__), '..')
-basepath = abspath(basepath)
+# base UCL path
+basepath = abspath(join(dirname(__file__), '..'))
 
 def usage():
     print("copy_images.py script:")
-    print("  copies a directory of images to the final ")
-    print("  mkdocs documentation folder in output/.")
-    print("  pass in the name of the images directory:")
-    print("         ./copy_images.py images")
-    print("")
+    print("    This script copies a directory of images to the final ")
+    print("    mkdocs documentation folder in output/.")
+    print("    To use this script, pass the relative path to the images directory\n")
+    print("         ./copy_images.py images\n")
 
 def main():
 
