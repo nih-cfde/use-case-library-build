@@ -1,5 +1,9 @@
 # this jinja2 template is filled out by process.py to build mkdocs.yml
 site_name: Use Case Library v1.0
+
+copyright: 'This website is available under the terms of the 
+<a href="https://creativecommons.org/licenses/by/4.0/">CC-BY license</a>.<br />'
+
 pages:
   - Introduction: index.md
   - Use Case Summaries:
@@ -31,8 +35,7 @@ theme:
   palette:
     primary: 'blue'
     accent: 'blue'
-  logo:
-    icon: 'dns'
+  logo: 'images/dcppc-logo.png'
   font:
     text: 'Roboto Slab'
     code: 'Roboto Mono'
