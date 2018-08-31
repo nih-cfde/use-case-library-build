@@ -1,5 +1,5 @@
 ---
 input: Machine readable activity log and algorithm
 output: List of researcher activity that requires manual review
-task: algorithm compares the data use restrictions to the researcher’s purpose
+task: Algorithm compares the data use restrictions to the researcher’s purpose
 ---
