@@ -6,3 +6,8 @@ user-stories:
 - USERSTORY-45
 - USERSTORY-46
 ---
+
+Integrate other relevant data. It should be possible to integrate gene
+expression data from resources such as MGI or BGE. It should also be
+possible to integrate functional and pathway data from resources such
+as Gene Ontology (GO).
