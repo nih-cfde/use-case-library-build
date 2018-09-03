@@ -8,7 +8,6 @@ epics:
 - EPIC-39
 - EPIC-40
 - EPIC-41
-- EPIC-42
 ---
 
 ### Scientific Objective
