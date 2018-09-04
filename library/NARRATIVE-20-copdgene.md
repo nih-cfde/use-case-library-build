@@ -4,7 +4,7 @@ persona: PERSONA-3-research-scientists
 blurb: Perform clinical genomic study using COPDGene data
 
 epics:
-- EPIC-38
+- EPIC-43
 - EPIC-39
 - EPIC-40
 - EPIC-41
