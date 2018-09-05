@@ -46,10 +46,12 @@ To create a new summary, persona, etc.:
   ID `SUMMARY-1` which is *not* unique.
 * Update the YAML metadata at the top of the file to reflect your new metadata.
 * Edit the markdown description below the YAML header.
-* Build the file using `snakemake`, check the output.
-* Iterate until you're happy.
+* (Optional) Build the file using `snakemake`, check the output. Iterate until you're happy.
 * Add new file to git repo, commit, push.
 * Set up a Pull Request to merge into master and tag in @ctb.
+* [Uncle Arche](https://github.com/dcppc/uncle-archie) will check out a copy of 
+  your pull request and run `snakemake build` on it, and link to the output of
+  the build process, so you can use Uncle Archie instead of using snakemake locally
 
 ## Higher order goals / why we did this:
 

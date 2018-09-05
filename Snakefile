@@ -56,3 +56,4 @@ rule mkdocs:
       directory('output/site')
    shell:
       "cd output && {python} -m mkdocs build"
+
