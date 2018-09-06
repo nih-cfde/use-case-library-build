@@ -66,6 +66,8 @@ def main(argv=sys.argv[1:]):
     for obj in obj_dict.values():
         obj.resolve_references(obj_dict)
 
+    print('checking references')
+    for obj in obj_dict.values():
         if obj.obj_type == 'EPIC' and not obj.narrative:
             print('WARNING, orphaned epic {} has no parent narrative!'.format(obj.ident))
         if hasattr(obj, 'blurb'):
