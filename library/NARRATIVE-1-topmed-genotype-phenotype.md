@@ -10,6 +10,11 @@ epics:
 - EPIC-5
 - EPIC-6
 - EPIC-7
+tags:
+- genotype
+- phenotype
+- association testing
+- functional analysis
 ---
 
 ### Scientific Objective 
