@@ -19,12 +19,10 @@
 
 {% endif %}
 
-<div style="visibility: hidden;">
+<div id="dcppc-tags" style="visibility: hidden;">
 {% if obj.tags %}
     {% for tag in obj.tags %}
         <p>{{ tag }}</p>
     {% endfor %}
 {% endif %}
-<p>weird fish</p>
-<p>pinecone</p>
 </div>
