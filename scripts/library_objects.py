@@ -63,12 +63,13 @@ class UserStory(object):
     obj_type = 'USER STORY'
     template = 'user_story_page.md'
 
-    def __init__(self, ident, inp, output, task):
+    def __init__(self, ident, inp, output, task, tags):
         self.ident = ident
         self.input = inp
         self.output = output
         self.task = task
         self.title = task
+        self.tags = tags
         self.epics = []
 
     def resolve_references(self, obj_dict): pass
@@ -166,11 +167,15 @@ def create_library_object(filename, header, content):
 
         obj = Persona(ident, header['title'], header['blurb'])
     elif filetype == 'USER STORY':
-        if set(header) != set(['input', 'output', 'task']):
+        if 'tags' not in header:
+            print('WARNING: no USER STORY tags found in {}'.format(ident))
+            header['tags'] = []
+
+        if set(header) != set(['input', 'output', 'task','tags']):
             print('WARNING: extra header components in {}'.format(ident))
             
         obj = UserStory(ident, header['input'], header['output'],
-                        header['task'])
+                        header['task'], header['tags'])
     elif filetype == 'NARRATIVE':
         if not set(header).issubset(set(['title', 'blurb', 'persona', 'epics'])):
             print('WARNING: extra header components in {}'.format(ident))
