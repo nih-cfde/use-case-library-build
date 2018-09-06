@@ -167,7 +167,6 @@ def create_library_object(filename, header, content):
     filetype, ident = get_type(filename)
     if filetype == 'PERSONA':
         if 'tags' not in header:
-            print('WARNING: no USER STORY tags found in {}'.format(ident))
             header['tags'] = []
 
         if set(header) != set(['title', 'blurb','tags']):
@@ -177,7 +176,6 @@ def create_library_object(filename, header, content):
 
     elif filetype == 'USER STORY':
         if 'tags' not in header:
-            print('WARNING: no USER STORY tags found in {}'.format(ident))
             header['tags'] = []
 
         if set(header) != set(['input', 'output', 'task','tags']):
@@ -188,7 +186,6 @@ def create_library_object(filename, header, content):
 
     elif filetype == 'NARRATIVE':
         if 'tags' not in header:
-            print('WARNING: no NARRATIVE tags found in {}'.format(ident))
             header['tags'] = []
 
         if not set(header).issubset(set(['title', 'blurb', 'persona', 'epics','tags'])):
@@ -204,7 +201,6 @@ def create_library_object(filename, header, content):
 
     elif filetype == 'EPIC':
         if 'tags' not in header:
-            print('WARNING: no EPIC tags found in {}'.format(ident))
             header['tags'] = []
 
         if set(header) != set(['title', 'blurb', 'user-stories','tags']):
@@ -215,7 +211,6 @@ def create_library_object(filename, header, content):
 
     elif filetype == 'SUMMARY':
         if 'tags' not in header:
-            print('WARNING: no SUMMARY tags found in {}'.format(ident))
             header['tags'] = []
 
         if not set(header).issubset(set(['title', 'narratives','tags'])):
