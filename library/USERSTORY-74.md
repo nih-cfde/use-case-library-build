@@ -1,5 +1,5 @@
 ---
-input: Patient data
-output: Annotated CT imaging data - render the images and visualize the anatomical structures using our cloud-based system, perform machine learning analysis on the images, and identify the anatomical aberrations associated with the genetic and phenotypic variations extracted by machine-learning models.
-task: COPD image analysis tools
+input: COPDGene cohort and i2b2/tranSMART
+output:  table with subject totals and statistical analysis by age, sex and race for each subset, if data are available
+task: Generate summary statistics
 ---
