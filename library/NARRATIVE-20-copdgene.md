@@ -1,7 +1,7 @@
 ---
 title: COPDGene Cohort Study with Imaging Data
 persona: PERSONA-3-research-scientists
-blurb: Perform clinical genomic study using COPDGene data
+blurb: Perform clinical genomic study using COPDGene data.
 
 epics:
 

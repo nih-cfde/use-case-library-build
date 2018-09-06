@@ -1,6 +1,6 @@
 ---
 title: Identify TOPmed records in which HDL has been measured, and to which the user has access for a given research purpose.
-blurb: Develop an analysis plan for phenotypic analysis
+blurb: Develop an analysis plan for phenotypic analysis.
 user-stories:
 user-stories:
 - USERSTORY-2
