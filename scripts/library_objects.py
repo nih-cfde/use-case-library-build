@@ -25,13 +25,42 @@ class LibraryObject(object):
     By extending this class, all use case library objects have a validate method
     they can use to validate parameters before setting them.
     """
-    def validate(self,param_name,param_value):
+    def validate(self,param_name,param_value,param_type=None):
+        """
+        Validate the parameter named param_name is set to 
+        non-null value param_value (optionally, enforcing type
+        checking to match type param_type).
+
+        param_name :        Name of parameter (string).
+                            This will become an attribute of the object
+
+        param_value :       The value to set the parameter to (any type).
+
+        param_type :        (optional) The type of object that param_value
+                            should be. If the types of param_value and 
+                            param_type do not match, an exception is raised.
+        """
+        try:
+            ident = self.ident
+        except AttributeError:
+            ident = ""
+
         if param_value==None:
-            try:
-                err = "Error: parameter %s did not validate, value was None: %s"%(param_name,self.ident)
-            except AttributeError:
-                err = "Error: parameter %s did not validate, value was None"%(param_name)
+            # No parameter value was specified,
+            err = "Error: parameter %s did not validate, value was None: %s"%(param_name,ident)
             raise Exception(err)
+
+        elif param_type is not None and type(param_type)!=type(param_value):
+            # User specified that this paramter
+            # should have type X but it had type Y.
+            err = "Error: parameter %s had incorrect type, needs type %s but has type %s: %s"%(
+                    param_name,
+                    type(param_type),
+                    type(param_value),
+                    ident
+            )
+            raise Exception(err)
+
         else:
             setattr(self, param_name, param_value)
 
@@ -104,11 +133,11 @@ class Narrative(LibraryObject):
     template = 'narrative_page.md'
 
     def __init__(self, ident, title, blurb, persona_str, epics_str):
-        self.validate('ident',ident)
-        self.validate('title',title)
-        self.validate('blurb',blurb)
-        self.validate('persona_str',persona_str)
-        self.validate('epics_str',epics_str) # epics that belong to this narrative
+        self.validate('ident',ident,"")
+        self.validate('title',title,"")
+        self.validate('blurb',blurb,"")
+        self.validate('persona_str',persona_str,"")
+        self.validate('epics_str',epics_str,[]) # epics that belong to this narrative
         self.summary = None
 
     def resolve_references(self, obj_dict):
@@ -119,7 +148,12 @@ class Narrative(LibraryObject):
             x.append(epic_obj)
         self.epics = x
 
-        persona = obj_dict[process_identifier(self.persona_str)]
+        try:
+            persona = obj_dict[process_identifier(self.persona_str)]
+        except AssertionError:
+            err = "Error: process identifier was not a single item. File: %s"%(self.ident)
+            raise Exception(err)
+
         self.persona = persona
         persona.add_narrative(self)
 
