@@ -1,6 +1,6 @@
 ---
-title: Perform an automated FAIR assessmen for many digital objects.
-blurb: AIR Assessment using FAIRshake user narrative
+title: Perform an automated FAIR assessment for many digital objects.
+blurb: FAIR Assessment using FAIRshake user narrative
 user-stories:
 
 ---
