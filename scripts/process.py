@@ -9,7 +9,6 @@ This script does a bunch of things:
 """
 import sys
 import argparse
-import yaml
 import os
 import shutil
 import traceback
@@ -67,8 +66,13 @@ def main(argv=sys.argv[1:]):
     for obj in obj_dict.values():
         obj.resolve_references(obj_dict)
 
+    print('checking references')
+    for obj in obj_dict.values():
         if obj.obj_type == 'EPIC' and not obj.narrative:
             print('WARNING, orphaned epic {} has no parent narrative!'.format(obj.ident))
+        if hasattr(obj, 'blurb'):
+            if not obj.blurb.endswith('.'):
+                print('WARNING, blurb for {} does not end with a period.'.format(obj.ident))
 
     #
     # create output locations. Note, 'output/docs' is completely recreated

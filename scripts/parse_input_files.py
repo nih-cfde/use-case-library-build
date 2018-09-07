@@ -3,6 +3,7 @@ Parse the input files from library/, return yaml obj + content
 """
 import yaml
 
+
 def parse_library_md(filename):
     lines = open(filename, 'rt').readlines()
     lines = [ x.rstrip() for x in lines ]
@@ -25,3 +26,12 @@ def parse_library_md(filename):
     yyheader = yaml.load("\n".join(header))
 
     return yyheader, rest
+
+
+def write_library_md(filename, header, content):
+    with open(filename + '.fix', 'wt') as fp:
+        fp.write('---\n')
+
+        fp.write(yaml.dump(header))
+        fp.write('---\n')
+        fp.write(content)

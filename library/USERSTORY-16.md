@@ -1,5 +1,5 @@
 ---
-input: multi-sample GDS & filters
+input: Multi-sample GDS & filters
 output: GRM
-task: estimate Genetic Relatedness Matrix (GRM)
+task: Estimate Genetic Relatedness Matrix (GRM)
 ---
