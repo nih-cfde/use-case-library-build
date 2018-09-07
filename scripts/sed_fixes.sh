@@ -53,10 +53,10 @@ if [[ -f "$LIBDIR/USERSTORY-1.md" ]]; then
     echo "Fixing capitalization..."
     echo "Running sed from $PWD, processing files in $LIBDIR"
 
-    ls -1 $LIBDIR/USER* | xargs -n1 -I% -t sed -i 's/input: \([a-z]\)/input: \u\1/g' %
-    ls -1 $LIBDIR/USER* | xargs -n1 -I% -t sed -i 's/output: \([a-z]\)/output: \u\1/g' %
-    ls -1 $LIBDIR/USER* | xargs -n1 -I% -t sed -i 's/task: \{1,\}\([a-z]\)/task: \u\1/g' %
-    ls -1 $LIBDIR/USER* | xargs -n1 -I% -t sed -i 's/DbGaP/dbGaP/g' %
+    ls -1 $LIBDIR/USER* | xargs -n1 -I% sed -i 's/input: \([a-z]\)/input: \u\1/g' %
+    ls -1 $LIBDIR/USER* | xargs -n1 -I% sed -i 's/output: \([a-z]\)/output: \u\1/g' %
+    ls -1 $LIBDIR/USER* | xargs -n1 -I% sed -i 's/task: \{1,\}\([a-z]\)/task: \u\1/g' %
+    ls -1 $LIBDIR/USER* | xargs -n1 -I% sed -i 's/DbGaP/dbGaP/g' %
 
     echo "Done."
 
