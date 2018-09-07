@@ -52,10 +52,10 @@ if [[ -f "$LIBDIR/USERSTORY-1.md" ]]; then
     # This is indeed the library directory
     echo "Fixing capitalization..."
 
-    echo $LIBDIR/USER* | xargs -n1 -I% -t /usr/local/bin/sed -i 's/input: \([a-z]\)/input: \u\1/g' %
-    echo $LIBDIR/USER* | xargs -n1 -I% -t /usr/local/bin/sed -i 's/output: \([a-z]\)/output: \u\1/g' %
-    echo $LIBDIR/USER* | xargs -n1 -I% -t /usr/local/bin/sed -i 's/task: \{1,\}\([a-z]\)/task: \u\1/g' %
-    echo $LIBDIR/USER* | xargs -n1 -I% -t /usr/local/bin/sed -i 's/DbGaP/dbGaP/g' %
+    echo $LIBDIR/USER* | xargs -n1 -I% -t sed -i 's/input: \([a-z]\)/input: \u\1/g' %
+    echo $LIBDIR/USER* | xargs -n1 -I% -t sed -i 's/output: \([a-z]\)/output: \u\1/g' %
+    echo $LIBDIR/USER* | xargs -n1 -I% -t sed -i 's/task: \{1,\}\([a-z]\)/task: \u\1/g' %
+    echo $LIBDIR/USER* | xargs -n1 -I% -t sed -i 's/DbGaP/dbGaP/g' %
 
     echo "Done."
 
