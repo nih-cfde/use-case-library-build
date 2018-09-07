@@ -44,6 +44,7 @@ rule process_library:
       'output/mkdocs.yml'
    shell:
       """
+      scripts/sed_fixes.sh library
       scripts/process.py library 
       scripts/copy_images.py images
       """

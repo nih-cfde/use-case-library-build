@@ -51,11 +51,12 @@ if [[ -f "$LIBDIR/USERSTORY-1.md" ]]; then
 
     # This is indeed the library directory
     echo "Fixing capitalization..."
+    echo "Running sed from $PWD, processing files in $LIBDIR"
 
-    echo $LIBDIR/USER* | xargs -n1 -I% -t /usr/local/bin/sed -i 's/input: \([a-z]\)/input: \u\1/g' %
-    echo $LIBDIR/USER* | xargs -n1 -I% -t /usr/local/bin/sed -i 's/output: \([a-z]\)/output: \u\1/g' %
-    echo $LIBDIR/USER* | xargs -n1 -I% -t /usr/local/bin/sed -i 's/task: \{1,\}\([a-z]\)/task: \u\1/g' %
-    echo $LIBDIR/USER* | xargs -n1 -I% -t /usr/local/bin/sed -i 's/DbGaP/dbGaP/g' %
+    ls -1 $LIBDIR/USER* | xargs -n1 -I% sed -i 's/input: \([a-z]\)/input: \u\1/g' %
+    ls -1 $LIBDIR/USER* | xargs -n1 -I% sed -i 's/output: \([a-z]\)/output: \u\1/g' %
+    ls -1 $LIBDIR/USER* | xargs -n1 -I% sed -i 's/task: \{1,\}\([a-z]\)/task: \u\1/g' %
+    ls -1 $LIBDIR/USER* | xargs -n1 -I% sed -i 's/DbGaP/dbGaP/g' %
 
     echo "Done."
 
