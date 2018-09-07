@@ -51,6 +51,8 @@ if [[ -f "$LIBDIR/USERSTORY-1.md" ]]; then
 
     # This is indeed the library directory
     echo "Fixing capitalization..."
+    echo "Running sed from $PWD"
+    echo "Processing files in $LIBDIR"
 
     echo $LIBDIR/USER* | xargs -n1 -I% -t sed -i 's/input: \([a-z]\)/input: \u\1/g' %
     echo $LIBDIR/USER* | xargs -n1 -I% -t sed -i 's/output: \([a-z]\)/output: \u\1/g' %
