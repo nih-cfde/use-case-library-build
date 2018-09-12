@@ -13,7 +13,7 @@ of larger goals and the Consortium timelines.
 
 ![Use case library glossary image](../images/glossary.png)
 
-## Discussion
+### Discussion
 
 First, "use cases" and "user narratives" seem to each be terms that
 various members of the consortium use to capture a single collection
@@ -36,14 +36,16 @@ should refer to them as a user in the narratives by saying "a
 we might want to say "an analyst who wants to do..." to be more
 specific.
 
-*Scientific objective:* a description of a scientific process, told
+### Definitions
+
+**Scientific objective:** a description of a scientific process, told
 without reference to a specific technology solution. Focuses on
 resources required, method(s) followed, and outcome(s) targeted. Can
 be validated with scientific stakeholders (is this valuable as
-written? Yes or no.)  **Note:** These are not currently represented
+written? Yes or no.)  *Note:* These are not currently represented
 explicitly in the use case library.
 
-*User epic:* a story, told from the user's perspective that captures a
+**User epic:** a story, told from the user's perspective that captures a
 valuable set of interactions with tools (e.g. software solutions) in
 the service of achieving the scientific objective. Must be written in
 terms that are meaningful to the user, preferably from their
@@ -54,8 +56,35 @@ this valuable as written? Yes or no.) and verified with engineering
 leadership (Did we deliver it in a way that fits this scenario? Yes or
 no.)
 
-*User story:* a specific piece of an epic that translates to a
+**User story:** a specific piece of an epic that translates to a
 well-scoped and defined piece of software or data engineering
 work. Can be verified with engineering teams (Did we deliver it? Yes
 or no.) Certain stories are likely to appear in multiple epics and
 should not be duplicated if possible.
+
+
+### How to write and an EPIC
+
+Each EPIC needs to be a big task **from a user perspective**, like "build a dataset" or "analyze a dataset" or "turn raw sequence into called variants".
+
+Then you take each EPIC, and break it down into small component parts...as if you're writing code...or instructions for a new undergrad, and those are your USER STORYs. In 90% of cases, each USER STORY will have two inputs, and the "output" from the first USER STORY in an EPIC will be one of the two 'inputs' of your second USER STORY in an EPIC. And in most cases, the last "output" from one EPIC should be one of the "inputs" for the next and the "task" needs to be an action. 
+
+The idea is TASK happens to `INPUT_A` + `INPUT_B` = `OUTPUT`
+
+You also shouldn't end up with a bunch of EPICs that are all one step each. EPICs are multistep things, and each of their steps is a USERSTORY.
+
+Example:
+
+If your EPIC is something like "Build a dataset" then your USERSTORIES would be something like:
+
+1. input: List of candidate genes + several databases of expression data
+output: expression data for candidate genes
+task: search for candidate genes in database
+
+2. input: expression data for candidate genes and some metadata
+output: expression data combined with metadata
+task: merge expression data with it's metadata
+
+3. input: expression data with metadata from several databases and domain knowledge
+output: one expression data set with metadata
+task: harmonize datasets 
