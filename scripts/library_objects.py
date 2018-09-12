@@ -18,14 +18,32 @@ def process_identifier(x):
     return "-".join(x.split('-')[:2])
 
 
-class Summary(object):
+class LibraryObject(object):
+    """
+    Base class that defines a method to validate parameters before they are set.
+    This keeps the code free of try/except clutter. It validates arbitrary variable names.
+    By extending this class, all use case library objects have a validate method
+    they can use to validate parameters before setting them.
+    """
+    def validate(self,param_name,param_value):
+        if param_value==None:
+            try:
+                err = "Error: parameter %s did not validate, value was None: %s"%(param_name,self.ident)
+            except AttributeError:
+                err = "Error: parameter %s did not validate, value was None"%(param_name)
+            raise Exception(err)
+        else:
+            setattr(self, param_name, param_value)
+
+
+class Summary(LibraryObject):
     obj_type = 'SUMMARY'
     template = 'summary_page.md'
 
     def __init__(self, ident, title, narratives_str, tags):
-        self.ident = ident
-        self.title = title
-        self.narratives_str = narratives_str
+        self.validate('ident',ident)
+        self.validate('title',title)
+        self.validate('narratives_str',narratives_str)
         self.tags = tags
 
     def resolve_references(self, obj_dict):
@@ -40,7 +58,7 @@ class Summary(object):
         self.content = content
 
 
-class Persona(object):
+class Persona(LibraryObject):
     obj_type = 'PERSONA'
     template = 'persona_page.md'
 
@@ -61,16 +79,16 @@ class Persona(object):
         self.narratives.append(obj)
 
 
-class UserStory(object):
+class UserStory(LibraryObject):
     obj_type = 'USER STORY'
     template = 'user_story_page.md'
 
     def __init__(self, ident, inp, output, task, tags):
-        self.ident = ident
-        self.input = inp
-        self.output = output
-        self.task = task
-        self.title = task
+        self.validate('ident',ident)
+        self.validate('title',task)
+        self.validate('task',task)
+        self.validate('input',inp)
+        self.validate('output',output)
         self.tags = tags
         self.epics = []
 
@@ -84,16 +102,16 @@ class UserStory(object):
             self.epics.append(epic)
 
 
-class Narrative(object):
+class Narrative(LibraryObject):
     obj_type = 'NARRATIVE'
     template = 'narrative_page.md'
 
     def __init__(self, ident, title, blurb, persona_str, epics_str, tags):
-        self.ident = ident
-        self.title = title
-        self.blurb = blurb
-        self.persona_str = persona_str
-        self.epics_str = epics_str        # epics that belong to this narrative
+        self.validate('ident',ident)
+        self.validate('title',title)
+        self.validate('blurb',blurb)
+        self.validate('persona_str',persona_str)
+        self.validate('epics_str',epics_str) # epics that belong to this narrative
         self.summary = None
         self.tags = tags
 
@@ -118,15 +136,15 @@ class Narrative(object):
         self.summary = obj
 
 
-class Epic(object):
+class Epic(LibraryObject):
     obj_type = 'EPIC'
     template = 'epic_page.md'
 
     def __init__(self, ident, title, blurb, user_stories_str, tags):
-        self.ident = ident
-        self.title = title
-        self.blurb = blurb
-        self.user_stories_str = user_stories_str
+        self.validate('ident',ident)
+        self.validate('title',title)
+        self.validate('blurb',blurb)
+        self.validate('user_stories_str',user_stories_str)
         self.narrative = None             # parent narrative object
         self.tags = tags
 
