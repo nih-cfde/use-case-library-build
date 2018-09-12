@@ -63,28 +63,25 @@ or no.) Certain stories are likely to appear in multiple epics and
 should not be duplicated if possible.
 
 
-### How to write and an EPIC
+### How to write and an EPIC and USERSTORY
 
-Each EPIC needs to be a big task **from a user perspective**, like "build a dataset" or "analyze a dataset" or "turn raw sequence into called variants".
+Each EPIC needs to be a big task **from a user perspective**, like "build a dataset" or "analyze a dataset" or "turn raw sequence into called variants". Multi-step EPICs are be broken down into small component parts, which we refer to as USERSTORYs. 
 
-Then you take each EPIC, and break it down into small component parts...as if you're writing code...or instructions for a new undergrad, and those are your USER STORYs. In 90% of cases, each USER STORY will have two inputs, and the "output" from the first USER STORY in an EPIC will be one of the two 'inputs' of your second USER STORY in an EPIC. And in most cases, the last "output" from one EPIC should be one of the "inputs" for the next and the "task" needs to be an action. 
+All USERSTORYs will have two inputs and an output. The idea is that a user story is a "task" where `INPUT_A` + `INPUT_B` = `OUTPUT`. In most cases, the output from one USERSTORY will be on of two 'inputs' for a subsequent USERSTORY in an EPIC. Likewise, the last output from one EPIC will likely be the input for another EPIC.  EPICs should contain more than one step each. 
 
-The idea is TASK happens to `INPUT_A` + `INPUT_B` = `OUTPUT`
+For examples, if your EPIC is "Build a dataset" then your USERSTORYS could be:
 
-You also shouldn't end up with a bunch of EPICs that are all one step each. EPICs are multistep things, and each of their steps is a USERSTORY.
+1. 01-USERSTORY
+	- input: List of candidate genes + several databases of expression data
+	- output: expression data for candidate genes
+	- task: search for candidate genes in database
 
-Example:
+2. 02-USERSTORY
+	- input: expression data for candidate genes and some metadata
+	- output: expression data combined with metadata
+	- task: merge expression data with it's metadata
 
-If your EPIC is something like "Build a dataset" then your USERSTORIES would be something like:
-
-1. input: List of candidate genes + several databases of expression data
-output: expression data for candidate genes
-task: search for candidate genes in database
-
-2. input: expression data for candidate genes and some metadata
-output: expression data combined with metadata
-task: merge expression data with it's metadata
-
-3. input: expression data with metadata from several databases and domain knowledge
-output: one expression data set with metadata
-task: harmonize datasets 
+3. 03-USERSTORY
+	- input: expression data with metadata from several databases and domain - knowledge
+	- output: one expression data set with metadata
+	- task: harmonize datasets 
