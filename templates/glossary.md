@@ -79,9 +79,9 @@ For examples, if your EPIC is "Build a dataset" then your USERSTORYS could be:
 2. 02-USERSTORY
 	- input: expression data for candidate genes and some metadata
 	- output: expression data combined with metadata
-	- task: merge expression data with it's metadata
+	- task: merge expression data with its metadata
 
 3. 03-USERSTORY
 	- input: expression data with metadata from several databases and domain - knowledge
-	- output: one expression data set with metadata
+	- output: one expression dataset with metadata
 	- task: harmonize datasets 
