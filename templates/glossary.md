@@ -17,24 +17,24 @@ of larger goals and the Consortium timelines.
 
 First, "use cases" and "user narratives" seem to each be terms that
 various members of the consortium use to capture a single collection
-of each of the three items below. So I'd suggest we stay away from
+of each of the three items below. Consortium members are advised to avoid
 using either term to represent a specific piece of this
 hierarchy. Additionally, "use case" historically refers to something
-lower in the hierarchy that can be verified (did it meet the spec) but
+lower in the hierarchy that can be verified (did it meet the spec), but
 not necessarily validated (is the spec, and therefore the solution,
-valuable).  Let's refer to the entire thing as a "user narrative."
-Another term commonly used in the field (but we haven't yet used) is
-"user scenario." I'd prefer sticking with something that people have
-heard before, so let's go with "user narrative."
+valuable).  We can refer to the entire collection as a "user narrative."
+Another term commonly used in the field (but that we haven't yet used) is
+"user scenario." However, "user narrative" is recommended as it is
+more commonly used.
 
-Second, we need a set lexicon for representing different types of
+Second, a set lexicon is needed to represent different types of
 users that are meaningful and in scope for our purposes. A general
 purpose description of a type of user is called a persona, but we
 should refer to them as a user in the narratives by saying "a
-<persona>." For example, "an analyst" is a specific user of persona
-"analyst." (think class in OOP. Sorry for the geekery.) In some cases
-we might want to say "an analyst who wants to do..." to be more
-specific.
+\<persona\>." For example, "an analyst" is a specific user of persona
+"analyst." In some cases a more specific description might be more
+appropriate, beginning with something like "an analyst who wants to
+do..."
 
 ### Definitions
 
@@ -69,7 +69,7 @@ Each EPIC needs to be a big task **from a user perspective**, like "build a data
 
 All USERSTORYs will have two inputs and an output. The idea is that a USERSTORY is a "task" where `INPUT_A` + `INPUT_B` = `OUTPUT`. In most cases, the output from one USERSTORY will be on of two 'inputs' for a subsequent USERSTORY in an EPIC. Likewise, the last output from one EPIC will likely be the input for another EPIC.  EPICs should contain more than one step each. 
 
-For example, if your EPIC is "Build a dataset" then your USERSTORYS could be:
+For example, if your EPIC is "Build a dataset" then your USERSTORYs could be:
 
 1. 01-USERSTORY
 	- input: List of candidate genes + several databases of expression data
