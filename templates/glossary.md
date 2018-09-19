@@ -82,6 +82,6 @@ For example, if your EPIC is "Build a dataset" then your USERSTORYS could be:
 	- task: merge expression data with its metadata
 
 3. 03-USERSTORY
-	- input: expression data with metadata from several databases and domain - knowledge
+	- input: expression data with metadata from several databases and domain expertise
 	- output: one expression dataset with metadata
 	- task: harmonize datasets 
