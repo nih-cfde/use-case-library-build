@@ -5,6 +5,7 @@
 (You'll need to install the packages in `requirements.txt`.)
 
 Run:
+
 ```
 snakemake
 ```
@@ -69,3 +70,4 @@ To create a new summary, persona, etc.:
 * add spell checker
 * add internal link checker
 * add author/contact info to YAML header
+
