@@ -62,6 +62,7 @@ To create a new summary, persona, etc.:
 * validation of metadata structure / links.
 
 ## TODO medium term:
+
 * add comments about where files are coming from
 * link in idents in markdown descriptions, e.g. USERSTORY-5-foobar should be turned into a link to that user story.
 * create an "errors" output page
