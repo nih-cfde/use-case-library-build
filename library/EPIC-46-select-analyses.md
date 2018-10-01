@@ -1,6 +1,9 @@
 ---
-title: Select analyses to perform for a customized RNA-seq analysis report. 
-blurb: Customize RNA-seq analysis
+title: Differential expression between young and old females. 
+blurb: Compare gene expression in two different brain regions from young and old females.
 user-stories:
+- USERSTORY-81
 - USERSTORY-82
+- USERSTORY-83
+- USERSTORY-84
 ---
