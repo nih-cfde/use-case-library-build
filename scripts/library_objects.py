@@ -73,7 +73,8 @@ class Summary(LibraryObject):
         self.validate('ident',ident)
         self.validate('title',title)
         self.validate('narratives_str',narratives_str)
-        self.tags = tags
+        self.validate('tags',tags,[])
+        self.tags = [j.lower() for j in self.tags]
 
     def resolve_references(self, obj_dict):
         x = []
@@ -92,11 +93,12 @@ class Persona(LibraryObject):
     template = 'persona_page.md'
 
     def __init__(self, ident, title, blurb, tags):
-        self.ident = ident
-        self.title = title
-        self.blurb = blurb
+        self.validate('ident',ident)
+        self.validate('title',title)
+        self.validate('blurb',blurb)
+        self.validate('tags',tags,[])
+        self.tags = [j.lower() for j in self.tags]
         self.narratives = []
-        self.tags = tags
 
     def resolve_references(self, obj_dict): pass
 
@@ -118,7 +120,8 @@ class UserStory(LibraryObject):
         self.validate('task',task)
         self.validate('input',inp)
         self.validate('output',output)
-        self.tags = tags
+        self.validate('tags',tags,[])
+        self.tags = [j.lower() for j in self.tags]
         self.epics = []
 
     def resolve_references(self, obj_dict): pass
@@ -141,8 +144,9 @@ class Narrative(LibraryObject):
         self.validate('blurb',blurb,"")
         self.validate('persona_str',persona_str,"")
         self.validate('epics_str',epics_str,[]) # epics that belong to this narrative
+        self.validate('tags',tags,[])
+        self.tags = [j.lower() for j in self.tags]
         self.summary = None
-        self.tags = tags
 
     def resolve_references(self, obj_dict):
         x = []
@@ -179,8 +183,8 @@ class Epic(LibraryObject):
         self.validate('title',title)
         self.validate('blurb',blurb)
         self.validate('user_stories_str',user_stories_str)
+        self.validate('tags',tags,[])
         self.narrative = None             # parent narrative object
-        self.tags = tags
 
     def resolve_references(self, obj_dict):
         x = []
@@ -274,6 +278,7 @@ def create_library_object(filename, header, content):
             narratives = []
 
         obj = Summary(ident, header['title'], narratives, header['tags'])
+
     else:
         raise ValueError('unhandled file type: ' + filetype)
 
