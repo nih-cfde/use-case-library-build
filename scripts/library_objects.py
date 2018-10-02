@@ -151,7 +151,12 @@ class Narrative(LibraryObject):
     def resolve_references(self, obj_dict):
         x = []
         for epic in self.epics_str:
-            epic_obj = obj_dict[process_identifier(epic)]
+            epic_key = process_identifier(epic)
+            if epic_key not in obj_dict.keys():
+                err = "Error: Missing epic %s, listed in narrative %s: "%(epic_key,self.ident)
+                err += "no epic file for %s exists in library/ directory"%(epic_key)
+                raise Exception(err)
+            epic_obj = obj_dict[epic_key]
             epic_obj.set_narrative(self)
             x.append(epic_obj)
         self.epics = x

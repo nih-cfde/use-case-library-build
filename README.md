@@ -5,6 +5,7 @@
 (You'll need to install the packages in `requirements.txt`.)
 
 Run:
+
 ```
 snakemake
 ```
