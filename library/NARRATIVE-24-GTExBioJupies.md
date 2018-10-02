@@ -6,7 +6,6 @@ epics:
 - EPIC-45
 - EPIC-46
 - EPIC-47
-- EPIC-48
 ---
 
 ### Scientific Objective
