@@ -69,10 +69,12 @@ class Summary(LibraryObject):
     obj_type = 'SUMMARY'
     template = 'summary_page.md'
 
-    def __init__(self, ident, title, narratives_str):
+    def __init__(self, ident, title, narratives_str, tags):
         self.validate('ident',ident)
         self.validate('title',title)
         self.validate('narratives_str',narratives_str)
+        self.validate('tags',tags,[])
+        self.tags = [j.lower() for j in self.tags]
 
     def resolve_references(self, obj_dict):
         x = []
@@ -90,10 +92,12 @@ class Persona(LibraryObject):
     obj_type = 'PERSONA'
     template = 'persona_page.md'
 
-    def __init__(self, ident, title, blurb):
-        self.ident = ident
-        self.title = title
-        self.blurb = blurb
+    def __init__(self, ident, title, blurb, tags):
+        self.validate('ident',ident)
+        self.validate('title',title)
+        self.validate('blurb',blurb)
+        self.validate('tags',tags,[])
+        self.tags = [j.lower() for j in self.tags]
         self.narratives = []
 
     def resolve_references(self, obj_dict): pass
@@ -110,12 +114,14 @@ class UserStory(LibraryObject):
     obj_type = 'USER STORY'
     template = 'user_story_page.md'
 
-    def __init__(self, ident, inp, output, task):
+    def __init__(self, ident, inp, output, task, tags):
         self.validate('ident',ident)
         self.validate('title',task)
         self.validate('task',task)
         self.validate('input',inp)
         self.validate('output',output)
+        self.validate('tags',tags,[])
+        self.tags = [j.lower() for j in self.tags]
         self.epics = []
 
     def resolve_references(self, obj_dict): pass
@@ -132,12 +138,14 @@ class Narrative(LibraryObject):
     obj_type = 'NARRATIVE'
     template = 'narrative_page.md'
 
-    def __init__(self, ident, title, blurb, persona_str, epics_str):
+    def __init__(self, ident, title, blurb, persona_str, epics_str, tags):
         self.validate('ident',ident,"")
         self.validate('title',title,"")
         self.validate('blurb',blurb,"")
         self.validate('persona_str',persona_str,"")
         self.validate('epics_str',epics_str,[]) # epics that belong to this narrative
+        self.validate('tags',tags,[])
+        self.tags = [j.lower() for j in self.tags]
         self.summary = None
 
     def resolve_references(self, obj_dict):
@@ -170,11 +178,12 @@ class Epic(LibraryObject):
     obj_type = 'EPIC'
     template = 'epic_page.md'
 
-    def __init__(self, ident, title, blurb, user_stories_str):
+    def __init__(self, ident, title, blurb, user_stories_str, tags):
         self.validate('ident',ident)
         self.validate('title',title)
         self.validate('blurb',blurb)
         self.validate('user_stories_str',user_stories_str)
+        self.validate('tags',tags,[])
         self.narrative = None             # parent narrative object
 
     def resolve_references(self, obj_dict):
@@ -213,18 +222,29 @@ def create_library_object(filename, header, content):
     """
     filetype, ident = get_type(filename)
     if filetype == 'PERSONA':
-        if set(header) != set(['title', 'blurb']):
+        if 'tags' not in header:
+            header['tags'] = []
+
+        if set(header) != set(['title', 'blurb','tags']):
             print('WARNING: extra header components in {}'.format(ident))
 
-        obj = Persona(ident, header['title'], header['blurb'])
+        obj = Persona(ident, header['title'], header['blurb'], header['tags'])
+
     elif filetype == 'USER STORY':
-        if set(header) != set(['input', 'output', 'task']):
+        if 'tags' not in header:
+            header['tags'] = []
+
+        if set(header) != set(['input', 'output', 'task','tags']):
             print('WARNING: extra header components in {}'.format(ident))
             
         obj = UserStory(ident, header['input'], header['output'],
-                        header['task'])
+                        header['task'], header['tags'])
+
     elif filetype == 'NARRATIVE':
-        if not set(header).issubset(set(['title', 'blurb', 'persona', 'epics'])):
+        if 'tags' not in header:
+            header['tags'] = []
+
+        if not set(header).issubset(set(['title', 'blurb', 'persona', 'epics','tags'])):
             print('WARNING: extra header components in {}'.format(ident))
             
         epics = header.get('epics', [])
@@ -233,15 +253,23 @@ def create_library_object(filename, header, content):
             epics = []
 
         obj = Narrative(ident, header['title'], header['blurb'],
-                         header['persona'], epics)
+                         header['persona'], epics, header['tags'])
+
     elif filetype == 'EPIC':
-        if set(header) != set(['title', 'blurb', 'user-stories']):
+        if 'tags' not in header:
+            header['tags'] = []
+
+        if set(header) != set(['title', 'blurb', 'user-stories','tags']):
             print('WARNING: extra header components in {}'.format(ident))
             
         obj = Epic(ident, header['title'], header['blurb'],
-                    header['user-stories'])
+                    header['user-stories'], header['tags'])
+
     elif filetype == 'SUMMARY':
-        if not set(header).issubset(set(['title', 'narratives'])):
+        if 'tags' not in header:
+            header['tags'] = []
+
+        if not set(header).issubset(set(['title', 'narratives','tags'])):
             print('WARNING: extra header components in {}'.format(ident))
             
         narratives = header.get('narratives', [])
@@ -249,7 +277,8 @@ def create_library_object(filename, header, content):
             print('WARNING: summary {} has no narratives.'.format(ident))
             narratives = []
 
-        obj = Summary(ident, header['title'], narratives)
+        obj = Summary(ident, header['title'], narratives, header['tags'])
+
     else:
         raise ValueError('unhandled file type: ' + filetype)
 

@@ -27,3 +27,11 @@ User stories belonging to this narrative:
 {{ obj.content }}
 
 {% endif %}
+
+<div id="dcppc-tags" style="visibility: hidden;">
+{% if obj.tags %}
+    {% for tag in obj.tags %}
+        <p>{{ tag }}</p>
+    {% endfor %}
+{% endif %}
+</div>
