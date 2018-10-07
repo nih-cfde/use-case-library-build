@@ -65,6 +65,22 @@ def main():
     
         if dry_run is False:
 
+
+
+            # NOTES:
+
+            # Make a new backup file,
+            # tear off the yaml header,
+            # apply the pandoc gfm to gfm 
+            # conversion step, then paste
+            # the yaml header back on.
+            # 
+            # Once that is all done,
+            # move the backup file to 
+            # the real file.
+
+
+
             # print md to screen
             cat_cmd = ['cat', md]
             cat_proc = subprocess.Popen(cat_cmd,
