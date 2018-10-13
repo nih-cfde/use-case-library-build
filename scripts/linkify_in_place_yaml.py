@@ -23,6 +23,8 @@ There is also a step at the end to apply a regular
 expression filter.
 """
 
+WORD_SOUP_FILE = 'word_soup.txt'
+
 def usage():
     print("linkify_in_place_yaml.py:")
     print("This script will search a pile of Markdown files with")
@@ -111,14 +113,32 @@ def main():
             pandoc_from_proc = subprocess.Popen(pandoc_from_cmd, 
                     stdin=cat_proc.stdout,
                     stdout=subprocess.PIPE)
-    
-            '''
-            # ---------------------------------
-            # If we were applying a filter,
-            # we would use these two steps:
 
-            # above, you would set:
-            FILTER = 'filters/parse_links.py'
+
+            ##########################
+            # Extract word soup from the
+            # YAML header components,
+            # and add them to the
+            # word soup.
+
+            for key in yaml_header:
+                value = yaml_header[key]
+                if type(value)==type(""):
+                    soup = value.split(" ")
+                    soup = [re.sub(r'\.$','',w) for w in soup]
+                    soup = [w.lower() for w in soup]
+                    with open(WORD_SOUP_FILE,'a') as f:
+                        f.write("\n".join(soup))
+                        f.write("\n")
+
+
+            ##########################
+            # Apply a custom panflute filter:
+            # 
+            # Walk the document and extract 
+            # word soup from the paragraphs
+
+            FILTER = os.path.join(os.getcwd(),'filter_word_soup.py')
 
             # filter: json to json
             pandoc_filter_cmd = [FILTER]
@@ -130,18 +150,6 @@ def main():
             pandoc_to_cmd = ['pandoc','-f','json','-t','gfm']
             pandoc_to_proc = subprocess.Popen(pandoc_to_cmd, 
                     stdin=pandoc_filter_proc.stdout,
-                    stdout=subprocess.PIPE)
-            '''
-
-            # -------------------------------------
-            # If we are not applying a filter,
-            # we skip straight to converting 
-            # the document back to Markdown.
-
-            # pandoc: json to markdown
-            pandoc_to_cmd = ['pandoc','-f','json','-t','gfm']
-            pandoc_to_proc = subprocess.Popen(pandoc_to_cmd, 
-                    stdin=pandoc_from_proc.stdout,
                     stdout=subprocess.PIPE)
 
             # we now have the text of the pandoc output
@@ -166,6 +174,7 @@ def main():
             head = yaml.dump(yaml_header, default_flow_style=False)
             head = re.sub('\n  ',' ',head)
 
+
             # write to target file
             with open(target,'w') as f:
                 f.write(delim)
@@ -185,6 +194,8 @@ def main():
 
             print("Dry run would have linkified document: %s"%(target),file=sys.stderr)
 
+        if kk==2:
+            break
 
 
 if __name__=="__main__":
