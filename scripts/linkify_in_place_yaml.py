@@ -164,6 +164,7 @@ def main():
             delim = '---\n'
 
             head = yaml.dump(yaml_header, default_flow_style=False)
+            head = re.sub('\n  ',' ',head)
 
             # write to target file
             with open(target,'w') as f:
@@ -183,6 +184,7 @@ def main():
             target = md
 
             print("Dry run would have linkified document: %s"%(target),file=sys.stderr)
+
 
 
 if __name__=="__main__":
