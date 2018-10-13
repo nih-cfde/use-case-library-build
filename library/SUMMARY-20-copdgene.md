@@ -1,15 +1,14 @@
 ---
 title: COPDGene Cohort Study with Imaging Data
-narratives:
+narratives: null
 ---
-
 **Scenario:**
 
 Samuel wants to study Chronic obstructive pulmonary disease (COPD), which is a chronic inflammatory lung disease that causes obstructed airflow from the lungs. He would like to search, explore, review and annotate chest CT images, as well as analyze genomic and phenotypic research data. Eventually, he'd like to integrate all of this data for use in a GWAS or PheWAS.
 
 **Current approach:**
 
-Genetic variants and CT imaging data are available in dbGaP, but only a fraction of the imaging data has been posted there. The format of the imaging data in dbGaP also makes it challenging to use. 
+Genetic variants and CT imaging data are available in dbGaP, but only a fraction of the imaging data has been posted there. The format of the imaging data in dbGaP also makes it challenging to use.
 
 **With Data Commons Phase 1:**
 

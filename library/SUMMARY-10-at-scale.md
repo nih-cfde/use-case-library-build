@@ -1,8 +1,7 @@
 ---
 title: Analysis at Scale
-narratives:
+narratives: null
 ---
-
 **Scenario:**
 
 I am working with a really large and complex dataset, stored across
@@ -23,7 +22,7 @@ on a large computing hub at my institution.
 **With Data Commons Phase 1:**
 
 Standards for interoperability of tools and harmonization of data and
-metadata will let me run this in the cloud, and allow me to run the 
+metadata will let me run this in the cloud, and allow me to run the
 same workflow on all of my data. Automating these processes both saves
 my time, and helps protect me from making errors.
 
@@ -31,7 +30,7 @@ my time, and helps protect me from making errors.
 
 Access to large datasets through single log-in. Data Commons will
 provide a collaborative environment for research and development. Instead
-of just using my idiosyncratic method, I can try validated workflows 
+of just using my idiosyncratic method, I can try validated workflows
 created by others. This will help me ensure that my results are robust
 and reproducible, and will also allow me to try analysis that are outside
 of my abiity to program myself.

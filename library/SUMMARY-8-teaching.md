@@ -1,8 +1,7 @@
 ---
 title: Teaching
-narratives:
+narratives: null
 ---
-
 **Scenario:**
 
 I am a teacher at a community college. I want a way for my students to
@@ -26,5 +25,3 @@ investigation of data.
 Training videos and workshops support continued learning. Community of
 developers and users within the Data Commons support citizen
 scientists.
-
-

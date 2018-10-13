@@ -5,7 +5,6 @@ user-stories:
 - USERSTORY-47
 - USERSTORY-48
 ---
-
 a. Perform alignment of the FASTQ files representing the GTEx raw data
 following quality control with a method such as Yet Another RNA
 Normalization software pipeline (YARN). Align the reads against the

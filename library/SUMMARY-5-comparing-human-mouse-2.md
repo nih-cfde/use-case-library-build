@@ -1,8 +1,7 @@
 ---
 title: Comparing Human and Mouse (patient focused)
-narratives:
+narratives: null
 ---
-
 **Scenario:**
 
 I have a patient with a new phenotype. I want to identify how common

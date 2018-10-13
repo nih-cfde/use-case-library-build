@@ -16,8 +16,7 @@ tags:
 - association testing
 - functional analysis
 ---
-
-### Scientific Objective 
+### Scientific Objective
 
 The primary objective of many TOPMed research projects is to
 identify genetic risk factors for biomedical phenotypes (such as

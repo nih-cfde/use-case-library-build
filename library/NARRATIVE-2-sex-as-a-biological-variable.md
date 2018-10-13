@@ -9,7 +9,6 @@ epics:
 - EPIC-11
 - EPIC-12
 ---
-
 Sexual dimorphism is the term that refers to differences between males
 and females of the same species. In medicine, we study sex and gender
 medicine with the goal of understanding fundamental differences of
