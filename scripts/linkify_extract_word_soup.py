@@ -7,40 +7,44 @@ from collections import OrderedDict
 from parse_input_files import parse_library_md
 
 """
-Linkify Script for Markdown + YAML Headers
+Linkify Extract Word Soup
+Markdown + YAML Headers
 
-This script linkifies the body of Markdown documents
-with YAML headers by removing the header, using Pandoc
-to linkify the body, and reattaching the header.
 
-The linkification step uses Pandoc to convert
-Github-flavored markdown to Github-flavored Markdown.
+This script iterates over every Markdown file in the
+library and performs the following set of operations:
 
-There is an optional step in the middle to apply
-a panflute filter.
+- remove the YAML header
+- extract words from the YAML header strings (into word_soup.txt)
+- pass the body through Pandoc Github-flavored markdown to JSON
+- apply a panflute filter to extract words from paragraphs (into word_soup.txt)
+- pass the body back through Pandoc JSON to Github-flavored markdown
+- re-attach the YAML header
+- dump the header + body into the original Markdown file
 
-There is also a step at the end to apply a regular
-expression filter.
+The end result is word_soup.txt, which can be used to generate
+a list of most common words, which will lead to a pool of tags.
 """
 
 WORD_SOUP_FILE = 'word_soup.txt'
 
 def usage():
-    print("linkify_in_place_yaml.py:")
-    print("This script will search a pile of Markdown files with")
-    print("YAML headers for hyperlinks and turn them into markdownified")
-    print("hyperlinks in-place.")
-    print("WARNING: This is a destructive task.")
+    print("linkify_extract_word_soup.py:")
+    print("This script iterates over each Markdown file with YAML headers,")
+    print("linkifies the body, and extracts a word soup from the header and")
+    print("body for the purposes of building a tag list.")
+    print("")
+    print("WARNING: This task will modify documents in-place.")
     print("")
     print("Usage:")
-    print("    ./linkify_in_place_yaml.py [FLAGS] <path-to-markdown-files>")
+    print("    ./linkify_extract_word_soup.py [FLAGS] <path-to-markdown-files>")
     print("")
     print("        -n | --dry-run       Print the names of files that would be")
     print("                             changed if the linkify_in_place script")
     print("                             were run.")
     print("")
     print("Example:")
-    print("    ./linkify_in_place_yaml.py ../library")
+    print("    ./linkify_extract_word_soup.py ../library")
     print("")
     exit(1)
 
@@ -194,7 +198,7 @@ def main():
 
             print("Dry run would have linkified document: %s"%(target),file=sys.stderr)
 
-        if kk==2:
+        if kk==15:
             break
 
 
