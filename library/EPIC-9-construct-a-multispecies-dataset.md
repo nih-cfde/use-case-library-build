@@ -7,7 +7,6 @@ user-stories:
 - USERSTORY-42
 - USERSTORY-43
 ---
-
 a. The analysis challenge is currently that each of the MODs using
 different file formats and semantics to record phenotypic data, and
 not all MODs record sex-specific annotations. There are challenges

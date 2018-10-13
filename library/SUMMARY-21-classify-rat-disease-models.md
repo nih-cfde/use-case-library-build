@@ -1,8 +1,7 @@
 ---
 title: Classify rat disease models
-narratives:
+narratives: null
 ---
-
 **Scenario:**
 
 I want to identify and classify rat disease models for preclinical studies by comparing phenotype and genotype profiles of several strains with genotype and phenotype profiles of cohorts in TOPMED with particular diagnoses such as hypertension, cardiomegaly, stroke and coronary artery disease.

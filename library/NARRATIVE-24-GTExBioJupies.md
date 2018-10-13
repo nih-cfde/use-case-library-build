@@ -7,7 +7,6 @@ epics:
 - EPIC-46
 - EPIC-47
 ---
-
 ### Scientific Objective
 
-To conduct exploratory data analysis of the RNA-seq data collected for the GTEx project, which contains thousands of tissue samples from hundreds of donors. 
+To conduct exploratory data analysis of the RNA-seq data collected for the GTEx project, which contains thousands of tissue samples from hundreds of donors.

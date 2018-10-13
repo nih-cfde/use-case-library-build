@@ -3,7 +3,6 @@ title: Governance and Audits
 narratives:
 - NARRATIVE-12
 ---
-
 **Scenario:**
 
 Sarah, who represents a Governance Authority (the Authority), is performing a security audit on a resource in the Data Commons. She is interested in how datasets are being used by researchers, and whether data use is a good fit for the statement of research purpose for a study.

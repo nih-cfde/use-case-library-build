@@ -2,11 +2,8 @@
 title: Identify TOPmed records in which HDL has been measured, and to which the user has access for a given research purpose.
 blurb: Develop an analysis plan for phenotypic analysis.
 user-stories:
-user-stories:
 - USERSTORY-2
-
 ---
-
 1. We aim to perform an analysis across the entire phenome using an
 ontology-based analysis. Phenotype ontologies are used to describe
 phenotypic outcomes of knockouts and other genetic modifications of
@@ -23,4 +20,3 @@ rule” should be followed, which states that annotations to ontology
 terms are “inherited” up is_a relations. We can then perform this
 separately for male and female organisms, and perform a chi-squared or
 Fisher exact test for each ontology term.
-

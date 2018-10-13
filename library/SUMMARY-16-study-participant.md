@@ -3,7 +3,6 @@ title: Study Participant Summary
 narratives:
 - NARRATIVE-16
 ---
-
 **Scenario**
 
 As a participant in a study, Jennifer would like to be able to see a summary of how many users and/or analysis projects have utilized data from the study in which she is a participant.

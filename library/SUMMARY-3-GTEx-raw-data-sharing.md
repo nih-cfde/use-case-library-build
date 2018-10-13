@@ -3,7 +3,6 @@ title: GTEx - Sharing Raw Data
 narratives:
 - NARRATIVE-3
 ---
-
 **Scenario**
 
 Mamie wants to use existing raw data on GTEx to use as input for evaluating a new computational method

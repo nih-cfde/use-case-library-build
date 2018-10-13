@@ -4,5 +4,4 @@ blurb: FAIR Assessment using FAIRshake user narrative
 user-stories:
 - USERSTORY-70
 - USERSTORY-71
-
 ---

@@ -5,7 +5,6 @@ blurb: Prepare a report documenting how frequently a resource is being used by c
 epics:
 - EPIC-16
 ---
-
 ### Scientific Objective
 
 A provider of a resource on the Data Commons would like to know if their resource is properly credited/acknowledged

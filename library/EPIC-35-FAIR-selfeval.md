@@ -5,6 +5,4 @@ user-stories:
 - USERSTORY-66
 - USERSTORY-67
 - USERSTORY-68
-
 ---
-

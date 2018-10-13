@@ -1,8 +1,7 @@
 ---
 title: Sustainability through Partnership
-narratives:
+narratives: null
 ---
-
 **Scenario:**
 
 The “GitHub”, “Wikipedia”, and ____ of biological and life science data.
