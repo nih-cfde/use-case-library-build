@@ -4,7 +4,7 @@ narratives: null
 ---
 **Scenario:**
 
-The “GitHub”, “Wikipedia”, and ____ of biological and life science data.
+The "GitHub" or "Wikipedia" of biological and life science data.
 
 **Current approach:**
 
