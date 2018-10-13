@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 import os, re, sys
 import subprocess
+import oyaml as yaml
+from collections import OrderedDict
+
 from parse_input_files import parse_library_md
 
 """
@@ -71,24 +74,24 @@ def main():
             if( bool1 and bool2 and bool3):
                 markdown_files.append( os.path.join( fdir, f ) )
 
-    # Here is the strategy:
-    # For each markdown document:
-    #    Tear off the yaml header
-    #    Make a secondary file (body only)
-    #    Apply pandoc gfm to json
-    #    (Apply panflute filter to linkify)
-    #    Apply json to gfm
-    #    Paste yaml header back on
-    #    Output to file 
-
+    ########################################
+    # Linkify strategy for Markdown + YAML:
+    # - tear off yaml header
+    # - store body in temp file
+    # - apply pandoc gfm to json with temp file
+    # - (optional: apply panflute filter)
+    # - apply pandoc json to gfm
+    # - paste YAML header back on
+    # - output to file
+    ########################################
 
     # Linkify each markdown document found
-    for md in markdown_files:
+    for kk, md in enumerate(markdown_files):
     
         print("-"*40,file=sys.stderr)
         print("Linkifying (in-place) document: %s"%(md),file=sys.stderr)
 
-        if (dry_run is False) or (True):
+        if dry_run is False:
 
             yaml_header, body = parse_library_md(md)
 
@@ -160,13 +163,14 @@ def main():
 
             delim = '---\n'
 
+            head = yaml.dump(yaml_header, default_flow_style=False)
+
             # write to target file
             with open(target,'w') as f:
                 f.write(delim)
-                for key in yaml_header.keys():
-                    f.write("%s: %s\n"%(key,yaml_header[key]))
+                f.write(head)
                 f.write(delim)
-                f.write("\n".join(body))
+                f.write(body)
 
             # remove backup file
             os.remove(backup_md)
@@ -179,7 +183,7 @@ def main():
             target = md
 
             print("Dry run would have linkified document: %s"%(target),file=sys.stderr)
-        
+
 
 if __name__=="__main__":
     main()
