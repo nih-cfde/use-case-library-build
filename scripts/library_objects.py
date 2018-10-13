@@ -79,7 +79,10 @@ class Summary(LibraryObject):
     def resolve_references(self, obj_dict):
         x = []
         for narrative_str in self.narratives_str:
-            narrative_obj = obj_dict[process_identifier(narrative_str)]
+            try:
+                narrative_obj = obj_dict[process_identifier(narrative_str)]
+            except KeyError:
+                raise Exception("ERROR: Could not find narrative %s"%(narrative_str))
             narrative_obj.set_summary(self)
             x.append(narrative_obj)
         self.narratives = x
