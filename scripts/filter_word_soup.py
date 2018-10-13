@@ -2,7 +2,8 @@
 from panflute import *
 import sys, os, re, json
 
-from linkify_extract_word_soup import WORD_SOUP_FILE
+from extract_word_soup import WORD_SOUP_FILE
+from extract_word_soup import STOP_WORD_LIST
 
 def main(doc=None):
     return run_filter(
@@ -19,11 +20,13 @@ def linkify(elem, doc):
     if type(elem)==Str:
         word = elem.text
         word = re.sub(r'\.$','',word)
+        word = re.sub(r',$','',word)
         word = word.lower()
-        doc.wordlist.append(word)
+        if word not in STOP_WORD_LIST:
+            doc.wordlist.append(word)
 
 def finalize(doc):
-    with open('wat.file','a') as f:
+    with open(WORD_SOUP_FILE,'a') as f:
         f.write("\n".join(doc.wordlist))
 
 
