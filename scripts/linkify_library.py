@@ -7,7 +7,7 @@ from collections import OrderedDict
 from parse_input_files import parse_library_md
 
 """
-Linkify Extract Word Soup
+Linkify Use Case Library
 Markdown + YAML Headers
 
 
@@ -15,36 +15,28 @@ This script iterates over every Markdown file in the
 library and performs the following set of operations:
 
 - remove the YAML header
-- extract words from the YAML header strings (into word_soup.txt)
 - pass the body through Pandoc Github-flavored markdown to JSON
-- apply a panflute filter to extract words from paragraphs (into word_soup.txt)
-- pass the body back through Pandoc JSON to Github-flavored markdown
+- pass the body back through Pandoc JSON to Github-flavored markdown (linkify)
 - re-attach the YAML header
 - dump the header + body into the original Markdown file
-
-The end result is word_soup.txt, which can be used to generate
-a list of most common words, which will lead to a pool of tags.
 """
 
-WORD_SOUP_FILE = 'word_soup.txt'
-
 def usage():
-    print("linkify_extract_word_soup.py:")
+    print("linkify_library.py:")
     print("This script iterates over each Markdown file with YAML headers,")
-    print("linkifies the body, and extracts a word soup from the header and")
-    print("body for the purposes of building a tag list.")
+    print("removes the YAML header, linkifies the body with pandoc, and")
+    print("re-attaches the YAML header.")
     print("")
     print("WARNING: This task will modify documents in-place.")
     print("")
     print("Usage:")
-    print("    ./linkify_extract_word_soup.py [FLAGS] <path-to-markdown-files>")
+    print("    ./linkify_library.py [FLAGS] <path-to-markdown-files>")
     print("")
     print("        -n | --dry-run       Print the names of files that would be")
-    print("                             changed if the linkify_in_place script")
-    print("                             were run.")
+    print("                             changed if the script were run.")
     print("")
     print("Example:")
-    print("    ./linkify_extract_word_soup.py ../library")
+    print("    ./linkify_library.py ../library")
     print("")
     exit(1)
 
@@ -85,7 +77,6 @@ def main():
     # - tear off yaml header
     # - store body in temp file
     # - apply pandoc gfm to json with temp file
-    # - (optional: apply panflute filter)
     # - apply pandoc json to gfm
     # - paste YAML header back on
     # - output to file
@@ -118,42 +109,10 @@ def main():
                     stdin=cat_proc.stdout,
                     stdout=subprocess.PIPE)
 
-
-            ##########################
-            # Extract word soup from the
-            # YAML header components,
-            # and add them to the
-            # word soup.
-
-            for key in yaml_header:
-                value = yaml_header[key]
-                if type(value)==type(""):
-                    soup = value.split(" ")
-                    soup = [re.sub(r'\.$','',w) for w in soup]
-                    soup = [w.lower() for w in soup]
-                    with open(WORD_SOUP_FILE,'a') as f:
-                        f.write("\n".join(soup))
-                        f.write("\n")
-
-
-            ##########################
-            # Apply a custom panflute filter:
-            # 
-            # Walk the document and extract 
-            # word soup from the paragraphs
-
-            FILTER = os.path.join(os.getcwd(),'filter_word_soup.py')
-
-            # filter: json to json
-            pandoc_filter_cmd = [FILTER]
-            pandoc_filter_proc = subprocess.Popen(pandoc_filter_cmd, 
-                    stdin=pandoc_from_proc.stdout,
-                    stdout=subprocess.PIPE)
-            
-            # pandoc: json to markdown
+            # pandoc: json to md
             pandoc_to_cmd = ['pandoc','-f','json','-t','gfm']
             pandoc_to_proc = subprocess.Popen(pandoc_to_cmd, 
-                    stdin=pandoc_filter_proc.stdout,
+                    stdin=pandoc_from_proc.stdout,
                     stdout=subprocess.PIPE)
 
             # we now have the text of the pandoc output
@@ -197,9 +156,6 @@ def main():
             target = md
 
             print("Dry run would have linkified document: %s"%(target),file=sys.stderr)
-
-        if kk==15:
-            break
 
 
 if __name__=="__main__":
