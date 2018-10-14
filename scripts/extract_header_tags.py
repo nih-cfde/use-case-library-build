@@ -134,25 +134,19 @@ def main():
 
             delim = '---\n'
 
-            target = re.sub('.md$','.md.backup',md)
             # write to target file
-            with open(target,'w') as f:
+            with open(md,'w') as f:
                 f.write(delim)
                 f.write(head)
                 f.write(delim)
                 f.write(body)
 
             print("Finished extracting header tags from document: %s"%(target),file=sys.stderr)
+            print("Extracted tags: %s"%( ", ".join(tags) ))
 
         else:
 
-            # target file is same as source/input file
-            target = md
-
-            print("Dry run would have extracted header tags from document: %s"%(target),file=sys.stderr)
-
-        if kk==3:
-            break
+            print("Dry run would have extracted header tags from document: %s"%(md),file=sys.stderr)
 
 
 if __name__=="__main__":
