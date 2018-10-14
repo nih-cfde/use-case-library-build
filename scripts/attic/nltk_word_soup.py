@@ -32,6 +32,7 @@ def step1_extract():
 
 
 def step2_nltk():
+
     bigram_measures = nltk.collocations.BigramAssocMeasures()
     
     # change this to read in your data

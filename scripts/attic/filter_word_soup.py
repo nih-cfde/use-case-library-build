@@ -21,6 +21,7 @@ def linkify(elem, doc):
         word = elem.text
         word = re.sub(r'\.$','',word)
         word = re.sub(r',$','',word)
+        word = re.sub(r';$','',word)
         word = word.lower()
         if word not in STOP_WORD_LIST:
             doc.wordlist.append(word)

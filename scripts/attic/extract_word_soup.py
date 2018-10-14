@@ -10,7 +10,6 @@ WORD_SOUP_FILE = 'word_soup.txt'
 with open('stop_words.txt','r') as f:
     STOP_WORD_LIST = f.readlines()
 STOP_WORD_LIST = [word.strip() for word in STOP_WORD_LIST]
-STOP_WORD_LIST += ['&']
 
 
 """
@@ -141,6 +140,7 @@ def main():
                     soup = value.split(" ")
                     soup = [re.sub(r'\.$','',w) for w in soup]
                     soup = [w.lower() for w in soup]
+                    soup = [w for w in soup if w not in STOP_WORD_LIST]
                     with open(WORD_SOUP_FILE,'a') as f:
                         f.write("\n".join(soup))
                         f.write("\n")
