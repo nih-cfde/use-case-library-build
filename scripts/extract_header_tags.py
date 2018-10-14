@@ -141,7 +141,7 @@ def main():
                 f.write(delim)
                 f.write(body)
 
-            print("Finished extracting header tags from document: %s"%(target),file=sys.stderr)
+            print("Finished extracting header tags from document: %s"%(md),file=sys.stderr)
             print("Extracted tags: %s"%( ", ".join(tags) ))
 
         else:
