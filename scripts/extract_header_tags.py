@@ -123,13 +123,10 @@ def main():
             # Step 3: clean up tags (lowercase, remove dupes, remove overlap)
             tags = [tag.lower() for tag in tags]
             tags = list(set(tags))
-            import pdb; pdb.set_trace()
             tags = scrub_overlap(tags)
 
             # Step 4: tag stemming
             lemma = WordNetLemmatizer()
-            print(list(lemma.lemmatize(tag,'n') for tag in tags))
-            print(yaml_header)
             yaml_header['tags'] = tags
 
             head = yaml.dump(yaml_header, default_flow_style=False)
