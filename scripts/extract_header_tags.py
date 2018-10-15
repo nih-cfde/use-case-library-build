@@ -3,7 +3,7 @@ import os, re, sys
 import subprocess
 import oyaml as yaml
 from collections import OrderedDict
-from nltk.stem import WordNetLemmatizer
+#from nltk.stem import WordNetLemmatizer
 from parse_input_files import parse_library_md
 
 from utilities import scrub_overlap
@@ -125,8 +125,7 @@ def main():
             tags = list(set(tags))
             tags = scrub_overlap(tags)
 
-            # Step 4: tag stemming
-            lemma = WordNetLemmatizer()
+            #lemma = WordNetLemmatizer()
             yaml_header['tags'] = tags
 
             head = yaml.dump(yaml_header, default_flow_style=False)
