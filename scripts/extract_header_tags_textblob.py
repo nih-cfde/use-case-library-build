@@ -117,8 +117,11 @@ def main():
             tags = scrub_overlap(tags)
 
             # Step 4: remove tags
-            ignore_tags = ['interesting','create','explore','perform','build','develop','data','associate','sexual','so','testing','comparing','kcs','qq','go','conduct']
+            ignore_tags = ['interesting','create','determine','explore','old female','old tissues','perform', 'build','develop','data','associate','sexual','so', 'testing','comparing','kcs','qq','go','conduct', 'raw','list','id','ids']
             tags = [j for j in tags if j not in ignore_tags]
+
+            # Step 5: sort tags
+            tags = sorted(tags)
 
             yaml_header['tags'] = tags
 
