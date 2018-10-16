@@ -23,6 +23,7 @@ python: Python
 qc: QC
 qq: Quantile
 sra: SRA
+sexual: sex
 topmed: TOPMed
 uids: UIDs
 vcf: VCF

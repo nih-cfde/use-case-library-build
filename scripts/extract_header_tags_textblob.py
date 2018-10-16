@@ -10,6 +10,9 @@ from parse_input_files import parse_library_md
 from utilities import scrub_overlap
 
 
+TEXTBLOB_IGNORE = 'textblob_ignore.dat'
+TEXTBLOB_REPLACE = 'textblob_replace.dat'
+
 """
 Extract Tags from YAML Header
 
@@ -116,10 +119,10 @@ def main():
             # Step 3: clean up tags (case, remove dupes, remove overlap)
             tags = list(set(tags))
             tags = scrub_overlap(tags)
-            tags = fix_case(tags)
+            tags = fix_replace(tags)
 
             # Step 4: remove tags
-            with open('ignore_tags.dat','r') as f:
+            with open(TEXTBLOB_IGNORE,'r') as f:
                 ignore_tags = [line for line in f.readlines() if line[0] != '#']
             tags = [j for j in tags if j not in ignore_tags]
 
@@ -127,7 +130,7 @@ def main():
             tags = sorted(tags)
 
             if len(tags)>0:
-                yaml_header['tags'] = tags
+                yaml_header['automatic_tags'] = tags
 
             head = yaml.dump(yaml_header, default_flow_style=False)
             head = re.sub('\n  ',' ',head)
@@ -149,9 +152,12 @@ def main():
             print("Dry run would have extracted header tags from document: %s"%(md),file=sys.stderr)
 
 
-def fix_case(tags):
-
-    with open('fix_case.dat','r') as f:
+def fix_replace(tags):
+    """
+    Perform replacement of phrases using the 
+    list in the replace file.
+    """
+    with open(TEXTBLOB_REPLACE,'r') as f:
         lines = f.readlines()
 
     case_fixes = {}
