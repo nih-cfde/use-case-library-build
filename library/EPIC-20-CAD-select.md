@@ -3,12 +3,6 @@ title: Move the cases and controls into a workspace
 blurb: Coronary artery disease (CAD) genome-wide association user narrative.
 user-stories:
 - USERSTORY-2
-tags:
-- genome-wide association user narrative
-- cad
-- coronary
-- artery disease
-- move
 ---
 Bring over relevant metadata, phenotypes, and genotypes into workspaces.
 Upload additional proprietary datasets to the workspace.

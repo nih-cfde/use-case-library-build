@@ -2,9 +2,6 @@
 title: View Data Access and Attribution Logs
 narratives:
 - NARRATIVE-13
-tags:
-- data access
-- attribution logs
 ---
 **Scenario:**
 

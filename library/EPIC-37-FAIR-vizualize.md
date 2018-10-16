@@ -3,10 +3,4 @@ title: Visualize FAIRness scores and display the scores of biomedical digital ob
 blurb: FAIR Assessment using FAIRshake user narrative
 user-stories:
 - USERSTORY-70
-tags:
-- biomedical digital objects
-- fairshake
-- fair assessment
-- user narrative
-- visualize fairness
 ---

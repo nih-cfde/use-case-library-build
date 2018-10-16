@@ -4,10 +4,6 @@ persona: PERSONA-5-data-provider.md
 blurb: Prepare a report documenting how frequently a resource is being used by consumers in the community.
 epics:
 - EPIC-16
-tags:
-- data access
-- prepare
-- attribution log
 ---
 ### Scientific Objective
 

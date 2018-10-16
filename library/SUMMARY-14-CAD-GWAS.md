@@ -2,8 +2,6 @@
 title: Coronary Artery GWAS Summary
 narratives:
 - NARRATIVE-14
-tags:
-- coronary artery gwas summary
 ---
 **Scenarios**
 

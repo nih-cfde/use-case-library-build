@@ -5,9 +5,4 @@ user-stories:
 - USERSTORY-2
 - USERSTORY-3
 - USERSTORY-9
-tags:
-- genome-wide association user narrative
-- cad
-- coronary artery disease cases
-- identify
 ---

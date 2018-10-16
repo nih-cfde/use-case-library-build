@@ -7,11 +7,6 @@ epics:
 - EPIC-40
 - EPIC-41
 - EPIC-42
-tags:
-- perform
-- copdgene cohort
-- imaging data
-- clinical genomic study
 ---
 ### Scientific Objective
 

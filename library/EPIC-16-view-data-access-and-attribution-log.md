@@ -4,9 +4,4 @@ blurb: Identify TOPMed participants whose data use restrictions are compatible f
 user-stories:
 - USERSTORY-2
 - USERSTORY-59
-tags:
-- data-use
-- data use restrictions
-- coronary artery diseases research
-- identify topmed
 ---

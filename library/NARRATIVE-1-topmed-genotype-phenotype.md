@@ -11,10 +11,10 @@ epics:
 - EPIC-6
 - EPIC-7
 tags:
-- genetic risk factors
-- identify
-- topmed genotype-phenotype
-- biomedical phenotypes
+- genotype
+- phenotype
+- association testing
+- functional analysis
 ---
 ### Scientific Objective
 
