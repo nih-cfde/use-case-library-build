@@ -110,11 +110,15 @@ def main():
             for sentence in sentences:
 
                 blob = TextBlob(sentence)
-                tags += blob.noun_phrases
+                tags += [str(j) for j in blob.noun_phrases]
 
             # Step 3: clean up tags (case, remove dupes, remove overlap)
             tags = list(set(tags))
             tags = scrub_overlap(tags)
+
+            # Step 4: remove tags
+            ignore_tags = ['interesting','create','explore','perform','build','develop','data','associate','sexual','so','testing','comparing','kcs','qq','go','conduct']
+            tags = [j for j in tags if j not in ignore_tags]
 
             yaml_header['tags'] = tags
 
