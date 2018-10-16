@@ -4,7 +4,7 @@ output: All logged activity for the specified resources during the specified tim
 task: Search for list of data use activity
 tags:
 - time window
-- start date
-- data commons
 - uid
+- data commons
+- start date
 ---

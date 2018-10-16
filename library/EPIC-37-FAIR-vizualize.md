@@ -4,9 +4,9 @@ blurb: FAIR Assessment using FAIRshake user narrative
 user-stories:
 - USERSTORY-70
 tags:
-- visualize fairness
 - fair assessment
 - user narrative
+- visualize fairness
 - biomedical digital objects
 - fairshake
 ---

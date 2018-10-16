@@ -5,7 +5,7 @@ task: Harmonize phenotypes across studies (transform dbGaP variables as needed)
 tags:
 - harmonized
 - topmed
-- multi-study phenotypic data
 - selected
 - variable identifiers
+- multi-study phenotypic data
 ---

@@ -3,8 +3,8 @@ title: FAIR Assessment using FAIRshake Summary
 narratives:
 - NARRATIVE-19
 tags:
-- fair assessment
 - fairshake summary
+- fair assessment
 ---
 **Scenario:**
 

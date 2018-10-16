@@ -3,8 +3,8 @@ input: All GTEx tissue samples and selected metadata elements such as tissue typ
 output: Two cohorts of GTEx tissue samples which will be used to generate a signature
 task: Use the dedicated application that is part of BioJupies to create a collection of signatures for young vs old tissues across all GTEx tissues
 tags:
-- metadata elements
 - gtex
-- tissue type
+- metadata elements
 - tissue samples
+- tissue type
 ---

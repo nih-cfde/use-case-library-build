@@ -4,6 +4,6 @@ blurb: Evaluate and refine association test results.
 user-stories:
 - USERSTORY-3-zip
 tags:
-- refine association test results
 - evaluate
+- refine association test results
 ---

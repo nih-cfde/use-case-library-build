@@ -7,6 +7,6 @@ user-stories:
 tags:
 - institutions access
 - pre-authorize researchers
-- institutional researchers
 - apply
+- institutional researchers
 ---

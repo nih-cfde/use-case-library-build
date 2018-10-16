@@ -6,9 +6,9 @@ user-stories:
 - USERSTORY-67
 - USERSTORY-68
 tags:
-- fair assessment
-- user narrative
-- fairness
 - digital object
+- fair assessment
+- fairness
+- user narrative
 - fairshake
 ---

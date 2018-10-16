@@ -4,8 +4,8 @@ output: Table of anatomical aberrations associated with the genetic and phenotyp
 task: Perform machine learning analysis on the images
 tags:
 - phenotypic variations
+- machine learning analysis
 - rendered copdgene
 - cohort images
 - anatomical aberrations
-- machine learning analysis
 ---

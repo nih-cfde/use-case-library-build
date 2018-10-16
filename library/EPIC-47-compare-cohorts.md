@@ -7,7 +7,7 @@ user-stories:
 - USERSTORY-83
 - USERSTORY-84
 tags:
-- gtex
-- old tissues
 - collection
+- old tissues
+- gtex
 ---

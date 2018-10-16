@@ -4,8 +4,8 @@ output: Table of GO or other pathway analysis terms that characterize the sexual
 task: Correlate differences in phenotype and expression levels with GO terms
 tags:
 - gene expressions
-- statistical
 - dimorphic phenotypes
 - organ systems
 - pathway analysis terms
+- statistical
 ---

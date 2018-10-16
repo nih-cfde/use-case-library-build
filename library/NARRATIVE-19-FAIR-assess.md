@@ -8,9 +8,9 @@ epics:
 - EPIC-37
 - EPIC-38
 tags:
-- software toolkit
-- fair assessment
 - biomedical digital research objects
+- fair assessment
 - assesses compliance
+- software toolkit
 - fairshake
 ---

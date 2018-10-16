@@ -5,7 +5,6 @@ task: Search for expression data
 tags:
 - phenotypic data
 - genotype-tissue expression
-- list
-- gtex
 - expression values
+- gtex
 ---

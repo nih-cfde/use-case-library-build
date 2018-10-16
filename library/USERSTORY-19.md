@@ -4,7 +4,7 @@ output: Reformatted variant-based functional annotations
 task: Parse WGSA output to facilitate queries
 tags:
 - reformatted
-- variant-based
-- functional annotations
 - wgsa
+- functional annotations
+- variant-based
 ---

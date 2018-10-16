@@ -4,6 +4,6 @@ output: Table of correlations of distribution of phenotype in organ systems with
 task: Correlate phenotypes with expression levels
 tags:
 - organ systems
-- statistical
 - chi-square results
+- statistical
 ---

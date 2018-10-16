@@ -4,6 +4,6 @@ output: NIH DC/AWS/GCP account
 task: Establish account(s) on NIH Data Commons platform(s)
 tags:
 - responsibility commitment
-- financial
 - nih dc/aws/gcp
+- financial
 ---

@@ -7,6 +7,6 @@ user-stories:
 - USERSTORY-8
 - USERSTORY-9
 tags:
-- prepare
 - genotypic data
+- prepare
 ---

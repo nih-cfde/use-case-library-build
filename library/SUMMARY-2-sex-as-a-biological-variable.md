@@ -3,8 +3,8 @@ title: Sex as a Biological Variable
 narratives:
 - NARRATIVE-2
 tags:
-- biological
 - sex
+- biological
 ---
 **Scenario**
 

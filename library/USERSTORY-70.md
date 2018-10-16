@@ -5,6 +5,6 @@ task: Use the FAIRshake Chrome extension and Bookmarklet to visualize the FAIRsh
 tags:
 - visualization
 - digital object
-- biomedical
 - fairshake chrome
+- biomedical
 ---

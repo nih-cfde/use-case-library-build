@@ -6,7 +6,7 @@ tags:
 - harmonized
 - genomic resources
 - selected
-- multi-study phenotypic data
 - multiple species
 - variable identifiers
+- multi-study phenotypic data
 ---

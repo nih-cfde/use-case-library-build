@@ -8,7 +8,7 @@ user-stories:
 - USERSTORY-84
 tags:
 - old females
-- gene expression
 - different brain regions
 - differential
+- gene expression
 ---

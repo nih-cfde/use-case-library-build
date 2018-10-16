@@ -5,7 +5,7 @@ task: Finalize dataset
 tags:
 - phenotype data
 - gene ontologies
-- expression
-- single
 - phenotypic data files
+- single
+- expression
 ---

@@ -3,11 +3,11 @@ input: Imaging features of interest and table of anatomical aberrations associat
 output: A notebook configuration JSON file which will be used by the BioJupies API to generate the notebook containing an analysis of the GTEx samples
 task: Generate subject lists and variables for subsequent analyses
 tags:
-- notebook configuration
 - phenotypic variations
-- gtex
 - biojupies api
 - imaging
 - anatomical aberrations
 - json
+- notebook configuration
+- gtex
 ---

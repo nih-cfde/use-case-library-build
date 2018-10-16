@@ -3,7 +3,7 @@ input: A list of digital objects to be assessed for FAIRness and the FAIRshake A
 output: A web-based fairness assessment
 task: Use the FAIRshake API and the FAIRshake website to create a project and submit a list of digital objects to be assessed for FAIRness.
 tags:
+- fairshake api
 - fairness assessment
 - digital objects
-- fairshake api
 ---

@@ -11,9 +11,9 @@ epics:
 - EPIC-6
 - EPIC-7
 tags:
+- identify
 - topmed genotype-phenotype
 - genetic risk factors
-- identify
 - biomedical phenotypes
 ---
 ### Scientific Objective
