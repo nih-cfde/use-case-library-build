@@ -44,6 +44,8 @@ def usage():
     print("")
     exit(1)
 
+
+
 def main():
 
     if(len(sys.argv)<2):
@@ -108,22 +110,24 @@ def main():
             # Step 2: extract noun phrases
             tags = []
             for sentence in sentences:
-
                 blob = TextBlob(sentence)
                 tags += [str(j) for j in blob.noun_phrases]
 
             # Step 3: clean up tags (case, remove dupes, remove overlap)
             tags = list(set(tags))
             tags = scrub_overlap(tags)
+            tags = fix_case(tags)
 
             # Step 4: remove tags
-            ignore_tags = ['interesting','create','determine','explore','old female','old tissues','perform', 'build','develop','data','associate','sexual','so', 'testing','comparing','kcs','qq','go','conduct', 'raw','list','id','ids']
+            with open('ignore_tags.dat','r') as f:
+                ignore_tags = [line for line in f.readlines() if line[0] != '#']
             tags = [j for j in tags if j not in ignore_tags]
 
             # Step 5: sort tags
             tags = sorted(tags)
 
-            yaml_header['tags'] = tags
+            if len(tags)>0:
+                yaml_header['tags'] = tags
 
             head = yaml.dump(yaml_header, default_flow_style=False)
             head = re.sub('\n  ',' ',head)
@@ -143,6 +147,34 @@ def main():
         else:
 
             print("Dry run would have extracted header tags from document: %s"%(md),file=sys.stderr)
+
+
+def fix_case(tags):
+
+    with open('fix_case.dat','r') as f:
+        lines = f.readlines()
+
+    case_fixes = {}
+    for line in lines:
+        (k,v) = line.split(": ")
+        case_fixes[k] = v
+
+    new_tags = []
+    for tag in tags:
+
+        new_tag = tag
+
+        for case_fix in case_fixes.keys():
+            if case_fix in new_tag:
+                r = case_fix
+                s = case_fixes[r]
+                new_tag = re.sub(r,s,new_tag)
+
+        new_tags.append(new_tag)
+
+    return new_tags
+
+
 
 
 if __name__=="__main__":
