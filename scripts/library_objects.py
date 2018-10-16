@@ -232,9 +232,14 @@ def create_library_object(filename, header, content):
     if filetype == 'PERSONA':
         if 'tags' not in header:
             header['tags'] = []
+        if 'automatic_tags' not in header:
+            header['automatic_tags'] = []
 
-        if set(header) != set(['title', 'blurb','automatic_tags','tags']):
+        required = ['title', 'blurb','automatic_tags','tags']
+        if set(header) != set(required):
             print('WARNING: extra header components in {}'.format(ident))
+            print('header   = %s'%(", ".join(header.keys())))
+            print('required = %s'%(", ".join(required)))
 
         obj = Persona(ident, header['title'], header['blurb'], 
                 header['automatic_tags']+header['tags'])
@@ -242,9 +247,14 @@ def create_library_object(filename, header, content):
     elif filetype == 'USER STORY':
         if 'tags' not in header:
             header['tags'] = []
+        if 'automatic_tags' not in header:
+            header['automatic_tags'] = []
 
-        if set(header) != set(['input','output','task','automatic_tags','tags']):
+        required = ['input','output','task','automatic_tags','tags']
+        if set(header) != set(required):
             print('WARNING: extra header components in {}'.format(ident))
+            print('header   = %s'%(", ".join(header.keys())))
+            print('required = %s'%(", ".join(required)))
             
         obj = UserStory(ident, header['input'], header['output'], header['task'], 
                 header['automatic_tags']+header['tags'])
@@ -252,9 +262,14 @@ def create_library_object(filename, header, content):
     elif filetype == 'NARRATIVE':
         if 'tags' not in header:
             header['tags'] = []
+        if 'automatic_tags' not in header:
+            header['automatic_tags'] = []
 
-        if not set(header).issubset(set(['title','blurb', 'persona', 'epics','automatic_tags','tags'])):
+        required = ['title','blurb', 'persona', 'epics','automatic_tags','tags']
+        if set(header) != set(required):
             print('WARNING: extra header components in {}'.format(ident))
+            print('header   = %s'%(", ".join(header.keys())))
+            print('required = %s'%(", ".join(required)))
             
         epics = header.get('epics', [])
         if not epics:
@@ -267,9 +282,14 @@ def create_library_object(filename, header, content):
     elif filetype == 'EPIC':
         if 'tags' not in header:
             header['tags'] = []
+        if 'automatic_tags' not in header:
+            header['automatic_tags'] = []
 
-        if set(header) != set(['title', 'blurb', 'user-stories','tags']):
+        required = ['title', 'blurb', 'user-stories','automatic_tags','tags']
+        if set(header) != set(required):
             print('WARNING: extra header components in {}'.format(ident))
+            print('header   = %s'%(", ".join(header.keys())))
+            print('required = %s'%(", ".join(required)))
             
         obj = Epic(ident, header['title'], header['blurb'],
                     header['user-stories'], header['automatic_tags']+header['tags'])
@@ -277,9 +297,14 @@ def create_library_object(filename, header, content):
     elif filetype == 'SUMMARY':
         if 'tags' not in header:
             header['tags'] = []
+        if 'automatic_tags' not in header:
+            header['automatic_tags'] = []
 
-        if not set(header).issubset(set(['title', 'narratives','tags'])):
+        required = ['title','narratives','automatic_tags','tags']
+        if set(header) != set(required):
             print('WARNING: extra header components in {}'.format(ident))
+            print('header   = %s'%(", ".join(header.keys())))
+            print('required = %s'%(", ".join(required)))
             
         narratives = header.get('narratives', [])
         if not narratives:
