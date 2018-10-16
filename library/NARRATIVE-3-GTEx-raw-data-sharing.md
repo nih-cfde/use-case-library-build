@@ -5,9 +5,6 @@ blurb: Many use cases exist for working with raw data.
 epics:
 - EPIC-13
 - EPIC-14
-automatic_tags:
-- GTEx
-- sharing raw data
 ---
 ### Scientific Objective
 

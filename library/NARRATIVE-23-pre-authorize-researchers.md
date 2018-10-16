@@ -4,8 +4,6 @@ persona: PERSONA-10-signing-official
 blurb: Pre-authorize all users at an institution.
 epics:
 - EPIC-44
-automatic_tags:
-- pre-authorize researchers
 ---
 ### Scientific Objective
 
