@@ -137,9 +137,10 @@ def test():
             "Use the automatically generated Jupyter Notebook to observe and share results including common differentially expressed genes and gene sets that are unique for each tissue and identify common small molecules that are predicted to reverse expression across all tissues",
     ]
     for sentence in sentences:
-        np_extractor = NPExtractor(sentence)
+        np_extractor = NouPhraseExtractor(sentence)
         result = np_extractor.extract()
         print("This sentence is about: %s" % ", ".join(result))
 
 if __name__ == '__main__':
     test()
+
