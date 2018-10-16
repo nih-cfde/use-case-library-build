@@ -2,6 +2,9 @@
 title: GTEx - Sharing Raw Data
 narratives:
 - NARRATIVE-3
+automatic_tags:
+- GTEx
+- sharing raw data
 ---
 **Scenario**
 

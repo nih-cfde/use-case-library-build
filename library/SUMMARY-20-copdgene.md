@@ -1,6 +1,9 @@
 ---
 title: COPDGene Cohort Study with Imaging Data
 narratives: null
+automatic_tags:
+- COPDGene cohort
+- imaging data
 ---
 **Scenario:**
 
