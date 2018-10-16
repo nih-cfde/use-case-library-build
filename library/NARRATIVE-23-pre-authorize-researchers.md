@@ -4,8 +4,6 @@ persona: PERSONA-10-signing-official
 blurb: Pre-authorize all users at an institution.
 epics:
 - EPIC-44
-tags:
-- !!python/object/new:textblob.blob.Word args: - pre-authorize researchers state:   string: pre-authorize researchers   pos_tag: null
 ---
 ### Scientific Objective
 

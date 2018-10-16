@@ -1,9 +1,6 @@
 ---
 title: Analysis at Scale
 narratives: null
-tags:
-- !!python/object/new:textblob.blob.Word args: - analysis state:   string: analysis   pos_tag: null
-- !!python/object/new:textblob.blob.Word args: - scale state:   string: scale   pos_tag: null
 ---
 **Scenario:**
 

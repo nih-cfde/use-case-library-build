@@ -1,9 +1,6 @@
 ---
 title: COPDGene Cohort Study with Imaging Data
 narratives: null
-tags:
-- !!python/object/new:textblob.blob.Word args: - imaging data state:   string: imaging data   pos_tag: null
-- !!python/object/new:textblob.blob.Word args: - copdgene cohort state:   string: copdgene cohort   pos_tag: null
 ---
 **Scenario:**
 

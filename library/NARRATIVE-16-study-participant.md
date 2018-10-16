@@ -4,8 +4,6 @@ persona: PERSONA-9-study-participant
 blurb: Participant is interested in who uses their data and why.
 epics:
 - EPIC-17
-tags:
-- !!python/object/new:textblob.blob.Word args: - participant summary state:   string: participant summary   pos_tag: null
 ---
 ### Scientific Objective
 

@@ -6,9 +6,6 @@ user-stories:
 - USERSTORY-41
 - USERSTORY-42
 - USERSTORY-43
-tags:
-- !!python/object/new:textblob.blob.Word args: - multi-species phenotype dataset state:   string: multi-species phenotype dataset   pos_tag: null
-- !!python/object/new:textblob.blob.Word args: - construct state:   string: construct   pos_tag: null
 ---
 a. The analysis challenge is currently that each of the MODs using
 different file formats and semantics to record phenotypic data, and

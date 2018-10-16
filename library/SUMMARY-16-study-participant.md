@@ -2,8 +2,6 @@
 title: Study Participant Summary
 narratives:
 - NARRATIVE-16
-tags:
-- !!python/object/new:textblob.blob.Word args: - participant summary state:   string: participant summary   pos_tag: null
 ---
 **Scenario**
 

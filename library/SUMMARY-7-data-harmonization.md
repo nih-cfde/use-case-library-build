@@ -1,8 +1,6 @@
 ---
 title: Data Harmonization
 narratives: null
-tags:
-- !!python/object/new:textblob.blob.Word args: - data harmonization state:   string: data harmonization   pos_tag: null
 ---
 **Scenario:**
 

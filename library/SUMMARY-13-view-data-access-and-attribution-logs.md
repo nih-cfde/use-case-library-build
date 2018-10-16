@@ -2,9 +2,6 @@
 title: View Data Access and Attribution Logs
 narratives:
 - NARRATIVE-13
-tags:
-- !!python/object/new:textblob.blob.Word args: - attribution logs state:   string: attribution logs   pos_tag: null
-- !!python/object/new:textblob.blob.Word args: - data access state:   string: data access   pos_tag: null
 ---
 **Scenario:**
 

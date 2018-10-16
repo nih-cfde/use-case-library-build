@@ -1,8 +1,6 @@
 ---
 title: Discovery-based/Exploratory Research
 narratives: null
-tags:
-- !!python/object/new:textblob.blob.Word args: - discovery-based/exploratory state:   string: discovery-based/exploratory   pos_tag: null
 ---
 **Scenario:**
 

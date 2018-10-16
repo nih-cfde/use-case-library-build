@@ -2,8 +2,6 @@
 title: Coronary Artery GWAS Summary
 narratives:
 - NARRATIVE-14
-tags:
-- !!python/object/new:textblob.blob.Word args: - coronary artery gwas summary state:   string: coronary artery gwas summary   pos_tag: null
 ---
 **Scenarios**
 

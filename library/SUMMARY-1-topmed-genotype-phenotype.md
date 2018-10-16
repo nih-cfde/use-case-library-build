@@ -2,9 +2,6 @@
 title: TOPmed Genotype-Phenotype Association Testing
 narratives:
 - NARRATIVE-1
-tags:
-- !!python/object/new:textblob.blob.Word args: - topmed genotype-phenotype state:   string: topmed genotype-phenotype   pos_tag: null
-- !!python/object/new:textblob.blob.Word args: - testing state:   string: testing   pos_tag: null
 ---
 **Scenario**
 

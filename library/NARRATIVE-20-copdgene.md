@@ -7,11 +7,6 @@ epics:
 - EPIC-40
 - EPIC-41
 - EPIC-42
-tags:
-- !!python/object/new:textblob.blob.Word args: - imaging data state:   string: imaging data   pos_tag: null
-- !!python/object/new:textblob.blob.Word args: - copdgene cohort state:   string: copdgene cohort   pos_tag: null
-- !!python/object/new:textblob.blob.Word args: - perform state:   string: perform   pos_tag: null
-- !!python/object/new:textblob.blob.Word args: - clinical genomic study state:   string: clinical genomic study   pos_tag: null
 ---
 ### Scientific Objective
 

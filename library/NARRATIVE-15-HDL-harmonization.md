@@ -8,14 +8,6 @@ epics:
 - EPIC-24
 - EPIC-25
 - EPIC-26
-tags:
-- !!python/object/new:textblob.blob.Word args: - associate state:   string: associate   pos_tag: null
-- !!python/object/new:textblob.blob.Word args: - disease phenotype state:   string: disease phenotype   pos_tag: null
-- !!python/object/new:textblob.blob.Word args: - high-density lipoproteins state:   string: high-density lipoproteins   pos_tag: null
-- !!python/object/new:textblob.blob.Word args: - high density lipoprotein genotype state:   string: high density lipoprotein genotype   pos_tag: null
-- !!python/object/new:textblob.blob.Word args: - harmonization user narrative state:   string: harmonization user narrative   pos_tag: null
-- !!python/object/new:textblob.blob.Word args: - hdl state:   string: hdl   pos_tag: null
-- !!python/object/new:textblob.blob.Word args: - data state:   string: data   pos_tag: null
 ---
 **Scientific Objective**
 Associate measures of high density lipoprotein genotype and disease phenotype

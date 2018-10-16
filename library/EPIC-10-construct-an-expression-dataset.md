@@ -5,9 +5,6 @@ user-stories:
 - USERSTORY-44
 - USERSTORY-45
 - USERSTORY-46
-tags:
-- !!python/object/new:textblob.blob.Word args: - multi-species expression dataset state:   string: multi-species expression dataset   pos_tag: null
-- !!python/object/new:textblob.blob.Word args: - construct state:   string: construct   pos_tag: null
 ---
 Integrate other relevant data. It should be possible to integrate gene
 expression data from resources such as MGI or BGE. It should also be
