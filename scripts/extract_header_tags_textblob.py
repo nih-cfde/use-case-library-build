@@ -123,7 +123,7 @@ def main():
 
             # Step 4: remove tags
             with open(TEXTBLOB_IGNORE,'r') as f:
-                ignore_tags = [line for line in f.readlines() if line[0] != '#']
+                ignore_tags = [line.strip() for line in f.readlines() if line[0] != '#']
             tags = [j for j in tags if j not in ignore_tags]
 
             # Step 5: sort tags
@@ -158,7 +158,7 @@ def fix_replace(tags):
     list in the replace file.
     """
     with open(TEXTBLOB_REPLACE,'r') as f:
-        lines = f.readlines()
+        lines = [line.strip() for line in f.readlines()]
 
     case_fixes = {}
     for line in lines:
