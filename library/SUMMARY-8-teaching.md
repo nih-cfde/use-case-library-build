@@ -1,7 +1,6 @@
 ---
 title: Teaching
 narratives: null
-tags: []
 ---
 **Scenario:**
 

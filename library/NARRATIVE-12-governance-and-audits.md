@@ -4,10 +4,6 @@ persona: PERSONA-8-governance-authority
 blurb: Perform security audit on resources accessed by users.
 epics:
 - EPIC-15
-tags:
-- audits
-- governance
-- security audit
 ---
 ### Scientific Objective
 

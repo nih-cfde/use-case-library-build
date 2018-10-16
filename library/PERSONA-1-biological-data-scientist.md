@@ -1,9 +1,6 @@
 ---
 title: Biological data scientist
 blurb: A researcher with some scripting skills.
-tags:
-- biological
-- data scientist
 ---
 A bioinformatician or researcher with some scripting skills, capable
 of using and combining pre-established pipelines, and doing

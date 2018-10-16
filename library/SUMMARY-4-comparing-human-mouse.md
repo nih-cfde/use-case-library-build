@@ -1,7 +1,6 @@
 ---
 title: Comparing Human and Mouse
 narratives: null
-tags: []
 ---
 **Scenario:**
 

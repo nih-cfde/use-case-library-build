@@ -7,11 +7,6 @@ epics:
 - EPIC-19
 - EPIC-20
 - EPIC-21
-tags:
-- coronary artery disease
-- coronary artery gwas user narrative
-- genetic risk factors
-- identify
 ---
 ### Scientific Objective
 

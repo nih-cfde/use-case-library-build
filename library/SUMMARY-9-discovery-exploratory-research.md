@@ -1,8 +1,6 @@
 ---
 title: Discovery-based/Exploratory Research
 narratives: null
-tags:
-- discovery-based/exploratory
 ---
 **Scenario:**
 
