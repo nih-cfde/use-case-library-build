@@ -5,6 +5,9 @@ blurb: Many use cases exist for working with raw data.
 epics:
 - EPIC-13
 - EPIC-14
+tags:
+- !!python/object/new:textblob.blob.Word args: - gtex state:   string: gtex   pos_tag: null
+- !!python/object/new:textblob.blob.Word args: - sharing raw data state:   string: sharing raw data   pos_tag: null
 ---
 ### Scientific Objective
 

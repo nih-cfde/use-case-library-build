@@ -6,4 +6,7 @@ user-stories:
 - USERSTORY-7
 - USERSTORY-8
 - USERSTORY-9
+tags:
+- !!python/object/new:textblob.blob.Word args: - genotypic data state:   string: genotypic data   pos_tag: null
+- !!python/object/new:textblob.blob.Word args: - prepare state:   string: prepare   pos_tag: null
 ---

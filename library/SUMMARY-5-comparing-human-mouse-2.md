@@ -1,6 +1,8 @@
 ---
 title: Comparing Human and Mouse (patient focused)
 narratives: null
+tags:
+- !!python/object/new:textblob.blob.Word args: - comparing state:   string: comparing   pos_tag: null
 ---
 **Scenario:**
 

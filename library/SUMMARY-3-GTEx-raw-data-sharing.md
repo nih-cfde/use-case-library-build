@@ -2,6 +2,9 @@
 title: GTEx - Sharing Raw Data
 narratives:
 - NARRATIVE-3
+tags:
+- !!python/object/new:textblob.blob.Word args: - gtex state:   string: gtex   pos_tag: null
+- !!python/object/new:textblob.blob.Word args: - sharing raw data state:   string: sharing raw data   pos_tag: null
 ---
 **Scenario**
 

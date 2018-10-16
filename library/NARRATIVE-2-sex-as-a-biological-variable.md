@@ -8,6 +8,14 @@ epics:
 - EPIC-10
 - EPIC-11
 - EPIC-12
+tags:
+- !!python/object/new:textblob.blob.Word args: - gtex state:   string: gtex   pos_tag: null
+- !!python/object/new:textblob.blob.Word args: - genome scale state:   string: genome scale   pos_tag: null
+- !!python/object/new:textblob.blob.Word args: - agr state:   string: agr   pos_tag: null
+- !!python/object/new:textblob.blob.Word args: - biological state:   string: biological   pos_tag: null
+- !!python/object/new:textblob.blob.Word args: - female biology state:   string: female biology   pos_tag: null
+- !!python/object/new:textblob.blob.Word args: - sexual state:   string: sexual   pos_tag: null
+- !!python/object/new:textblob.blob.Word args: - dimorphism refers state:   string: dimorphism refers   pos_tag: null
 ---
 Sexual dimorphism is the term that refers to differences between males
 and females of the same species. In medicine, we study sex and gender

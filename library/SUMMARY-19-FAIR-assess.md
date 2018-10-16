@@ -2,6 +2,9 @@
 title: FAIR Assessment using FAIRshake Summary
 narratives:
 - NARRATIVE-19
+tags:
+- !!python/object/new:textblob.blob.Word args: - fairshake summary state:   string: fairshake summary   pos_tag: null
+- !!python/object/new:textblob.blob.Word args: - fair assessment state:   string: fair assessment   pos_tag: null
 ---
 **Scenario:**
 

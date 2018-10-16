@@ -1,6 +1,9 @@
 ---
 title: Compare human and rat phenotypes for environmental factors
 narratives: null
+tags:
+- !!python/object/new:textblob.blob.Word args: - environmental factors state:   string: environmental factors   pos_tag: null
+- !!python/object/new:textblob.blob.Word args: - rat phenotypes state:   string: rat phenotypes   pos_tag: null
 ---
 **Scenario:**
 

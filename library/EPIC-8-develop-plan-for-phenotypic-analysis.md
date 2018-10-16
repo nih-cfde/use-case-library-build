@@ -4,6 +4,10 @@ blurb: Develop an analysis plan for phenotypic analysis.
 user-stories:
 - USERSTORY-1
 - USERSTORY-2
+tags:
+- !!python/object/new:textblob.blob.Word args: - develop state:   string: develop   pos_tag: null
+- !!python/object/new:textblob.blob.Word args: - analysis plan state:   string: analysis plan   pos_tag: null
+- !!python/object/new:textblob.blob.Word args: - phenotypic analysis state:   string: phenotypic analysis   pos_tag: null
 ---
 a. We aim to perform an analysis across the entire phenome using an
 ontology-based analysis. Phenotype ontologies are used to describe

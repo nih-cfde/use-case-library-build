@@ -2,6 +2,9 @@
 title: Sex as a Biological Variable
 narratives:
 - NARRATIVE-2
+tags:
+- !!python/object/new:textblob.blob.Word args: - sex state:   string: sex   pos_tag: null
+- !!python/object/new:textblob.blob.Word args: - biological state:   string: biological   pos_tag: null
 ---
 **Scenario**
 

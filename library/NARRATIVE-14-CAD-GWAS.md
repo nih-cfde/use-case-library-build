@@ -7,6 +7,11 @@ epics:
 - EPIC-19
 - EPIC-20
 - EPIC-21
+tags:
+- !!python/object/new:textblob.blob.Word args: - coronary artery disease state:   string: coronary artery disease   pos_tag: null
+- !!python/object/new:textblob.blob.Word args: - genetic risk factors state:   string: genetic risk factors   pos_tag: null
+- !!python/object/new:textblob.blob.Word args: - identify state:   string: identify   pos_tag: null
+- !!python/object/new:textblob.blob.Word args: - coronary artery gwas user narrative state:   string: coronary artery gwas user narrative   pos_tag: null
 ---
 ### Scientific Objective
 

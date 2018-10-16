@@ -2,6 +2,8 @@
 title: Pre-authorize Researchers
 narratives:
 - NARRATIVE-23
+tags:
+- !!python/object/new:textblob.blob.Word args: - pre-authorize researchers state:   string: pre-authorize researchers   pos_tag: null
 ---
 **Scenario**
 

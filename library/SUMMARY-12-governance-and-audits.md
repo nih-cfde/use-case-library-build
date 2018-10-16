@@ -2,6 +2,9 @@
 title: Governance and Audits
 narratives:
 - NARRATIVE-12
+tags:
+- !!python/object/new:textblob.blob.Word args: - audits state:   string: audits   pos_tag: null
+- !!python/object/new:textblob.blob.Word args: - governance state:   string: governance   pos_tag: null
 ---
 **Scenario:**
 

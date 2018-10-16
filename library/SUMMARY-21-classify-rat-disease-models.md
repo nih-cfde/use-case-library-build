@@ -1,6 +1,9 @@
 ---
 title: Classify rat disease models
 narratives: null
+tags:
+- !!python/object/new:textblob.blob.Word args: - rat disease models state:   string: rat disease models   pos_tag: null
+- !!python/object/new:textblob.blob.Word args: - classify state:   string: classify   pos_tag: null
 ---
 **Scenario:**
 

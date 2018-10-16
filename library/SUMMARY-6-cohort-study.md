@@ -1,6 +1,8 @@
 ---
 title: Cohort Study
 narratives: null
+tags:
+- !!python/object/new:textblob.blob.Word args: - cohort state:   string: cohort   pos_tag: null
 ---
 **Scenario:**
 

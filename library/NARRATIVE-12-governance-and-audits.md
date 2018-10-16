@@ -4,6 +4,11 @@ persona: PERSONA-8-governance-authority
 blurb: Perform security audit on resources accessed by users.
 epics:
 - EPIC-15
+tags:
+- !!python/object/new:textblob.blob.Word args: - audits state:   string: audits   pos_tag: null
+- !!python/object/new:textblob.blob.Word args: - governance state:   string: governance   pos_tag: null
+- !!python/object/new:textblob.blob.Word args: - perform state:   string: perform   pos_tag: null
+- !!python/object/new:textblob.blob.Word args: - security audit state:   string: security audit   pos_tag: null
 ---
 ### Scientific Objective
 

@@ -1,6 +1,9 @@
 ---
 title: Sustainability through Partnership
 narratives: null
+tags:
+- !!python/object/new:textblob.blob.Word args: - sustainability state:   string: sustainability   pos_tag: null
+- !!python/object/new:textblob.blob.Word args: - partnership state:   string: partnership   pos_tag: null
 ---
 **Scenario:**
 
