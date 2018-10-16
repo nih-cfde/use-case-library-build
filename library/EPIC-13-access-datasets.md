@@ -6,4 +6,6 @@ user-stories:
 - USERSTORY-2
 - USERSTORY-60
 - USERSTORY-61
+automatic_tags:
+- obtain
 ---

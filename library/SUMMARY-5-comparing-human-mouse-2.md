@@ -1,6 +1,8 @@
 ---
 title: Comparing Human and Mouse (patient focused)
 narratives: null
+automatic_tags:
+- comparing
 ---
 **Scenario:**
 
