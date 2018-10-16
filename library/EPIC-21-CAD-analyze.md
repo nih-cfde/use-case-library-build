@@ -3,6 +3,12 @@ title: Perform more detailed analyses
 blurb: Coronary artery disease (CAD) genome-wide association user narrative.
 user-stories:
 - USERSTORY-2
+tags:
+- genome-wide association user narrative
+- cad
+- perform
+- artery disease
+- coronary
 ---
 Identify a credible set of causal variants at each genome-wide significant locus.
 For each variant in each of the credible sets, utilize the GTEx dataset to perform an eQTL analysis that associates each variant within each of the credible sets with the expression of nearby genes.

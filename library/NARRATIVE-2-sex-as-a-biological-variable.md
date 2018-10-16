@@ -8,6 +8,14 @@ epics:
 - EPIC-10
 - EPIC-11
 - EPIC-12
+tags:
+- biological
+- genome scale
+- dimorphism refers
+- sexual
+- gtex
+- agr
+- female biology
 ---
 Sexual dimorphism is the term that refers to differences between males
 and females of the same species. In medicine, we study sex and gender

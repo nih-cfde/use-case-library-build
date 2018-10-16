@@ -6,4 +6,7 @@ user-stories:
 - USERSTORY-7
 - USERSTORY-8
 - USERSTORY-9
+tags:
+- prepare
+- genotypic data
 ---

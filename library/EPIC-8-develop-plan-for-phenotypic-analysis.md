@@ -4,6 +4,10 @@ blurb: Develop an analysis plan for phenotypic analysis.
 user-stories:
 - USERSTORY-1
 - USERSTORY-2
+tags:
+- analysis plan
+- phenotypic analysis
+- develop
 ---
 a. We aim to perform an analysis across the entire phenome using an
 ontology-based analysis. Phenotype ontologies are used to describe
