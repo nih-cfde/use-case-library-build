@@ -6,6 +6,9 @@ user-stories:
 - USERSTORY-41
 - USERSTORY-42
 - USERSTORY-43
+tags:
+- multi-species phenotype dataset
+- construct
 ---
 a. The analysis challenge is currently that each of the MODs using
 different file formats and semantics to record phenotypic data, and

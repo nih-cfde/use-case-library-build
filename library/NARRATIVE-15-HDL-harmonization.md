@@ -8,6 +8,12 @@ epics:
 - EPIC-24
 - EPIC-25
 - EPIC-26
+tags:
+- high density lipoprotein genotype
+- harmonization user narrative
+- high-density lipoproteins
+- disease phenotype
+- hdl
 ---
 **Scientific Objective**
 Associate measures of high density lipoprotein genotype and disease phenotype

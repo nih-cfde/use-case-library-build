@@ -2,6 +2,9 @@
 title: Governance and Audits
 narratives:
 - NARRATIVE-12
+tags:
+- governance
+- audits
 ---
 **Scenario:**
 
