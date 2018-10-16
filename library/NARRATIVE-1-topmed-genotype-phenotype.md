@@ -15,6 +15,10 @@ tags:
 - phenotype
 - association testing
 - functional analysis
+automatic_tags:
+- TOPMed genotype-phenotype
+- biomedical phenotypes
+- genetic risk factors
 ---
 ### Scientific Objective
 

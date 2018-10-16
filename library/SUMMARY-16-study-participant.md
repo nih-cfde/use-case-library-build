@@ -2,6 +2,8 @@
 title: Study Participant Summary
 narratives:
 - NARRATIVE-16
+automatic_tags:
+- participant summary
 ---
 **Scenario**
 

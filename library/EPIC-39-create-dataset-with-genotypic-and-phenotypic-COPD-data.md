@@ -5,4 +5,8 @@ user-stories:
 - USERSTORY-1
 - USERSTORY-2
 - USERSTORY-73
+automatic_tags:
+- available variables
+- clinical data
+- copdgene
 ---
