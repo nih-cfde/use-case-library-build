@@ -2,10 +2,12 @@ agr: AGR
 api: API
 biojupies: Biojupies
 cad: CAD
+coronary artery disease: CAD
+coronary artery diseases: CAD
+CADs: CAD
 cram: CRAM
 cwl: CWL
 dbgap: dbGaP
-era: ERA
 fair: FAIR
 fairshake: FAIRshake
 gds: GDS
@@ -22,6 +24,7 @@ pcs: PCS
 python: Python
 qc: QC
 qq: Quantile
+rna-seq: RNA-Seq
 sra: SRA
 sexual: sex
 topmed: TOPMed

@@ -117,9 +117,9 @@ def main():
                 tags += [str(j) for j in blob.noun_phrases]
 
             # Step 3: clean up tags (case, remove dupes, remove overlap)
+            tags = fix_replace(tags)
             tags = list(set(tags))
             tags = scrub_overlap(tags)
-            tags = fix_replace(tags)
 
             # Step 4: remove tags
             with open(TEXTBLOB_IGNORE,'r') as f:
@@ -162,7 +162,9 @@ def fix_replace(tags):
 
     case_fixes = {}
     for line in lines:
-        (k,v) = line.split(": ")
+        (k,v) = line.split(":")
+        k = k.strip()
+        v = v.strip()
         case_fixes[k] = v
 
     new_tags = []
