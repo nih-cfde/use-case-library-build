@@ -6,11 +6,6 @@ epics:
 - EPIC-45
 - EPIC-46
 - EPIC-47
-automatic_tags:
-- Biojupies
-- GTEx analysis
-- data analysis
-- rna-seq
 ---
 ### Scientific Objective
 
