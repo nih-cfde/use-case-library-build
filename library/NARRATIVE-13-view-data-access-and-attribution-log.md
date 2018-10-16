@@ -5,9 +5,9 @@ blurb: Prepare a report documenting how frequently a resource is being used by c
 epics:
 - EPIC-16
 tags:
-- prepare
 - attribution log
 - data access
+- prepare
 ---
 ### Scientific Objective
 

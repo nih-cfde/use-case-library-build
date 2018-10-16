@@ -5,7 +5,7 @@ user-stories:
 - USERSTORY-64
 - USERSTORY-65
 tags:
-- summary
 - searching
 - study participant
+- summary
 ---

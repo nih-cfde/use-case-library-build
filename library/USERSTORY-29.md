@@ -3,8 +3,8 @@ input: Model fit statistics & QQ plot
 output: Decision to accept or modify analysis
 task: Evaluate model fit
 tags:
-- model
 - decision
-- modify analysis
 - fit statistics
+- model
+- modify analysis
 ---

@@ -5,9 +5,9 @@ blurb: Perform security audit on resources accessed by users.
 epics:
 - EPIC-15
 tags:
-- security audit
-- governance
 - audits
+- governance
+- security audit
 ---
 ### Scientific Objective
 

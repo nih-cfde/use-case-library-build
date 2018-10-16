@@ -4,7 +4,7 @@ output: Raw datasets matched to identifiers
 task: Match datasets to identifiers
 tags:
 - cloud
-- sra
-- raw datasets
 - gtex ids
+- raw datasets
+- sra
 ---

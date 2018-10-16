@@ -5,6 +5,6 @@ user-stories:
 - USERSTORY-4
 - USERSTORY-5
 tags:
-- cross-study phenotypic dataset
 - construct
+- cross-study phenotypic dataset
 ---

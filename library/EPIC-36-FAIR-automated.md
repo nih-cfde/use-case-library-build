@@ -4,8 +4,8 @@ blurb: FAIR Assessment using FAIRshake user narrative
 user-stories:
 - USERSTORY-69
 tags:
-- fair assessment
 - digital objects
-- user narrative
+- fair assessment
 - fairshake
+- user narrative
 ---

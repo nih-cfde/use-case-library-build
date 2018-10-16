@@ -5,9 +5,9 @@ user-stories:
 - USERSTORY-79
 - USERSTORY-80
 tags:
-- visualize
-- specific genetic variants
 - copdgene
 - interactively
 - specific data subsets
+- specific genetic variants
+- visualize
 ---

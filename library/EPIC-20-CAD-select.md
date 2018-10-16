@@ -4,10 +4,10 @@ blurb: Coronary artery disease (CAD) genome-wide association user narrative.
 user-stories:
 - USERSTORY-2
 tags:
-- coronary
+- CAD
 - artery disease
+- coronary
 - genome-wide association user narrative
-- cad
 - move
 ---
 Bring over relevant metadata, phenotypes, and genotypes into workspaces.

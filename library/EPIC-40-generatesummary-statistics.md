@@ -5,8 +5,8 @@ user-stories:
 - USERSTORY-74
 - USERSTORY-75
 tags:
-- simple statistical analyses
 - available variables
 - generate summary statistics
 - return aggregate summary statistics
+- simple statistical analyses
 ---

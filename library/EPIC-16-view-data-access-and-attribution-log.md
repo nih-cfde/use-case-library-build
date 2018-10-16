@@ -5,8 +5,8 @@ user-stories:
 - USERSTORY-2
 - USERSTORY-59
 tags:
-- data use restrictions
 - coronary artery diseases research
-- identify topmed
+- data use restrictions
 - data-use
+- identify topmed
 ---

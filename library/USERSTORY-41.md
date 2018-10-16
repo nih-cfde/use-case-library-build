@@ -3,10 +3,10 @@ input: Selected list of Alliance of Genomic Resources variable identifiers for m
 output: Harmonized, multi-study phenotypic data set
 task: Harmonize phenotypes across studies (transform variables as needed)
 tags:
-- harmonized
 - genomic resources
-- selected
-- multiple species
-- variable identifiers
+- harmonized
 - multi-study phenotypic data
+- multiple species
+- selected
+- variable identifiers
 ---

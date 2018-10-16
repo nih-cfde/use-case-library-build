@@ -3,8 +3,8 @@ input: UID of resource(s) within the Data Commons and the start date and end dat
 output: All logged activity for the specified resources during the specified time window
 task: Search for list of data use activity
 tags:
-- time window
-- uid
 - data commons
 - start date
+- time window
+- uid
 ---

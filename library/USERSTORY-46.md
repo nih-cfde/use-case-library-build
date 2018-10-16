@@ -3,9 +3,9 @@ input: Expression data separated by sex and phenotypic data files annotated with
 output: Single dataset with species, sex, expression and phenotype data
 task: Finalize dataset
 tags:
-- phenotype data
+- expression
 - gene ontologies
+- phenotype data
 - phenotypic data files
 - single
-- expression
 ---

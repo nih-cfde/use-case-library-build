@@ -4,6 +4,6 @@ blurb: Perform genotype-phenotype association analysis.
 user-stories:
 - USERSTORY-3-zip
 tags:
-- genotype-phenotype association tests
 - genotype-phenotype association analysis
+- genotype-phenotype association tests
 ---

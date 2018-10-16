@@ -4,8 +4,8 @@ output: Computational requirements
 task: Evaluate memory and parallelization requirements of analysis plan
 tags:
 - analysis
+- computational
 - pipeline choice
 - sample size
-- computational
 - statistical model
 ---

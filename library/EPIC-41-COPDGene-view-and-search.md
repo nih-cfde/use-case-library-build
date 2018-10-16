@@ -5,8 +5,8 @@ user-stories:
 - USERSTORY-77
 - USERSTORY-78
 tags:
-- phenotypic variations
-- identify
-- determine copd
 - anatomical aberrations
+- determine copd
+- identify
+- phenotypic variations
 ---

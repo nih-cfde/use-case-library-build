@@ -9,6 +9,6 @@ tags:
 - digital object
 - fair assessment
 - fairness
-- user narrative
 - fairshake
+- user narrative
 ---

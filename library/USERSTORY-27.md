@@ -4,10 +4,10 @@ output: Model fit statistics, association test statistics
 task: Perform model-fitting and association tests
 tags:
 - association test statistics
-- grm
-- phenotypic data
-- pcs
-- multi-sample gds
 - fit statistics
+- grm
 - model parameter file
+- multi-sample gds
+- pcs
+- phenotypic data
 ---

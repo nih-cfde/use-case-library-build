@@ -3,7 +3,7 @@ title: GTEx - Sharing Raw Data
 narratives:
 - NARRATIVE-3
 tags:
-- gtex
+- GTEx
 - sharing raw data
 ---
 **Scenario**

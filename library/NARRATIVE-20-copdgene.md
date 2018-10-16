@@ -9,8 +9,8 @@ epics:
 - EPIC-42
 tags:
 - clinical genomic study
-- imaging data
 - copdgene cohort
+- imaging data
 ---
 ### Scientific Objective
 

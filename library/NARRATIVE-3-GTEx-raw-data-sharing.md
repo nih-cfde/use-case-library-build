@@ -6,7 +6,7 @@ epics:
 - EPIC-13
 - EPIC-14
 tags:
-- gtex
+- GTEx
 - sharing raw data
 ---
 ### Scientific Objective
