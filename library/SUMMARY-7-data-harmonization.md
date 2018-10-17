@@ -1,8 +1,6 @@
 ---
 title: Data Harmonization
 narratives: null
-automatic_tags:
-- data harmonization
 ---
 **Scenario:**
 

@@ -7,10 +7,6 @@ epics:
 - EPIC-40
 - EPIC-41
 - EPIC-42
-automatic_tags:
-- COPDGene cohort
-- clinical genomic study
-- imaging data
 ---
 ### Scientific Objective
 

@@ -6,8 +6,4 @@ user-stories:
 - USERSTORY-82
 - USERSTORY-83
 - USERSTORY-84
-automatic_tags:
-- different brain regions
-- differential
-- gene expression
 ---

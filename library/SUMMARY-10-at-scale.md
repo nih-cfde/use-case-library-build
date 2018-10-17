@@ -1,9 +1,6 @@
 ---
 title: Analysis at Scale
 narratives: null
-automatic_tags:
-- analysis
-- scale
 ---
 **Scenario:**
 
