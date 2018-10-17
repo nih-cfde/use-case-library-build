@@ -3,6 +3,12 @@ title: Identify TOPmed records in which HDL has been measured, and to which the 
 blurb: Develop an analysis plan for phenotypic analysis.
 user-stories:
 - USERSTORY-2
+tags:
+- HDL
+- analysis plan
+- identify TOPMed
+- phenotypic analysis
+- research purpose
 ---
 1. We aim to perform an analysis across the entire phenome using an
 ontology-based analysis. Phenotype ontologies are used to describe

@@ -6,4 +6,7 @@ user-stories:
 - USERSTORY-82
 - USERSTORY-83
 - USERSTORY-84
+tags:
+- GTEx
+- collection
 ---

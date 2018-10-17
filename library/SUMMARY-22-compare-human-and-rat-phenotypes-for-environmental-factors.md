@@ -1,6 +1,9 @@
 ---
 title: Compare human and rat phenotypes for environmental factors
 narratives: null
+tags:
+- environmental factors
+- rat phenotypes
 ---
 **Scenario:**
 
