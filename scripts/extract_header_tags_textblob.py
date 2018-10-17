@@ -130,7 +130,7 @@ def main():
             tags = sorted(tags)
 
             if len(tags)>0:
-                yaml_header['automatic_tags'] = tags
+                yaml_header['tags'] = tags
 
             head = yaml.dump(yaml_header, default_flow_style=False)
             head = re.sub('\n  ',' ',head)
