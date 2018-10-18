@@ -102,50 +102,57 @@ def main():
 
             yaml_header, body = parse_library_md(md)
 
-            # Step 1: compile the sentences where tags come from
-            sentences = []
-            for key in yaml_header:
-                if key in ['title','blurb','input','output']:
-                    value = yaml_header[key]
-                    if type(value)==type(""):
-                        sentences.append(value)
+            if 'tags' not in yaml_header.keys():
 
-            # Step 2: extract noun phrases
-            tags = []
-            for sentence in sentences:
-                blob = TextBlob(sentence)
-                tags += [str(j) for j in blob.noun_phrases]
+                # No tags yet, so populate tags wtih automatically extracted tags
 
-            # Step 3: clean up tags (case, remove dupes, remove overlap)
-            tags = fix_replace(tags)
-            tags = list(set(tags))
-            tags = scrub_overlap(tags)
+                # Step 1: compile the sentences where tags come from
+                sentences = []
+                for key in yaml_header:
+                    if key in ['title','blurb','input','output']:
+                        value = yaml_header[key]
+                        if type(value)==type(""):
+                            sentences.append(value)
 
-            # Step 4: remove tags
-            with open(TEXTBLOB_IGNORE,'r') as f:
-                ignore_tags = [line.strip() for line in f.readlines() if line[0] != '#']
-            tags = [j for j in tags if j not in ignore_tags]
+                # Step 2: extract noun phrases
+                tags = []
+                for sentence in sentences:
+                    blob = TextBlob(sentence)
+                    tags += [str(j) for j in blob.noun_phrases]
 
-            # Step 5: sort tags
-            tags = sorted(tags)
+                # Step 3: clean up tags (case, remove dupes, remove overlap)
+                tags = fix_replace(tags)
+                tags = list(set(tags))
+                tags = scrub_overlap(tags)
 
-            if len(tags)>0:
-                yaml_header['tags'] = tags
+                # Step 4: remove tags
+                with open(TEXTBLOB_IGNORE,'r') as f:
+                    ignore_tags = [line.strip() for line in f.readlines() if line[0] != '#']
+                tags = [j for j in tags if j not in ignore_tags]
 
-            head = yaml.dump(yaml_header, default_flow_style=False)
-            head = re.sub('\n  ',' ',head)
+                # Step 5: sort tags
+                tags = sorted(tags)
 
-            delim = '---\n'
+                if len(tags)>0:
+                    yaml_header['tags'] = tags
 
-            # write to target file
-            with open(md,'w') as f:
-                f.write(delim)
-                f.write(head)
-                f.write(delim)
-                f.write(body)
+                head = yaml.dump(yaml_header, default_flow_style=False)
+                head = re.sub('\n  ',' ',head)
 
-            print("Finished extracting header tags from document: %s"%(md),file=sys.stderr)
-            print("Extracted tags: %s"%( ", ".join(tags) ))
+                delim = '---\n'
+
+                # write to target file
+                with open(md,'w') as f:
+                    f.write(delim)
+                    f.write(head)
+                    f.write(delim)
+                    f.write(body)
+
+                print("Finished extracting header tags from document: %s"%(md),file=sys.stderr)
+                print("Extracted tags: %s"%( ", ".join(tags) ))
+
+            else:
+                print("Document already contains tags: %s"%(md),file=sys.stderr)
 
         else:
 
