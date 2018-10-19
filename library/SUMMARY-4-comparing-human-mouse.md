@@ -16,7 +16,7 @@ collaborate to determine the root of the phenotype.
 
 Right now, the labs would work independently in their respective
 models. They would analyze data separately and compare notes. One lab
-might send the grad student or post doc to visit the other for
+might send a grad student or post doc to visit the other for
 collaborative research. Their analysis workflows would be
 incompatible.
 
