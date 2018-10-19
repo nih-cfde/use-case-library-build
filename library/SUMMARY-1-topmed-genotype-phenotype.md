@@ -56,7 +56,7 @@ access easily using a Data Commons interface, which prompts her for the
 necessary information.  Her approvals arrive much faster than before due to 
 automation of data access processes, and she is able guide her collaborators to 
 efficiently obtain compatible approvals. Large-scale harmonization of the 
-phenotype metadata have been done so that searches for CAD-related phenotypes 
+phenotype metadata has been done so that searches for CAD-related phenotypes 
 have better sensitivity and specificity, thus facilitating the construction of 
 her cross-study data set.  She now has a large suite of pre-built applications 
 and workflows to choose from for her analysis.  
