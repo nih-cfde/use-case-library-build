@@ -1,8 +1,9 @@
 ---
 title: Cohort Study
-narratives:
+narratives: null
+tags:
+- cohort
 ---
-
 **Scenario:**
 
 I study racial disparities among African Americans with cardiovascular

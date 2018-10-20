@@ -2,8 +2,10 @@
 title: View Data Access and Attribution Logs
 narratives:
 - NARRATIVE-13
+tags:
+- attribution logs
+- data access
 ---
-
 **Scenario:**
 
 Joe, the provider of a resource on the Data Commons, is preparing a report documenting how frequently his resource is being used by consumers in the community. He would like to know if his resource is properly credited/acknowledged.

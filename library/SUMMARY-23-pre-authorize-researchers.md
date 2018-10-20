@@ -2,8 +2,9 @@
 title: Pre-authorize Researchers
 narratives:
 - NARRATIVE-23
+tags:
+- pre-authorize researchers
 ---
-
 **Scenario**
 
 As Signing Official, Marion would like to be able to pre-authorize researchers at her institution to access Commons datasets, rather than having to re-sign for each request to access data.

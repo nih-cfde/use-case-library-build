@@ -79,7 +79,10 @@ class Summary(LibraryObject):
     def resolve_references(self, obj_dict):
         x = []
         for narrative_str in self.narratives_str:
-            narrative_obj = obj_dict[process_identifier(narrative_str)]
+            try:
+                narrative_obj = obj_dict[process_identifier(narrative_str)]
+            except KeyError:
+                raise Exception("ERROR: Could not find narrative %s"%(narrative_str))
             narrative_obj.set_summary(self)
             x.append(narrative_obj)
         self.narratives = x
@@ -230,8 +233,11 @@ def create_library_object(filename, header, content):
         if 'tags' not in header:
             header['tags'] = []
 
-        if set(header) != set(['title', 'blurb','tags']):
+        required = ['title', 'blurb','tags']
+        if set(header) != set(required):
             print('WARNING: extra header components in {}'.format(ident))
+            print('header   = %s'%(", ".join(header.keys())))
+            print('required = %s'%(", ".join(required)))
 
         obj = Persona(ident, header['title'], header['blurb'], header['tags'])
 
@@ -239,33 +245,40 @@ def create_library_object(filename, header, content):
         if 'tags' not in header:
             header['tags'] = []
 
-        if set(header) != set(['input', 'output', 'task','tags']):
+        required = ['input','output','task','tags']
+        if set(header) != set(required):
             print('WARNING: extra header components in {}'.format(ident))
+            print('header   = %s'%(", ".join(header.keys())))
+            print('required = %s'%(", ".join(required)))
             
-        obj = UserStory(ident, header['input'], header['output'],
-                        header['task'], header['tags'])
+        obj = UserStory(ident, header['input'], header['output'], header['task'], header['tags'])
 
     elif filetype == 'NARRATIVE':
         if 'tags' not in header:
             header['tags'] = []
 
-        if not set(header).issubset(set(['title', 'blurb', 'persona', 'epics','tags'])):
+        required = ['title','blurb', 'persona', 'epics','tags']
+        if set(header) != set(required):
             print('WARNING: extra header components in {}'.format(ident))
+            print('header   = %s'%(", ".join(header.keys())))
+            print('required = %s'%(", ".join(required)))
             
         epics = header.get('epics', [])
         if not epics:
             print('WARNING: narrative {} has no epics.'.format(ident))
             epics = []
 
-        obj = Narrative(ident, header['title'], header['blurb'],
-                         header['persona'], epics, header['tags'])
+        obj = Narrative(ident, header['title'], header['blurb'], header['persona'], epics, header['tags'])
 
     elif filetype == 'EPIC':
         if 'tags' not in header:
             header['tags'] = []
 
-        if set(header) != set(['title', 'blurb', 'user-stories','tags']):
+        required = ['title', 'blurb', 'user-stories','tags']
+        if set(header) != set(required):
             print('WARNING: extra header components in {}'.format(ident))
+            print('header   = %s'%(", ".join(header.keys())))
+            print('required = %s'%(", ".join(required)))
             
         obj = Epic(ident, header['title'], header['blurb'],
                     header['user-stories'], header['tags'])
@@ -274,8 +287,11 @@ def create_library_object(filename, header, content):
         if 'tags' not in header:
             header['tags'] = []
 
-        if not set(header).issubset(set(['title', 'narratives','tags'])):
+        required = ['title','narratives','tags']
+        if set(header) != set(required):
             print('WARNING: extra header components in {}'.format(ident))
+            print('header   = %s'%(", ".join(header.keys())))
+            print('required = %s'%(", ".join(required)))
             
         narratives = header.get('narratives', [])
         if not narratives:
@@ -290,3 +306,4 @@ def create_library_object(filename, header, content):
     obj.filename = os.path.basename(filename)
     obj.set_content(content)
     return obj
+

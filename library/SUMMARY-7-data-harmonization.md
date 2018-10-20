@@ -1,8 +1,9 @@
 ---
 title: Data Harmonization
-narratives:
+narratives: null
+tags:
+- data harmonization
 ---
-
 **Scenario:**
 
 I am trying to connect phenotypic variables from one study to
@@ -17,7 +18,7 @@ different studies. Spend lots of time and money cleaning up data.
 
 **With Data Commons Phase 1:**
 
-A common metadata model eases the burden of data harmonization.  
+A common metadata model eases the burden of data harmonization.
 
 **With Data Commons longer vision:**
 

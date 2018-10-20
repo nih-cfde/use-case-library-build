@@ -1,8 +1,9 @@
 ---
 title: Discovery-based/Exploratory Research
-narratives:
+narratives: null
+tags:
+- discovery-based/exploratory
 ---
-
 **Scenario:**
 
 I have my own raw genetic dataset that I’d like to explore
@@ -32,4 +33,3 @@ data in the Data Commons so it is accessible by other
 researchers. Marketplace for finding datasets that others have
 contributed to collaborate on. Policies around intellectual property
 that encourage collaboration, open science, and protect researchers.
-

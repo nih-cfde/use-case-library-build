@@ -5,4 +5,6 @@ user-stories:
 - USERSTORY-2
 - USERSTORY-57
 - USERSTORY-58
+tags:
+- security audit
 ---
