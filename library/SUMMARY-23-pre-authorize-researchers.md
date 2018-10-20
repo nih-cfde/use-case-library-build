@@ -2,6 +2,8 @@
 title: Pre-authorize Researchers
 narratives:
 - NARRATIVE-23
+automatic_tags:
+- pre-authorize researchers
 ---
 **Scenario**
 

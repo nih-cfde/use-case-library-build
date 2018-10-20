@@ -1,6 +1,9 @@
 ---
 title: Classify rat disease models
 narratives: null
+automatic_tags:
+- classify
+- rat disease models
 ---
 **Scenario:**
 

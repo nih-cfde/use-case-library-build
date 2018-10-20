@@ -1,6 +1,8 @@
 ---
 title: Cohort Study
 narratives: null
+automatic_tags:
+- cohort
 ---
 **Scenario:**
 

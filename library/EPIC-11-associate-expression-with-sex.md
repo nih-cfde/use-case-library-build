@@ -1,9 +1,11 @@
 ---
 title: Associate expression with sex
-blurb: Asssociate differences in gene expression with sex.
+blurb: Associate differences in gene expression with sex.
 user-stories:
 - USERSTORY-47
 - USERSTORY-48
+automatic_tags:
+- gene expression
 ---
 a. Perform alignment of the FASTQ files representing the GTEx raw data
 following quality control with a method such as Yet Another RNA

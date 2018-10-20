@@ -10,6 +10,9 @@ from parse_input_files import parse_library_md
 from utilities import scrub_overlap
 
 
+TEXTBLOB_IGNORE = 'textblob_ignore.dat'
+TEXTBLOB_REPLACE = 'textblob_replace.dat'
+
 """
 Extract Tags from YAML Header
 
@@ -43,6 +46,8 @@ def usage():
     print("    ./extract_header_tags_textblob.py ../library")
     print("")
     exit(1)
+
+
 
 def main():
 
@@ -108,15 +113,24 @@ def main():
             # Step 2: extract noun phrases
             tags = []
             for sentence in sentences:
-
                 blob = TextBlob(sentence)
-                tags += blob.noun_phrases
+                tags += [str(j) for j in blob.noun_phrases]
 
             # Step 3: clean up tags (case, remove dupes, remove overlap)
+            tags = fix_replace(tags)
             tags = list(set(tags))
             tags = scrub_overlap(tags)
 
-            yaml_header['tags'] = tags
+            # Step 4: remove tags
+            with open(TEXTBLOB_IGNORE,'r') as f:
+                ignore_tags = [line.strip() for line in f.readlines() if line[0] != '#']
+            tags = [j for j in tags if j not in ignore_tags]
+
+            # Step 5: sort tags
+            tags = sorted(tags)
+
+            if len(tags)>0:
+                yaml_header['automatic_tags'] = tags
 
             head = yaml.dump(yaml_header, default_flow_style=False)
             head = re.sub('\n  ',' ',head)
@@ -136,6 +150,39 @@ def main():
         else:
 
             print("Dry run would have extracted header tags from document: %s"%(md),file=sys.stderr)
+
+
+def fix_replace(tags):
+    """
+    Perform replacement of phrases using the 
+    list in the replace file.
+    """
+    with open(TEXTBLOB_REPLACE,'r') as f:
+        lines = [line.strip() for line in f.readlines()]
+
+    case_fixes = {}
+    for line in lines:
+        (k,v) = line.split(":")
+        k = k.strip()
+        v = v.strip()
+        case_fixes[k] = v
+
+    new_tags = []
+    for tag in tags:
+
+        new_tag = tag
+
+        for case_fix in case_fixes.keys():
+            if case_fix in new_tag:
+                r = case_fix
+                s = case_fixes[r]
+                new_tag = re.sub(r,s,new_tag)
+
+        new_tags.append(new_tag)
+
+    return new_tags
+
+
 
 
 if __name__=="__main__":
