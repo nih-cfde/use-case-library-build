@@ -5,26 +5,26 @@ narratives:
 
 **Scenario:**
 
-I am a teacher at a community college. I want a way for my students to
-learn data science processes using real-life data. I do not have the
-expertise or resources to do this on my own. I did this in graduate
+Natalia is a teacher at a community college. She wants a way for her students to
+learn data science processes using real-life data. She does not have the
+expertise or resources to do this on her own, but she has experience doing this in graduate
 school.
 
 **Current approach:**
 
-I can partner with a high performance computing center at a nearby
-university. I can use a synthetic “experiment”.
+Natalia could partner with a high performance computing center at a nearby
+university. She could also use a synthetic “experiment”.
 
 **With Data Commons Phase 1:**
 
-Public website that opens up access to data and tools. Leverage a
-standard set of resources in the cloud. Support exploratory
+Natalia can access data and tools on a public website. She can leverage a
+standard set of resources in the cloud that support exploratory
 investigation of data.
 
 **With Data Commons longer vision:**
 
-Training videos and workshops support continued learning. Community of
-developers and users within the Data Commons support citizen
+Natalia can use training videos and workshops that support continued learning. A community of
+developers and users within the Data Commons is available to help support citizen
 scientists.
 
 
