@@ -4,6 +4,6 @@ blurb: Construct an analysis-ready, cross-study phenotypic dataset.
 user-stories:
 - USERSTORY-4
 - USERSTORY-5
-automatic_tags:
+tags:
 - cross-study phenotypic dataset
 ---

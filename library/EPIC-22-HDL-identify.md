@@ -3,7 +3,7 @@ title: Identify TOPmed records in which HDL has been measured, and to which the 
 blurb: Develop an analysis plan for phenotypic analysis.
 user-stories:
 - USERSTORY-2
-automatic_tags:
+tags:
 - HDL
 - analysis plan
 - identify TOPMed

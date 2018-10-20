@@ -1,7 +1,7 @@
 ---
 title: GTEx Analysis with BioJupies
 narratives: null
-automatic_tags:
+tags:
 - Biojupies
 - GTEx analysis
 ---

@@ -5,6 +5,6 @@ user-stories:
 - USERSTORY-1
 - USERSTORY-2
 - USERSTORY-3
-automatic_tags:
+tags:
 - analysis plan
 ---

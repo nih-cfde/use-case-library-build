@@ -42,6 +42,12 @@ def usage():
     print("        -n | --dry-run       Print the names of files that would be")
     print("                             changed if the script were run.")
     print("")
+    print("        -f | --force         If an item in the use case library already")
+    print("                             contains tags, force overwrite the tags.")
+    print("")
+    print("        -s | --safe          If an item in the use case library already")
+    print("                             contains tags, be safe and don't overwrite the tags.")
+    print("")
     print("Example:")
     print("    ./extract_header_tags_textblob.py ../library")
     print("")
@@ -54,7 +60,7 @@ def main():
     if(len(sys.argv)<2):
         usage()
 
-    # Extract dry run arguments, if present
+    # Extract dry run argument, if present
     args = sys.argv[1:]
     dry_run = False
     for dry_run_flag in ['-n','--dry-run']:
@@ -62,10 +68,31 @@ def main():
             dry_run = True
             args.remove(dry_run_flag)
 
+    # Extract force argument, if present
+    args = sys.argv[1:]
+    force_run = False
+    for force_run_flag in ['-f','--force']:
+        if(force_run_flag in args):
+            force_run = True
+            args.remove(force_run_flag)
+
+    # Extract safe argument, if present
+    args = sys.argv[1:]
+    safe_run = False
+    for safe_run_flag in ['-s','--safe']:
+        if(safe_run_flag in args):
+            safe_run = True
+            args.remove(safe_run_flag)
+
+    if safe_run and force_run:
+        err = "ERROR: Cannot do safe run and force run together. Specify one of -f or -s."
+        raise Exception(err)
+
     # Set the location of the source files and check it exists
     SRC_DOCS = args[0]
     if not os.path.isdir(SRC_DOCS):
         err = "ERROR: No source directory %s was found."%(SRC_DOCS)
+        raise Exception(err)
     
     # Walk the directory and look for Markdown files
     markdown_files = []
@@ -102,50 +129,57 @@ def main():
 
             yaml_header, body = parse_library_md(md)
 
-            # Step 1: compile the sentences where tags come from
-            sentences = []
-            for key in yaml_header:
-                if key in ['title','blurb','input','output']:
-                    value = yaml_header[key]
-                    if type(value)==type(""):
-                        sentences.append(value)
+            if 'tags' not in yaml_header.keys() or force_run:
 
-            # Step 2: extract noun phrases
-            tags = []
-            for sentence in sentences:
-                blob = TextBlob(sentence)
-                tags += [str(j) for j in blob.noun_phrases]
+                # No tags yet, so populate tags wtih automatically extracted tags
 
-            # Step 3: clean up tags (case, remove dupes, remove overlap)
-            tags = fix_replace(tags)
-            tags = list(set(tags))
-            tags = scrub_overlap(tags)
+                # Step 1: compile the sentences where tags come from
+                sentences = []
+                for key in yaml_header:
+                    if key in ['title','blurb','input','output']:
+                        value = yaml_header[key]
+                        if type(value)==type(""):
+                            sentences.append(value)
 
-            # Step 4: remove tags
-            with open(TEXTBLOB_IGNORE,'r') as f:
-                ignore_tags = [line.strip() for line in f.readlines() if line[0] != '#']
-            tags = [j for j in tags if j not in ignore_tags]
+                # Step 2: extract noun phrases
+                tags = []
+                for sentence in sentences:
+                    blob = TextBlob(sentence)
+                    tags += [str(j) for j in blob.noun_phrases]
 
-            # Step 5: sort tags
-            tags = sorted(tags)
+                # Step 3: clean up tags (case, remove dupes, remove overlap)
+                tags = fix_replace(tags)
+                tags = list(set(tags))
+                tags = scrub_overlap(tags)
 
-            if len(tags)>0:
-                yaml_header['automatic_tags'] = tags
+                # Step 4: remove tags
+                with open(TEXTBLOB_IGNORE,'r') as f:
+                    ignore_tags = [line.strip() for line in f.readlines() if line[0] != '#']
+                tags = [j for j in tags if j not in ignore_tags]
 
-            head = yaml.dump(yaml_header, default_flow_style=False)
-            head = re.sub('\n  ',' ',head)
+                # Step 5: sort tags
+                tags = sorted(tags)
 
-            delim = '---\n'
+                if len(tags)>0:
+                    yaml_header['tags'] = tags
 
-            # write to target file
-            with open(md,'w') as f:
-                f.write(delim)
-                f.write(head)
-                f.write(delim)
-                f.write(body)
+                head = yaml.dump(yaml_header, default_flow_style=False)
+                head = re.sub('\n  ',' ',head)
 
-            print("Finished extracting header tags from document: %s"%(md),file=sys.stderr)
-            print("Extracted tags: %s"%( ", ".join(tags) ))
+                delim = '---\n'
+
+                # write to target file
+                with open(md,'w') as f:
+                    f.write(delim)
+                    f.write(head)
+                    f.write(delim)
+                    f.write(body)
+
+                print("Finished extracting header tags from document: %s"%(md),file=sys.stderr)
+                print("Extracted tags: %s"%( ", ".join(tags) ))
+
+            else:
+                print("Document already contains tags: %s"%(md),file=sys.stderr)
 
         else:
 
@@ -183,9 +217,6 @@ def fix_replace(tags):
     return new_tags
 
 
-
-
 if __name__=="__main__":
     main()
-
 

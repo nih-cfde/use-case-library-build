@@ -2,7 +2,7 @@
 input: Association test statistics
 output: QQ plot
 task: Generate QQ plot for evaluating model fit
-automatic_tags:
+tags:
 - Quantile
 - association test statistics
 ---

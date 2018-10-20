@@ -5,7 +5,7 @@ user-stories:
 - USERSTORY-66
 - USERSTORY-67
 - USERSTORY-68
-automatic_tags:
+tags:
 - FAIR assessment
 - FAIRness
 - FAIRshake

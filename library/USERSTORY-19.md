@@ -2,7 +2,7 @@
 input: Variant-based functional annotations (WGSA)
 output: Reformatted variant-based functional annotations
 task: Parse WGSA output to facilitate queries
-automatic_tags:
+tags:
 - functional annotations
 - reformatted
 - variant-based

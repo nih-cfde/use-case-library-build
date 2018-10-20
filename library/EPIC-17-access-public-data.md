@@ -4,7 +4,7 @@ blurb: A study participant wants to see how their data is used.
 user-stories:
 - USERSTORY-64
 - USERSTORY-65
-automatic_tags:
+tags:
 - searching
 - study participant
 - summary

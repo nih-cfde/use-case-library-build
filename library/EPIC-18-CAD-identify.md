@@ -6,7 +6,7 @@ user-stories:
 - USERSTORY-3
 - USERSTORY-6
 - USERSTORY-9
-automatic_tags:
+tags:
 - CAD
 - artery disease
 - coronary

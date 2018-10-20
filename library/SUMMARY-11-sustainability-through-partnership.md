@@ -1,7 +1,7 @@
 ---
 title: Sustainability through Partnership
 narratives: null
-automatic_tags:
+tags:
 - partnership
 - sustainability
 ---

@@ -6,6 +6,6 @@ user-stories:
 - USERSTORY-7
 - USERSTORY-8
 - USERSTORY-9
-automatic_tags:
+tags:
 - genotypic data
 ---

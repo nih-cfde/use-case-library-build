@@ -8,7 +8,7 @@ epics:
 - EPIC-24
 - EPIC-25
 - EPIC-26
-automatic_tags:
+tags:
 - HDL
 - disease phenotype
 - harmonization user narrative

@@ -1,7 +1,7 @@
 ---
 title: Signing Official
 blurb: The Signing Official (SO) has institutional authority to legally bind the institution in grants administration matters.
-automatic_tags:
+tags:
 - grants administration matters
 - institutional authority
 - signing
