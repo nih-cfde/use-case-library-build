@@ -15,7 +15,7 @@ in more data than what is available in dbGaP.
 
 **Current approach:**
 
-Right now she would separate logins for the datasets she wants to use and
+Right now Ishanvi would separate logins for the datasets she wants to use and
 require separate approvals. She wouldn't have the ability to download all
 the studies she identified and store all of that data locally. She wouldn't have
 the funds or technical support to use it in the cloud. She would perform
@@ -26,15 +26,15 @@ all to her computer. And it would have to be secure.
 
 **With Data Commons Phase 1:**
 
-Ishvani can readily access data in the cloud. Multiple datasets are supported
+Ishanvi can readily access data in the cloud. Multiple datasets are supported
 and can be linked through a common metadata model. A query returns
-data that matches Ishvani’s data access approval and the study
+data that matches Ishanvi’s data access approval and the study
 consent. She can label her new cohort and use a secure workspace and pre-made tools to analyze it.
 
 **With Data Commons longer vision:**
 
 Data is automatically put into a common data model and linked across
-studies. The data has been deemed FAIR. Ishvani can bring her
+studies. The data has been deemed FAIR. Ishanvi can bring her
 own data to the cloud workspace to expand her cohort. The pool of
 supported data sets is greatly expanded. She can now publish
 her cohort for other researchers to use. They can find a cohort
