@@ -4,7 +4,7 @@ blurb: Identify the anatomical aberrations associated with the genetic and pheno
 user-stories:
 - USERSTORY-77
 - USERSTORY-78
-automatic_tags:
+tags:
 - anatomical aberrations
 - determine copd
 - phenotypic variations

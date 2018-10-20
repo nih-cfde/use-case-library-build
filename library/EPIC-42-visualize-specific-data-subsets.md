@@ -4,7 +4,7 @@ blurb: Interactively view and search specific data subsets - e.g., chest CT scan
 user-stories:
 - USERSTORY-79
 - USERSTORY-80
-automatic_tags:
+tags:
 - COPDGene
 - interactively
 - specific data subsets

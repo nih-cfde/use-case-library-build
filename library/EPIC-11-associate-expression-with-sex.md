@@ -4,7 +4,7 @@ blurb: Associate differences in gene expression with sex.
 user-stories:
 - USERSTORY-47
 - USERSTORY-48
-automatic_tags:
+tags:
 - gene expression
 ---
 a. Perform alignment of the FASTQ files representing the GTEx raw data

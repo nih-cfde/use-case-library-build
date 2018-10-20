@@ -8,7 +8,7 @@ epics:
 - EPIC-10
 - EPIC-11
 - EPIC-12
-automatic_tags:
+tags:
 - AGR
 - GTEx
 - biological

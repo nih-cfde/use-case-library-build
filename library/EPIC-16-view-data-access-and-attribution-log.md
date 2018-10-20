@@ -4,7 +4,7 @@ blurb: Identify TOPMed participants whose data use restrictions are compatible f
 user-stories:
 - USERSTORY-2
 - USERSTORY-59
-automatic_tags:
+tags:
 - CAD research
 - data use restrictions
 - data-use

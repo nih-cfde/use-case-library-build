@@ -4,7 +4,7 @@ persona: PERSONA-9-study-participant
 blurb: Participant is interested in who uses their data and why.
 epics:
 - EPIC-17
-automatic_tags:
+tags:
 - participant summary
 ---
 ### Scientific Objective

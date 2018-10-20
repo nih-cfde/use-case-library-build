@@ -3,7 +3,7 @@ title: Perform more detailed analyses
 blurb: Coronary artery disease (CAD) genome-wide association user narrative.
 user-stories:
 - USERSTORY-2
-automatic_tags:
+tags:
 - CAD
 - artery disease
 - coronary

@@ -5,7 +5,7 @@ user-stories:
 - USERSTORY-44
 - USERSTORY-45
 - USERSTORY-46
-automatic_tags:
+tags:
 - multi-species expression dataset
 ---
 Integrate other relevant data. It should be possible to integrate gene

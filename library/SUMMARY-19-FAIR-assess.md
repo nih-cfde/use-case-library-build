@@ -2,7 +2,7 @@
 title: FAIR Assessment using FAIRshake Summary
 narratives:
 - NARRATIVE-19
-automatic_tags:
+tags:
 - FAIR assessment
 - FAIRshake summary
 ---

@@ -1,7 +1,7 @@
 ---
 title: Analysis at Scale
 narratives: null
-automatic_tags:
+tags:
 - analysis
 - scale
 ---

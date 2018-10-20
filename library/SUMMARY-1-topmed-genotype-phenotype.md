@@ -2,7 +2,7 @@
 title: TOPmed Genotype-Phenotype Association Testing
 narratives:
 - NARRATIVE-1
-automatic_tags:
+tags:
 - TOPMed genotype-phenotype
 ---
 **Scenario**

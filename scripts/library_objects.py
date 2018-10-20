@@ -232,40 +232,32 @@ def create_library_object(filename, header, content):
     if filetype == 'PERSONA':
         if 'tags' not in header:
             header['tags'] = []
-        if 'automatic_tags' not in header:
-            header['automatic_tags'] = []
 
-        required = ['title', 'blurb','automatic_tags','tags']
+        required = ['title', 'blurb','tags']
         if set(header) != set(required):
             print('WARNING: extra header components in {}'.format(ident))
             print('header   = %s'%(", ".join(header.keys())))
             print('required = %s'%(", ".join(required)))
 
-        obj = Persona(ident, header['title'], header['blurb'], 
-                header['automatic_tags']+header['tags'])
+        obj = Persona(ident, header['title'], header['blurb'], header['tags'])
 
     elif filetype == 'USER STORY':
         if 'tags' not in header:
             header['tags'] = []
-        if 'automatic_tags' not in header:
-            header['automatic_tags'] = []
 
-        required = ['input','output','task','automatic_tags','tags']
+        required = ['input','output','task','tags']
         if set(header) != set(required):
             print('WARNING: extra header components in {}'.format(ident))
             print('header   = %s'%(", ".join(header.keys())))
             print('required = %s'%(", ".join(required)))
             
-        obj = UserStory(ident, header['input'], header['output'], header['task'], 
-                header['automatic_tags']+header['tags'])
+        obj = UserStory(ident, header['input'], header['output'], header['task'], header['tags'])
 
     elif filetype == 'NARRATIVE':
         if 'tags' not in header:
             header['tags'] = []
-        if 'automatic_tags' not in header:
-            header['automatic_tags'] = []
 
-        required = ['title','blurb', 'persona', 'epics','automatic_tags','tags']
+        required = ['title','blurb', 'persona', 'epics','tags']
         if set(header) != set(required):
             print('WARNING: extra header components in {}'.format(ident))
             print('header   = %s'%(", ".join(header.keys())))
@@ -276,31 +268,26 @@ def create_library_object(filename, header, content):
             print('WARNING: narrative {} has no epics.'.format(ident))
             epics = []
 
-        obj = Narrative(ident, header['title'], header['blurb'], header['persona'], epics, 
-                header['automatic_tags']+header['tags'])
+        obj = Narrative(ident, header['title'], header['blurb'], header['persona'], epics, header['tags'])
 
     elif filetype == 'EPIC':
         if 'tags' not in header:
             header['tags'] = []
-        if 'automatic_tags' not in header:
-            header['automatic_tags'] = []
 
-        required = ['title', 'blurb', 'user-stories','automatic_tags','tags']
+        required = ['title', 'blurb', 'user-stories','tags']
         if set(header) != set(required):
             print('WARNING: extra header components in {}'.format(ident))
             print('header   = %s'%(", ".join(header.keys())))
             print('required = %s'%(", ".join(required)))
             
         obj = Epic(ident, header['title'], header['blurb'],
-                    header['user-stories'], header['automatic_tags']+header['tags'])
+                    header['user-stories'], header['tags'])
 
     elif filetype == 'SUMMARY':
         if 'tags' not in header:
             header['tags'] = []
-        if 'automatic_tags' not in header:
-            header['automatic_tags'] = []
 
-        required = ['title','narratives','automatic_tags','tags']
+        required = ['title','narratives','tags']
         if set(header) != set(required):
             print('WARNING: extra header components in {}'.format(ident))
             print('header   = %s'%(", ".join(header.keys())))
@@ -311,8 +298,7 @@ def create_library_object(filename, header, content):
             print('WARNING: summary {} has no narratives.'.format(ident))
             narratives = []
 
-        obj = Summary(ident, header['title'], narratives, 
-                header['automatic_tags']+header['tags'])
+        obj = Summary(ident, header['title'], narratives, header['tags'])
 
     else:
         raise ValueError('unhandled file type: ' + filetype)

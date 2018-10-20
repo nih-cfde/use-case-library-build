@@ -4,7 +4,7 @@ blurb: FAIR Assessment using FAIRshake user narrative
 user-stories:
 - USERSTORY-70
 - USERSTORY-71
-automatic_tags:
+tags:
 - FAIR assessment
 - FAIRness
 - FAIRshake

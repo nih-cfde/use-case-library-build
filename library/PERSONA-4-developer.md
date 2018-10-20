@@ -1,7 +1,7 @@
 ---
 title: Developer
 blurb: A researcher who can build new software tools and pipelines.
-automatic_tags:
+tags:
 - developer
 - new software tools
 ---
