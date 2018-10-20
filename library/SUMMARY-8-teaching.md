@@ -12,7 +12,7 @@ school.
 
 **Current approach:**
 
-Natalia could partner with a high performance computing center at a nearby
+She could partner with a high performance computing center at a nearby
 university. She could also use a synthetic “experiment”.
 
 **With Data Commons Phase 1:**
@@ -23,7 +23,7 @@ investigation of data.
 
 **With Data Commons longer vision:**
 
-Natalia can use training videos and workshops that support continued learning. A community of
+She can use training videos and workshops that support continued learning. A community of
 developers and users within the Data Commons is available to help support citizen
 scientists.
 
