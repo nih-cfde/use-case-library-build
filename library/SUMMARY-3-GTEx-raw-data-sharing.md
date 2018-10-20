@@ -10,7 +10,7 @@ Mamie wants to use existing raw data on GTEx as input for evaluating a new compu
 
 **Current Approach**
 
-Once Mamie had gained access rights to GTEx, she could retrieve raw data files. However, she'd have to manually match the IDs used in the paper where the raw data originated to the GTEx dataset IDs. Furthermore if there was an update to the GTEx before Mamie finished her analysis, the paths to the raw data could change and need to be manually re-matched to the IDs.
+Once Mamie had gained access rights to GTEx, she would retrieve raw data files. However, she'd have to manually match the IDs used in the paper where the raw data originated to the GTEx dataset IDs. Furthermore if there was an update to the GTEx before Mamie finished her analysis, the paths to the raw data could change and need to be manually re-matched to the IDs.
 
 **With the Data Commons Phase I**
 
