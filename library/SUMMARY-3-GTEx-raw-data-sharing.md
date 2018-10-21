@@ -22,6 +22,6 @@ to static raw data paths.
 **With Data Commons longer vision:**
 
 Mamie can develop new methods for variant discovery, and submit her workflow
-to the Data Commons as a CWL. The ability to share both data and pipelines
+to the Data Commons as CWL. The ability to share both data and pipelines
 within the Commons makes research faster for others, but also allows non-experts
 to run workflows that they otherwise would not have been able to code.
