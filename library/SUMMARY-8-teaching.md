@@ -1,8 +1,7 @@
 ---
 title: Teaching
-narratives:
+narratives: null
 ---
-
 **Scenario:**
 
 Natalia is a teacher at a community college. She wants a way for her students to

@@ -1,8 +1,10 @@
 ---
 title: Analysis at Scale
-narratives:
+narratives: null
+tags:
+- analysis
+- scale
 ---
-
 **Scenario:**
 
 Maritza is working with a really large and complex dataset stored across

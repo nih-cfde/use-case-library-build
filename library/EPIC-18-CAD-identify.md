@@ -6,4 +6,10 @@ user-stories:
 - USERSTORY-3
 - USERSTORY-6
 - USERSTORY-9
+tags:
+- CAD
+- artery disease
+- coronary
+- data-use
+- genome-wide association user narrative
 ---

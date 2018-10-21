@@ -17,13 +17,13 @@ pages:
     - {{ obj.title }}: {{ obj.ident }}.md
 {% endfor %}
   - Personas:
-{% for obj in yield_objects('PERSONA') %}
+{% for obj in yield_objects('PERSONA') %} {% autoescape true %}
     - "{{ obj.title }}": {{ obj.ident }}.md
-{% endfor %}
+{% endautoescape %} {% endfor %}
   - User Stories:
-{% for obj in yield_objects('USER STORY') %}
+{% for obj in yield_objects('USER STORY') %} {% autoescape true %}
     - "{{ obj.title }}": {{ obj.ident }}.md
-{% endfor %}
+{% endautoescape %} {% endfor %}
   - Epics:
 {% for obj in yield_objects('EPIC') %}
     - {{ obj.title }}: {{ obj.ident }}.md

@@ -1,8 +1,9 @@
 ---
 title: Data Harmonization
-narratives:
+narratives: null
+tags:
+- data harmonization
 ---
-
 **Scenario:**
 
 Zhong is trying to connect phenotypic variables from one study to
@@ -18,6 +19,7 @@ different studies. He might be able to use computer algorithms to aid in this ta
 
 Zhong can use a common metadata model that will make data harmonization easier and more efficient.  
 
+
 **With Data Commons longer vision:**
 
 Zhong can access a set of harmonization approaches 
@@ -26,3 +28,4 @@ result of Data Commons users sharing previously harmonized data. Users
 can collectively validate harmonization to increase trust in the metadata
 model. Computer scientists will develop deep learning techniques to suggest
 improvements to harmonization that are verified by the user community.
+

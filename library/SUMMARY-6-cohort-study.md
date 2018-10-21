@@ -1,8 +1,9 @@
 ---
 title: Cohort Study
-narratives:
+narratives: null
+tags:
+- cohort
 ---
-
 **Scenario:**
 
 Ishanvi studies racial disparities among African Americans with cardiovascular

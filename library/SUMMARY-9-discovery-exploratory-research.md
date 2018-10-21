@@ -1,8 +1,9 @@
 ---
 title: Discovery-based/Exploratory Research
-narratives:
+narratives: null
+tags:
+- discovery-based/exploratory
 ---
-
 **Scenario:**
 
 Wesley has his own raw genetic dataset that he’d like to explore
@@ -32,4 +33,5 @@ data in the Data Commons so it is accessible by other
 researchers. There is now a marketplace for finding datasets that others have
 contributed to collaborate on. There are also policies around intellectual property
 that encourage collaboration, open science, as well as protecting researchers.
+
 

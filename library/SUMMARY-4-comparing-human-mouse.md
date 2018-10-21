@@ -1,8 +1,7 @@
 ---
 title: Comparing Human and Mouse
-narratives:
+narratives: null
 ---
-
 **Scenario:**
 
 Two research teams independently found a novel phenotype. One team has
@@ -36,4 +35,3 @@ the Commons environment. They are able to tailor their analysis
 pipeline. They work with developers in the Data Commons community to
 set up an automatic update of their collaborative study as more human
 data is added to TOPMed.
-

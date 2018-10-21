@@ -1,8 +1,7 @@
 ---
 title: Comparing Human and Mouse (patient focused)
-narratives:
+narratives: null
 ---
-
 **Scenario:**
 
 Gordon has a patient with a new phenotype. He wants to identify how common

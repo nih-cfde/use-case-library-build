@@ -1,26 +1,42 @@
 #!/usr/bin/env python
 import os, re, sys
 import subprocess
+import oyaml as yaml
+from collections import OrderedDict
+
+from parse_input_files import parse_library_md
 
 """
-Linkify all links in a document using Pandoc
+Linkify Use Case Library
+Markdown + YAML Headers
+
+
+This script iterates over every Markdown file in the
+library and performs the following set of operations:
+
+- remove the YAML header
+- pass the body through Pandoc Github-flavored markdown to JSON
+- pass the body back through Pandoc JSON to Github-flavored markdown (linkify)
+- re-attach the YAML header
+- dump the header + body into the original Markdown file
 """
 
 def usage():
-    print("linkify_in_place:")
-    print("This script will search a pile of Markdown files for")
-    print("hyperlinks and turn them into markdownified hyperlinks")
-    print("in-place. WARNING: This is a destructive task.")
+    print("linkify_library.py:")
+    print("This script iterates over each Markdown file with YAML headers,")
+    print("removes the YAML header, linkifies the body with pandoc, and")
+    print("re-attaches the YAML header.")
+    print("")
+    print("WARNING: This task will modify documents in-place.")
     print("")
     print("Usage:")
-    print("    ./linkify_in_place [FLAGS] <path-to-markdown-files>")
+    print("    ./linkify_library.py [FLAGS] <path-to-markdown-files>")
     print("")
     print("        -n | --dry-run       Print the names of files that would be")
-    print("                             changed if the linkify_in_place script")
-    print("                             were run.")
+    print("                             changed if the script were run.")
     print("")
     print("Example:")
-    print("    ./linkify_in_place ../library")
+    print("    ./linkify_library.py ../library")
     print("")
     exit(1)
 
@@ -55,54 +71,45 @@ def main():
 
             if( bool1 and bool2 and bool3):
                 markdown_files.append( os.path.join( fdir, f ) )
-    
+
+    ########################################
+    # Linkify strategy for Markdown + YAML:
+    # - tear off yaml header
+    # - store body in temp file
+    # - apply pandoc gfm to json with temp file
+    # - apply pandoc json to gfm
+    # - paste YAML header back on
+    # - output to file
+    ########################################
 
     # Linkify each markdown document found
-    for md in markdown_files:
+    for kk, md in enumerate(markdown_files):
     
         print("-"*40,file=sys.stderr)
         print("Linkifying (in-place) document: %s"%(md),file=sys.stderr)
-    
+
         if dry_run is False:
 
-            # print md to screen
-            cat_cmd = ['cat', md]
+            yaml_header, body = parse_library_md(md)
+
+            # make a new backup file
+            backup_md = re.sub('.md$','.md.secondary',md)
+
+            with open(backup_md,'w') as f:
+                f.write("\n".join(body))
+
+            # cat md (we will pass this to pandoc)
+            cat_cmd = ['cat', backup_md]
             cat_proc = subprocess.Popen(cat_cmd,
                     stdout=subprocess.PIPE)
-    
+
             # pandoc: md to json
             pandoc_from_cmd = ['pandoc','-f','gfm','-t','json','-s']
             pandoc_from_proc = subprocess.Popen(pandoc_from_cmd, 
                     stdin=cat_proc.stdout,
                     stdout=subprocess.PIPE)
-    
-            '''
-            # ---------------------------------
-            # If we were applying a filter,
-            # we would use these two steps:
 
-            # above, you would set:
-            FILTER = 'filters/parse_links.py'
-
-            # filter: json to json
-            pandoc_filter_cmd = [FILTER]
-            pandoc_filter_proc = subprocess.Popen(pandoc_filter_cmd, 
-                    stdin=pandoc_from_proc.stdout,
-                    stdout=subprocess.PIPE)
-            
-            # pandoc: json to markdown
-            pandoc_to_cmd = ['pandoc','-f','json','-t','gfm']
-            pandoc_to_proc = subprocess.Popen(pandoc_to_cmd, 
-                    stdin=pandoc_filter_proc.stdout,
-                    stdout=subprocess.PIPE)
-            '''
-
-            # -------------------------------------
-            # If we are not applying a filter,
-            # we skip straight to converting 
-            # the document back to Markdown.
-
-            # pandoc: json to markdown
+            # pandoc: json to md
             pandoc_to_cmd = ['pandoc','-f','json','-t','gfm']
             pandoc_to_proc = subprocess.Popen(pandoc_to_cmd, 
                     stdin=pandoc_from_proc.stdout,
@@ -111,7 +118,7 @@ def main():
             # we now have the text of the pandoc output
             pandoc_output = pandoc_to_proc.stdout.read().decode('utf-8')
 
-            # apply any filtering at this point
+            # apply any regex filtering at this point
             # 
             # github checkboxes (not handled well by pandoc...)
             # \[x\] or \[X\] into [x]
@@ -125,9 +132,21 @@ def main():
             # target file is same as source/input file
             target = md
 
+            delim = '---\n'
+
+            head = yaml.dump(yaml_header, default_flow_style=False)
+            head = re.sub('\n  ',' ',head)
+
+
             # write to target file
             with open(target,'w') as f:
-                f.write(final_document)
+                f.write(delim)
+                f.write(head)
+                f.write(delim)
+                f.write(body)
+
+            # remove backup file
+            os.remove(backup_md)
 
             print("Finished linkifying document: %s"%(target),file=sys.stderr)
 
@@ -137,7 +156,7 @@ def main():
             target = md
 
             print("Dry run would have linkified document: %s"%(target),file=sys.stderr)
-        
+
 
 if __name__=="__main__":
     main()
