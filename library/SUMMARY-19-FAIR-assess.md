@@ -8,16 +8,17 @@ tags:
 ---
 **Scenario:**
 
-Andrew wants to making his groups digital research objects more findable, accessible, interoperable and reusable (FAIR). This will be a critical step for getting his groups data to be widely used by data scientists.
+Andrew wants to make his group's digital research objects more findable, accessible, interoperable and reusable (FAIR). This will be a critical step for getting his group's data to be widely used by data scientists.
 
 **Current approach:**
 
-Software to systematically assess, store and display the FAIRness of biomedical digital objects is currently mostly not available.
+Andrew would have to come up with his own solution. Software to systematically assess, store and display the FAIRness of biomedical digital objects is not currently available.
 
 **With Data Commons Phase 1:**
 
-To begin addressing this challenge, the FAIR guiding principles were established. FAIRshake is a new software toolkit that was developed for the Data Commons to enable the assessment of compliance of biomedical digital research objects with the FAIR guiding principles. FAIRshake functions as a repository to store and serve FAIR assessments. It will allow Andrew to start projects, contribute metrics and rubrics, and perform and display FAIR assessments.
+Andrew can use the FAIRshake software toolkit to assess the compliance of his group's biomedical research objects.
+FAIR guiding principles have been established. FAIRshake functions as a repository to store and serve FAIR assessments. Now, Andrew can start projects, contribute metrics and rubrics, and perform and display FAIR assessments.
 
 **With Data Commons longer vision:**
 
-Ater he completes his FAIR assessment Andrew can see what parts of his digital object repository need work, and can put resources into improving the FAIRness of his data. After some community building, led by the Data Commons, Andrew will also find that memebers of the FAIR commnunity have also asssessed his reposoitory, and have noticed things he didn't. Once he is happy with the status of his own data, Andrew begins to set aside time each month to assess new commnuinty datasets for FAIRness, and helping newcomers learn the FAIRshake system.
+After he completes his FAIR assessment Andrew can see what parts of his digital object repository need work, and can put resources into improving the FAIRness of his data. After some community building, led by the Data Commons, Andrew will also find that memebers of the FAIR commnunity have also asssessed his reposoitory, and have noticed things he didn't. Once he is happy with the status of his own data, Andrew begins to set aside time each month to assess new community datasets for FAIRness, and help newcomers learn the FAIRshake system.
