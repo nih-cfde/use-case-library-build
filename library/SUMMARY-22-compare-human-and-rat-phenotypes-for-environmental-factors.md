@@ -7,7 +7,7 @@ tags:
 ---
 **Scenario:**
 
-Nancy wants to compare the effect of environmental factors such as diet and activity, genotype and phenotype profiles between particular rat strains and human cohorts exhibiting similar genotype and phenotype profiles to identify the impact of environmental factors on phenotype expression from particular genotypes and to identify particular rat strains that might mimic human cohorts for preclinical studies. In addition, she would like to examine the impacts of age and sex.
+NAncy wants to compare the effects of environmental factors such as diet and activity on phenotype. To do this she would compare the phenotypic profiles of many different rat strains, and record what phenotypic changes were consistent across different genotypic backgrounds. She would also compare the rat genotypes and phenotypes to human studies to identify particular rat strains that might mimic human cohorts for preclinical studies. In addition, she wants to examine the impacts of age and sex.
 
 **Current approach:**
 
