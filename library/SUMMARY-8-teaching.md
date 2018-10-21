@@ -13,7 +13,7 @@ school.
 **Current approach:**
 
 She could partner with a high performance computing center at a nearby
-university. She could also create a synthetic “experiment”.
+university or she could create a synthetic “experiment”.
 
 **With Data Commons Phase 1:**
 
