@@ -11,7 +11,7 @@ As Signing Official, Marion would like to be able to pre-authorize researchers a
 
 **Current Approach**
 
-Marion has to authorize each researcher at her university one at a time, and only authorizes them by specific request.
+Marion would have to authorize each researcher at her university one at a time, and could only authorize them by specific request.
 
 **With the Data Commons Phase I**
 
@@ -19,4 +19,4 @@ Marion has to authorize each researcher at her university one at a time, and onl
 
 **With Data Commons longer vision:**
 
-Marion will be able to log into her Data Commons account, fill out the necessary paperwork for her university. Upon acceptance, Marion can then apply her universities privileges to both current and future researchers at her university.
+Marion can log in to her Data Commons account and fill out the necessary paperwork for her university. Upon acceptance, Marion can then apply her university's privileges to both current and future researchers at her university.
