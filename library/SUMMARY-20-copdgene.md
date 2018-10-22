@@ -11,7 +11,7 @@ Samuel wants to study chronic obstructive pulmonary disease (COPD), which is a c
 
 **Current approach:**
 
-Samuel could go to dbGaP to access genetic variants and CT imaging data. However, only a fraction of the imaging data would be posted. To make things even more difficult for Samuel, the format of the imaging data in dbGaP would be challenging to use.
+Samuel could go to dbGaP to access genetic variants and CT imaging data. However, only a fraction of the imaging data is currently available there. To make things even more difficult for Samuel, the format of the imaging data in dbGaP would be challenging to use.
 
 **With Data Commons Phase 1:**
 
