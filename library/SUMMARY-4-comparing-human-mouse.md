@@ -4,7 +4,7 @@ narratives: null
 ---
 **Scenario:**
 
-Two research teams independently found a novel phenotype. Lily's team has
+Two research teams independently found a novel phenotype. Lilly's team has
 a patient cohort with the phenotype and are looking for a molecular
 and genetic profile associated with the phenotype. Amerie's team has
 identified the same phenotype in mice. The teams found each other at a
@@ -14,7 +14,7 @@ collaborate to determine the root of the phenotype.
 **Current approach:**
 
 Right now, the labs would work independently in their respective
-models. They would analyze data separately and compare notes. Lily's lab
+models. They would analyze data separately and compare notes. Lilly's lab
 might send a grad student or post doc to visit Amerie's lab for
 collaborative research. Their analysis workflows would be
 incompatible.
