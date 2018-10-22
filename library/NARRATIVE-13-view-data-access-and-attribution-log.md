@@ -10,4 +10,4 @@ tags:
 ---
 ### Scientific Objective
 
-A provider of a resource on the Data Commons would like to know if their resource is properly credited/acknowledged
+The provider of a resource on the Data Commons would like to know if their resource is properly credited/acknowledged.
