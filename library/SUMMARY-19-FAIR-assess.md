@@ -17,7 +17,7 @@ Andrew would have to come up with his own solution. Software to systematically a
 **With Data Commons Phase 1:**
 
 Andrew can use the FAIRshake software toolkit to assess the compliance of his group's biomedical research objects.
-FAIR guiding principles have been established. FAIRshake functions as a repository to store and serve FAIR assessments. Now, Andrew can start projects, contribute metrics and rubrics, and perform and display FAIR assessments.
+FAIR guiding principles have been established by the community, and FAIRshake functions as a repository to store and serve FAIR assessments. Now, Andrew can start projects, contribute metrics and rubrics, and perform and display FAIR assessments.
 
 **With Data Commons longer vision:**
 
