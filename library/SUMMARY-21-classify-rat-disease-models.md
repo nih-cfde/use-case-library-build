@@ -7,7 +7,7 @@ tags:
 ---
 **Scenario:**
 
-Donald wants to identify and classify rat disease models for preclinical studies by comparing phenotype and genotype profiles of several strains with those of cohorts in TOPMED with particular diagnoses such as hypertension, cardiomegaly, stroke and coronary artery disease.
+Donald wants to identify and classify rat disease models for preclinical studies by comparing phenotype and genotype profiles of several rat strains with those of human cohorts in TOPMED who have particular diagnoses such as hypertension, cardiomegaly, stroke and coronary artery disease.
 
 **Current approach:**
 
