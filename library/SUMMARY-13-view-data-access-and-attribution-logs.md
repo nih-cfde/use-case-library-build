@@ -12,12 +12,12 @@ Joe, the provider of a resource on the Data Commons, is preparing a report docum
 
 **Current approach:**
 
-Joe keeps a personal log of access to his data, and uses PubMed and similar search engines to find instances where his data has been cited, but generally cannot track un-cited uses.
+Joe would keep a personal log of access to his data, and use PubMed and similar search engines to find instances where his data had been cited, but generally wouldn't be able to track un-cited uses.
 
 **With Data Commons Phase 1:**
 
-In addition to his own, internal logs, Joe can request logs of usernames for all Commons users to accessed his data.
+In addition to his own, internal logs, Joe can request logs of usernames for all Commons users who accessed his data.
 
 **With Data Commons longer vision:**
 
- He accesses the Data Commons user interface for querying the data access log. The user interface allows him to specify his search criteria, which include the UID of his resource(s) within the Data Commons and the start date and end date of the time window he’s interested in. The process returns all logged activity for the specified resources during the specified time window.
+Joe can access the Data Commons user interface for querying the data access log. The user interface allows him to specify his search criteria, which include the UID of his resource(s) within the Data Commons as well as the start date and end date for the time window he’s interested in. The process returns all logged activity for the specified resources during the specified time window.
