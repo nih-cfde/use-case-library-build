@@ -9,10 +9,10 @@ user-stories:
 tags:
 - multi-species phenotype dataset
 ---
-a. The analysis challenge is currently that each of the MODs using
+a. The analysis challenge currently is that each of the MODs use
 different file formats and semantics to record phenotypic data, and
-not all MODs record sex-specific annotations. There are challenges
-related to proper interpretation of file formats and assumptions, for
+not all MODs record sex-specific annotations. There are also challenges
+related to proper interpretation of file formats and assumptions. For
 instance, what to do if multiple genes are recorded for a model. This
 requires deep understanding of the underlying data and communication
 with the MOD databases. In practical terms, we require all of the data
