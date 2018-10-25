@@ -27,7 +27,7 @@ phase of the NIH Data Commons project is that we can use the model
 organism data resources in the Alliance of Genomic Resources and the
 tissue-based gene expression data in the Genotype-Tissue Expression
 (GTEx) project to understand some aspects of the differences between
-male and female biology at genome scale. An additional hypothesis is
+male and female biology at genomic scale. An additional hypothesis is
 that we can use this information to inform our analysis of male and
 female participants in the TOPMed project. The following two example
 projects will exemplify the approach taken to model organism and GTEx
@@ -45,6 +45,6 @@ zebrafish, xenopus, drosophila, C. elegans, and yeast. We'll want to
 generate a table of results for each ontology term with chi-square
 statistics, p-values, and corrected p-values; to determine the
 correlation of distributions of phenotypes in organ systems with
-expression of genes in the organs; and to generate a table of GO or
+expression of genes in the organs; and to generate a table of Gene Ontologies (GO) or
 other pathway analysis terms that characterize the sexually dimorphic
 phenotypes or gene expressions.
