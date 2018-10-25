@@ -1,6 +1,6 @@
 ---
 title: Developer
-blurb: A researcher who can build new software tools and pipelines.
+blurb: A researcher who can build new software tools and pipelines
 tags:
 - developer
 - new software tools

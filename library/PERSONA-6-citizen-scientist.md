@@ -1,6 +1,6 @@
 ---
 title: Citizen scientist
-blurb: An volunteer who can contribute time, effort and resources.
+blurb: An volunteer who can contribute time, effort and resources
 tags:
 - citizen
 - contribute time

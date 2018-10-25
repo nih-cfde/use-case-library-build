@@ -1,6 +1,6 @@
 ---
 title: Data-use aware searching for datasets containing controls and cases with coronary artery disease
-blurb: Coronary artery disease (CAD) genome-wide association user narrative.
+blurb: Coronary artery disease (CAD) genome-wide association user narrative
 user-stories:
 - USERSTORY-2
 - USERSTORY-3

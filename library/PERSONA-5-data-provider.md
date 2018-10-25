@@ -1,6 +1,6 @@
 ---
 title: Data provider
-blurb: A researcher who can provide experimental data.
+blurb: A researcher who can provide experimental data
 tags:
 - experimental data
 ---
