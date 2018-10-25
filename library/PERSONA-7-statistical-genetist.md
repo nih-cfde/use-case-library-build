@@ -1,6 +1,6 @@
 ---
 title: Statistical geneticist
-blurb: A researcher with command-line and statistical skills.
+blurb: A researcher with command-line and statistical skills
 tags:
 - statistical skills
 ---
