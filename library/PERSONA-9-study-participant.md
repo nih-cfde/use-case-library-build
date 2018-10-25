@@ -1,5 +1,5 @@
 ---
-title: Study Participant
+title: Study participant
 blurb: An individual whose data is included in one or more datasets at the Commons.
 tags:
 - participant
