@@ -1,5 +1,5 @@
 ---
-title: Develop a plan for phenotypic analysis.
+title: Develop a plan for phenotypic analysis
 blurb: Develop an analysis plan for phenotypic analysis.
 user-stories:
 - USERSTORY-1
