@@ -1,6 +1,6 @@
 ---
-title: Harmonize HDL data across studies.
-blurb: Data harmonization high density lipoproteins (HDL) user narrative.
+title: Harmonize HDL data across studies
+blurb: Data harmonization high density lipoproteins (HDL) user narrative
 user-stories:
 - USERSTORY-2
 tags:

@@ -1,6 +1,6 @@
 ---
-title: Governance authority
-blurb: A member of a governing body.
+title: Governance Authority
+blurb: A member of a governing body
 tags:
 - governance
 ---
