@@ -1,6 +1,6 @@
 ---
 title: Study Participant
-blurb: An individual whose data is included in one or more datasets at the Commons.
+blurb: An individual whose data is included in one or more datasets at the Commons
 tags:
 - participant
 ---

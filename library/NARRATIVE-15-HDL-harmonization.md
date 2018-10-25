@@ -1,7 +1,7 @@
 ---
 title: Data harmonization user narrative focused on high-density lipoproteins (HDL) research
 persona: PERSONA-3-research-scientists.md
-blurb: Associate measures of high density lipoprotein genotype and disease phenotype.
+blurb: Associate measures of high density lipoprotein genotype and disease phenotype
 epics:
 - EPIC-22
 - EPIC-23

@@ -1,6 +1,6 @@
 ---
 title: Biological data scientist
-blurb: A researcher with some scripting skills.
+blurb: A researcher with some scripting skills
 tags:
 - biological
 - data scientist

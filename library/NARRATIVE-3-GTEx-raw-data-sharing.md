@@ -1,7 +1,7 @@
 ---
 title: GTEx - Sharing Raw Data
 persona: PERSONA-1-biological-data-scientist
-blurb: Many use cases exist for working with raw data.
+blurb: Many use cases exist for working with raw data
 epics:
 - EPIC-13
 - EPIC-14

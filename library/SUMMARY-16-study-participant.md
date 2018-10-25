@@ -13,7 +13,6 @@ As a participant in a study, Jennifer would like to be able to see a summary of 
 
 Jennifer would have to contact the researcher who ran the study she was in to request this information, and this request could compromise her anonymous status.
 
-
 **With the Data Commons Phase I**
 
 

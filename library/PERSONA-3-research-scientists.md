@@ -1,6 +1,6 @@
 ---
 title: Research scientist
-blurb: A research scientist who can run pre-established pipelines.
+blurb: A research scientist who can run pre-established pipelines
 tags:
 - research scientist
 ---

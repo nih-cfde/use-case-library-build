@@ -1,7 +1,7 @@
 ---
 title: Sex as a Biological Variable
 persona: PERSONA-1-biological-data-scientist
-blurb: Sexual dimorphism refers to differences between males and females of the same species. We will use AGR and GTEx to understand some aspects of the differences between male and female biology at a genomic scale.
+blurb: Sexual dimorphism refers to differences between males and females of the same species. We will use AGR and GTEx to understand some aspects of the differences between male and female biology at a genome scale
 epics:
 - EPIC-8
 - EPIC-9
