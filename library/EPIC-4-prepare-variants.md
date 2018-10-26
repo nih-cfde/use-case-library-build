@@ -1,6 +1,6 @@
 ---
 title: Prepare variants to be tested
-blurb: Prepare variants to be tested in the genotype call set
+blurb: Prepare variants to be tested from a set of called genotypes
 user-stories:
 - USERSTORY-3-zip
 ---
