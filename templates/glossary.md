@@ -22,7 +22,7 @@ be validated with scientific stakeholders (is this valuable as
 written? Yes or no.)  *Note:* These are not currently represented
 explicitly in the use case library.
 
-**Personas:** The types of users who will appear in the epics and stories that follow.
+**Persona:** a type of users who will appear in the epics and stories that follow.
 
 **User epic:** a story, told from the user's perspective that captures a
 valuable set of interactions with tools (e.g. software solutions) in
@@ -41,7 +41,7 @@ work. Can be verified with engineering teams (Did we deliver it? Yes
 or no.) Certain stories are likely to appear in multiple epics and
 should not be duplicated if possible.
 
-**User narrative:** The collection of related personas, objectives, epics and stories.
+**User narrative:** a collection of related personas, objectives, epics and stories.
 
 ### How to write and an EPIC and USERSTORY
 
