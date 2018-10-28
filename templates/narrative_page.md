@@ -11,6 +11,8 @@ Persona: {{ make_title_link(obj.persona) }}
 
 {{ obj.content }}
 
+## Related Library Items
+
 {% if obj.epics %}
 
 User epics under this narrative:
@@ -19,11 +21,15 @@ User epics under this narrative:
 * {{ epic.ident }}: {{ make_title_link(epic) }} - {{ epic.blurb }}
 
   {% if epic.user_stories %}
-  {% for story in epic.user_stories %}
-> use **{{ story.input }}** to generate **{{ story.output }}** by **{{ story.task }}** (story appears in {{ len(story.epics) }} epics total).
-  {% endfor %}
+    {% for story in epic.user_stories %}
+
+**User Story:** use **{{ story.input }}** to generate **{{ story.output }}**
+by **{{ story.task }}** (story appears in {{ len(story.epics) }} epics total).
+
+    {% endfor %}
   {% endif %}
-{%- endfor %}
+
+{% endfor %}
 
 {% endif %}
 
