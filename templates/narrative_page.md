@@ -19,16 +19,12 @@ User epics under this narrative:
 
 {% for epic in obj.epics %}
 * {{ epic.ident }}: {{ make_title_link(epic) }} - {{ epic.blurb }}
-
   {% if epic.user_stories %}
     {% for story in epic.user_stories %}
-
-**User Story:** use **{{ story.input }}** to generate **{{ story.output }}**
-by **{{ story.task }}** (story appears in {{ len(story.epics) }} epics total).
-
+    * **User Story:** use **{{ story.input }}** to generate **{{ story.output }}**
+      by **{{ story.task }}** (story appears in {{ len(story.epics) }} epics total).
     {% endfor %}
   {% endif %}
-
 {% endfor %}
 
 {% endif %}
