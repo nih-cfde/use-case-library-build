@@ -50,13 +50,34 @@ echo "Looking in directory \"$LIBDIR\" for use case library..."
 if [[ -f "$LIBDIR/USERSTORY-1.md" ]]; then
 
     # This is indeed the library directory
-    echo "Fixing capitalization..."
-    echo "Running sed from $PWD, processing files in $LIBDIR"
 
-    ls -1 $LIBDIR/USER* | xargs -n1 -I% sed -i 's/input: \([a-z]\)/input: \u\1/g' %
-    ls -1 $LIBDIR/USER* | xargs -n1 -I% sed -i 's/output: \([a-z]\)/output: \u\1/g' %
-    ls -1 $LIBDIR/USER* | xargs -n1 -I% sed -i 's/task: \{1,\}\([a-z]\)/task: \u\1/g' %
-    ls -1 $LIBDIR/USER* | xargs -n1 -I% sed -i 's/DbGaP/dbGaP/g' %
+    for TYPE in EPIC NARRATIVE PERSONA SUMMARY USER; do
+
+        echo "Running sed from $PWD, processing files in $LIBDIR of type $TYPE"
+
+        echo "Fixing capitalization..."
+
+        ls -1 ${LIBDIR}/${TYPE}* | xargs -n1 -I% sed -i 's/input: \{1,\}\([a-z]\)/input: \u\1/g' %
+        ls -1 ${LIBDIR}/${TYPE}* | xargs -n1 -I% sed -i 's/output: \{1,\}\([a-z]\)/output: \u\1/g' %
+        ls -1 ${LIBDIR}/${TYPE}* | xargs -n1 -I% sed -i 's/task: \{1,\}\([a-z]\)/task: \u\1/g' %
+
+        ls -1 ${LIBDIR}/${TYPE}* | xargs -n1 -I% sed -i 's/title: \{1,\}\([a-z]\)/title: \u\1/g' %
+        ls -1 ${LIBDIR}/${TYPE}* | xargs -n1 -I% sed -i 's/persona: \{1,\}\([a-z]\)/persona: \u\1/g' %
+        ls -1 ${LIBDIR}/${TYPE}* | xargs -n1 -I% sed -i 's/blurb: \{1,\}\([a-z]\)/blurb: \u\1/g' %
+
+        ls -1 ${LIBDIR}/${TYPE}* | xargs -n1 -I% sed -i 's/DbGaP/dbGaP/g' %
+
+        echo "Fixing punctuation..."
+
+        ls -1 ${LIBDIR}/${TYPE}* | xargs -n1 -I% sed -i 's/input: \{1,\}\(.*\)\.$/input: \u\1/g' %
+        ls -1 ${LIBDIR}/${TYPE}* | xargs -n1 -I% sed -i 's/output: \{1,\}\(.*\)\.$/output: \u\1/g' %
+        ls -1 ${LIBDIR}/${TYPE}* | xargs -n1 -I% sed -i 's/task: \{1,\}\(.*\)\.$/task: \u\1/g' %
+
+        ls -1 ${LIBDIR}/${TYPE}* | xargs -n1 -I% sed -i 's/title: \{1,\}\(.*\)\.$/title: \u\1/g' %
+        ls -1 ${LIBDIR}/${TYPE}* | xargs -n1 -I% sed -i 's/persona: \{1,\}\(.*\)\.$/persona: \u\1/g' %
+        ls -1 ${LIBDIR}/${TYPE}* | xargs -n1 -I% sed -i 's/blurb: \{1,\}\(.*\)\.$/blurb: \u\1/g' %
+
+    done
 
     echo "Done."
 

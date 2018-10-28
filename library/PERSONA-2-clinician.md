@@ -1,6 +1,6 @@
 ---
 title: Clinician
-blurb: A clinician who can use web-based front-ends.
+blurb: A clinical who can use web-based front-ends
 tags:
 - clinician
 ---

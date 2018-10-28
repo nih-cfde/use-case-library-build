@@ -1,6 +1,6 @@
 ---
 title: Perform security audit
-blurb: Perform security audit on resources accessed by users.
+blurb: Perform security audit on resources accessed by users
 user-stories:
 - USERSTORY-2
 - USERSTORY-57
