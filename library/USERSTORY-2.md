@@ -1,5 +1,7 @@
 ---
-input: eRA Commons ID
-output: authenticated log on
-task: log on to NIH Data Commons
+input: ERA Commons ID
+output: Authenticated log on
+task: Log on to NIH Data Commons
+tags:
+- era commons id
 ---

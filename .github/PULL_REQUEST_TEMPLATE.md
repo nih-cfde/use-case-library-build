@@ -4,7 +4,7 @@ Please place an x between the brackets to indicate a yes answer
 to the questions below.
 
 - [ ] Is this pull request mergeable?
-- [ ] Have you tested these changes locally?
+- [ ] Have you tested these changes locally or with Uncle Archie?
 - [ ] Was a spellchecker run on the source code and documentation after
   changes were made?
 

@@ -1,5 +1,5 @@
 # {{ obj.task }}
-(This is User Story {{ obj.ident }}.)
+(User Story {{ obj.ident }} - {{ make_view_link(obj, "view source") }} | {{ make_edit_link(obj, "edit") }})
 
 **Use {{ obj.input }} to generate {{ obj.output }} to {{ obj.task }}**
 
@@ -18,3 +18,5 @@
 {{ obj.content }}
 
 {% endif %}
+
+{% include "tagblock.html" %}

@@ -1,5 +1,8 @@
 ---
-input: multi-sample GDS
+input: Multi-sample GDS
 output: QC filter to apply to samples
-task: sample-level QC of genotype call set
+task: Sample-level QC of genotype call set
+tags:
+- QC
+- multi-sample GDS
 ---

@@ -10,9 +10,12 @@ epics:
 - EPIC-5
 - EPIC-6
 - EPIC-7
+tags:
+- TOPMed genotype-phenotype
+- biomedical phenotypes
+- genetic risk factors
 ---
-
-### Scientific Objective 
+### Scientific Objective
 
 The primary objective of many TOPMed research projects is to
 identify genetic risk factors for biomedical phenotypes (such as
