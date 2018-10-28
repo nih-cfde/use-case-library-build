@@ -1,7 +1,7 @@
 ---
 title: Pre-authorize Researchers
 persona: PERSONA-10-signing-official
-blurb: Pre-authorize all users at an institution.
+blurb: Pre-authorize all users at an institution
 epics:
 - EPIC-44
 tags:
