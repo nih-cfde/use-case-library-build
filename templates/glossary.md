@@ -13,29 +13,6 @@ of larger goals and the Consortium timelines.
 
 ![Use case library glossary image](../images/glossary.png)
 
-### Discussion
-
-First, "use cases" and "user narratives" seem to each be terms that
-various members of the consortium use to capture a single collection
-of each of the three items below. Consortium members are advised to avoid
-using either term to represent a specific piece of this
-hierarchy. Additionally, "use case" historically refers to something
-lower in the hierarchy that can be verified (did it meet the spec), but
-not necessarily validated (is the spec, and therefore the solution,
-valuable).  We can refer to the entire collection as a "user narrative."
-Another term commonly used in the field (but that we haven't yet used) is
-"user scenario." However, "user narrative" is recommended as it is
-more commonly used.
-
-Second, a set lexicon is needed to represent different types of
-users that are meaningful and in scope for our purposes. A general
-purpose description of a type of user is called a persona, but we
-should refer to them as a user in the narratives by saying "a
-\<persona\>." For example, "an analyst" is a specific user of persona
-"analyst." In some cases a more specific description might be more
-appropriate, beginning with something like "an analyst who wants to
-do..."
-
 ### Definitions
 
 **Scientific objective:** a description of a scientific process, told
