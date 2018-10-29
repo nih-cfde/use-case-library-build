@@ -1,7 +1,13 @@
 # {{ obj.title }}
 (User Narrative {{ obj.ident }} - {{ make_view_link(obj, "view source") }} | {{ make_edit_link(obj, "edit") }})
 
+{% if obj.persona %}
 Persona: {{ make_title_link(obj.persona) }} - {{ obj.persona.blurb }}
+{% endif %}
+
+{% if obj.summary %}
+Summary: {{ make_title_link(obj.summary) }} ({{ obj.ident }})
+{% endif %}
 
 ## Blurb
 
