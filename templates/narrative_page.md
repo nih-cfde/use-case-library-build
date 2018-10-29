@@ -21,7 +21,7 @@ User epics under this narrative:
 * {{ epic.ident }}: {{ make_title_link(epic) }} - {{ epic.blurb }}
   {% if epic.user_stories %}
     {% for story in epic.user_stories %}
-    * **User Story:** use **{{ story.input }}** to generate **{{ story.output }}**
+    * {{ story.ident }}: {{ make_title_link(story) }} - Use **{{ story.input }}** to generate **{{ story.output }}**
       by **{{ story.task }}** (story appears in {{ len(story.epics) }} epics total).
     {% endfor %}
   {% endif %}
