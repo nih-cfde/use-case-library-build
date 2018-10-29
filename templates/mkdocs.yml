@@ -20,14 +20,14 @@ pages:
 {% for obj in yield_objects('PERSONA') %} {% autoescape true %}
     - "{{ obj.title }}": {{ obj.ident }}.md
 {% endautoescape %} {% endfor %}
-  - User Stories:
-{% for obj in yield_objects('USER STORY') %} {% autoescape true %}
-    - "{{ obj.title }}": {{ obj.ident }}.md
-{% endautoescape %} {% endfor %}
   - Epics:
 {% for obj in yield_objects('EPIC') %}
     - {{ obj.title }}: {{ obj.ident }}.md
 {% endfor %}
+  - User Stories:
+{% for obj in yield_objects('USER STORY') %} {% autoescape true %}
+    - "{{ obj.title }}": {{ obj.ident }}.md
+{% endautoescape %} {% endfor %}
   - Complete List of Contents: full_list.md
   - Glossary of terms: glossary.md
 
