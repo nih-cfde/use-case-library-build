@@ -10,7 +10,7 @@
 {% if obj.narrative %}
 Parent narrative:
 
-* {{ obj.ident }}: {{ make_title_link(obj.narrative) }} - {{ obj.narrative.blurb }}
+* {{ obj.narrative.ident }}: {{ make_title_link(obj.narrative) }} - {{ obj.narrative.blurb }}
 {% else %}
 (No parent narrative)
 {% endif %}
