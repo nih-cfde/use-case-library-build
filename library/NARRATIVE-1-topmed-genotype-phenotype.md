@@ -1,5 +1,5 @@
 ---
-title: TOPmed Genotype-phenotype association testing
+title: TOPMed Genotype-phenotype association testing
 persona: PERSONA-1-biological-data-scientist
 blurb: Identify genetic risk factors for biomedical phenotypes
 epics:
