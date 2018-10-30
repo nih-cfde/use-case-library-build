@@ -1,11 +1,12 @@
 # {{ obj.title }}
-(Use Case Summary {{ obj.ident }} - {{ make_view_link(obj, "view source") }} | {{ make_edit_link(obj, "edit") }})
 
 <!-- **ID: {{ obj.ident }}** [(permalink)](...) -->
 
-## Description:
+## Description
 
 {{ obj.content }}
+
+## User Narratives
 
 {% if obj.narratives %}
 
@@ -15,5 +16,7 @@ User narratives for this summary:
 {% endfor %}
 
 {% endif %}
+
+(Use Case Summary {{ obj.ident }} - {{ make_view_link(obj, "view source") }} | {{ make_edit_link(obj, "edit") }})
 
 {% include "tagblock.html" %}
