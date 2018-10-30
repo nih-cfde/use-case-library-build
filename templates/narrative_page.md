@@ -1,5 +1,9 @@
 # {{ obj.title }}
 
+{% if obj.summary %}
+Summary: {{ make_title_link(obj.summary) }} ({{ obj.ident }})
+{% endif %}
+
 ## User Narrative
 
 {{ obj.content }}
@@ -25,10 +29,6 @@ User epics under this narrative:
   {% endif %}
 {% endfor %}
 
-{% endif %}
-
-{% if obj.summary %}
-Summary: {{ make_title_link(obj.summary) }} ({{ obj.summary.ident }})
 {% endif %}
 
 (User Narrative {{ obj.ident }} - {{ make_view_link(obj, "view source") }} | {{ make_edit_link(obj, "edit") }})
