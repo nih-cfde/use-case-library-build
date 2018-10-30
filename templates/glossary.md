@@ -11,7 +11,7 @@ The Use Case Library also provides a set of high level **summaries** that
 capture the essential scientific objectives and place them in the context
 of larger goals and the Consortium timelines.
 
-![Use case library glossary image](../images/glossary.png)
+![Use case library glossary image](images/glossary.png)
 
 ### Definitions
 
