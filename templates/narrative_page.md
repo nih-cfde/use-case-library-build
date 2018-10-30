@@ -2,12 +2,6 @@
 
 ## User Narrative
 
-### Short Description
-
-{{ obj.blurb }}
-
-### Full Description
-
 {{ obj.content }}
 
 ## User Persona
