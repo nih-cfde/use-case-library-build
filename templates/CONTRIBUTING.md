@@ -22,14 +22,14 @@ Thank you for being here and for being a part of the DCPPC project.
 
 To create a new summary, persona, etc.:
 
-- Make a new branch fom [latest master](https://github.com/dcppc/use-case-library). See [below](#building-the-site-locally-for-testing) for more details
-- Create a new SUMMARY-, PERSONA-, NARRATIVE-, USERSTORY-, or EPIC- file under library/ by copying an existing file. Make sure that the filename specifies a unique ID, e.g. SUMMARY-1-xyz yields the ID SUMMARY-1 which is not unique.
+- Make a new branch from [latest master](https://github.com/dcppc/use-case-library). See [below](#building-the-site-locally-for-testing) for more details
+- Create a new SUMMARY-, PERSONA-, NARRATIVE-, USERSTORY-, or EPIC- file under library/ by copying an existing file. Make sure that the filename specifies a unique ID (e.g. *SUMMARY-1-xyz* yields the ID *SUMMARY-1* which is not unique)
 - Update the YAML metadata at the top of the file to reflect your new metadata.
 - Edit the markdown description below the YAML header.
 - (Optional) Build the file using snakemake, check the output. Iterate until you're happy.
-- Add new file to git repo, commit, push.
+- Add a new file to git repo, commit, push.
 - Set up a Pull Request to merge into master and tag in @ctb.
-- Uncle Arche will check out a copy of your pull request and run snakemake build on it, and link to the output of the build process, so you can use Uncle Archie instead of using snakemake locally
+- Uncle Archie will check out a copy of your pull request, run a snakemake build on it, and link to the output of the build process, so you can use Uncle Archie instead of using snakemake locally
 
 # Overview
 
@@ -41,7 +41,7 @@ For maximum flexibility, each part of a Use Case is stored in it's own markdown 
  -  Filenames begin with the component type in ALLCAPS
  -  The component type is followed by `-<digit>` where the digit is a number that does not already occur in that component set
 
-For Epics, Narratives, Personas, and Summaries, the digit is addionally followed by a short description of the contents of the file, where spaces are replaced with `-`
+For Epics, Narratives, Personas, and Summaries, the digit is additionally followed by a short description of the contents of the file, where spaces are replaced with `-`
 
 Examples:
 
@@ -57,7 +57,7 @@ For User Stories, no description is added:
 The numbers included in each filename are to ensure uniqueness. There is no requirement that all numbers are used in the library or that they occur in a particular order within a Use Case.
 
 ## Usage
- | Use Case Component | Specificity | Occurances per Use Case | 
+ | Use Case Component | Specificity | Occurences per Use Case | 
  |:--------------------:|:------------:|:-------------------------:|
  Persona | Can be used by multiple UCs | 1 |
  Scientific Objective | Can be used by a single UC | 1 |
@@ -77,7 +77,7 @@ User Narrative | Can be used by a single UC | 1 |
 
 A Persona is a general description of a type of user. As these are general archetypes, most contributors will not need to create a new Persona. A Persona file has four parts:
 
- 1. title: this 1 - 5 words that describe a user
+ 1. title: this is 1 - 5 words that describe a user
  2. blurb: < 10 words that add more description
  3. tags: a carriage return seperated list of relevant 1 - 2 word descriptions
  4. A long form description of the user, detailing their strengths and weaknesses as they relate to computational science.
@@ -101,14 +101,14 @@ R/RStudio or Python/Jupyter Notebook.
 
 ### Use Case Summary
 
-A Summary is a high-level, non-technical description of a entire Use Case, written in third-person omniscient. The user in each summary should have a name, a problem, abd both proximate and ultimate goals. Although these are based on genearl archetypes, each Use Case will have it's own unique summary, and the user should be a relatable individual rather than a faceless abstraction. The Summary also includes multiple solutions to the users problem. 
+A Summary is a high-level, non-technical description of an entire Use Case, written in the third-person. The user in each summary should have a name, a problem, and both proximate and ultimate goals. Although these are based on general archetypes, each Use Case will have it's own unique summary, and the user should be a relatable individual rather than a faceless abstraction. The Summary also includes multiple solutions to the user's problem. 
 
 A Summary file has seven parts:
 
- 1. title: this 1 - 5 words that describe the summary
- 2. narratives: the abbreviated file name of the narrative that is tied to this summary, formatted as a single-item list (i.e.`NARRATIVE-#`)
- 3. tags: a carriage return seperated list of relevant 1 - 2 word descriptions
- 4. Scenario: A long form description of a named user, including their proximate and ultimate goals, available resources, problems with reaching those goals and individual abilities.
+ 1. Title: this 1 - 5 words that describe the summary
+ 2. Narratives: the abbreviated file name of the narrative that is tied to this summary, formatted as a single-item list (i.e.`NARRATIVE-#`)
+ 3. Tags: a carriage return separated list of relevant 1 - 2 word descriptions
+ 4. Scenario: A long form description of a named user, including their proximate and ultimate goals, available resources, problems with reaching those goals and individual abilities
  5. Current Approaches: A long form description of how this user might approach their problems, given current non-Data Commons technology
  6. With the Data Commons Phase I: A long form description of how this user might attain their goals more easily using Data Commons resources
  7. With Data Commons longer vision: A long form description of how this user will be able to accomplish their goals by using future technologies being created by the Data Commons
@@ -159,7 +159,7 @@ A User Narrative file references the collection of User Epics and User Stories f
 
 A User Narrative file has six parts:
 
- 1. title: this 1 - 5 words that describe the Use Case
+ 1. title: 1 - 5 words that describe the Use Case
  2. persona: this is the exact file name of the persona for this Use Case *without* the file extension
  3. blurb: < 10 word description of Use Case
  4. epics: a carriage return seperated list of the abbreviated file names of Epics associated with this Use Case (i.e. `EPIC-#`). 
@@ -196,11 +196,11 @@ established associations, with the aim of identifying causal variants.`
 
 ### User Epic
 
-A User Epic is a short description that captures a valuable set of interactions with tools (e.g. software solutions) in the service of achieving the scientific objective. Epics can also be thought of as big tasks, and should be written from the users perspective, e.g.: "build a dataset" or "analyze a dataset" or "turn raw sequence into called variants". Importantly, an Epic is a multi-step process, which will later be broken down into small component parts (User Stories). Most Use cases will have between three and five Epics, however very simple Use Cases may have only one, and very complex Use Cases may have ten or more. User Epics are tied to specific Use Cases, and can not be shared.
+A User Epic is a short description that captures a valuable set of interactions with tools (e.g. software solutions) in the service of achieving the scientific objective. Epics can also be thought of as big tasks, and should be written from the users perspective, e.g.: "build a dataset" or "analyze a dataset" or "turn raw sequence into called variants". Importantly, an Epic is a multi-step process, which will later be broken down into small component parts (User Stories). Most Use Cases will have between three and five Epics, however very simple Use Cases may have only one, and very complex Use Cases may have ten or more. User Epics are tied to specific Use Cases, and can not be shared.
 
 A User Epic file has five parts:
 
- 1. title: this 1 - 5 words that describe the Epic
+ 1. title: 1 - 5 words that describe the Epic
  2. blurb: < 20 word description of Epic task
  3. user-stories: a carriage return seperated list of the abbreviated file names of the User Stories associated with this Epic (i.e. `USERSTORY-#`). 
  4. tags: a carriage return seperated list of relevant 1 - 2 word descriptions
@@ -270,10 +270,12 @@ Although the Use Case library is generally read from the top down, you may find 
 
 If your Epic is "Build a dataset" then your User Stories might be:
 
+
 1) 
 
 ```
-input: List of candidate genes + several databases of expression data
+
+input: list of candidate genes + several databases of expression data
 output: expression data for candidate genes
 task: search for candidate genes in database
 ```
@@ -302,7 +304,7 @@ The steps required to build and deploy the testing version of the Use Case Libra
 1. Set up a virtual environment
 1. Build and test the site locally
 
-We walk through each of these steps below
+We walk through each of these steps below:
 
 ### Clone a local copy
 
