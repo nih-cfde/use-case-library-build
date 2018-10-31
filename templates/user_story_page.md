@@ -1,6 +1,6 @@
 # {{ obj.task }}
 
-**Use {{ obj.input }} to generate {{ obj.output }} to {{ obj.task }}**
+Use **{{ obj.input }}** to generate **{{ obj.output }}** to **{{ obj.task }}**.
 
 {% if obj.epics %}
 ## User Epics
