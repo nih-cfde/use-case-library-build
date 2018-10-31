@@ -150,7 +150,6 @@ Geraldine now has the ability to search many more data repositories to find
 CAD-related studies.  When she finds new studies, she is able to apply for
 access easily using a Data Commons interface...
 ```
-```
 
 
 ### User Narrative
