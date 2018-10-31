@@ -1,3 +1,4 @@
+import os
 from library_objects import create_library_object
 import parse_input_files
 
@@ -53,13 +54,16 @@ def resolve_library_refs(obj_dict):
 
 def get_basepath(f):
     """
-    Get the directory one path up from f
+    Get the directory one dir level up from f
     """
-    basepath = os.path.join(os.path.dirname(f), '..')
-    basepath = os.path.abspath(basepath)
-    return basepath
+    a = os.path.abspath(f)
+    d = os.path.dirname(a)
+    b = os.path.join(d,'..')
+    c = os.path.abspath(b)
+    return c
 
-def subdir(basepath,location):
+def subdir(location):
+    basepath = get_basepath(__file__)
     return os.path.join(basepath, location)
 
 def scrub_overlap(tags):

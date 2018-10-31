@@ -6,7 +6,9 @@ from collections import OrderedDict
 
 from parse_input_files import parse_library_md
 
-from utilities import walk_dir_get_md_files
+from utilities import \
+        walk_dir_get_md_files, subdir, \
+        GITHUB_LIBRARY_LOCATION, GITHUB_EDIT_LOCATION
 
 """
 Linkify Use Case Library

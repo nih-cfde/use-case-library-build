@@ -41,32 +41,28 @@ def main(argv=sys.argv[1:]):
 
     print('found {} input files under library/'.format(len(inputfiles)))
 
+    # Load each library file into obj_dict
+    obj_dict = md_files_to_obj_dict(markdown_files)
+
+    # Load each library file into obj_dict
+    obj_dict = md_files_to_obj_dict(markdown_files)
+
+    print('Loaded {} objects'.format(len(obj_dict)))
+
+    print('Resolving references')
+    obj_dict = resolve_library_refs(obj_dict)
+
+    print('Checking references')
+    check_library_refs(obj_dict)
+
+
+    # Unique portion of this script:
+
     #
-    # second, load all of the library files => obj_dict
+    # re-write each file in the library.
+    # as it is, this script will strip \n 
+    # off the end of the file.
     #
-
-    obj_dict = {}
-    for filename in inputfiles:
-        # load markdown file + header
-        header, content = parse_input_files.parse_library_md(filename)
-
-        # create library object according to filename & header
-        obj = create_library_object(filename, header, content)
-        if obj.ident in obj_dict:
-            raise Exception("duplicate identity: " + obj.ident)
-
-        obj_dict[obj.ident] = obj
-
-    print('loaded {} objects'.format(len(obj_dict)))
-
-    print('resolving references')
-    for obj in obj_dict.values():
-        obj.resolve_references(obj_dict)
-
-    print('checking references')
-    for obj in obj_dict.values():
-        if obj.obj_type == 'EPIC' and not obj.narrative:
-            print('WARNING, orphaned epic {} has no parent narrative!'.format(obj.ident))
 
     for filename in inputfiles:
         with open(filename, 'rt') as fp:

@@ -7,7 +7,9 @@ import traceback
 
 from jinja2 import Environment, FileSystemLoader
 
-from utilities import walk_dir_get_md_files, subdir
+from utilities import \
+        walk_dir_get_md_files, subdir, \
+        GITHUB_LIBRARY_LOCATION, GITHUB_EDIT_LOCATION
 
 
 """
@@ -41,16 +43,16 @@ def main(argv=sys.argv[1:]):
     # Load each library file into obj_dict
     obj_dict = md_files_to_obj_dict(markdown_files)
 
-
     print('Loaded {} objects'.format(len(obj_dict)))
 
     print('Resolving references')
     obj_dict = resolve_library_refs(obj_dict)
 
     print('Checking references')
-    for obj in obj_dict.values():
-        if obj.obj_type == 'EPIC' and not obj.narrative:
-            print('WARNING: orphaned epic {} has no parent narrative!'.format(obj.ident))
+    check_library_refs(obj_dict)
+
+
+    # Unique portion of this script:
 
     #
     # create output locations. Note, 'output/docs' is completely recreated
