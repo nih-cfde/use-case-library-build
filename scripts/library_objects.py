@@ -47,17 +47,17 @@ class LibraryObject(object):
 
         if param_value==None:
             # No parameter value was specified,
-            err = "Error: parameter %s did not validate, value was None: %s"%(param_name,ident)
+            err = "Error: library item %s: parameter %s did not validate, value was None"%(ident,param_name)
             raise Exception(err)
 
         elif param_type is not None and type(param_type)!=type(param_value):
             # User specified that this paramter
             # should have type X but it had type Y.
-            err = "Error: parameter %s had incorrect type, needs type %s but has type %s: %s"%(
+            err = "Error: library item %s: parameter %s had incorrect type, needs type %s but has type %s: %s"%(
+                    ident,
                     param_name,
                     type(param_type),
-                    type(param_value),
-                    ident
+                    type(param_value)
             )
             raise Exception(err)
 
@@ -270,9 +270,6 @@ def create_library_object(filename, header, content):
             print('required = %s'%(", ".join(required)))
             
         epics = header.get('epics', [])
-        if not epics:
-            print('WARNING: narrative {} has no epics.'.format(ident))
-            epics = []
 
         obj = Narrative(ident, header['title'], header['blurb'], header['persona'], epics, header['tags'])
 
@@ -300,8 +297,7 @@ def create_library_object(filename, header, content):
             print('required = %s'%(", ".join(required)))
             
         narratives = header.get('narratives', [])
-        if not narratives:
-            print('WARNING: summary {} has no narratives.'.format(ident))
+        if(narratives is None):
             narratives = []
 
         obj = Summary(ident, header['title'], narratives, header['tags'])
