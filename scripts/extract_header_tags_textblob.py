@@ -4,10 +4,10 @@ import subprocess
 import oyaml as yaml
 from textblob import TextBlob
 from collections import OrderedDict
-#from nltk.stem import WordNetLemmatizer
+
 from parse_input_files import parse_library_md
 
-from utilities import scrub_overlap
+from utilities import scrub_overlap, walk_dir_get_md_files
 
 
 TEXTBLOB_IGNORE = 'textblob_ignore.dat'
@@ -94,20 +94,7 @@ def main():
         err = "ERROR: No source directory %s was found."%(SRC_DOCS)
         raise Exception(err)
     
-    # Walk the directory and look for Markdown files
-    markdown_files = []
-    for fdir,fdirnames,fnames in os.walk(SRC_DOCS):
-        for f in fnames:
-
-            # Check a set of conditions to see if we
-            # really want to linkify this document.
-            bool1 = f[-3:]=='.md'       # only add markdown
-            bool2 = f[-7:]!='_new.md'   # ignore _new.md (?)
-            bool3 = '.github' not in fdir  # ignore github templates
-
-            if( bool1 and bool2 and bool3):
-                markdown_files.append( os.path.join( fdir, f ) )
-
+    markdown_files = walk_dir_get_md_files(SRC_DOCS)
 
     ########################################
     # Strategy:
@@ -117,7 +104,6 @@ def main():
     # - Update YAML header
     # - Output to file
     ########################################
-
 
     # For each markdown doc
     for kk, md in enumerate(markdown_files):
@@ -152,7 +138,7 @@ def main():
                 tags = list(set(tags))
                 tags = scrub_overlap(tags)
 
-                # Step 4: remove tags
+                # Step 4: remove tags we are ignoring
                 with open(TEXTBLOB_IGNORE,'r') as f:
                     ignore_tags = [line.strip() for line in f.readlines() if line[0] != '#']
                 tags = [j for j in tags if j not in ignore_tags]
