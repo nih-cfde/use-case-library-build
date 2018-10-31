@@ -43,25 +43,3 @@ should not be duplicated if possible.
 
 **User narrative:** a collection of related personas, objectives, epics and stories.
 
-### How to write and an EPIC and USERSTORY
-
-Each EPIC needs to be a big task **from a user perspective**, like "build a dataset" or "analyze a dataset" or "turn raw sequence into called variants". Multi-step EPICs are be broken down into small component parts, which we refer to as USERSTORYs. 
-
-USERSTORYs will usually have two inputs and an output. The idea is that a USERSTORY is a "task" where `INPUT_A` + `INPUT_B` = `OUTPUT`. In most cases, the output from one USERSTORY will be one of the two 'inputs' for a subsequent USERSTORY in an EPIC. Likewise, the last output from one EPIC will likely be the input for another EPIC. EPICs should contain more than one step each. 
-
-For example, if your EPIC is "Build a dataset" then your USERSTORYs could be:
-
-1. 01-USERSTORY
-	- input: List of candidate genes + several databases of expression data
-	- output: expression data for candidate genes
-	- task: search for candidate genes in database
-
-2. 02-USERSTORY
-	- input: expression data for candidate genes and some metadata
-	- output: expression data combined with metadata
-	- task: merge expression data with its metadata
-
-3. 03-USERSTORY
-	- input: expression data with metadata from several databases and domain expertise
-	- output: one expression dataset with metadata
-	- task: harmonize datasets 
