@@ -65,7 +65,9 @@ if [[ -f "$LIBDIR/USERSTORY-1.md" ]]; then
         ls -1 ${LIBDIR}/${TYPE}* | xargs -n1 -I% sed -i 's/persona: \{1,\}\([a-z]\)/persona: \u\1/g' %
         ls -1 ${LIBDIR}/${TYPE}* | xargs -n1 -I% sed -i 's/blurb: \{1,\}\([a-z]\)/blurb: \u\1/g' %
 
-        ls -1 ${LIBDIR}/${TYPE}* | xargs -n1 -I% sed -i 's/DbGaP/dbGaP/g' %
+        ls -1 ${LIBDIR}/${TYPE}* | xargs -n1 -I% sed -i 's/[dD][bB][gG][aA][pP]/dbGaP/g' %
+        ls -1 ${LIBDIR}/${TYPE}* | xargs -n1 -I% sed -i 's/[tT][oO][pP][mM]ed/TOPMed/g' %
+        ls -1 ${LIBDIR}/${TYPE}* | xargs -n1 -I% sed -i 's/[cC][oO][pP][dD][gG]ene/COPDGene/g' %
 
         echo "Fixing punctuation..."
 
