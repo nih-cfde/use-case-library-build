@@ -233,7 +233,7 @@ Example:
 > `---`  
 
 
-## Additional Help
+## Additional Context
 
 Although the Use Case library is generally read from the top down, you may find it easier to begin by detailing all the concrete, individual steps as User Stories. User Stories grouped by the overall technical task they help achieve become User Epics. The biological reason for completing the Epics can then become the Scientific Objective, and a high level description of "Why is this objective important?" can be the basis for your Summary.
 
@@ -262,3 +262,84 @@ If your Epic is "Build a dataset" then your User Stories might be:
 `input: expression data with metadata from several databases and domain expertise`  
 `output: one expression dataset with metadata`  
 `task: harmonize datasets`  
+
+## Building the site locally for testing
+
+The steps required to build and deploy the testing version of the Use Case Library are as follows:
+
+1. Clone a local copy of this repo
+1. Set up a virtual environment
+1. Build and test the site locally
+
+We walk through each of these steps below
+
+### Clone a local copy
+
+
+Clone a local copy of the repository and cd into that directory:
+
+> git clone https://github.com/dcppc/use-case-library.git && cd use-case-library
+
+
+### Set up virtual environment
+
+Create a Python virtual environment, which will give you a clean version of Python that won't get mixed up with your default/system Python.
+
+**Do these steps once:** Create a virtual environment in the repo directory:
+
+```
+virtualenv vp
+```
+
+This will take a minute. The virtual environment lives in the `vp/` directory and anything installed into your virtual environment will be located in the `vp/` directory.
+
+To activate your virtual environment:
+
+```
+source vp/bin/activate
+```
+
+Now `python` and `pip` should point to the versions in `vp/bin/`. You can install software into the virtual environment via:
+
+```
+pip install -r requirements.txt
+```
+
+
+**Do this step each time:** You will need to activate the virtual environment each time:
+
+```
+source vp/bin/activate
+```
+
+Then the versions of `python` and `pip` that you use will be the ones in the virtual environment.
+
+
+You can deactivate the virtual environment at any time by using:
+
+```
+deactivate
+```
+
+### Build and test site locally using Snakemake
+
+To build the site using the Snakefile:
+
+```
+snakemake build
+```
+
+To view the site use the `serve` action:
+
+```
+snakemake serve
+```
+
+and then visit <http://localhost:8000> in a browser.
+
+
+
+If the site does not build, one or more files may need editing. The error output from Snakemake should help you identfy them. 
+If need help, please [open an
+issue](https://github.com/dcppc/use-case-library/issues/new) and Team Copper
+will lend a hand ASAP.
