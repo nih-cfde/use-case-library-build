@@ -8,7 +8,9 @@
 
 ## User Narrative
 {% if obj.narrative %}
-Parent narrative: {{ make_title_link(obj.narrative) }} - {{ obj.narrative.blurb }}
+Parent narrative:
+
+* {{ obj.narrative.ident }}: {{ make_title_link(obj.narrative) }} - {{ obj.narrative.blurb }}
 {% else %}
 (No parent narrative)
 {% endif %}
