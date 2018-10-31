@@ -9,6 +9,8 @@ from jinja2 import Environment, FileSystemLoader
 
 from utilities import \
         walk_dir_get_md_files, subdir, \
+        md_files_to_obj_dict, \
+        check_library_refs, resolve_library_refs, \
         GITHUB_LIBRARY_LOCATION, GITHUB_EDIT_LOCATION
 
 
@@ -119,7 +121,7 @@ def main(argv=sys.argv[1:]):
             template = jinja_env.get_template(filename)
         except:
             traceback.print_exc()
-            print('on template:', filename)
+            print(' in template:', filename)
             return False
 
         print('\rcreating:', outpath, end='')
@@ -128,7 +130,7 @@ def main(argv=sys.argv[1:]):
             rendered = template.render(input_names)
         except:
             traceback.print_exc()
-            print('on file:', filename)
+            print(' in file:', filename)
             return False
         
         with open(outpath, 'wt') as fp:

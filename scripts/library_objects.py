@@ -150,6 +150,8 @@ class Narrative(LibraryObject):
         self.validate('tags',tags,[])
         self.tags = [j.lower() for j in self.tags]
         self.summary = None
+        self.persona = None
+        self.epics = []
 
     def resolve_references(self, obj_dict):
         x = []
@@ -165,13 +167,14 @@ class Narrative(LibraryObject):
         self.epics = x
 
         try:
-            persona = obj_dict[process_identifier(self.persona_str)]
+            self.persona = obj_dict[process_identifier(self.persona_str)]
         except AssertionError:
-            err = "Error: process identifier was not a single item. File: %s"%(self.ident)
+            err = "Error: persona process identifier was not a single item. "
+            err += "Try proving a single item instead of a list. "
+            err += "File: %s"%(self.ident)
             raise Exception(err)
 
-        self.persona = persona
-        persona.add_narrative(self)
+        self.persona.add_narrative(self)
 
     def set_content(self, content):
         self.content = content
@@ -193,6 +196,7 @@ class Epic(LibraryObject):
         self.validate('user_stories_str',user_stories_str)
         self.validate('tags',tags,[])
         self.narrative = None             # parent narrative object
+        self.user_stories = []
 
     def resolve_references(self, obj_dict):
         x = []

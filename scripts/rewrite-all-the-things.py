@@ -9,6 +9,8 @@ from jinja2 import Environment, FileSystemLoader
 
 from utilities import \
         walk_dir_get_md_files, subdir, \
+        md_files_to_obj_dict, \
+        check_library_refs, resolve_library_refs, \
         GITHUB_LIBRARY_LOCATION, GITHUB_EDIT_LOCATION
 
 
@@ -39,7 +41,7 @@ def main(argv=sys.argv[1:]):
     # Get all markdown files in library
     markdown_files = walk_dir_get_md_files(args.library_dir)
 
-    print('found {} input files under library/'.format(len(inputfiles)))
+    print('Found {} input files under library/'.format(len(inputfiles)))
 
     # Load each library file into obj_dict
     obj_dict = md_files_to_obj_dict(markdown_files)

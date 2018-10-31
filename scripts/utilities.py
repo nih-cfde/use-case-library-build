@@ -18,27 +18,33 @@ def check_library_refs(obj_dict):
     Check library items to ensure they have all the links
     to other library items that they ought to.
     """
+    warnings = []
     for obj in obj_dict.values():
 
         # User stories that aren't called from any epics
-        if obj.obj_type=='USER STORY' and len(self.epics)==0:
-            print('WARNING: orphaned user story {} has no parent epic!'.format(obj.ident))
+        if obj.obj_type=='USER STORY' and len(obj.epics)==0:
+            warn = 'WARNING: orphaned user story {} has no parent epic!'.format(obj.ident)
+            warnings.append(warn)
 
         # Epics that aren't called from any narratives
-        if obj.obj_type=='EPIC' and self.narrative is None:
-            print('WARNING: orphaned user epic {} has no parent narrative!'.format(obj.ident))
+        if obj.obj_type=='EPIC' and obj.narrative is None:
+            warn = 'WARNING: orphaned user epic {} has no parent narrative!'.format(obj.ident)
+            warnings.append(warn)
 
         # Epics that don't have user stories
-        if obj.obj_type=='EPIC' and len(self.user_stories)==0:
-            print('WARNING: orphaned user epic {} has no user stories!'.format(obj.ident))
+        if obj.obj_type=='EPIC' and len(obj.user_stories)==0:
+            warn = 'WARNING: childless user epic {} has no user stories!'.format(obj.ident)
+            warnings.append(warn)
 
         # Narratives that aren't called from any summaries
-        if obj.obj_type=='NARRATIVE' and self.summary is None:
-            print('WARNING: orphaned narrative {} has no parent summary!'.format(obj.ident))
+        if obj.obj_type=='NARRATIVE' and obj.summary is None:
+            warn = 'WARNING: orphaned narrative {} has no parent summary!'.format(obj.ident)
+            warnings.append(warn)
 
         # Narratives that don't have epics
-        if obj.obj_type=='NARRATIVE' and len(self.epics)==0:
-            print('WARNING: orphaned narrative {} has no epics!'.format(obj.ident))
+        if obj.obj_type=='NARRATIVE' and len(obj.epics)==0:
+            warn = 'WARNING: childless narrative {} has no epics!'.format(obj.ident)
+            warnings.append(warn)
 
 
 def resolve_library_refs(obj_dict):
