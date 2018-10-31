@@ -6,6 +6,8 @@ from collections import OrderedDict
 
 from parse_input_files import parse_library_md
 
+from utilities import walk_dir_get_md_files
+
 """
 Linkify Use Case Library
 Markdown + YAML Headers
@@ -58,19 +60,7 @@ def main():
     if not os.path.isdir(SRC_DOCS):
         err = "ERROR: No source directory %s was found."%(SRC_DOCS)
     
-    # Walk the directory and look for Markdown files
-    markdown_files = []
-    for fdir,fdirnames,fnames in os.walk(SRC_DOCS):
-        for f in fnames:
-
-            # Check a set of conditions to see if we
-            # really want to linkify this document.
-            bool1 = f[-3:]=='.md'       # only add markdown
-            bool2 = f[-7:]!='_new.md'   # ignore _new.md (?)
-            bool3 = '.github' not in fdir  # ignore github templates
-
-            if( bool1 and bool2 and bool3):
-                markdown_files.append( os.path.join( fdir, f ) )
+    markdown_files = walk_dir_get_md_files(SRC_DOCS)
 
     ########################################
     # Linkify strategy for Markdown + YAML:
@@ -82,7 +72,7 @@ def main():
     # - output to file
     ########################################
 
-    # Linkify each markdown document found
+    # For each markdown doc
     for kk, md in enumerate(markdown_files):
     
         print("-"*40,file=sys.stderr)
