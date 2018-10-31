@@ -60,6 +60,7 @@ def main():
     if not os.path.isdir(SRC_DOCS):
         err = "ERROR: No source directory %s was found."%(SRC_DOCS)
     
+    # Get all markdown files in library
     markdown_files = walk_dir_get_md_files(SRC_DOCS)
 
     ########################################

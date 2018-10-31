@@ -1,42 +1,43 @@
 #! /usr/bin/env python
-"""
-Process the use case library files under library/ and create a mkdocs site.
-
-This script does a bunch of things:
-* sets up & validates a references structure between the files in library/
-* uses jinja2 templates under templates/ to build markdown output files
-* creates a mkdocs.yml configuration.
-"""
 import sys
 import argparse
 import os
 import shutil
 import traceback
 
+from jinja2 import Environment, FileSystemLoader
+
+from utilities import \
+        walk_dir_get_md_files, subdir, \
+        GITHUB_LIBRARY_LOCATION, GITHUB_EDIT_LOCATION
+
+
+"""
+Rewrite (Repair) Files in the Use Case Library
+
+This script rewrites files in the use case library 
+under the library/ folder in a way that improves
+and fixes problems.
+
+This script does the following:
+- Set up and validate reference structure between library items
+- Use Jinja tempates (see templates dir) to build markdown output files
+- Creates an mkdocs.yml configuration
+"""
+
 GITHUB_LIBRARY_LOCATION="https://github.com/dcppc/use-case-library/tree/master/library/"
 GITHUB_EDIT_LOCATION="https://github.com/dcppc/use-case-library/edit/master/library/"
 
-from jinja2 import Environment, FileSystemLoader
-
-from library_objects import create_library_object
-import parse_input_files
-
 basepath = os.path.join(os.path.dirname(__file__), '..')
 basepath = os.path.abspath(basepath)
-
-def subdir(location):
-    return os.path.join(basepath, location)
 
 def main(argv=sys.argv[1:]):
     p = argparse.ArgumentParser()
     p.add_argument('library_dir')
     args = p.parse_args(argv)
 
-    inputfiles = set()
-    for root, dirs, files in os.walk(args.library_dir):
-        for name in files:
-            if name.endswith('.md'):
-                inputfiles.add(os.path.join(root, name))
+    # Get all markdown files in library
+    markdown_files = walk_dir_get_md_files(args.library_dir)
 
     print('found {} input files under library/'.format(len(inputfiles)))
 

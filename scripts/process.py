@@ -1,75 +1,56 @@
 #! /usr/bin/env python
-"""
-Process the use case library files under library/ and create a mkdocs site.
-
-This script does a bunch of things:
-* sets up & validates a references structure between the files in library/
-* uses jinja2 templates under templates/ to build markdown output files
-* creates a mkdocs.yml configuration.
-"""
 import sys
 import argparse
 import os
 import shutil
 import traceback
 
-GITHUB_LIBRARY_LOCATION="https://github.com/dcppc/use-case-library/tree/master/library/"
-GITHUB_EDIT_LOCATION="https://github.com/dcppc/use-case-library/edit/master/library/"
-
 from jinja2 import Environment, FileSystemLoader
 
-from library_objects import create_library_object
-import parse_input_files
+from utilities import walk_dir_get_md_files, subdir
 
-basepath = os.path.join(os.path.dirname(__file__), '..')
-basepath = os.path.abspath(basepath)
 
-def subdir(location):
-    return os.path.join(basepath, location)
+"""
+Process the Use Case Library
+
+This script processes the use case library files
+under the library/ folder and uses them to create
+the mkdocs use case library site.
+
+This script does the following:
+- Set up and validate reference structure between library items
+- Use Jinja tempates (see templates dir) to build markdown output files
+- Creates an mkdocs.yml configuration
+"""
 
 def main(argv=sys.argv[1:]):
     p = argparse.ArgumentParser()
     p.add_argument('library_dir')
     args = p.parse_args(argv)
 
+    # Load jinja templates from disk (templates folder)
     jinja_env = Environment(
         loader=FileSystemLoader(subdir('templates'))
     )
 
-    inputfiles = set()
-    for root, dirs, files in os.walk(args.library_dir):
-        for name in files:
-            if name.endswith('.md'):
-                inputfiles.add(os.path.join(root, name))
+    # Get all markdown files in library
+    markdown_files = walk_dir_get_md_files(args.library_dir)
 
-    print('found {} input files under library/'.format(len(inputfiles)))
+    print('Found {} input files in library/'.format(len(markdown_files)))
 
-    #
-    # second, load all of the library files => obj_dict
-    #
+    # Load each library file into obj_dict
+    obj_dict = md_files_to_obj_dict(markdown_files)
 
-    obj_dict = {}
-    for filename in inputfiles:
-        # load markdown file + header
-        header, content = parse_input_files.parse_library_md(filename)
 
-        # create library object according to filename & header
-        obj = create_library_object(filename, header, content)
-        if obj.ident in obj_dict:
-            raise Exception("duplicate identity: " + obj.ident)
+    print('Loaded {} objects'.format(len(obj_dict)))
 
-        obj_dict[obj.ident] = obj
+    print('Resolving references')
+    obj_dict = resolve_library_refs(obj_dict)
 
-    print('loaded {} objects'.format(len(obj_dict)))
-
-    print('resolving references')
-    for obj in obj_dict.values():
-        obj.resolve_references(obj_dict)
-
-    print('checking references')
+    print('Checking references')
     for obj in obj_dict.values():
         if obj.obj_type == 'EPIC' and not obj.narrative:
-            print('WARNING, orphaned epic {} has no parent narrative!'.format(obj.ident))
+            print('WARNING: orphaned epic {} has no parent narrative!'.format(obj.ident))
 
     #
     # create output locations. Note, 'output/docs' is completely recreated
