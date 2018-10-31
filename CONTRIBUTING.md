@@ -22,7 +22,7 @@ Thank you for being here and for being a part of the DCPPC project.
 
 To create a new summary, persona, etc.:
 
-- Make a new branch fom [latest master](https://github.com/dcppc/use-case-library).
+- Make a new branch fom [latest master](https://github.com/dcppc/use-case-library). See [below](#building-the-site-locally-for-testing) for more details
 - Create a new SUMMARY-, PERSONA-, NARRATIVE-, USERSTORY-, or EPIC- file under library/ by copying an existing file. Make sure that the filename specifies a unique ID, e.g. SUMMARY-1-xyz yields the ID SUMMARY-1 which is not unique.
 - Update the YAML metadata at the top of the file to reflect your new metadata.
 - Edit the markdown description below the YAML header.
