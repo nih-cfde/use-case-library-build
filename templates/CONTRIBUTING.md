@@ -20,7 +20,14 @@ Thank you for being here and for being a part of the DCPPC project.
 
 # Quick Start
 
-To create a new summary, persona, etc.:
+To suggest a new Use Case and provide some text:
+
+- Make a copy of [this form](use-case-template.md)
+- Fill in as much information as possible
+- [Create an issue here](https://github.com/dcppc/use-case-library/issues/new)
+- Copy the text of the form into the issue box, or attach it as a comment
+
+If you are already familiar with the Use Case Library:
 
 - Make a new branch from [latest master](https://github.com/dcppc/use-case-library). See [below](#building-the-site-locally-for-testing) for more details
 - Create a new SUMMARY-, PERSONA-, NARRATIVE-, USERSTORY-, or EPIC- file under library/ by copying an existing file. Make sure that the filename specifies a unique ID (e.g. *SUMMARY-1-xyz* yields the ID *SUMMARY-1* which is not unique)
