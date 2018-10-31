@@ -4,10 +4,10 @@ Hello, and thank you for wanting to contribute to the DCPPC Use Case Library\!
 
 By contributing to this repository, you agree:
 
-1.  To obey the [Code of Conduct](./CODE_OF_CONDUCT.md)
+1.  To obey the [Code of Conduct](https://github.com/dcppc/use-case-library/blob/master/CODE_OF_CONDUCT.md)
 2.  To release all your contributions under the same terms as the
-    license itself: the [Creative Commons Zero](./LICENSE.md) (aka
-    Public Domain) license
+    Use Case Library license itself: the [Creative Commons Zero](https://github.com/dcppc/use-case-library/blob/master/LICENSE.md)
+    (aka Public Domain) license
 
 If you are OK with these two conditions, then we welcome both you and
 your contribution\!
@@ -86,14 +86,18 @@ The sub-section of the file containing the title, blurb and tags should be bound
 
 Example: 
 
-> `---`  
-> `title: Biological data scientist`  
-> `blurb: A researcher with some scripting skills`  
-> `tags:`  
-> `- biological`  
-> `- data scientist`  
-> `---`  
-> `A bioinformatician or researcher with some scripting skills, capable of using and combining pre-established pipelines, and doing exploratory data analysis in R/RStudio or Python/Jupyter Notebook.`  
+```
+---
+title: Biological data scientist
+blurb: A researcher with some scripting skills
+tags:
+- biological
+- data scientist
+---
+A bioinformatician or researcher with some scripting skills, capable of using
+and combining pre-established pipelines, and doing exploratory data analysis in
+R/RStudio or Python/Jupyter Notebook.
+```
 
 ### Use Case Summary
 
@@ -113,29 +117,40 @@ The sub-section of the file containing the title, narratives and tags should be 
 
 Example: ([See the full file here](https://github.com/dcppc/use-case-library/blob/master/library/SUMMARY-1-topmed-genotype-phenotype.md))
 
-> `---`  
-> `title: TOPmed Genotype-Phenotype Association Testing`  
-> `narratives:`  
-> `- NARRATIVE-1`  
-> `tags:`  
-> `- TOPMed genotype-phenotype`  
-> `---`  
-> `**Scenario**`  
+```
+---
+title: TOPmed Genotype-Phenotype Association Testing
+narratives:
+- NARRATIVE-1
+tags:
+- TOPMed genotype-phenotype
+---
+**Scenario**
 
-> `Geraldine is a biomedical researcher who wants to look for genetic variants associated with coronary artery disease (CAD) by performing Genome Wide Association Analysis (GWAS), using genotypes from whole genome sequence (WGS). A large sample size is needed for statistical power to detect...`  
+Geraldine is a biomedical researcher who wants to look for genetic variants
+associated with coronary artery disease (CAD) by performing Genome Wide
+Association Analysis (GWAS), using genotypes from whole genome sequence (WGS).
+A large sample size is needed for statistical power to detect...
 
+**Current Approach**
 
-> `**Current Approach**`  
+Without the Commons, Geraldine would have to find and download several datasets
+to build a large synthetic cohort. It is likely that different studies would
+have annotated their data differently, making it difficult...
 
-> `Without the Commons, Geraldine would have to find and download several datasets to build a large synthetic cohort. It is likely that different studies would have annotated their data differently, making it difficult...`
+**With the Data Commons Phase I**
 
-> `**With the Data Commons Phase I**`
-> 
-> `Geraldine logs into her favorite full stack and searches for dbGaP studies with WGS-genotypes and CAD phenotypes.  She is able to find CAD-related phenotypes in multiple studies, even though they use different variable names...`
+Geraldine logs into her favorite full stack and searches for dbGaP studies with
+WGS-genotypes and CAD phenotypes.  She is able to find CAD-related phenotypes
+in multiple studies, even though they use different variable names...
 
-> `**With Data Commons longer vision:**`
+**With Data Commons longer vision:**
 
-> `Geraldine now has the ability to search many more data repositories to find  CAD-related studies.  When she finds new studies, she is able to apply for  access easily using a Data Commons interface...`
+Geraldine now has the ability to search many more data repositories to find
+CAD-related studies.  When she finds new studies, she is able to apply for
+access easily using a Data Commons interface...
+```
+```
 
 
 ### User Narrative
@@ -155,22 +170,28 @@ The sub-section of the file containing the title, blurb and tags should be bound
 
 Example: 
 
-> `---`  
-> `title: TOPmed Genotype-phenotype association testing`  
-> `persona: PERSONA-1-biological-data-scientist`  
-> `blurb: Identify genetic risk factors for biomedical phenotypes`  
-> `epics:`  
-> `- EPIC-1`  
-> `- EPIC-2`  
-> `- EPIC-3`  
-> `tags:`  
-> `- TOPMed genotype-phenotype`  
-> `- biomedical phenotypes`  
-> `- genetic risk factors`  
-> `---`  
-> `### Scientific Objective`  
+```
+---
+title: TOPmed Genotype-phenotype association testing
+persona: PERSONA-1-biological-data-scientist
+blurb: Identify genetic risk factors for biomedical phenotypes
+epics:
+- EPIC-1
+- EPIC-2
+- EPIC-3
+tags:
+- TOPMed genotype-phenotype
+- biomedical phenotypes
+- genetic risk factors
+---
+### Scientific Objective
 
-> `The primary objective of many TOPMed research projects is to identify genetic risk factors for biomedical phenotypes (such as HDL cholesterol level in blood serum or diabetic disease status) via genotype-phenotype association testing. These tests are often followed by functional analyses of variants with established associations, with the aim of identifying causal variants.`
+The primary objective of many TOPMed research projects is to identify genetic
+risk factors for biomedical phenotypes (such as HDL cholesterol level in blood
+serum or diabetic disease status) via genotype-phenotype association testing.
+These tests are often followed by functional analyses of variants with
+established associations, with the aim of identifying causal variants.`
+```
 
 
 ### User Epic
@@ -189,16 +210,18 @@ The sub-section of the file containing the title, blurb, user-stories, and tags 
 
 Example: 
 
-> `---`  
-> `title: Associate expression with sex`  
-> `blurb: Associate differences in gene expression with sex`  
-> `user-stories:`  
-> `- USERSTORY-47`  
-> `- USERSTORY-48`  
-> `tags:`  
-> `- gene expression`  
-> `---`  
-> `Perform alignment of the FASTQ files representing the GTEx raw data following quality control with a method such as Yet Another RNA Normalization software pipeline (YARN). Align the reads against the hg38 genomes using STAR or another aligner. Provide quality control metrics.`
+```
+---
+title: Associate expression with sex
+blurb: Associate differences in gene expression with sex
+user-stories:
+- USERSTORY-47
+- USERSTORY-48
+tags:
+- gene expression
+---
+Perform alignment of the FASTQ files representing the GTEx raw data following quality control with a method such as Yet Another RNA Normalization software pipeline (YARN). Align the reads against the hg38 genomes using STAR or another aligner. Provide quality control metrics.`
+```
 
 
 
@@ -221,16 +244,18 @@ The text from a User Story is programatically transformed into a sentence, so th
 
 Example: 
 
-> `---`  
-> `input: a financial transaction`  
-> `output: an NIH compatible account`  
-> `task: purchasing access to NIH Data Commons platform(s)`  
-> `tags:`  
-> `- financial`  
-> `- Amazon Web Services`  
-> `- Google Cloud Platform`  
-> `- responsibility commitment`  
-> `---`  
+```
+---
+input: a financial transaction
+output: an NIH compatible account
+task: purchasing access to NIH Data Commons platform(s)
+tags:
+- financial
+- Amazon Web Services
+- Google Cloud Platform
+- responsibility commitment
+---
+```
 
 
 ## Additional Context
@@ -247,21 +272,27 @@ If your Epic is "Build a dataset" then your User Stories might be:
 
 1) 
 
-`input: List of candidate genes + several databases of expression data`  
-`output: expression data for candidate genes`  
-`task: search for candidate genes in database`  
+```
+input: List of candidate genes + several databases of expression data
+output: expression data for candidate genes
+task: search for candidate genes in database
+```
 
 2) 
 
-`input: expression data for candidate genes and some metadata`  
-`output: expression data combined with metadata`  
-`task: merge expression data with its metadata`  
+```
+input: expression data for candidate genes and some metadata
+output: expression data combined with metadata
+task: merge expression data with its metadata
+```
 
 3) 
 
-`input: expression data with metadata from several databases and domain expertise`  
-`output: one expression dataset with metadata`  
-`task: harmonize datasets`  
+```
+input: expression data with metadata from several databases and domain expertise
+output: one expression dataset with metadata
+task: harmonize datasets
+```
 
 ## Building the site locally for testing
 
@@ -315,7 +346,7 @@ source vp/bin/activate
 Then the versions of `python` and `pip` that you use will be the ones in the virtual environment.
 
 
-You can deactivate the virtual environment at any time by using:
+You can deactivate and exit the virtual environment at any time by using:
 
 ```
 deactivate
