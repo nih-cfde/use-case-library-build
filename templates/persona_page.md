@@ -1,21 +1,18 @@
 # {{ obj.title }}
-(Persona {{ obj.ident }} - {{ make_view_link(obj, "view source") }} | {{ make_edit_link(obj, "edit") }})
 
-## Blurb
-
-{{ obj.blurb }}
-
-## Full Description:
+## Persona Description
 
 {{ obj.content }}
 
-{% if obj.narratives %}
+## User Narratives and User Epics
 
+{% if obj.narratives %}
 User narratives for this persona:
 {% for narrative in obj.narratives %}
 * {{ narrative.ident }}: {{ make_title_link(narrative) }} - {{ narrative.blurb }}
-{% endfor %}
+{% endfor %}{# end for each narrative #}
+{% endif %}{# end if obj.narratives #}
 
-{% endif %}
+(Persona {{ obj.ident }} - {{ make_view_link(obj, "view source") }} | {{ make_edit_link(obj, "edit") }})
 
 {% include "tagblock.html" %}

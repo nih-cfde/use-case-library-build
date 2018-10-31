@@ -1,5 +1,5 @@
 ---
-title: TOPmed Genotype-Phenotype Association Testing
+title: TOPMed Genotype-Phenotype Association Testing
 narratives:
 - NARRATIVE-1
 tags:
