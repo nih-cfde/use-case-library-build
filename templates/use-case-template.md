@@ -26,3 +26,5 @@ input: list of candidate genes and several databases of expression data
 output: expression data for candidate genes
 task: search for candidate genes in database
 ```
+
+[Link to markdown version of this file](https://github.com/dcppc/use-case-library/blob/master/templates/use-case-template.md)
