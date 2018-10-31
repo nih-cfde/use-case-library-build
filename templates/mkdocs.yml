@@ -29,7 +29,7 @@ pages:
 {% endautoescape %} {% endfor %}
   - Complete List of Contents: full_list.md
   - Glossary of terms: glossary.md
-  - Contributing Guide : CONTRIBUTING.md
+  - Contributing Guide : ../CONTRIBUTING.md
 
 theme:
   name: null
