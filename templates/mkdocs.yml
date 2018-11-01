@@ -29,6 +29,8 @@ pages:
 {% endautoescape %} {% endfor %}
   - Complete List of Contents: full_list.md
   - Glossary of terms: glossary.md
+  - Contributing Guide : CONTRIBUTING.md
+  - Use Case Submission Form : use-case-template.md
 
 theme:
   name: null
