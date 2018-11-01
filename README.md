@@ -70,4 +70,3 @@ To create a new summary, persona, etc.:
 * add spell checker
 * add internal link checker
 * add author/contact info to YAML header
-
