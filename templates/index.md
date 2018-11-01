@@ -8,10 +8,10 @@ For the structure of the Use Case Library, please see
 [the use case glossary](./glossary/).
 
 If you want to contribute a new user narrative, please
-[make a copy of this template document](https://docs.google.com/document/d/1bAfdDyuiZikHUUUFutoBSvsfbiSe6_PYpr8kGkHdilI/edit#),
+[make a copy of this template document](use-case-template.md),
 modify it, and then
 [create a new issue on GitHub under dcppc/use-case-library/](https://github.com/dcppc/use-case-library/issues). Alternatively,
-you can submit it to dcppc.inbox@gmail.com.
+you can submit it to dcppc.inbox@gmail.com, or follow the detailed instructions in the [Use Case Submission Form](use-case-template.md)
 
 ## Use Case Summaries
 
