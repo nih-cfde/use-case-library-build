@@ -7,7 +7,6 @@ epics:
 - EPIC-23
 - EPIC-24
 - EPIC-25
-- EPIC-26
 tags:
 - HDL
 - disease phenotype
