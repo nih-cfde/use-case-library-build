@@ -325,9 +325,9 @@ a web server served or using Github Pages. The final static site files are
 located in `output/site/`. The file  `output/site/index.html` is the main
 entry point.
 
-## Building the site locally for testing
+## Optional: Building the site locally for testing
 
-The steps required to build and deploy the testing version of the Use Case Library are as follows:
+The Use Case Library uses [Uncle Archie](https://github.com/dcppc/uncle-archie), (a home-brewed continuous integration server for pull request checks and push-to-deploy functionality) to deploy a test version of the website. Thus, you do not _need_ to build the tes site locally. However, the steps required to build and deploy the testing version of the Use Case Library are as follows:
 
 1. Clone a local copy of this repo
 1. Set up a virtual environment
