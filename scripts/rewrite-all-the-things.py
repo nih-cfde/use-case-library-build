@@ -66,24 +66,11 @@ def main(argv=sys.argv[1:]):
     for obj in obj_dict.values():
         if obj.obj_type == 'EPIC' and not obj.narrative:
             print('WARNING, orphaned epic {} has no parent narrative!'.format(obj.ident))
-        if hasattr(obj, 'blurb'):
-            if not obj.blurb.endswith('.'):
-                print('WARNING, blurb for {} does not end with a period.'.format(obj.ident))
 
     for filename in inputfiles:
         with open(filename, 'rt') as fp:
             lines = list(fp)
             lines = [ x.rstrip("\n") for x in lines ]
-
-        new_lines = []
-        for x in lines:
-            if x.startswith('blurb:') and not x.endswith('.'):
-                x += '.'
-            new_lines.append(x)
-
-        with open(filename + '.fix', 'wt') as fp:
-            fp.write("\n".join(new_lines))
-            fp.write("\n")
 
     return 0
 
