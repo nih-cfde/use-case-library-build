@@ -297,7 +297,7 @@ def create_library_object(filename, header, content):
             print('required = %s'%(", ".join(required)))
             
         narratives = header.get('narratives', [])
-        if(narratives is None):
+        if narratives is None:
             narratives = []
 
         obj = Summary(ident, header['title'], narratives, header['tags'])
