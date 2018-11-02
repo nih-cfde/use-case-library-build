@@ -6,7 +6,6 @@ epics:
 - EPIC-18
 - EPIC-19
 - EPIC-20
-- EPIC-21
 tags:
 - CAD
 - coronary artery gwas user narrative
