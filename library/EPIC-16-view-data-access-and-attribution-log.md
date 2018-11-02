@@ -1,12 +1,10 @@
 ---
-title: Data-use aware searching for Identify datasets containing controls and cases with coronary artery disease
-blurb: Identify TOPMed participants whose data use restrictions are compatible for coronary artery diseases research
+title: View data access and attribution log
+blurb: Get logs for how a dataset was used across the commons for a specific time period
 user-stories:
 - USERSTORY-2
 - USERSTORY-59
 tags:
-- CAD research
-- data use restrictions
+- attribution log
 - data-use
-- identify TOPMed
 ---
