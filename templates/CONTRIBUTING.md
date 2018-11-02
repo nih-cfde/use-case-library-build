@@ -18,7 +18,7 @@ will lend a hand ASAP.
 
 Thank you for being here and for being a part of the DCPPC project.
 
-# Quick Start
+## Quick Start
 
 To suggest a new Use Case and provide some text:
 
@@ -38,17 +38,16 @@ If you are already familiar with the Use Case Library:
 - Set up a Pull Request to merge into master and tag in @ctb.
 - Uncle Archie will check out a copy of your pull request, run a snakemake build on it, and link to the output of the build process, so you can use Uncle Archie instead of using snakemake locally
 
-# Overview
+## Detailed contributor guidelines
 
-The Use Case Library hosts a variety of Use Cases that are relevant to the [Data Commons](https://public.nihdatacommons.us/) and maintained via our [Github Repository](https://github.com/dcppc/use-case-library)  
+### File Name Conventions
 
-## File Name Conventions
 For maximum flexibility, each part of a Use Case is stored in it's own markdown file. Different components of the library follow slightly different naming conventions, however they all share two characteristics:
 
  -  Filenames begin with the component type in ALLCAPS
  -  The component type is followed by `-<digit>` where the digit is a number that does not already occur in that component set
 
-For Epics, Narratives, Personas, and Summaries, the digit is additionally followed by a short description of the contents of the file, where spaces are replaced with `-`
+For Epics, Narratives, Personas, and Summaries, the digit is additionally followed by a short description of the contents of the file, where spaces are replaced with `-`. For User Stories, no description is added to the file name.
 
 Examples:
 
@@ -56,27 +55,23 @@ Examples:
 - NARRATIVE-1-topmed-genotype-phenotype.md
 - PERSONA-5-data-provider.md
 - SUMMARY-1-topmed-genotype-phenotype.md
-
-For User Stories, no description is added:
-
 - USERSTORY-6.md
 
 The numbers included in each filename are to ensure uniqueness. There is no requirement that all numbers are used in the library or that they occur in a particular order within a Use Case.
 
-## Usage
- | Use Case Component | Specificity | Occurences per Use Case | 
- |:--------------------:|:------------:|:-------------------------:|
- Persona | Can be used by multiple UCs | 1 |
- Scientific Objective | Can be used by a single UC | 1 |
- Summary | Can be used by a single UC | 1 |
+### Writing a Use Case
+ 
+A finished Use Case must be associated with a Persona, and have a Scientific Objective, a Summary, and a number of User Epics and User Stories that comprise it's User Narrative. 
+
+| Use Case Component | Specificity | Occurences per Use Case | 
+|:--------------------:|:------------:|:-------------------------:|
+Persona | Can be used by multiple UCs | 1 |
+Scientific Objective | Can be used by a single UC | 1 |
+Summary | Can be used by a single UC | 1 |
 User Narrative | Can be used by a single UC | 1 |
- User Epic | Can be used by a single UC | 1 - 10 |
- User Story | Can be used by multiple UCs | 1 - any | 
+User Epic | Can be used by a single UC | 1 - 10 |
+User Story | Can be used by multiple UCs | 1 - any | 
  
- 
- ## Writing a Use Case
- 
- A finished Use Case must be associated with a Persona, and have a Scientific Objective, a Summary, and a number of User Epics and User Stories that comprise it's User Narrative. 
  
 ![](images/UseCaseTopDown.png)
 
@@ -110,17 +105,16 @@ R/RStudio or Python/Jupyter Notebook.
 
 A Summary is a high-level, non-technical description of an entire Use Case, written in the third-person. The user in each summary should have a name, a problem, and both proximate and ultimate goals. Although these are based on general archetypes, each Use Case will have it's own unique summary, and the user should be a relatable individual rather than a faceless abstraction. The Summary also includes multiple solutions to the user's problem. 
 
-A Summary file has seven parts:
+A Summary file has eight parts:
 
- 1. Title: this 1 - 5 words that describe the summary
- 2. Narratives: the abbreviated file name of the narrative that is tied to this summary, formatted as a single-item list (i.e.`NARRATIVE-#`)
- 3. Tags: a carriage return separated list of relevant 1 - 2 word descriptions
- 4. Scenario: A long form description of a named user, including their proximate and ultimate goals, available resources, problems with reaching those goals and individual abilities
- 5. Current Approaches: A long form description of how this user might approach their problems, given current non-Data Commons technology
- 6. With the Data Commons Phase I: A long form description of how this user might attain their goals more easily using Data Commons resources
- 7. With Data Commons longer vision: A long form description of how this user will be able to accomplish their goals by using future technologies being created by the Data Commons
-
-The sub-section of the file containing the title, narratives and tags should be bounded by `---`
+1. Title: this 1 - 5 words that describe the summary
+2. Narratives: the abbreviated file name of the narrative that is tied to this summary, formatted as a single-item list (i.e.`NARRATIVE-#`)
+3. Tags: a carriage return separated list of relevant 1 - 2 word descriptions
+4. Scenario: A long form description of a named user, including their proximate and ultimate goals, available resources, problems with reaching those goals and individual abilities
+5. Current Approaches: A long form description of how this user might approach their problems, given current non-Data Commons technology
+6. With the Data Commons Phase I: A long form description of how this user might attain their goals more easily using Data Commons resources
+7. With Data Commons longer vision: A long form description of how this user will be able to accomplish their goals by using future technologies being created by the Data Commons
+8. YAML front matter block: The YAML sub-section of the file containing the title, narratives and tags should be bounded by `---`
 
 Example: ([See the full file here](https://github.com/dcppc/use-case-library/blob/master/library/SUMMARY-1-topmed-genotype-phenotype.md))
 
@@ -398,8 +392,6 @@ snakemake serve
 ```
 
 and then visit <http://localhost:8000> in a browser.
-
-
 
 If the site does not build, one or more files may need editing. The error output from Snakemake should help you identfy them. 
 If need help, please [open an
