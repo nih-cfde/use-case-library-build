@@ -21,6 +21,9 @@ def check_library_refs(obj_dict):
     warnings = []
     for obj in obj_dict.values():
 
+        if obj.ident=='USERSTORY-10':
+            import pdb; pdb.set_trace()
+
         # User stories that aren't called from any epics
         if obj.obj_type=='USER STORY' and len(obj.epics)==0:
             warn = 'WARNING: orphaned user story {} has no parent epic!'.format(obj.ident)
@@ -45,6 +48,9 @@ def check_library_refs(obj_dict):
         if obj.obj_type=='NARRATIVE' and len(obj.epics)==0:
             warn = 'WARNING: childless narrative {} has no epics!'.format(obj.ident)
             warnings.append(warn)
+
+    for warning in warnings:
+        print(warning)
 
 
 def resolve_library_refs(obj_dict):
