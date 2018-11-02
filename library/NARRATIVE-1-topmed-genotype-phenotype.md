@@ -10,6 +10,7 @@ epics:
 - EPIC-5
 - EPIC-6
 - EPIC-7
+- EPIC-27
 tags:
 - TOPMed genotype-phenotype
 - biomedical phenotypes
