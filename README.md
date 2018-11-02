@@ -31,3 +31,9 @@ mkdocs site materials. The result is static HTML that can be deployed on
 a web server served or using Github Pages. The final static site files are
 located in `output/site/`. The file  `output/site/index.html` is the main
 entry point.
+
+## A more detailed guide to building the site
+
+See the [Contributing](http://nih-data-commons.us/use-case-library/CONTRIBUTING/)
+page for more detailed information about building the Use Case Library.
+
