@@ -70,9 +70,6 @@ def main(argv=sys.argv[1:]):
     for obj in obj_dict.values():
         if obj.obj_type == 'EPIC' and not obj.narrative:
             print('WARNING, orphaned epic {} has no parent narrative!'.format(obj.ident))
-        if hasattr(obj, 'blurb'):
-            if not obj.blurb.endswith('.'):
-                print('WARNING, blurb for {} does not end with a period.'.format(obj.ident))
 
     #
     # create output locations. Note, 'output/docs' is completely recreated
@@ -163,6 +160,8 @@ def main(argv=sys.argv[1:]):
     #
 
     render_template('index.md')
+    render_template('CONTRIBUTING.md')
+    render_template('use-case-template.md')
     render_template('full_list.md')
     render_template('glossary.md')
     render_template('mkdocs.yml', subdir('output/mkdocs.yml'))

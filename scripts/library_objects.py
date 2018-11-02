@@ -111,6 +111,8 @@ class Persona(LibraryObject):
     def add_narrative(self, obj):
         assert obj.obj_type == 'NARRATIVE'
         self.narratives.append(obj)
+        # Note: narratives will not be sorted
+        # when we retrieve this later
 
 
 class UserStory(LibraryObject):
