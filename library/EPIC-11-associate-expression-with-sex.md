@@ -1,6 +1,6 @@
 ---
 title: Associate expression with sex
-blurb: Associate differences in gene expression with sex
+blurb: Use chi-square tests to associate differences in gene expression with sex
 user-stories:
 - USERSTORY-47
 - USERSTORY-48

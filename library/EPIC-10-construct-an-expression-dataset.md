@@ -1,6 +1,6 @@
 ---
 title: Construct a multi-species expression dataset
-blurb: Construct a multi-species expression dataset
+blurb: Find suitable expression datasets from multiple species and annotate them by sex
 user-stories:
 - USERSTORY-44
 - USERSTORY-45

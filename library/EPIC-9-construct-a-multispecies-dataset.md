@@ -1,6 +1,6 @@
 ---
 title: Construct a multi-species phenotype dataset
-blurb: Construct a multi-species phenotype dataset
+blurb: Find suitable phenotypic datasets from multiple species and harmonize and annotate their variables
 user-stories:
 - USERSTORY-40
 - USERSTORY-41
@@ -16,7 +16,7 @@ related to proper interpretation of file formats and assumptions. For
 instance, what to do if multiple genes are recorded for a model. This
 requires deep understanding of the underlying data and communication
 with the MOD databases. In practical terms, we require all of the data
-to be put into a flexible computational datastructure that allows
+to be put into a flexible computational data structure that allows
 ontology traversals and statistical tests.
 
 b. Harmonize data across available datasets. For instance, for mouse
