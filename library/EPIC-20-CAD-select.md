@@ -9,7 +9,3 @@ tags:
 - coronary
 - genome-wide association user narrative
 ---
-Bring over relevant metadata, phenotypes, and genotypes into workspaces.
-Upload additional proprietary datasets to the workspace.
-Perform batch-processing to re-align the read-level data using my favorite variant calling pipeline.
-Open a notebook and perform association testing to identify loci that are genome-wide significant.
