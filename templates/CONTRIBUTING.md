@@ -77,14 +77,13 @@ User Story | Can be used by multiple UCs | 1 - any |
 
 ### Personas
 
-A Persona is a general description of a type of user. As these are general archetypes, most contributors will not need to create a new Persona. A Persona file has four parts:
+A Persona is a general description of a type of user. As these are general archetypes, most contributors will not need to create a new Persona. A Persona file has five parts:
 
  1. title: this is 1 - 5 words that describe a user
  2. blurb: < 10 words that add more description
  3. tags: a carriage return seperated list of relevant 1 - 2 word descriptions
  4. A long form description of the user, detailing their strengths and weaknesses as they relate to computational science.
-
-The sub-section of the file containing the title, blurb and tags should be bounded by `---`
+ 5. YAML front matter block: The YAML sub-section of the file containing the title, blurb and tags should be bounded by `---`
 
 Example: 
 
@@ -157,7 +156,7 @@ access easily using a Data Commons interface...
 
 A User Narrative file references the collection of User Epics and User Stories for a given Use Case, and also contains the text of the Scientfic Objective. Each Use case has it's own User Narrative file. 
 
-A User Narrative file has six parts:
+A User Narrative file has seven parts:
 
  1. title: 1 - 5 words that describe the Use Case
  2. persona: this is the exact file name of the persona for this Use Case *without* the file extension
@@ -165,8 +164,7 @@ A User Narrative file has six parts:
  4. epics: a carriage return seperated list of the abbreviated file names of Epics associated with this Use Case (i.e. `EPIC-#`). 
  5. tags: a carriage return seperated list of relevant 1 - 2 word descriptions
  6. Scientific Objective: A long form description of moderatly detailed scientific question. It should be domain and subject specific, but should not reference a specific user or any specific tools for answering the question. 
-
-The sub-section of the file containing the title, blurb and tags should be bounded by `---`
+ 7. YAML front matter block: The YAML sub-section of the file containing the title, blurb and tags should be bounded by `---`
 
 Example: 
 
@@ -198,15 +196,15 @@ established associations, with the aim of identifying causal variants.`
 
 A User Epic is a short description that captures a valuable set of interactions with tools (e.g. software solutions) in the service of achieving the scientific objective. Epics can also be thought of as big tasks, and should be written from the users perspective, e.g.: "build a dataset" or "analyze a dataset" or "turn raw sequence into called variants". Importantly, an Epic is a multi-step process, which will later be broken down into small component parts (User Stories). Most Use Cases will have between three and five Epics, however very simple Use Cases may have only one, and very complex Use Cases may have ten or more. User Epics are tied to specific Use Cases, and can not be shared.
 
-A User Epic file has five parts:
+A User Epic file has six parts:
 
  1. title: 1 - 5 words that describe the Epic
  2. blurb: < 20 word description of Epic task
  3. user-stories: a carriage return seperated list of the abbreviated file names of the User Stories associated with this Epic (i.e. `USERSTORY-#`). 
  4. tags: a carriage return seperated list of relevant 1 - 2 word descriptions
  5. untitled description: An optional long form description of the task. This can be quite detailed and include specific file types, statistical analyses, and techniques. It should be domain and subject specific, and can give context for the User Stories. 
+ 6. YAML front matter block: The YAML sub-section of the file containing the title, blurb, user-stories, and tags should be bounded by `---`
 
-The sub-section of the file containing the title, blurb, user-stories, and tags should be bounded by `---`
 
 Example: 
 
@@ -235,10 +233,10 @@ A User Story file has five parts:
  2. output: Usualy one, but occasionally two files or abilities gained by completing this task
  3. task: a single operation that turns the input into output
  4. tags: a carriage return seperated list of relevant 1 - 2 word descriptions
+ 5. YAML front matter block: The YAML sub-section of the file containing all the text of this file should be bounded by `---`
 
-The entirety text of this file should be bounded by `---`
 
-The text from a User Story is programatically transformed into a sentence, so the input, output and task *must* be written such that they complete the sentence:
+**Important Note** The text from a User Story is programatically transformed into a sentence, so the input, output and task *must* be written such that they complete the sentence:
 
 `Use <input> to <task> to generate <output>`
 
