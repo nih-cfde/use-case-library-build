@@ -1,7 +1,7 @@
 ---
-input: FAIR metrics rubric and a resource to analyze
-output: A rubric-based fairness assessment
-task: Use the FAIR metrics defined within a rubric to evaluate FAIRness and complete an assessment
+input: a completed FAIR assessment and source of digital object
+output: digital object website with FAIR assessment scores
+task: Visualize FAIRness scores
 tags:
 - FAIRness assessment
 - metrics rubric

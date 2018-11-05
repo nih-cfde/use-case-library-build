@@ -1,9 +1,9 @@
 ---
-input: Automated FAIRshake assessment
-output: Verification FAIR metric compliance
-task: Use the FAIRshake automated assessment to register and expose the self-assessment results to automate and verify FAIR metric compliance
+input: FAIRshake summary statistics
+output: aspects of FAIRness that can be improved upon
+task: visualize the FAIRshake insignia and determine the FAIR score of a biomedical digital object
 tags:
-- automated FAIRshake
-- metric compliance
-- verification FAIR
+- FAIRshake
+- summary statistics
+- FAIRshake insignia
 ---
