@@ -1,6 +1,6 @@
 # {{ obj.task }}
 
-Use **{{ obj.input }}** to **{{ obj.task }}** to generate **{{ obj.output }}**.
+Use **{{ make_first_lowercase(obj.input) }}** to **{{ make_first_lowercase(obj.task) }}** to generate **{{ make_first_lowercase(obj.output) }}**.
 
 {% if obj.epics %}
 ## User Epics

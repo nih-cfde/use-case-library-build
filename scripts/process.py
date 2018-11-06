@@ -86,20 +86,25 @@ def main(argv=sys.argv[1:]):
 
         return [ obj for _, _, obj in sorted(x) ]
 
+    def make_first_lowercase(s):
+        if s is None:
+            raise ValueError("null object passed in to make_firstchar_lowercase()!")
+        return s[0].upper + s[1:]
+
     def make_title_link(obj):
         if obj is None:
-            raise ValueError("null object passed in to make_title_link!")
+            raise ValueError("null object passed in to make_title_link()!")
         return "[{}]({})".format(obj.title, obj.ident + '.md')
 
     def make_view_link(obj, link_text):
         if obj is None:
-            raise ValueError("null object passed in to make_edit_link!")
+            raise ValueError("null object passed in to make_edit_link()!")
         return "[{}]({})".format(link_text,
                                  GITHUB_LIBRARY_LOCATION + obj.filename)
 
     def make_edit_link(obj, link_text):
         if obj is None:
-            raise ValueError("null object passed in to make_edit_link!")
+            raise ValueError("null object passed in to make_edit_link()!")
         return "[{}]({})".format(link_text,
                                  GITHUB_EDIT_LOCATION + obj.filename)
 
