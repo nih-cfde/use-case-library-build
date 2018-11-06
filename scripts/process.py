@@ -89,6 +89,7 @@ def main(argv=sys.argv[1:]):
     def make_first_lowercase(s):
         if s is None:
             raise ValueError("null object passed in to make_firstchar_lowercase()!")
+        # Need to check for abbreviations here
         return s[0].lower() + s[1:]
 
     def make_title_link(obj):
