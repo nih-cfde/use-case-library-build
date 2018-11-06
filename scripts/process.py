@@ -1,75 +1,60 @@
 #! /usr/bin/env python
-"""
-Process the use case library files under library/ and create a mkdocs site.
-
-This script does a bunch of things:
-* sets up & validates a references structure between the files in library/
-* uses jinja2 templates under templates/ to build markdown output files
-* creates a mkdocs.yml configuration.
-"""
 import sys
 import argparse
 import os
 import shutil
 import traceback
 
-GITHUB_LIBRARY_LOCATION="https://github.com/dcppc/use-case-library/tree/master/library/"
-GITHUB_EDIT_LOCATION="https://github.com/dcppc/use-case-library/edit/master/library/"
-
 from jinja2 import Environment, FileSystemLoader
 
-from library_objects import create_library_object
-import parse_input_files
+from utilities import \
+        walk_dir_get_md_files, subdir, \
+        md_files_to_obj_dict, \
+        check_library_refs, resolve_library_refs, \
+        GITHUB_LIBRARY_LOCATION, GITHUB_EDIT_LOCATION
 
-basepath = os.path.join(os.path.dirname(__file__), '..')
-basepath = os.path.abspath(basepath)
 
-def subdir(location):
-    return os.path.join(basepath, location)
+"""
+Process the Use Case Library
+
+This script processes the use case library files
+under the library/ folder and uses them to create
+the mkdocs use case library site.
+
+This script does the following:
+- Set up and validate reference structure between library items
+- Use Jinja tempates (see templates dir) to build markdown output files
+- Creates an mkdocs.yml configuration
+"""
 
 def main(argv=sys.argv[1:]):
     p = argparse.ArgumentParser()
     p.add_argument('library_dir')
     args = p.parse_args(argv)
 
+    # Load jinja templates from disk (templates folder)
     jinja_env = Environment(
         loader=FileSystemLoader(subdir('templates'))
     )
 
-    inputfiles = set()
-    for root, dirs, files in os.walk(args.library_dir):
-        for name in files:
-            if name.endswith('.md'):
-                inputfiles.add(os.path.join(root, name))
+    # Get all markdown files in library
+    markdown_files = walk_dir_get_md_files(args.library_dir)
 
-    print('found {} input files under library/'.format(len(inputfiles)))
+    print('Found {} input files in library/'.format(len(markdown_files)))
 
-    #
-    # second, load all of the library files => obj_dict
-    #
+    # Load each library file into obj_dict
+    obj_dict = md_files_to_obj_dict(markdown_files)
 
-    obj_dict = {}
-    for filename in inputfiles:
-        # load markdown file + header
-        header, content = parse_input_files.parse_library_md(filename)
+    print('Loaded {} objects'.format(len(obj_dict)))
 
-        # create library object according to filename & header
-        obj = create_library_object(filename, header, content)
-        if obj.ident in obj_dict:
-            raise Exception("duplicate identity: " + obj.ident)
+    print('Resolving references')
+    obj_dict = resolve_library_refs(obj_dict)
 
-        obj_dict[obj.ident] = obj
+    print('Checking references')
+    check_library_refs(obj_dict)
 
-    print('loaded {} objects'.format(len(obj_dict)))
 
-    print('resolving references')
-    for obj in obj_dict.values():
-        obj.resolve_references(obj_dict)
-
-    print('checking references')
-    for obj in obj_dict.values():
-        if obj.obj_type == 'EPIC' and not obj.narrative:
-            print('WARNING, orphaned epic {} has no parent narrative!'.format(obj.ident))
+    # Unique portion of this script:
 
     #
     # create output locations. Note, 'output/docs' is completely recreated
@@ -101,20 +86,25 @@ def main(argv=sys.argv[1:]):
 
         return [ obj for _, _, obj in sorted(x) ]
 
+    def make_first_lowercase(s):
+        if s is None:
+            raise ValueError("null object passed in to make_firstchar_lowercase()!")
+        return s[0].lower() + s[1:]
+
     def make_title_link(obj):
         if obj is None:
-            raise ValueError("null object passed in to make_title_link!")
+            raise ValueError("null object passed in to make_title_link()!")
         return "[{}]({})".format(obj.title, obj.ident + '.md')
 
     def make_view_link(obj, link_text):
         if obj is None:
-            raise ValueError("null object passed in to make_edit_link!")
+            raise ValueError("null object passed in to make_edit_link()!")
         return "[{}]({})".format(link_text,
                                  GITHUB_LIBRARY_LOCATION + obj.filename)
 
     def make_edit_link(obj, link_text):
         if obj is None:
-            raise ValueError("null object passed in to make_edit_link!")
+            raise ValueError("null object passed in to make_edit_link()!")
         return "[{}]({})".format(link_text,
                                  GITHUB_EDIT_LOCATION + obj.filename)
 
@@ -126,17 +116,18 @@ def main(argv=sys.argv[1:]):
             outpath = os.path.join(subdir('output/docs'), filename)
 
         input_names = dict(yield_objects=yield_objects,
-                           make_title_link=make_title_link,
-                           make_view_link=make_view_link,
-                           make_edit_link=make_edit_link,
-                           len=len)
+                make_first_lowercase=make_first_lowercase,
+                make_title_link=make_title_link,
+                make_view_link=make_view_link,
+                make_edit_link=make_edit_link,
+                len=len)
         input_names.update(kw)
 
         try:
             template = jinja_env.get_template(filename)
         except:
             traceback.print_exc()
-            print('on template:', filename)
+            print(' in template:', filename)
             return False
 
         print('\rcreating:', outpath, end='')
@@ -145,7 +136,7 @@ def main(argv=sys.argv[1:]):
             rendered = template.render(input_names)
         except:
             traceback.print_exc()
-            print('on file:', filename)
+            print(' in file:', filename)
             return False
         
         with open(outpath, 'wt') as fp:
