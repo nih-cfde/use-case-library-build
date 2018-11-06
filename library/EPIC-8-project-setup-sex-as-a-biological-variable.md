@@ -1,6 +1,6 @@
 ---
-title: Project Setup
-blurb: Acquire accounts and access to resources; and plan statistical analysis
+title: Project Setup - sex as a biological variable
+blurb: Acquire accounts and access to AGR and GTEx resources; and plan statistical analysis
 user-stories:
 - USERSTORY-1
 - USERSTORY-2
