@@ -120,6 +120,7 @@ if [[ -f "$LIBDIR/USERSTORY-1.md" ]]; then
         ls -1 ${LIBDIR}/${TYPE}* | xargs -n1 -I% sed -i 's/[dD][bB][gG][aA][pP]/dbGaP/g' %
         ls -1 ${LIBDIR}/${TYPE}* | xargs -n1 -I% sed -i 's/[tT][oO][pP][mM]ed/TOPMed/g' %
         ls -1 ${LIBDIR}/${TYPE}* | xargs -n1 -I% sed -i 's/[cC][oO][pP][dD][gG]ene/COPDGene/g' %
+        ls -1 ${LIBDIR}/${TYPE}* | xargs -n1 -I% sed -i 's/nIH/NIH/g' %
 
         # -----------------------------
         # Fix punctuation
