@@ -22,6 +22,7 @@ json: JSON
 jupyter: Jupyter
 kcs: KCs
 manhattan: Manhattan plot
+nih: NIH
 pcs: PCS
 python: Python
 qc: QC
