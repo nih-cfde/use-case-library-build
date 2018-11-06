@@ -116,10 +116,11 @@ def main(argv=sys.argv[1:]):
             outpath = os.path.join(subdir('output/docs'), filename)
 
         input_names = dict(yield_objects=yield_objects,
-                           make_title_link=make_title_link,
-                           make_view_link=make_view_link,
-                           make_edit_link=make_edit_link,
-                           len=len)
+                make_first_lowercase=make_first_lowercase,
+                make_title_link=make_title_link,
+                make_view_link=make_view_link,
+                make_edit_link=make_edit_link,
+                len=len)
         input_names.update(kw)
 
         try:
