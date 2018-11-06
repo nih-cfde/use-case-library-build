@@ -64,12 +64,12 @@ FULLSTOP="false"
 # -----------------------
 # Param checking
 
-if [ "$UPPERCASE" -ne "true" -a "$UPPERCASE" -ne "false" ]; then
+if [ "$UPPERCASE" != "true" ] && [ "$UPPERCASE" != "false" ]; then
     echo "ERROR: invalid value for UPPERCASE environment variable, must be 'true' or 'false'"
     usage
 fi
 
-if [ "$FULLSTOP" -ne "true" -a "$FULLSTOP" -ne "false" ]; then
+if [ "$FULLSTOP" != "true" ] && [ "$FULLSTOP" != "false" ]; then
     echo "ERROR: invalid value for FULLSTOP environment variable, must be 'true' or 'false'"
 fi
 
