@@ -1,7 +1,7 @@
 ---
-input: Statistical expertise
-output: Statistical analysis plan
-task: Specify statistical methods to be used in analysis
+input: statistical expertise
+output: a statistical analysis plan
+task: specify statistical methods to be used in analysis
 tags:
 - analysis plan
 - statistical

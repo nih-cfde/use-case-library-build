@@ -1,7 +1,7 @@
 ---
-input: Statisical analysis plan & list of available analysis pipelines
-output: Analysis pipeline choice
-task: Select analysis pipeline (GENESIS illustrated here)
+input: statisical analysis plan and list of available analysis pipelines
+output:  a suitable analysis pipeline
+task: select an analysis pipeline (GENESIS illustrated here)
 tags:
 - analysis plan
 - available analysis pipelines

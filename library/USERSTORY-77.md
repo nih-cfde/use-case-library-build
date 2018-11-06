@@ -1,7 +1,7 @@
 ---
-input: COPDGene cohort and Chest Imaging Platform
-output: Images ready for analysis
-task: Render the images and visualize the anatomical structures
+input: a COPDGene cohort and a Chest Imaging Platform
+output:  images ready for analysis
+task:  render images and visualize anatomical structures
 tags:
 - COPDGene
 - chest imaging platform

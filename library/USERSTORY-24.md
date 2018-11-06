@@ -1,7 +1,7 @@
 ---
-input: Statistical analysis plan & selected analysis pipeline
-output: Model parameter file
-task: Specify model parameters
+input: a statistical analysis plan & selected analysis pipeline
+output:  a model parameter file
+task:  specify model parameters
 tags:
 - analysis pipeline
 - analysis plan

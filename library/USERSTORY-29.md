@@ -1,7 +1,7 @@
 ---
-input: Model fit statistics & QQ plot
-output: Decision to accept or modify analysis
-task: Evaluate model fit
+input: model fit statistics & QQ plot
+output: a decision to accept or modify analysis
+task: evaluate model fit
 tags:
 - Quantile
 - decision

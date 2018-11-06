@@ -1,6 +1,6 @@
 ---
-input: computational notebook and re-aligned reads
-output: list of loci that have genome-wide significance
+input: a computational notebook and re-aligned reads
+output: a list of loci that have genome-wide significance
 task: association testing
 tags:
 - association testing

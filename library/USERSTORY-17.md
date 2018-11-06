@@ -1,7 +1,7 @@
 ---
-input: Positon-based genomic annotations from multiple sources (e.g. GENCODE, GeneHancer)
-output: Aggregation unit definitions (genomic position ranges)
-task: Define aggregation units based on genomic positions (e.g. genes, regulatory regions, etc.)
+input: positon-based genomic annotations from multiple sources (e.g. GENCODE, GeneHancer)
+output:  defined aggregation units based on genomic positions (e.g. genes, regulatory regions, etc.)
+task: aggregate unit definitions (genomic position ranges)
 tags:
 - aggregation
 - gencode

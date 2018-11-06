@@ -1,7 +1,7 @@
 ---
-input: Analysis pipeline software modules (in docker image)
-output: CWL analysis pipeline
-task: Create and install CWL analysis pipeline
+input:  analysis pipeline software modules in a docker image
+output:  a CWL analysis pipeline
+task:  create and install a CWL analysis pipeline
 tags:
 - CWL
 - analysis pipeline

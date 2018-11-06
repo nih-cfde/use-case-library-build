@@ -1,7 +1,7 @@
 ---
-input: Genetic PCs and KCs
-output: Additional sample filter
-task: Decide on additional sample exclusions based on PCs and relatedness
+input: genetic PCs and KCs
+output: an additional sample filter
+task: decide on additional sample exclusions based on PCs and relatedness
 tags:
 - KCs
 - genetic PCS

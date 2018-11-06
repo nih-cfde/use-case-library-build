@@ -1,7 +1,7 @@
 ---
-input: Public interface access and ID of dataset
-output: Summary of how many users and/or analysis projects have utilized data
-task: Search for uses of specific dataset
+input: public interface access and the ID of a dataset
+output:  a summary of how many users and/or analysis projects have used data
+task:  search for uses of a specific dataset
 tags:
 - public interface access
 - summary

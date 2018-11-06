@@ -1,7 +1,7 @@
 ---
-input: UID of resource(s) within the Data Commons and the start date and end date of the time window of interest
-output: All logged activity for the specified resources during the specified time window
-task: Search for list of data use activity
+input: the UID of resource(s) within the Data Commons and a time window
+output:  all logged activity for the specified resources during the specified time window
+task:  search data use activity across the Commons
 tags:
 - start date
 - time window

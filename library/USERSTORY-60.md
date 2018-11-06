@@ -1,7 +1,7 @@
 ---
-input: Domain knowledge
-output: Dataset applicable to new method
-task: Find applicable datasets
+input: domain knowledge
+output:  a dataset applicable to a new method
+task:  find applicable datasets
 tags:
 - dataset
 - domain
