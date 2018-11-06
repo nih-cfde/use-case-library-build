@@ -52,7 +52,7 @@ echo "Looking in directory \"$LIBDIR\" for use case library..."
 # Should first char of each line
 # be changed to uppercase or lowercase?
 # upper or lower
-CASE="lower"
+CASE="upper"
 
 
 # -----------------------
