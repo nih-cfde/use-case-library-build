@@ -45,8 +45,8 @@ rule process_library:
    shell:
       """
       scripts/sed_fixes.sh library
-      scripts/process.py library 
-      scripts/copy_images.py images
+      {python} scripts/process.py library 
+      {python} scripts/copy_images.py images
       """
 
 rule mkdocs:

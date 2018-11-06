@@ -1,71 +1,70 @@
 #! /usr/bin/env python
-"""
-Process the use case library files under library/ and create a mkdocs site.
-
-This script does a bunch of things:
-* sets up & validates a references structure between the files in library/
-* uses jinja2 templates under templates/ to build markdown output files
-* creates a mkdocs.yml configuration.
-"""
 import sys
 import argparse
 import os
 import shutil
 import traceback
 
+from jinja2 import Environment, FileSystemLoader
+
+from utilities import \
+        walk_dir_get_md_files, subdir, \
+        md_files_to_obj_dict, \
+        check_library_refs, resolve_library_refs, \
+        GITHUB_LIBRARY_LOCATION, GITHUB_EDIT_LOCATION
+
+
+"""
+Rewrite (Repair) Files in the Use Case Library
+
+This script rewrites files in the use case library 
+under the library/ folder in a way that improves
+and fixes problems.
+
+This script does the following:
+- Set up and validate reference structure between library items
+- Use Jinja tempates (see templates dir) to build markdown output files
+- Creates an mkdocs.yml configuration
+"""
+
 GITHUB_LIBRARY_LOCATION="https://github.com/dcppc/use-case-library/tree/master/library/"
 GITHUB_EDIT_LOCATION="https://github.com/dcppc/use-case-library/edit/master/library/"
 
-from jinja2 import Environment, FileSystemLoader
-
-from library_objects import create_library_object
-import parse_input_files
-
 basepath = os.path.join(os.path.dirname(__file__), '..')
 basepath = os.path.abspath(basepath)
-
-def subdir(location):
-    return os.path.join(basepath, location)
 
 def main(argv=sys.argv[1:]):
     p = argparse.ArgumentParser()
     p.add_argument('library_dir')
     args = p.parse_args(argv)
 
-    inputfiles = set()
-    for root, dirs, files in os.walk(args.library_dir):
-        for name in files:
-            if name.endswith('.md'):
-                inputfiles.add(os.path.join(root, name))
+    # Get all markdown files in library
+    markdown_files = walk_dir_get_md_files(args.library_dir)
 
-    print('found {} input files under library/'.format(len(inputfiles)))
+    print('Found {} input files under library/'.format(len(inputfiles)))
+
+    # Load each library file into obj_dict
+    obj_dict = md_files_to_obj_dict(markdown_files)
+
+    # Load each library file into obj_dict
+    obj_dict = md_files_to_obj_dict(markdown_files)
+
+    print('Loaded {} objects'.format(len(obj_dict)))
+
+    print('Resolving references')
+    obj_dict = resolve_library_refs(obj_dict)
+
+    print('Checking references')
+    check_library_refs(obj_dict)
+
+
+    # Unique portion of this script:
 
     #
-    # second, load all of the library files => obj_dict
+    # re-write each file in the library.
+    # as it is, this script will strip \n 
+    # off the end of the file.
     #
-
-    obj_dict = {}
-    for filename in inputfiles:
-        # load markdown file + header
-        header, content = parse_input_files.parse_library_md(filename)
-
-        # create library object according to filename & header
-        obj = create_library_object(filename, header, content)
-        if obj.ident in obj_dict:
-            raise Exception("duplicate identity: " + obj.ident)
-
-        obj_dict[obj.ident] = obj
-
-    print('loaded {} objects'.format(len(obj_dict)))
-
-    print('resolving references')
-    for obj in obj_dict.values():
-        obj.resolve_references(obj_dict)
-
-    print('checking references')
-    for obj in obj_dict.values():
-        if obj.obj_type == 'EPIC' and not obj.narrative:
-            print('WARNING, orphaned epic {} has no parent narrative!'.format(obj.ident))
 
     for filename in inputfiles:
         with open(filename, 'rt') as fp:
