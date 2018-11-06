@@ -11,7 +11,7 @@ from utilities import scrub_overlap, walk_dir_get_md_files
 
 
 TEXTBLOB_IGNORE = 'textblob_ignore.dat'
-TEXTBLOB_REPLACE = 'textblob_replace.dat'
+TEXTBLOB_REPLACE = 'textblob_abbreviations.dat'
 
 """
 Extract Tags from YAML Header
