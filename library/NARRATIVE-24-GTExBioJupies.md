@@ -5,7 +5,6 @@ blurb: Conduct exploratory RNA-seq data analysis of GTEx data
 epics:
 - EPIC-45
 - EPIC-46
-- EPIC-47
 tags:
 - Biojupies
 - GTEx analysis
