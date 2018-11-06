@@ -264,7 +264,7 @@ Although the Use Case library is generally read from the top down, you may find 
 ![](images/UseCaseBottomUp.png)
 
 
-### Worked Example of an Epic and it's User Stories
+### Worked Example of an Epic and its User Stories
 
 If your Epic is "Build a dataset" then your User Stories might be:
 
@@ -294,7 +294,9 @@ output: one expression dataset with metadata
 task: harmonize datasets
 ```
 
-## A brief overview of how the site its built
+## Building the Site
+
+### A brief overview of how the site is built
 
 The Markdown files in `library/` define a collection of high-level use case
 library items: summaries, personas, narratives, user epics, and user stories.
@@ -317,27 +319,35 @@ a web server served or using Github Pages. The final static site files are
 located in `output/site/`. The file  `output/site/index.html` is the main
 entry point.
 
-## Optional: Building the site locally for testing
+### Optional: Building the site locally for testing
 
-The Use Case Library uses [Uncle Archie](https://github.com/dcppc/uncle-archie), (a home-brewed continuous integration server for pull request checks and push-to-deploy functionality) to deploy a test version of the website. Thus, you do not _need_ to build the tes site locally. However, the steps required to build and deploy the testing version of the Use Case Library are as follows:
+The Use Case Library uses [Uncle Archie](https://github.com/dcppc/uncle-archie)
+(a home-brewed continuous integration server that runs pull request checks) to
+deploy a test version of the website each time a pull request is opened or 
+updated. Thus, you do not _need_ to build the test site locally.
+
+However, it is still useful to build a local version of the Use Case Library
+site to test out local changes. To do this, the steps are as follows:
 
 1. Clone a local copy of this repo
-1. Set up a virtual environment
+1. Set up a Python virtual environment
 1. Build and test the site locally
 
-We walk through each of these steps below:
+We walk through each of these steps below.
 
 ### Clone a local copy
 
-
 Clone a local copy of the repository and cd into that directory:
 
-> git clone https://github.com/dcppc/use-case-library.git && cd use-case-library
-
+```
+git clone https://github.com/dcppc/use-case-library.git && cd use-case-library
+```
 
 ### Set up virtual environment
 
 Create a Python virtual environment, which will give you a clean version of Python that won't get mixed up with your default/system Python.
+
+(Note that each of the following commands should be executed in a Bash shell, not a Python shell.)
 
 **Do these steps once:** Create a virtual environment in the repo directory:
 
@@ -368,7 +378,6 @@ source vp/bin/activate
 
 Then the versions of `python` and `pip` that you use will be the ones in the virtual environment.
 
-
 You can deactivate and exit the virtual environment at any time by using:
 
 ```
@@ -391,7 +400,8 @@ snakemake serve
 
 and then visit <http://localhost:8000> in a browser.
 
-If the site does not build, one or more files may need editing. The error output from Snakemake should help you identfy them. 
+If the site does not build, one or more files may need editing. The error output
+from Snakemake should help you identfy them. 
 If need help, please [open an
 issue](https://github.com/dcppc/use-case-library/issues/new) and Team Copper
 will lend a hand ASAP.
