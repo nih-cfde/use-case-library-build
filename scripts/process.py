@@ -2,6 +2,7 @@
 import sys
 import argparse
 import os
+import re
 import shutil
 import traceback
 
@@ -13,6 +14,7 @@ from utilities import \
         check_library_refs, resolve_library_refs, \
         GITHUB_LIBRARY_LOCATION, GITHUB_EDIT_LOCATION
 
+ABBREVIATIONS_REPLACE = 'textblob_abbreviations.dat'
 
 """
 Process the Use Case Library
@@ -72,6 +74,23 @@ def main(argv=sys.argv[1:]):
         pass
     os.mkdir(subdir('output/docs'))
 
+
+    #
+    # abbreviations (useful)
+    # 
+
+    abf = os.path.join(os.path.dirname(os.path.realpath(__file__)),ABBREVIATIONS_REPLACE)
+    with open(abf,'r') as f:
+        lines = [line.strip() for line in f.readlines()]
+
+    case_fixes = {}
+    for line in lines:
+        (k,v) = line.split(":")
+        k = k.strip()
+        v = v.strip()
+        case_fixes[k] = v
+
+
     #
     # define a few utility functions for templates
     #
@@ -89,7 +108,20 @@ def main(argv=sys.argv[1:]):
     def make_first_lowercase(s):
         if s is None:
             raise ValueError("null object passed in to make_firstchar_lowercase()!")
-        return s[0].lower() + s[1:]
+        # Need to check for abbreviations here
+        # ^pattern
+        new_s = s[0].lower() + s[1:]
+        for case_fix in case_fixes:
+            k = case_fix
+            v = case_fixes[k]
+
+            s_lower = s.lower()
+            if re.match(k,s_lower):
+                find_this = r'^%s'%(k)
+                replace_with_this = r'%s'%(v)
+                new_s = re.sub(find_this, replace_with_this, new_s, flags=re.IGNORECASE)
+
+        return new_s
 
     def make_title_link(obj):
         if obj is None:
@@ -120,6 +152,7 @@ def main(argv=sys.argv[1:]):
                 make_title_link=make_title_link,
                 make_view_link=make_view_link,
                 make_edit_link=make_edit_link,
+                case_fixes=case_fixes,
                 len=len)
         input_names.update(kw)
 
