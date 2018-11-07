@@ -60,7 +60,8 @@ def resolve_library_refs(obj_dict):
     """
     for obj in obj_dict.values():
         obj.resolve_references(obj_dict)
-        return obj_dict
+
+    return obj_dict
 
 def get_basepath(f):
     """
