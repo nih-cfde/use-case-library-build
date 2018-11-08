@@ -122,7 +122,7 @@ if [[ -f "$LIBDIR/USERSTORY-1.md" ]]; then
         ls -1 ${LIBDIR}/${TYPE}* | xargs -n1 -I% sed -i 's/[cC][oO][pP][dD][gG]ene/COPDGene/g' %
         ls -1 ${LIBDIR}/${TYPE}* | xargs -n1 -I% sed -i 's/[gG][tT][eE]x/GTEx/g' %
         ls -1 ${LIBDIR}/${TYPE}* | xargs -n1 -I% sed -i 's/jupyter/Jupyter/g' %
-        ls -1 ${LIBDIR}/${TYPE}* | xargs -n1 -I% sed -i 's/python/Pupyter/g' %
+        ls -1 ${LIBDIR}/${TYPE}* | xargs -n1 -I% sed -i 's/python/Python/g' %
         ls -1 ${LIBDIR}/${TYPE}* | xargs -n1 -I% sed -i 's/rna-seq/RNA-Seq/g' %
         ls -1 ${LIBDIR}/${TYPE}* | xargs -n1 -I% sed -i 's/nIH/NIH/g' %
 
