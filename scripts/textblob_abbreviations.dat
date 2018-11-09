@@ -18,6 +18,7 @@ guid: GUID
 guids: GUIDs
 hdl: HDL
 igv: IGV
+i/o: I/O
 json: JSON
 jupyter: Jupyter
 kcs: KCs
