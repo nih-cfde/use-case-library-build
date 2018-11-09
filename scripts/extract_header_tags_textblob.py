@@ -24,6 +24,13 @@ If tags already exist in the document, this script
 will not overwrite or modify them by default, unless
 run with the --force flag.
 
+
+NOTE: This script will dump key-value pairs for the 
+library item yaml headers with a lowercase first 
+character. To keep consistency, you should also run
+the sed_fixes script in this directory.
+
+
 Procedure:
     - For each markdown file:
         - Extract the YAML header
