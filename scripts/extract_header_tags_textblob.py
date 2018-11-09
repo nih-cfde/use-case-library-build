@@ -53,7 +53,7 @@ def usage():
     print("                             already contains tags, be safe and don't overwrite the tags.")
     print("")
     print("Example:")
-    print("    ./extract_header_tags_textblob.py ../library")
+    print("    ./extract_header_tags_textblob.py ../library -f ")
     print("")
     exit(1)
 
