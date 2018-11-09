@@ -1,10 +1,9 @@
 ---
 input: CRAM files and interesting variant positions
-output:  an IGV plot (read pileups at variant position)
-task:  evaluate sequence data quality for variants of interest
+output: an IGV plot (read pileups at variant position)
+task: evaluate sequence data quality for variants of interest
 tags:
 - CRAM
-- igv
+- IGV
 - interesting variant positions
-- variant position
 ---

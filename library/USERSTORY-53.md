@@ -3,7 +3,7 @@ input: a workspace with relevant metadata, phenotypes, and genotypes for cases a
 output: re-aligned read-level data
 task: batch re-alignment
 tags:
-- processing
 - CAD
-- coronary artery disease
+- read-level data
+- relevant metadata
 ---

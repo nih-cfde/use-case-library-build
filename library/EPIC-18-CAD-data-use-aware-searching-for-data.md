@@ -8,6 +8,6 @@ user-stories:
 - USERSTORY-51
 tags:
 - CAD
-- coronary artery disease
-- project setup
+- acquire
+- data-use
 ---

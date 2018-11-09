@@ -11,7 +11,7 @@ Donald wants to identify and classify rat disease models for preclinical studies
 
 **Current approach:**
 
-Donald would have to spend a lot of time doing this manually. 
+Donald would have to spend a lot of time doing this manually.
 
 **With Data Commons Phase 1:**
 

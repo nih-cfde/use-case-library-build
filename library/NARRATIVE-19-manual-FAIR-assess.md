@@ -5,9 +5,7 @@ blurb: Assess compliance of biomedical digital research objects with FAIR guidin
 epics:
 - EPIC-35
 tags:
-- FAIR assessment
 - FAIRshake
-- assesses compliance
 - biomedical digital research objects
-- software toolkit
+- manual FAIR assessment
 ---

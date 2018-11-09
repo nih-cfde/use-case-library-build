@@ -7,7 +7,10 @@ user-stories:
 - USERSTORY-42
 - USERSTORY-43
 tags:
+- find
 - multi-species phenotype dataset
+- multiple species
+- suitable phenotypic datasets
 ---
 a. The analysis challenge currently is that each of the MODs use
 different file formats and semantics to record phenotypic data, and

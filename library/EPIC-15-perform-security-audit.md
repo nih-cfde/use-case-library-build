@@ -6,5 +6,7 @@ user-stories:
 - USERSTORY-57
 - USERSTORY-58
 tags:
+- acquire
+- data use trails
 - security audit
 ---

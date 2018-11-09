@@ -6,5 +6,8 @@ user-stories:
 - USERSTORY-2
 - USERSTORY-3
 tags:
-- accounts
+- TOPMed
+- acquire
+- genotype-phenotype association
+- project setup
 ---

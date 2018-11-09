@@ -5,4 +5,5 @@ user-stories:
 - USERSTORY-49
 tags:
 - candidate genes
+- pathway analysis
 ---

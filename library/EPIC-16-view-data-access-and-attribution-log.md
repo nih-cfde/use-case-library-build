@@ -6,5 +6,6 @@ user-stories:
 - USERSTORY-59
 tags:
 - attribution log
-- data-use
+- specific time period
+- view data access
 ---

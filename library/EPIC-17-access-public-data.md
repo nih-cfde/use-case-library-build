@@ -7,5 +7,5 @@ user-stories:
 tags:
 - searching
 - study participant
-- summary
+- study summary data
 ---

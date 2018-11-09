@@ -7,5 +7,6 @@ user-stories:
 tags:
 - different brain regions
 - differential
+- expression analysis
 - gene expression
 ---

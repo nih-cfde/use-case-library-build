@@ -25,15 +25,15 @@ on a large computing hub at her institution, if they have one.
 **With Data Commons Phase 1:**
 
 Standards for interoperability of tools and harmonization of data and
-metadata will let Maritza run this in the cloud.  She can run the 
+metadata will let Maritza run this in the cloud.  She can run the
 same workflow on all of her data, and she can automate these processes saving
 time, and helping prevent her from making errors.
 
 **With Data Commons longer vision:**
 
-Maritza can access large datasets through single sign-on. The Data Commons 
+Maritza can access large datasets through single sign-on. The Data Commons
 provides a collaborative environment for research and development so instead
-of just using her idiosyncratic method, she can try validated workflows 
+of just using her idiosyncratic method, she can try validated workflows
 created by others. This will help her ensure that results are robust
 and reproducible.  She can also try analyses that are outside
 her abiity to program herself.

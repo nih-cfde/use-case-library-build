@@ -7,6 +7,5 @@ user-stories:
 - USERSTORY-38
 - USERSTORY-39
 tags:
-- develop hypotheses
 - causal variants
 ---

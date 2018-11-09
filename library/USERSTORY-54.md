@@ -3,7 +3,6 @@ input: a computational notebook and re-aligned reads
 output: a list of loci that have genome-wide significance
 task: association testing
 tags:
-- association testing
-- CAD
-- coronary artery disease
+- computational notebook
+- genome-wide significance
 ---

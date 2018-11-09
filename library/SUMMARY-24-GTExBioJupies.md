@@ -1,7 +1,7 @@
 ---
 title: GTEx Analysis with BioJupies
-narratives: 
-- NARRATIVE-24 
+narratives:
+- NARRATIVE-24
 tags:
 - Biojupies
 - GTEx analysis

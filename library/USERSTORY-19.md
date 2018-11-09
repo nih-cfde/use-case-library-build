@@ -1,10 +1,8 @@
 ---
 input: variant-based functional annotations from a WGSA pipeline
-output:  reformatted variant-based functional annotations
-task:  parse WGSA output to facilitate queries
+output: reformatted variant-based functional annotations
+task: parse WGSA output to facilitate queries
 tags:
+- WGSA
 - functional annotations
-- reformatted
-- variant-based
-- wgsa
 ---

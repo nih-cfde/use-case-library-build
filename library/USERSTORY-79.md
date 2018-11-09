@@ -7,7 +7,6 @@ tags:
 - GTEx
 - JSON
 - anatomical aberrations
-- imaging
 - notebook configuration
 - phenotypic variations
 ---

@@ -4,7 +4,7 @@ output: a list of differentially expressed genes, gene sets and small molecules 
 task: assess candidates
 tags:
 - Jupyter notebook
-- researcher's observation
+- domain knowledge
 - reverse expression
 - small molecules
 ---

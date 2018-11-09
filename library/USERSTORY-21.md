@@ -1,8 +1,8 @@
 ---
 input: user-specified filtering criteria and a variant database
-output:  variant filters
-task:  define variant filters for input to analysis software
+output: variant filters
+task: define variant filters for input to analysis software
 tags:
-- user-specified
 - variant database
+- variant filters
 ---
