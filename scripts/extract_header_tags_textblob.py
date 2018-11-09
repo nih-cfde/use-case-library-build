@@ -92,7 +92,7 @@ def main():
         err = "ERROR: Cannot do safe run and force run together. Specify one of -f or -s."
         raise Exception(err)
 
-    if !safe_run and !force_run:
+    if not safe_run and not force_run:
         # User did not specify,
         # use safe mode by default
         force_run = False
