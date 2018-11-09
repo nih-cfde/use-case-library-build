@@ -1,9 +1,10 @@
 ---
-input: a Data Commons ID and research question
-output: a list of TOPmed records in which HDL has been measured
-task: search for suitable datasets
+input: A Data Commons ID and research question
+output: A list of TOPMed records in which HDL has been measured
+task: Search for suitable datasets
 tags:
-- search
 - HDL
-- high density lipoproteins
+- TOPMed
+- data commons id
+- research question
 ---

@@ -5,5 +5,6 @@ user-stories:
 - USERSTORY-4
 - USERSTORY-5
 tags:
-- analysis plan
+- choose
+- initial statistical framework
 ---

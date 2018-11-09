@@ -7,6 +7,4 @@ user-stories:
 - USERSTORY-54
 tags:
 - CAD
-- coronary artery disease
-- prepare data
 ---

@@ -1,8 +1,8 @@
 ---
-input: interesting variant positions or regions
-output:  an interactive graphical display
-task:  evaluate variant characteristics
+input: Interesting variant positions or regions
+output: An interactive graphical display
+task: Evaluate variant characteristics
 tags:
-- graphical display
-- variant positions
+- interactive graphical display
+- interesting variant positions
 ---

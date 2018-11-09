@@ -10,6 +10,7 @@ user-stories:
 - USERSTORY-15
 - USERSTORY-16
 tags:
+- genesis
 - genotypic data
-- GENESIS pipeline
+- reformat
 ---

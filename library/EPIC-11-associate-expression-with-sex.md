@@ -5,6 +5,7 @@ user-stories:
 - USERSTORY-47
 - USERSTORY-48
 tags:
+- chi-square tests
 - gene expression
 ---
 a. Perform alignment of the FASTQ files representing the GTEx raw data

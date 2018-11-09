@@ -6,7 +6,8 @@ user-stories:
 - USERSTORY-56
 - USERSTORY-72
 tags:
-- CAD
-- coronary artery disease
+- candidate loci
 - causal variants
+- downstream
+- significant loci
 ---

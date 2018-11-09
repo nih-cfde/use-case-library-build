@@ -6,4 +6,10 @@ user-stories:
 - USERSTORY-2
 - USERSTORY-60
 - USERSTORY-61
+tags:
+- GTEx
+- acquire
+- project setup
+- raw data
+- sharing
 ---

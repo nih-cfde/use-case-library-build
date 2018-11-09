@@ -1,7 +1,7 @@
 ---
-input: association test statistics
-output:  a LocusZoom plot
-task:  evaluate associations of all variants in a region of interest
+input: Association test statistics
+output: A LocusZoom plot
+task: Evaluate associations of all variants in a region of interest
 tags:
 - association test statistics
 - locuszoom

@@ -6,8 +6,11 @@ user-stories:
 - USERSTORY-2
 - USERSTORY-5
 tags:
-- accounts
-- choose statistical analysis
+- AGR
+- GTEx
+- acquire
+- project setup
+- statistical analysis
 ---
 a. We aim to perform an analysis across the entire phenome using an
 ontology-based analysis. Phenotype ontologies are used to describe

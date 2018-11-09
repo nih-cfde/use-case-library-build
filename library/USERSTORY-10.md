@@ -1,8 +1,7 @@
 ---
-input: single-sample VCFs
-output:  a multi-sample VCF
-task: combine single-sample VCFs
+input: Single-sample VCFs
+output: A multi-sample VCF
+task: Combine single-sample VCFs
 tags:
-- multi-sample VCF
-- single-sample VCFs
+- VCFs
 ---

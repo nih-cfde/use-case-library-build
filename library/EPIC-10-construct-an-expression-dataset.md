@@ -6,7 +6,10 @@ user-stories:
 - USERSTORY-45
 - USERSTORY-46
 tags:
+- find
 - multi-species expression dataset
+- multiple species
+- suitable expression datasets
 ---
 Integrate other relevant data. It should be possible to integrate gene
 expression data from resources such as MGI or BGE. It should also be

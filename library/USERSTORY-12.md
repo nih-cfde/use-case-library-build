@@ -1,8 +1,9 @@
 ---
-input: a multi-sample VCF
+input: A multi-sample VCF
 output: QC metrics data and filtering information
-task: do variant-level QC analysis
+task: Do variant-level QC analysis
 tags:
 - QC
-- multi-sample VCF
+- VCF
+- metrics data
 ---

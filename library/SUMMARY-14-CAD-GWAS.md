@@ -5,8 +5,6 @@ narratives:
 tags:
 - coronary artery gwas summary
 ---
-
-
 **Scenario**
 
 Airyonna is a statistical geneticist, and she is interested in using statistical methods to identify genetic risk factors for coronary artery disease. As Airyonna has never worked with patients directly, she has decided to start by using genotype-phenotype association testing on existing biomedical data sets. However, while Airyonna has the mathematical background to perform and interpret this analysis, she does not have easy access to a computing cluster, and has only basic coding skills. Similarly, while Airyonna will likely have little trouble getting approval for her experiment, she does not currently have access to any human genomics datasets, and is unsure how to find them or apply for access.
