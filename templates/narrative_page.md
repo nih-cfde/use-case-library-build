@@ -25,7 +25,7 @@ User epics under this narrative:
     {% for story in epic.user_stories %}
     * {{ story.ident }}: {{ make_title_link(story) }} - Use **{{ make_first_lowercase(story.input) }}** to 
      **{{ make_first_lowercase(story.task) }}** to generate **{{ make_first_lowercase(story.output) }}** 
-     (story appears in {{ len(story.epics) }} epics total).
+     (story appears in {{ len(story.epics) }} epic(s)).
     {% endfor %}
   {% endif %}
 {% endfor %}
