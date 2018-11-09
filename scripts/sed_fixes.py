@@ -108,9 +108,10 @@ def main():
     types = ['EPIC','NARRATIVE','PERSONA','SUMMARY','USER']
 
     for t in types:
-        for g in glob.glob(os.path.join(libdir,'%s*'%(t))):
 
-            print("sed_fixes.py is now scrubbing %s"%(os.path.basename(g)))
+        print("sed_fixes.py running from %s, processing files of type %s"%(libdir,t))
+
+        for g in glob.glob(os.path.join(libdir,'%s*'%(t))):
 
             # read
             with open(g,'r') as f:
