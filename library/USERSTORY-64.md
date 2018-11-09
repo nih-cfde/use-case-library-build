@@ -1,7 +1,8 @@
 ---
-input: Commons Public ID
-output: Public interface access
-task: Log on to public interface of NIH Data Commons
+input: A Commons Public ID
+output: A user interface with access to public commons data
+task: Log on to the NIH Data Commons
 tags:
-- public interface access
+- public commons data
+- user interface
 ---

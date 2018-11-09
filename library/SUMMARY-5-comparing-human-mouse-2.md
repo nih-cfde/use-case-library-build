@@ -29,6 +29,6 @@ associations with the phenotype.
 
 **With Data Commons longer vision:**
 
-He can make his work replicable by publishing his query and analysis in the Commons environment. 
+He can make his work replicable by publishing his query and analysis in the Commons environment.
 Gordon can work with developers in the Data Commons community to set
 up an automatic update of the study as more human data is added.

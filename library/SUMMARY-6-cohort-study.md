@@ -18,7 +18,7 @@ in more data than what is available in dbGaP.
 
 Right now Ishanvi would have separate logins for the datasets she wants to use and each would
 require separate approvals. She wouldn't have the ability to download all
-the studies she wants or to store all of that data locally, but she also wouldn't have
+the studies she wants or to store all of that data locally, and she also wouldn't have
 the funds or technical support to use it in the cloud. She would perform
 search queries over and over until she had the data she thought she needed and
 download that to analyze with a software package she purchased. She would like

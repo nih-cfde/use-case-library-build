@@ -1,8 +1,8 @@
 ---
-input: Multi-sample VCF
-output: Multi-sample GDS
-task: Reformat VCF to GDS (for GENESIS pipeline)
+input: A multi-sample VCF
+output: A multi-sample GDS
+task: Reformat from VCF to GDS (for GENESIS pipeline)
 tags:
-- multi-sample GDS
-- multi-sample VCF
+- GDS
+- VCF
 ---

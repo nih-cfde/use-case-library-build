@@ -1,13 +1,11 @@
 ---
-title: Create a dataset with genotypic and phenotypic COPD data
-blurb: Explore curated clinical data from the COPDGene study and explore available variables
+title: Access COPDGene and create a dataset
+blurb: Explore curated genotypic and phenotypic clinical data from the COPDGene study
 user-stories:
 - USERSTORY-1
 - USERSTORY-2
 - USERSTORY-73
 tags:
-- COPDGene
-- available variables
-- clinical data
-- copd
+- access COPDGene
+- phenotypic clinical data
 ---

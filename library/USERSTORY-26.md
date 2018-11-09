@@ -1,7 +1,10 @@
 ---
 input: Computational requirements
-output: Usable computing environment
-task: Instantiate computing environment for the analysis pipeline, including I/O, memory requirements, parallelization strategy, and cost control
+output: A usable computing environment with sufficient I/O and memory, a parallelization strategy and cost control
+task: Instantiate a computing environment for an analysis pipeline
 tags:
-- computational
+- computational requirements
+- cost control
+- i/o
+- parallelization strategy
 ---

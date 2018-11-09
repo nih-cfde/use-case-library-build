@@ -1,9 +1,9 @@
 ---
-input: COPDGene cohort and i2b2/tranSMART and variable list
-output: Statistical analysis by variable
-task: Generate statistical analysis based upon a variable
+input: A COPDGene cohort and i2b2/tranSMART and variable list
+output: Generate a statistical analysis by variable
+task: Do statistical analysis based upon a variable
 tags:
 - COPDGene
-- statistical
+- statistical analysis
 - variable list
 ---

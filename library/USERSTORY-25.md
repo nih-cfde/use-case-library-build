@@ -1,11 +1,10 @@
 ---
-input: Analysis pipeline choice, statistical model and sample size
+input: A chosen analysis pipeline, statistical model, and sample size
 output: Computational requirements
-task: Evaluate memory and parallelization requirements of analysis plan
+task: Evaluate memory and parallelization requirements of an analysis plan
 tags:
-- analysis
-- computational
-- pipeline choice
+- analysis pipeline
+- computational requirements
 - sample size
 - statistical model
 ---

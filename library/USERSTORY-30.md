@@ -1,6 +1,6 @@
 ---
 input: Association test statistics
-output: Manhattan plot
+output: A Manhattan plot
 task: Evaluate specificity of association results
 tags:
 - Manhattan plot

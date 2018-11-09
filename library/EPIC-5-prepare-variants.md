@@ -8,6 +8,5 @@ user-stories:
 - USERSTORY-20
 - USERSTORY-21
 tags:
-- prepare variants
-- GENESIS pipeline
+- annotate
 ---

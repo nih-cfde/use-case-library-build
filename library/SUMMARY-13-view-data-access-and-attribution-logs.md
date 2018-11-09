@@ -12,7 +12,7 @@ Joe, the provider of a resource on the Data Commons, is preparing a report docum
 
 **Current approach:**
 
-Joe would keep a personal log of access to his data, and use PubMed and similar search engines to find instances where his data had been cited, but generally wouldn't be able to track un-cited uses.
+Joe would need to keep a personal log of access to his data, and use PubMed and similar search engines to find instances where his data had been cited, but generally wouldn't be able to track un-cited uses.
 
 **With Data Commons Phase 1:**
 

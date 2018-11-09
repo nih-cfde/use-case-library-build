@@ -1,8 +1,9 @@
 ---
 input: Multi-sample GDS & filters
-output: GRM
-task: Estimate Genetic Relatedness Matrix (GRM)
+output: A Genetic Relatedness Matrix (GRM)
+task: Estimate a Genetic Relatedness Matrix (GRM)
 tags:
+- GDS
 - GRM
-- multi-sample GDS
+- genetic relatedness matrix
 ---

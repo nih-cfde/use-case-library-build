@@ -1,6 +1,7 @@
 ---
 title: COPDGene Cohort Study with Imaging Data
-narratives: null
+narratives:
+- NARRATIVE-20
 tags:
 - COPDGene cohort
 - imaging data

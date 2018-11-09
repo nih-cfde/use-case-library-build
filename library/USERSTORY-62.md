@@ -1,10 +1,10 @@
 ---
-input: Cloud workspace with raw datasets and identifiers (SRA, GTEx IDs, etc)
+input: A cloud workspace with raw datasets and identifiers (SRA, GTEx IDs, etc)
 output: Raw datasets matched to identifiers
 task: Match datasets to identifiers
 tags:
 - GTEx ids
 - SRA
-- cloud
+- cloud workspace
 - raw datasets
 ---

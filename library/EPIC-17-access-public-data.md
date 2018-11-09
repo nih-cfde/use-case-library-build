@@ -1,5 +1,5 @@
 ---
-title: Searching for Study Summary data
+title: Searching for study summary data
 blurb: A study participant wants to see how their data is used
 user-stories:
 - USERSTORY-64
@@ -7,5 +7,5 @@ user-stories:
 tags:
 - searching
 - study participant
-- summary
+- study summary data
 ---

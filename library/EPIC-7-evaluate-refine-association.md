@@ -1,6 +1,6 @@
 ---
 title: Evaluate and refine association test results
-blurb: Look at results and modify statistical parameters as needed 
+blurb: Look at results and modify statistical parameters as needed
 user-stories:
 - USERSTORY-28
 - USERSTORY-29
@@ -11,6 +11,7 @@ user-stories:
 - USERSTORY-34
 - USERSTORY-35
 tags:
-- evaluate causal variants
+- evaluate
 - refine association test results
+- statistical parameters
 ---

@@ -1,12 +1,10 @@
 ---
-input: A list of computational tools and selected tool parameters
-output: A notebook configuration JSON file which will be used by the BioJupies API to generate the notebook containing an analysis of the GTEx samples
-task: Use the computational tool selection interface on BioJupies to select and customize the downstream analysis
+input: Gene expression data and BioJupies
+output: A notebook configuration JSON file
+task: Select and customize the downstream analysis
 tags:
-- Biojupies API
-- GTEx
+- Biojupies
 - JSON
-- computational tools
+- gene expression data
 - notebook configuration
-- tool parameters
 ---

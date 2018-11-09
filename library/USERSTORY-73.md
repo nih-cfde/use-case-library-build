@@ -1,9 +1,8 @@
 ---
-input: Authenticated log on and COPDGene website
-output: Subset of COPDGene clinical, imaging, and genetic data that matches researcher interests
+input: An authenticated log on and the COPDGene website
+output: A subset of COPDGene clinical, imaging and genetic data that matches researcher interests
 task: Explore clinical variables of interest
 tags:
 - COPDGene
 - genetic data
-- subset
 ---

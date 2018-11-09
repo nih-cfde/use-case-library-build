@@ -1,9 +1,8 @@
 ---
-input: Genomic coordinates, annotations of interest
+input: Genomic coordinates and annotations of interest
 output: Genome browser graphic displays
-task: Evaluate genomic annotations for variants in region of interest
+task: Evaluate genomic annotations for variants in a region of interest
 tags:
-- browser graphic displays
-- genome
-- genomic
+- genome browser graphic displays
+- genomic coordinates
 ---

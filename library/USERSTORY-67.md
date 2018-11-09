@@ -1,8 +1,9 @@
 ---
-input: FAIR metrics booklet and a resource to analyze
-output: A fairness assessment
-task: Use the FAIRshake Chrome extension and Bookmarklet to initiate the FAIR assessment of a digital object
+input: The FAIRshake Chrome extension, the FAIR rubric and digital object
+output: A completed FAIRness assessment
+task: Perform a manual assessment
 tags:
-- FAIRness assessment
-- metrics booklet
+- FAIRness
+- FAIRshake chrome
+- digital object
 ---

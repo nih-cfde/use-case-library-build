@@ -20,13 +20,24 @@ This script extracts the YAML header from every
 markdown item in the use case library and creates
 a tag list by extracting noun phrases using textblob.
 
+If tags already exist in the document, this script
+will not overwrite or modify them by default, unless
+run with the --force flag.
+
+
+NOTE: This script will dump key-value pairs for the 
+library item yaml headers with a lowercase first 
+character. To keep consistency, you should also run
+the sed_fixes script in this directory.
+
+
 Procedure:
-    - For each markdown file
-    - Extract the YAML header
-    - Run each header string through noun phrase extractor
-    - Process/filter tags/noun phrases
-    - Add tags to YAML header
-    - Update original markdown with new YAML header
+    - For each markdown file:
+        - Extract the YAML header
+        - Run each header string through noun phrase extractor
+        - Process/filter tags/noun phrases
+        - Add tags to YAML header
+        - Update original markdown with new YAML header
 """
 
 def usage():
@@ -45,11 +56,11 @@ def usage():
     print("        -f | --force         If an item in the use case library already")
     print("                             contains tags, force overwrite the tags.")
     print("")
-    print("        -s | --safe          If an item in the use case library already")
-    print("                             contains tags, be safe and don't overwrite the tags.")
+    print("        -s | --safe          (Default behavior) If an item in the use case library")
+    print("                             already contains tags, be safe and don't overwrite the tags.")
     print("")
     print("Example:")
-    print("    ./extract_header_tags_textblob.py ../library")
+    print("    ./extract_header_tags_textblob.py ../library -f ")
     print("")
     exit(1)
 
@@ -88,6 +99,12 @@ def main():
         err = "ERROR: Cannot do safe run and force run together. Specify one of -f or -s."
         raise Exception(err)
 
+    if not safe_run and not force_run:
+        # User did not specify,
+        # use safe mode by default
+        force_run = False
+        safe_run = True
+
     # Set the location of the source files and check it exists
     SRC_DOCS = args[0]
     if not os.path.isdir(SRC_DOCS):
@@ -117,7 +134,8 @@ def main():
 
             if 'tags' not in yaml_header.keys() or force_run:
 
-                # No tags yet, so populate tags wtih automatically extracted tags
+                # No tags yet, or starting clean with new tags,
+                # so populate tags wtih automatically extracted tags
 
                 # Step 1: compile the sentences where tags come from
                 sentences = []
@@ -165,6 +183,7 @@ def main():
                 print("Extracted tags: %s"%( ", ".join(tags) ))
 
             else:
+                print("Script was run in safe mode and will not modify tags.")
                 print("Document already contains tags: %s"%(md),file=sys.stderr)
 
         else:

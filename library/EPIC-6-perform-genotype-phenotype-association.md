@@ -9,6 +9,7 @@ user-stories:
 - USERSTORY-26
 - USERSTORY-27
 tags:
-- genotype-phenotype association analysis
-- genotype-phenotype association tests
+- association tests
+- genotype-phenotype association analysis pipeline
+- run
 ---

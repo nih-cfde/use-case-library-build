@@ -1,9 +1,8 @@
 ---
 input: Reformatted variant-based functional annotations
-output: Variant database
-task: Construct database to hold variant-based functional annotations if needed for efficiency of queries
+output: A variant database
+task: Construct a database to hold variant-based functional annotations to enable efficient queries
 tags:
 - functional annotations
-- reformatted
-- variant
+- variant database
 ---

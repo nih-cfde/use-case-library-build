@@ -1,10 +1,9 @@
 ---
-input: Biomedical digital object and FAIRshake Chrome extension
-output: Visualization of FAIR
-task: Use the FAIRshake Chrome extension and Bookmarklet to visualize the FAIRshake insignia to determine the FAIR score of a biomedical digital object
+input: A biomedical digital object and FAIRshake Chrome extension
+output: FAIRness tracking data
+task: Track the progress of a FAIRness score for a digital object over time
 tags:
+- FAIRness
 - FAIRshake chrome
-- biomedical
-- digital object
-- visualization
+- biomedical digital object
 ---

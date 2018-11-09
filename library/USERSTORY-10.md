@@ -1,8 +1,7 @@
 ---
 input: Single-sample VCFs
-output: Multi-sample VCF
-task: Prepare genotypic data - assemble single-sample VCFs
+output: A multi-sample VCF
+task: Combine single-sample VCFs
 tags:
-- multi-sample VCF
-- single-sample VCFs
+- VCFs
 ---

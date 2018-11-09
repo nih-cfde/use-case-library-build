@@ -1,8 +1,8 @@
 ---
 input: Phenotype domain knowledge
-output: List of phenotype concepts
-task: Define phenotype concepts for primary outcome, covariates and ancillary variables
+output: A list of phenotype concepts
+task: Defining phenotype concepts for primary outcome, covariates and ancillary variables
 tags:
-- domain knowledge
 - phenotype concepts
+- phenotype domain knowledge
 ---

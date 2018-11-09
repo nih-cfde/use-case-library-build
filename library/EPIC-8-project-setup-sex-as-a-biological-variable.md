@@ -1,12 +1,16 @@
 ---
-title: Develop a plan for phenotypic analysis
-blurb: Develop an analysis plan for phenotypic analysis
+title: Project Setup - sex as a biological variable
+blurb: Acquire accounts and access to AGR and GTEx resources; and plan statistical analysis
 user-stories:
 - USERSTORY-1
 - USERSTORY-2
+- USERSTORY-5
 tags:
-- analysis plan
-- phenotypic analysis
+- AGR
+- GTEx
+- acquire
+- project setup
+- statistical analysis
 ---
 a. We aim to perform an analysis across the entire phenome using an
 ontology-based analysis. Phenotype ontologies are used to describe

@@ -1,6 +1,6 @@
 ---
-input: List of phenotype concepts and dbGaP data files
-output: List of dbGaP variable identifiers for multiple TOPMed studies
+input: A list of phenotype concepts and dbGaP data files
+output: A list of dbGaP variable identifiers for multiple TOPMed studies
 task: Search metadata to identify dbGaP variables corresponding to phenotype concepts
 tags:
 - TOPMed
