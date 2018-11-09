@@ -1,7 +1,7 @@
 ---
-input: expression data files and their metadata
-output: expression data separated by sex
-task: annotate expression data by sex
+input: Expression data files and their metadata
+output: Expression data separated by sex
+task: Annotate expression data by sex
 tags:
 - expression data files
 ---

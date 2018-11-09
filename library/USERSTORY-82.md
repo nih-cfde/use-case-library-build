@@ -1,7 +1,7 @@
 ---
-input: gene expression data and BioJupies
-output: a notebook configuration JSON file
-task: select and customize the downstream analysis
+input: Gene expression data and BioJupies
+output: A notebook configuration JSON file
+task: Select and customize the downstream analysis
 tags:
 - Biojupies
 - JSON

@@ -1,6 +1,6 @@
 ---
-input: a completed FAIR assessment and source of digital object
-output: digital object website with FAIR assessment scores
+input: A completed FAIR assessment and source of digital object
+output: Digital object website with FAIR assessment scores
 task: Visualize FAIRness scores
 tags:
 - FAIR

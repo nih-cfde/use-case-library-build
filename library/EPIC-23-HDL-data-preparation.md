@@ -1,6 +1,6 @@
 ---
 title: Data preparation
-blurb: Extract and harmonize HDL measurements from each individual study data.
+blurb: Extract and harmonize HDL measurements from each individual study data
 user-stories:
 - USERSTORY-7
 - USERSTORY-8

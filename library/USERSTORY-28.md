@@ -1,7 +1,7 @@
 ---
-input: association test statistics
+input: Association test statistics
 output: QQ plot
-task: generate QQ plot for evaluating model fit
+task: Generate QQ plot for evaluating model fit
 tags:
 - Quantile
 - association test statistics
