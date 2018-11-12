@@ -3,7 +3,11 @@ site_name: Use Case Library v1.0
 site_url: http://nih-data-commons.us/use-case-library
 
 copyright: 'This website is available under the terms of the 
-<a href="https://creativecommons.org/licenses/by/4.0/">CC-BY license</a>.<br />'
+<a href="https://creativecommons.org/licenses/by/4.0/">CC-BY license</a>.<br />
+To contribute or open an issue, visit the 
+<a href="https://github.com/dcppc/use-case-library">dcppc/use-case-library</a> 
+GitHub repository.
+<br />'
 
 pages:
   - Introduction: index.md
