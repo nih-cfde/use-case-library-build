@@ -4,7 +4,7 @@ Hello, and thank you for wanting to contribute to the DCPPC Use Case Library\!
 
 By contributing to this repository, you agree:
 
-1.  To obey the [Code of Conduct](https://github.com/dcppc/use-case-library/blob/master/CODE_OF_CONDUCT.md)
+1.  To obey the [Code of Conduct](https://public.nihdatacommons.us/CODE_OF_CONDUCT/)
 2.  To release all your contributions under the same terms as the
     Use Case Library license itself: the [Creative Commons Zero](https://github.com/dcppc/use-case-library/blob/master/LICENSE.md)
     (aka Public Domain) license
