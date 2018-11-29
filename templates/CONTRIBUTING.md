@@ -6,7 +6,7 @@ By contributing to this repository, you agree:
 
 1.  To obey the [Code of Conduct](https://public.nihdatacommons.us/CODE_OF_CONDUCT/)
 2.  To release all your contributions under the same terms as the
-    Use Case Library license itself: the [Creative Commons Zero](https://github.com/dcppc/use-case-library/blob/master/LICENSE.md)
+    Use Case Library license itself: the [Creative Commons Attribution 4.0](https://public.nihdatacommons.us/LICENSE/)
     (aka Public Domain) license
 
 If you are OK with these two conditions, then we welcome both you and
