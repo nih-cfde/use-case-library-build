@@ -27,5 +27,5 @@
 ## User stories
 
 {% for obj in yield_objects('USER STORY') %}
-* {{ obj.ident }}: {{ make_title_link(obj) }} - {{ obj.title }}
+* {{ obj.ident }}: {{ make_title_link(obj) }}
 {% endfor %}
