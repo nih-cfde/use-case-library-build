@@ -11,7 +11,7 @@ If you want to contribute a new user narrative, please
 [make a copy of this template document](use-case-template.md),
 modify it, and then
 [create a new issue on GitHub under dcppc/use-case-library/](https://github.com/dcppc/use-case-library/issues). Alternatively,
-you can submit it to dcppc.inbox@gmail.com, or follow the detailed instructions in the [Contributing Guidelines](CONTRIBUTING.md)
+you can submit it to dcppc.inbox@gmail.com, or follow the detailed instructions in the [Contributing Guidelines](CONTRIBUTING.md).
 
 ## Use Case Summaries
 
@@ -19,7 +19,9 @@ you can submit it to dcppc.inbox@gmail.com, or follow the detailed instructions 
 * {{ make_title_link(obj) }}
 {% endfor %}
 
-## [Full listing of library entries](full_list.md)
+## Full Listing of Library Entries
+
+View the comprehensive list of library entries [here](full_list.md).
 
 The Use Case Library contains {{ len(yield_objects('SUMMARY')) }} use
 case summaries, {{ len(yield_objects('NARRATIVE')) }} user narratives,
