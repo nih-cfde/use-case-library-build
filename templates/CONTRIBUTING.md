@@ -4,10 +4,10 @@ Hello, and thank you for wanting to contribute to the DCPPC Use Case Library\!
 
 By contributing to this repository, you agree:
 
-1.  To obey the [Code of Conduct](https://public.nihdatacommons.us/CODE_OF_CONDUCT/)
+1.  To obey the [Code of Conduct](https://public.nihdatacommons.us/CODE_OF_CONDUCT/).
 2.  To release all your contributions under the same terms as the
-    Use Case Library license itself: the [Creative Commons Attribution 4.0](https://public.nihdatacommons.us/LICENSE/)
-    (aka Public Domain) license
+    Use Case Library license itself: the [Creative Commons Attribution 4.0](LICENSE.md)
+    (aka Public Domain) license.
 
 If you are OK with these two conditions, then we welcome both you and
 your contribution\!
@@ -31,11 +31,11 @@ If you are already familiar with the Use Case Library:
 
 - Make a new branch from [latest master](https://github.com/dcppc/use-case-library). See [below](#building-the-site-locally-for-testing) for more details
 - Create a new SUMMARY-, PERSONA-, NARRATIVE-, USERSTORY-, or EPIC- file under library/ by copying an existing file. Make sure that the filename specifies a unique ID (e.g. *SUMMARY-1-xyz* yields the ID *SUMMARY-1* which is not unique)
-- Update the YAML metadata at the top of the file to reflect your new metadata.
-- Edit the markdown description below the YAML header.
-- (Optional) Build the file using snakemake, check the output. Iterate until you're happy.
-- Add a new file to git repo, commit, push.
-- Set up a Pull Request to merge into master and tag in @ctb.
+- Update the YAML metadata at the top of the file to reflect your new metadata
+- Edit the markdown description below the YAML header
+- (Optional) Build the file using snakemake, check the output. Iterate until you're happy
+- Add a new file to git repo, commit, push
+- Set up a Pull Request to merge into master and tag in @ctb
 - Uncle Archie will check out a copy of your pull request, run a snakemake build on it, and link to the output of the build process, so you can use Uncle Archie instead of using snakemake locally
 
 ## Detailed contributor guidelines
