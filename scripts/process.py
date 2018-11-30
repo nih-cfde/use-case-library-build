@@ -188,6 +188,7 @@ def main(argv=sys.argv[1:]):
     render_template('use-case-template.md')
     render_template('full_list.md')
     render_template('glossary.md')
+    render_template('LICENSE.md')
     render_template('mkdocs.yml', subdir('output/mkdocs.yml'))
 
     for obj in obj_dict.values():
