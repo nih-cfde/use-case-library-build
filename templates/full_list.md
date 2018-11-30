@@ -6,7 +6,7 @@
 * {{ obj.ident }}: {{ make_title_link(obj) }}
 {% endfor %}
 
-## User narratives
+## User Narratives
 
 {% for obj in yield_objects('NARRATIVE') %}
 * {{ obj.ident }}: {{ make_title_link(obj) }} - {{ obj.blurb }}
@@ -24,8 +24,8 @@
 * {{ obj.ident }}: {{ make_title_link(obj) }} - {{ obj.blurb }}
 {% endfor %}
 
-## User stories
+## User Stories
 
 {% for obj in yield_objects('USER STORY') %}
-* {{ obj.ident }}: {{ make_title_link(obj) }} - {{ obj.title }}
+* {{ obj.ident }}: {{ make_title_link(obj) }}
 {% endfor %}
