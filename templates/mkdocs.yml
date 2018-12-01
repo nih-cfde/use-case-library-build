@@ -32,9 +32,10 @@ pages:
     - "{{ obj.title }}": {{ obj.ident }}.md
 {% endautoescape %} {% endfor %}
   - Complete List of Contents: full_list.md
-  - Glossary of terms: glossary.md
+  - Glossary of Terms: glossary.md
   - Contributing Guide : CONTRIBUTING.md
   - Use Case Submission Form : use-case-template.md
+  - License : LICENSE.md
 
 theme:
   name: null
