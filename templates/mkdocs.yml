@@ -15,6 +15,14 @@ pages:
 {% for obj in yield_objects('USE CASE') %}
     - {{ obj.title }}: {{ obj.ident }}.md
 {% endfor %}
+  - Tasks:
+{% for obj in yield_objects('TASK') %}
+    - {{ obj.title }}: {{ obj.ident }}.md
+{% endfor %}
+  - Requirements:
+{% for obj in yield_objects('REQUIREMENT') %}
+    - {{ obj.title }}: {{ obj.ident }}.md
+{% endfor %}
   - Complete List of Contents: full_list.md
   - Glossary of Terms: glossary.md
   - Contributing Guide : CONTRIBUTING.md

@@ -99,6 +99,7 @@ def main(argv=sys.argv[1:]):
         x = []
         for obj in obj_dict.values():
             if obj.obj_type == obj_type:
+                assert '-' in obj.ident, "identifiers must have - in them"
                 ot, number = obj.ident.split('-')
                 number = int(number)
                 x.append((number, ot, obj))

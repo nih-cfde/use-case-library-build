@@ -7,6 +7,8 @@ the Use Case Library.
 import os.path
 
 prefixes = {'uc': 'USE CASE',
+            't': 'TASK',
+            'r': 'REQUIREMENT',
             'USERSTORY': 'USER STORY',
             'PERSONA': 'PERSONA',
             'NARRATIVE': 'NARRATIVE',
@@ -70,6 +72,36 @@ class UseCase(LibraryObject):
     template = 'use_case_page.md'
 
     def __init__(self, ident, title, persona, objective, user_tasks, requirements):
+        self.ident = ident
+        self.validate('title', title)
+
+    def resolve_references(self, obj_dict):
+        print('XXX resolve_references', obj_dict)
+
+    def set_content(self, content):
+        self.content = content
+
+
+class Task(LibraryObject):
+    obj_type = 'TASK'
+    template = 'task_page.md'
+
+    def __init__(self, ident, title):
+        self.ident = ident
+        self.validate('title', title)
+
+    def resolve_references(self, obj_dict):
+        print('XXX resolve_references', obj_dict)
+
+    def set_content(self, content):
+        self.content = content
+
+
+class Requirement(LibraryObject):
+    obj_type = 'REQUIREMENT'
+    template = 'requirement_page.md'
+
+    def __init__(self, ident, title):
         self.ident = ident
         self.validate('title', title)
 
@@ -254,7 +286,10 @@ def create_library_object(filename, header, content):
         obj = UseCase(ident, header['title'], header['persona'],
                       header['objective'], header['user_tasks'],
                       header['requirements'])
-                                                      
+    elif filetype == 'TASK':
+        obj = Task(ident, header['title'])
+    elif filetype == 'REQUIREMENT':
+        obj = Requirement(ident, header['title'])
     elif filetype == 'PERSONA':
         if 'tags' not in header:
             header['tags'] = []
