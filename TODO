@@ -1,0 +1,9 @@
+CTB:
+- Set this up with conda environments/--use-conda, I think
+- dig into sed_fixes
+- lightly document objects structure
+
+Someone else :)
+- Update CoC file in top level directory
+- Adjust mkdocs templates etc.; probably remove mkdocs-material-db
+- Fix deploy/gh-deploy stuff in Snakefile

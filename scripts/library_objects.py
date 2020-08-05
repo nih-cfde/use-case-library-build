@@ -6,7 +6,7 @@ the Use Case Library.
 """
 import os.path
 
-prefixes = {'EPIC': 'EPIC',
+prefixes = {'uc': 'USE CASE',
             'USERSTORY': 'USER STORY',
             'PERSONA': 'PERSONA',
             'NARRATIVE': 'NARRATIVE',
@@ -63,6 +63,21 @@ class LibraryObject(object):
 
         else:
             setattr(self, param_name, param_value)
+
+
+class UseCase(LibraryObject):
+    obj_type = 'USE CASE'
+    template = 'use_case_page.md'
+
+    def __init__(self, ident, title, persona, objective, user_tasks, requirements):
+        self.ident = ident
+        self.validate('title', title)
+
+    def resolve_references(self, obj_dict):
+        print('XXX resolve_references', obj_dict)
+
+    def set_content(self, content):
+        self.content = content
 
 
 class Summary(LibraryObject):
@@ -235,7 +250,12 @@ def create_library_object(filename, header, content):
     Create a library object for the given filename / header combination.
     """
     filetype, ident = get_type(filename)
-    if filetype == 'PERSONA':
+    if filetype == 'USE CASE':
+        obj = UseCase(ident, header['title'], header['persona'],
+                      header['objective'], header['user_tasks'],
+                      header['requirements'])
+                                                      
+    elif filetype == 'PERSONA':
         if 'tags' not in header:
             header['tags'] = []
 

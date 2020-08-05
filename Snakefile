@@ -44,9 +44,9 @@ rule process_library:
       'output/mkdocs.yml'
    shell:
       """
-      {python} scripts/sed_fixes.py library
+#      {python} scripts/sed_fixes.py library
       {python} scripts/process.py library 
-      {python} scripts/copy_images.py images
+#      {python} scripts/copy_images.py images
       """
 
 rule mkdocs:
