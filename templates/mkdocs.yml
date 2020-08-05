@@ -11,42 +11,26 @@ GitHub repository.
 
 pages:
   - Introduction: index.md
-  - Use Case Summaries:
-{% for obj in yield_objects('SUMMARY') %}
+  - Use Cases:
+{% for obj in yield_objects('USE CASE') %}
     - {{ obj.title }}: {{ obj.ident }}.md
 {% endfor %}
-  - User Narratives:
-{% for obj in yield_objects('NARRATIVE') %}
-    - {{ obj.title }}: {{ obj.ident }}.md
-{% endfor %}
-  - Personas:
-{% for obj in yield_objects('PERSONA') %} {% autoescape true %}
-    - "{{ obj.title }}": {{ obj.ident }}.md
-{% endautoescape %} {% endfor %}
-  - Epics:
-{% for obj in yield_objects('EPIC') %}
-    - {{ obj.title }}: {{ obj.ident }}.md
-{% endfor %}
-  - User Stories:
-{% for obj in yield_objects('USER STORY') %} {% autoescape true %}
-    - "{{ obj.title }}": {{ obj.ident }}.md
-{% endautoescape %} {% endfor %}
   - Complete List of Contents: full_list.md
   - Glossary of Terms: glossary.md
   - Contributing Guide : CONTRIBUTING.md
   - Use Case Submission Form : use-case-template.md
   - License : LICENSE.md
 
-theme:
-  name: null
-  custom_dir: 'mkdocs-material-dib/material'
-  palette:
-    primary: 'blue'
-    accent: 'blue'
-  logo: 'images/dcppc-logo.png'
-  font:
-    text: 'Roboto Slab'
-    code: 'Roboto Mono'
+#theme:
+#  name: null
+#  custom_dir: 'mkdocs-material-dib/material'
+#  palette:
+#    primary: 'blue'
+#    accent: 'blue'
+#  logo: 'images/dcppc-logo.png'
+#  font:
+#    text: 'Roboto Slab'
+#    code: 'Roboto Mono'
 
 # Extensions
 #markdown_extensions:
@@ -56,9 +40,9 @@ theme:
 #  - toc:
 #      permalink: true
 
-extra:
-  # annotation
-  hypothesis: true
-  # disqus
-  disqus: data-commons-use-case-library
-  matomo: 5
+#extra:
+#  # annotation
+#  hypothesis: true
+#  # disqus
+#  disqus: data-commons-use-case-library
+#  matomo: 5
