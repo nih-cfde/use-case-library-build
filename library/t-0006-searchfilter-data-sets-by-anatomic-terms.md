@@ -1,3 +1,3 @@
 ---
-title: T0006 Search/filter data sets by anatomic terms
+title: Search/filter data sets by anatomic terms
 ---
