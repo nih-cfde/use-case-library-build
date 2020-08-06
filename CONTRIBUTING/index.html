@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="http://nih-data-commons.us/use-case-library/CONTRIBUTING/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Contributing Guide - Use Case Library v1.0</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Use Case Library v1.0</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Introduction</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Use Cases <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../uc-0001/" class="dropdown-item">Researcher Browse and Filter</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tasks <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../t-0001/" class="dropdown-item">T0001 Access CFDE interface</a>
+</li>
+                                    
+<li>
+    <a href="../t-0006/" class="dropdown-item">T0006 Search/filter data sets by anatomic terms</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Requirements <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../r-00001/" class="dropdown-item">R00001 The interface will support GUI web access to end users</a>
+</li>
+                                    
+<li>
+    <a href="../r-00003/" class="dropdown-item">R00003 The interface will support the selection of an Uberon term of interest</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../full_list/" class="nav-link">Complete List of Contents</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../glossary/" class="nav-link">Glossary of Terms</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Contributing Guide</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../use-case-template/" class="nav-link">Use Case Submission Form</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../LICENSE/" class="nav-link">License</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../glossary/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../use-case-template/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#use-case-library-contributing-guidelines" class="nav-link">Use Case Library Contributing Guidelines</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#quick-start" class="nav-link">Quick Start</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#detailed-contributor-guidelines" class="nav-link">Detailed contributor guidelines</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#additional-context" class="nav-link">Additional Context</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#building-the-site" class="nav-link">Building the Site</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="use-case-library-contributing-guidelines">Use Case Library Contributing Guidelines</h1>
+<p>Hello, and thank you for wanting to contribute to the DCPPC Use Case Library!</p>
+<p>By contributing to this repository, you agree:</p>
+<ol>
+<li>To obey the <a href="https://public.nihdatacommons.us/CODE_OF_CONDUCT/">Code of Conduct</a>.</li>
+<li>To release all your contributions under the same terms as the
+    Use Case Library license itself: the <a href="../LICENSE/">Creative Commons Attribution 4.0</a>
+    (aka Public Domain) license.</li>
+</ol>
+<p>If you are OK with these two conditions, then we welcome both you and
+your contribution!</p>
+<p>If you have any questions about contributing, please <a href="https://github.com/dcppc/use-case-library/issues/new">open an
+issue</a> and Team Copper
+will lend a hand ASAP.</p>
+<p>Thank you for being here and for being a part of the DCPPC project.</p>
+<h2 id="quick-start">Quick Start</h2>
+<p>To suggest a new Use Case and provide some text:</p>
+<ul>
+<li>Make a copy of <a href="../use-case-template/">this form</a></li>
+<li>Fill in as much information as possible</li>
+<li><a href="https://github.com/dcppc/use-case-library/issues/new">Create an issue here</a></li>
+<li>Copy the text of the form into the issue box, or attach it as a comment</li>
+</ul>
+<p>If you are already familiar with the Use Case Library:</p>
+<ul>
+<li>Make a new branch from <a href="https://github.com/dcppc/use-case-library">latest master</a>. See <a href="#building-the-site-locally-for-testing">below</a> for more details</li>
+<li>Create a new SUMMARY-, PERSONA-, NARRATIVE-, USERSTORY-, or EPIC- file under library/ by copying an existing file. Make sure that the filename specifies a unique ID (e.g. <em>SUMMARY-1-xyz</em> yields the ID <em>SUMMARY-1</em> which is not unique)</li>
+<li>Update the YAML metadata at the top of the file to reflect your new metadata</li>
+<li>Edit the markdown description below the YAML header</li>
+<li>(Optional) Build the file using snakemake, check the output. Iterate until you're happy</li>
+<li>Add a new file to git repo, commit, push</li>
+<li>Set up a Pull Request to merge into master and tag in @ctb</li>
+<li>Uncle Archie will check out a copy of your pull request, run a snakemake build on it, and link to the output of the build process, so you can use Uncle Archie instead of using snakemake locally</li>
+</ul>
+<h2 id="detailed-contributor-guidelines">Detailed contributor guidelines</h2>
+<h3 id="file-name-conventions">File Name Conventions</h3>
+<p>For maximum flexibility, each part of a Use Case is stored in it's own markdown file. Different components of the library follow slightly different naming conventions, however they all share two characteristics:</p>
+<ul>
+<li>Filenames begin with the component type in ALLCAPS</li>
+<li>The component type is followed by <code>-&lt;digit&gt;</code> where the digit is a number that does not already occur in that component set</li>
+</ul>
+<p>For Epics, Narratives, Personas, and Summaries, the digit is additionally followed by a short description of the contents of the file, where spaces are replaced with <code>-</code>. For User Stories, no description is added to the file name.</p>
+<p>Examples:</p>
+<ul>
+<li>EPIC-1-develop-plan-for-association-testing.md</li>
+<li>NARRATIVE-1-topmed-genotype-phenotype.md</li>
+<li>PERSONA-5-data-provider.md</li>
+<li>SUMMARY-1-topmed-genotype-phenotype.md</li>
+<li>USERSTORY-6.md</li>
+</ul>
+<p>The numbers included in each filename are to ensure uniqueness. There is no requirement that all numbers are used in the library or that they occur in a particular order within a Use Case.</p>
+<h3 id="writing-a-use-case">Writing a Use Case</h3>
+<p>A finished Use Case must be associated with a Persona, and have a Scientific Objective, a Summary, and a number of User Epics and User Stories that comprise it's User Narrative. </p>
+<table>
+<thead>
+<tr>
+<th align="center">Use Case Component</th>
+<th align="center">Specificity</th>
+<th align="center">Occurences per Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Persona</td>
+<td align="center">Can be used by multiple UCs</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">Scientific Objective</td>
+<td align="center">Can be used by a single UC</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">Summary</td>
+<td align="center">Can be used by a single UC</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">User Narrative</td>
+<td align="center">Can be used by a single UC</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">User Epic</td>
+<td align="center">Can be used by a single UC</td>
+<td align="center">1 - 10</td>
+</tr>
+<tr>
+<td align="center">User Story</td>
+<td align="center">Can be used by multiple UCs</td>
+<td align="center">1 - any</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="" src="images/UseCaseTopDown.png" /></p>
+<h3 id="personas">Personas</h3>
+<p>A Persona is a general description of a type of user. As these are general archetypes, most contributors will not need to create a new Persona. A Persona file has five parts:</p>
+<ol>
+<li>title: this is 1 - 5 words that describe a user</li>
+<li>blurb: &lt; 10 words that add more description</li>
+<li>tags: a carriage return seperated list of relevant 1 - 2 word descriptions</li>
+<li>A long form description of the user, detailing their strengths and weaknesses as they relate to computational science.</li>
+<li>YAML front matter block: The YAML sub-section of the file containing the title, blurb and tags should be bounded by <code>---</code></li>
+</ol>
+<p>Example: </p>
+<pre><code>---
+title: Biological data scientist
+blurb: A researcher with some scripting skills
+tags:
+- biological
+- data scientist
+---
+A bioinformatician or researcher with some scripting skills, capable of using
+and combining pre-established pipelines, and doing exploratory data analysis in
+R/RStudio or Python/Jupyter Notebook.
+</code></pre>
+
+<h3 id="use-case-summary">Use Case Summary</h3>
+<p>A Summary is a high-level, non-technical description of an entire Use Case, written in the third-person. The user in each summary should have a name, a problem, and both proximate and ultimate goals. Although these are based on general archetypes, each Use Case will have it's own unique summary, and the user should be a relatable individual rather than a faceless abstraction. The Summary also includes multiple solutions to the user's problem. </p>
+<p>A Summary file has eight parts:</p>
+<ol>
+<li>Title: this 1 - 5 words that describe the summary</li>
+<li>Narratives: the abbreviated file name of the narrative that is tied to this summary, formatted as a single-item list (i.e.<code>NARRATIVE-#</code>)</li>
+<li>Tags: a carriage return separated list of relevant 1 - 2 word descriptions</li>
+<li>Scenario: A long form description of a named user, including their proximate and ultimate goals, available resources, problems with reaching those goals and individual abilities</li>
+<li>Current Approaches: A long form description of how this user might approach their problems, given current non-Data Commons technology</li>
+<li>With the Data Commons Phase I: A long form description of how this user might attain their goals more easily using Data Commons resources</li>
+<li>With Data Commons longer vision: A long form description of how this user will be able to accomplish their goals by using future technologies being created by the Data Commons</li>
+<li>YAML front matter block: The YAML sub-section of the file containing the title, narratives and tags should be bounded by <code>---</code></li>
+</ol>
+<p>Example: (<a href="https://github.com/dcppc/use-case-library/blob/master/library/SUMMARY-1-topmed-genotype-phenotype.md">See the full file here</a>)</p>
+<pre><code>---
+title: TOPmed Genotype-Phenotype Association Testing
+narratives:
+- NARRATIVE-1
+tags:
+- TOPMed genotype-phenotype
+---
+**Scenario**
+
+Geraldine is a biomedical researcher who wants to look for genetic variants
+associated with coronary artery disease (CAD) by performing Genome Wide
+Association Analysis (GWAS), using genotypes from whole genome sequence (WGS).
+A large sample size is needed for statistical power to detect...
+
+**Current Approach**
+
+Without the Commons, Geraldine would have to find and download several datasets
+to build a large synthetic cohort. It is likely that different studies would
+have annotated their data differently, making it difficult...
+
+**With the Data Commons Phase I**
+
+Geraldine logs into her favorite full stack and searches for dbGaP studies with
+WGS-genotypes and CAD phenotypes.  She is able to find CAD-related phenotypes
+in multiple studies, even though they use different variable names...
+
+**With Data Commons longer vision:**
+
+Geraldine now has the ability to search many more data repositories to find
+CAD-related studies.  When she finds new studies, she is able to apply for
+access easily using a Data Commons interface...
+</code></pre>
+
+<h3 id="user-narrative">User Narrative</h3>
+<p>A User Narrative file references the collection of User Epics and User Stories for a given Use Case, and also contains the text of the Scientfic Objective. Each Use case has it's own User Narrative file. </p>
+<p>A User Narrative file has seven parts:</p>
+<ol>
+<li>title: 1 - 5 words that describe the Use Case</li>
+<li>persona: this is the exact file name of the persona for this Use Case <em>without</em> the file extension</li>
+<li>blurb: &lt; 10 word description of Use Case</li>
+<li>epics: a carriage return seperated list of the abbreviated file names of Epics associated with this Use Case (i.e. <code>EPIC-#</code>). </li>
+<li>tags: a carriage return seperated list of relevant 1 - 2 word descriptions</li>
+<li>Scientific Objective: A long form description of moderatly detailed scientific question. It should be domain and subject specific, but should not reference a specific user or any specific tools for answering the question. </li>
+<li>YAML front matter block: The YAML sub-section of the file containing the title, blurb and tags should be bounded by <code>---</code></li>
+</ol>
+<p>Example: </p>
+<pre><code>---
+title: TOPmed Genotype-phenotype association testing
+persona: PERSONA-1-biological-data-scientist
+blurb: Identify genetic risk factors for biomedical phenotypes
+epics:
+- EPIC-1
+- EPIC-2
+- EPIC-3
+tags:
+- TOPMed genotype-phenotype
+- biomedical phenotypes
+- genetic risk factors
+---
+### Scientific Objective
+
+The primary objective of many TOPMed research projects is to identify genetic
+risk factors for biomedical phenotypes (such as HDL cholesterol level in blood
+serum or diabetic disease status) via genotype-phenotype association testing.
+These tests are often followed by functional analyses of variants with
+established associations, with the aim of identifying causal variants.`
+</code></pre>
+
+<h3 id="user-epic">User Epic</h3>
+<p>A User Epic is a short description that captures a valuable set of interactions with tools (e.g. software solutions) in the service of achieving the scientific objective. Epics can also be thought of as big tasks, and should be written from the users perspective, e.g.: "build a dataset" or "analyze a dataset" or "turn raw sequence into called variants". Importantly, an Epic is a multi-step process, which will later be broken down into small component parts (User Stories). Most Use Cases will have between three and five Epics, however very simple Use Cases may have only one, and very complex Use Cases may have ten or more. User Epics are tied to specific Use Cases, and can not be shared.</p>
+<p>A User Epic file has six parts:</p>
+<ol>
+<li>title: 1 - 5 words that describe the Epic</li>
+<li>blurb: &lt; 20 word description of Epic task</li>
+<li>user-stories: a carriage return seperated list of the abbreviated file names of the User Stories associated with this Epic (i.e. <code>USERSTORY-#</code>). </li>
+<li>tags: a carriage return seperated list of relevant 1 - 2 word descriptions</li>
+<li>untitled description: An optional long form description of the task. This can be quite detailed and include specific file types, statistical analyses, and techniques. It should be domain and subject specific, and can give context for the User Stories. </li>
+<li>YAML front matter block: The YAML sub-section of the file containing the title, blurb, user-stories, and tags should be bounded by <code>---</code></li>
+</ol>
+<p>Example: </p>
+<pre><code>---
+title: Associate expression with sex
+blurb: Associate differences in gene expression with sex
+user-stories:
+- USERSTORY-47
+- USERSTORY-48
+tags:
+- gene expression
+---
+Perform alignment of the FASTQ files representing the GTEx raw data following quality control with a method such as Yet Another RNA Normalization software pipeline (YARN). Align the reads against the hg38 genomes using STAR or another aligner. Provide quality control metrics.`
+</code></pre>
+
+<h3 id="user-story">User Story</h3>
+<p>A User Story is a short description of a very specific step of a larger task (the Epic). User Stories will usually have two inputs and one output. The a USERSTORY is a <em>single step task</em> where INPUT_A + INPUT_B = OUTPUT. In most cases, the output from one User Story will be one of the two 'inputs' for a subsequent User Story in an Epic. Likewise, the last output from one Epic will likely be the input for the first User Story of the next Epic in a User Narrative. Most Use cases will have between three and five Epics, and each of those will be associated with between two and five User Stories. Unlike most other Use Case Components, User Stories can be shared across Use Cases.</p>
+<p>A User Story file has five parts:</p>
+<ol>
+<li>input: Usually two, but sometimes one or three files, tools or abilities which are necessary to begin this task</li>
+<li>output: Usualy one, but occasionally two files or abilities gained by completing this task</li>
+<li>task: a single operation that turns the input into output</li>
+<li>tags: a carriage return seperated list of relevant 1 - 2 word descriptions</li>
+<li>YAML front matter block: The YAML sub-section of the file containing all the text of this file should be bounded by <code>---</code></li>
+</ol>
+<p><strong>Important Note</strong> The text from a User Story is programatically transformed into a sentence, so the input, output and task <em>must</em> be written such that they complete the sentence:</p>
+<p><code>Use &lt;input&gt; to &lt;task&gt; to generate &lt;output&gt;</code></p>
+<p>Example: </p>
+<pre><code>---
+input: a financial transaction
+output: an NIH compatible account
+task: purchasing access to NIH Data Commons platform(s)
+tags:
+- financial
+- Amazon Web Services
+- Google Cloud Platform
+- responsibility commitment
+---
+</code></pre>
+
+<h2 id="additional-context">Additional Context</h2>
+<p>Although the Use Case library is generally read from the top down, you may find it easier to begin by detailing all the concrete, individual steps as User Stories. User Stories grouped by the overall technical task they help achieve become User Epics. The biological reason for completing the Epics can then become the Scientific Objective, and a high level description of "Why is this objective important?" can be the basis for your Summary.</p>
+<p><img alt="" src="images/UseCaseBottomUp.png" /></p>
+<h3 id="worked-example-of-an-epic-and-its-user-stories">Worked Example of an Epic and its User Stories</h3>
+<p>If your Epic is "Build a dataset" then your User Stories might be:</p>
+<p>1) </p>
+<pre><code>
+input: list of candidate genes + several databases of expression data
+output: expression data for candidate genes
+task: search for candidate genes in database
+</code></pre>
+
+<p>2) </p>
+<pre><code>input: expression data for candidate genes and some metadata
+output: expression data combined with metadata
+task: merge expression data with its metadata
+</code></pre>
+
+<p>3) </p>
+<pre><code>input: expression data with metadata from several databases and domain expertise
+output: one expression dataset with metadata
+task: harmonize datasets
+</code></pre>
+
+<h2 id="building-the-site">Building the Site</h2>
+<h3 id="a-brief-overview-of-how-the-site-is-built">A brief overview of how the site is built</h3>
+<p>The Markdown files in <code>library/</code> define a collection of high-level use case
+library items: summaries, personas, narratives, user epics, and user stories.</p>
+<p>These files provide three types of information:</p>
+<ul>
+<li>a <strong>unique identifier</strong>, given by the TYPE-NUMBER in the filename; so <code>SUMMARY-1-topmed-genotype-phenotype</code> has the identifier <code>SUMMARY-1</code>.</li>
+<li><strong>metadata</strong>, stored in the YAML header at the top of the file contents; this metadata links between object types.</li>
+<li><strong>markdown content</strong> describing the library item in more detail.</li>
+</ul>
+<p>The script <code>scripts/process.py</code> processes each library item, 
+checking the content of the item and assembling links to other library
+items, and uses templates to build an <a href="https://www.mkdocs.org/">mkdocs</a>-ready
+static site in <code>output/docs/</code>, with the mkdocs configuration file at <code>output/mkdocs.yml</code>.
+The processing step uses Jinja for templating (see <code>templates/</code> directory).</p>
+<p>The use case library static site is built from the automatically-generated
+mkdocs site materials. The result is static HTML that can be deployed on
+a web server served or using Github Pages. The final static site files are
+located in <code>output/site/</code>. The file  <code>output/site/index.html</code> is the main
+entry point.</p>
+<h3 id="optional-building-the-site-locally-for-testing">Optional: Building the site locally for testing</h3>
+<p>The Use Case Library uses <a href="https://github.com/dcppc/uncle-archie">Uncle Archie</a>
+(a home-brewed continuous integration server that runs pull request checks) to
+deploy a test version of the website each time a pull request is opened or 
+updated. Thus, you do not <em>need</em> to build the test site locally.</p>
+<p>However, it is still useful to build a local version of the Use Case Library
+site to test out local changes. To do this, the steps are as follows:</p>
+<ol>
+<li>Clone a local copy of this repo</li>
+<li>Set up a Python virtual environment</li>
+<li>Build and test the site locally</li>
+</ol>
+<p>We walk through each of these steps below.</p>
+<h3 id="clone-a-local-copy">Clone a local copy</h3>
+<p>Clone a local copy of the repository and cd into that directory:</p>
+<pre><code>git clone https://github.com/dcppc/use-case-library.git &amp;&amp; cd use-case-library
+</code></pre>
+
+<h3 id="set-up-virtual-environment">Set up virtual environment</h3>
+<p>Create a Python virtual environment, which will give you a clean version of Python that won't get mixed up with your default/system Python.</p>
+<p>(Note that each of the following commands should be executed in a Bash shell, not a Python shell.)</p>
+<p><strong>Do these steps once:</strong> Create a virtual environment in the repo directory:</p>
+<pre><code>virtualenv vp
+</code></pre>
+
+<p>This will take a minute. The virtual environment lives in the <code>vp/</code> directory and anything installed into your virtual environment will be located in the <code>vp/</code> directory.</p>
+<p>To activate your virtual environment:</p>
+<pre><code>source vp/bin/activate
+</code></pre>
+
+<p>Now <code>python</code> and <code>pip</code> should point to the versions in <code>vp/bin/</code>. You can install software into the virtual environment via:</p>
+<pre><code>pip install -r requirements.txt
+</code></pre>
+
+<p><strong>Do this step each time:</strong> You will need to activate the virtual environment each time:</p>
+<pre><code>source vp/bin/activate
+</code></pre>
+
+<p>Then the versions of <code>python</code> and <code>pip</code> that you use will be the ones in the virtual environment.</p>
+<p>You can deactivate and exit the virtual environment at any time by using:</p>
+<pre><code>deactivate
+</code></pre>
+
+<h3 id="build-and-test-site-locally-using-snakemake">Build and test site locally using Snakemake</h3>
+<p>To build the site using the Snakefile:</p>
+<pre><code>snakemake build
+</code></pre>
+
+<p>To view the site use the <code>serve</code> action:</p>
+<pre><code>snakemake serve
+</code></pre>
+
+<p>and then visit <a href="http://localhost:8000">http://localhost:8000</a> in a browser.</p>
+<p>If the site does not build, one or more files may need editing. The error output
+from Snakemake should help you identfy them. 
+If need help, please <a href="https://github.com/dcppc/use-case-library/issues/new">open an
+issue</a> and Team Copper
+will lend a hand ASAP.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>This website is available under the terms of the <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY license</a>.<br /> To contribute or open an issue, visit the <a href="https://github.com/dcppc/use-case-library">dcppc/use-case-library</a> GitHub repository. <br /></p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
