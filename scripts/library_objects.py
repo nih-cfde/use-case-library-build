@@ -201,66 +201,9 @@ def create_library_object(filename, header, content):
             print('required = %s'%(", ".join(required)))
 
         obj = Persona(ident, header['title'], header['blurb'], header['tags'])
-
-    elif filetype == 'USER STORY':
-        if 'tags' not in header:
-            header['tags'] = []
-
-        required = ['input','output','task','tags']
-        if set(header) != set(required):
-            print('WARNING: extra header components in {}'.format(ident))
-            print('header   = %s'%(", ".join(header.keys())))
-            print('required = %s'%(", ".join(required)))
-            
-        obj = UserStory(ident, header['input'], header['output'], header['task'], header['tags'])
-
-    elif filetype == 'NARRATIVE':
-        if 'tags' not in header:
-            header['tags'] = []
-
-        required = ['title','blurb', 'persona', 'epics','tags']
-        if set(header) != set(required):
-            print('WARNING: extra header components in {}'.format(ident))
-            print('header   = %s'%(", ".join(header.keys())))
-            print('required = %s'%(", ".join(required)))
-            
-        epics = header.get('epics', [])
-
-        obj = Narrative(ident, header['title'], header['blurb'], header['persona'], epics, header['tags'])
-
-    elif filetype == 'EPIC':
-        if 'tags' not in header:
-            header['tags'] = []
-
-        required = ['title', 'blurb', 'user-stories','tags']
-        if set(header) != set(required):
-            print('WARNING: extra header components in {}'.format(ident))
-            print('header   = %s'%(", ".join(header.keys())))
-            print('required = %s'%(", ".join(required)))
-            
-        obj = Epic(ident, header['title'], header['blurb'],
-                    header['user-stories'], header['tags'])
-
-    elif filetype == 'SUMMARY':
-        if 'tags' not in header:
-            header['tags'] = []
-
-        required = ['title','narratives','tags']
-        if set(header) != set(required):
-            print('WARNING: extra header components in {}'.format(ident))
-            print('header   = %s'%(", ".join(header.keys())))
-            print('required = %s'%(", ".join(required)))
-            
-        narratives = header.get('narratives', [])
-        if narratives is None:
-            narratives = []
-
-        obj = Summary(ident, header['title'], narratives, header['tags'])
-
     else:
         raise ValueError('unhandled file type: ' + filetype)
 
     obj.filename = os.path.basename(filename)
     obj.set_content(content)
     return obj
-
