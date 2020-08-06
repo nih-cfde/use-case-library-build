@@ -4,9 +4,9 @@ title: Researcher Browse and Filter
 persona: Clinical Researcher
 objective: Multiple DCC Comparison
 user_tasks:
-- T0001
+- t-0001
 requirements:
-- R0001
+- r-00001
 ---
 ### Summary
 

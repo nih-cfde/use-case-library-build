@@ -6,17 +6,27 @@
 
 {{ obj.content }}
 
-## User Narratives
+## Requirements
 
-{% if obj.narratives %}
+{% if obj.requirements %}
 
-User narratives for this summary:
-{% for narrative in obj.narratives %}
-* {{ narrative.ident }}: {{ make_title_link(narrative) }} - {{ narrative.blurb }}
+Requirements for this use case:
+{% for requirement in obj.requirements %}
+* {{ requirement.ident }}: {{ requirement.title }}
 {% endfor %}
 
 {% endif %}
 
-(Use Case Summary {{ obj.ident }} - {{ make_view_link(obj, "view source") }} | {{ make_edit_link(obj, "edit") }})
+## Tasks
+
+{% if obj.user_tasks %}
+
+Tasks for this use case:
+{% for task in obj.user_tasks %}
+* {{ task.ident }}: {{ task.title }}
+{% endfor %}
+
+{% endif %}
+
 
 {% include "tagblock.html" %}
