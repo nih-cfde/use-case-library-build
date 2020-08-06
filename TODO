@@ -1,7 +1,8 @@
 CTB:
-- Set this up with conda environments/--use-conda, I think
 - dig into sed_fixes
 - lightly document objects structure
+- look into copy images script
+- add personas, objectives
 
 Someone else :)
 - Update CoC file in top level directory
