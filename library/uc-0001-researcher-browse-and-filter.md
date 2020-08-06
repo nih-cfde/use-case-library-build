@@ -5,8 +5,10 @@ persona: Clinical Researcher
 objective: Multiple DCC Comparison
 user_tasks:
 - t-0001
+- t-0006
 requirements:
 - r-00001
+- r-00003
 ---
 ### Summary
 
