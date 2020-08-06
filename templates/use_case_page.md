@@ -12,7 +12,7 @@
 
 Requirements for this use case:
 {% for requirement in obj.requirements %}
-* {{ requirement.ident }}: {{ requirement.title }}
+* {{ requirement.ident }}: {{ make_title_link(requirement) }}
 {% endfor %}
 
 {% endif %}
@@ -23,7 +23,7 @@ Requirements for this use case:
 
 Tasks for this use case:
 {% for task in obj.user_tasks %}
-* {{ task.ident }}: {{ task.title }}
+* {{ task.ident }}: {{ make_title_link(task) }}
 {% endfor %}
 
 {% endif %}

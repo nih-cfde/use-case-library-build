@@ -7,7 +7,7 @@
 Use cases that contain this task:
 
 {% for uc in obj.use_cases %}
-* {{ uc.ident }}: {{ uc.title }}
+* {{ uc.ident }}: {{ make_title_link(uc) }}
 {% endfor %}
 
 {% endif %}
