@@ -87,6 +87,7 @@ class UseCase(LibraryObject):
             try:
                 task = obj_dict[task_name]
                 self.user_tasks.append(task)
+                task.add_use_case(self)
             except KeyError:
                 raise Exception(f"could not find task {task_name} for use case {self.ident}")
             
@@ -94,6 +95,7 @@ class UseCase(LibraryObject):
             try:
                 req = obj_dict[requirement_name]
                 self.requirements.append(req)
+                req.add_use_case(self)
             except KeyError:
                 raise Exception(f"could not find requirement {requirement_name} for use case {self.ident}")
 
@@ -108,12 +110,17 @@ class Task(LibraryObject):
     def __init__(self, ident, title):
         self.ident = ident
         self.validate('title', title)
+        self.use_cases = []
 
     def resolve_references(self, obj_dict):
-        print('XXX resolve_references', obj_dict)
+        pass
 
     def set_content(self, content):
         self.content = content
+
+    def add_use_case(self, uc):
+        if uc not in self.use_cases:
+            self.use_cases.append(uc)
 
 
 class Requirement(LibraryObject):
@@ -123,38 +130,17 @@ class Requirement(LibraryObject):
     def __init__(self, ident, title):
         self.ident = ident
         self.validate('title', title)
+        self.use_cases = []
 
     def resolve_references(self, obj_dict):
-        print('XXX resolve_references', obj_dict)
+        pass
 
     def set_content(self, content):
         self.content = content
 
-
-class Summary(LibraryObject):
-    obj_type = 'SUMMARY'
-    template = 'summary_page.md'
-
-    def __init__(self, ident, title, narratives_str, tags):
-        self.validate('ident',ident)
-        self.validate('title',title)
-        self.validate('narratives_str',narratives_str)
-        self.validate('tags',tags,[])
-        self.tags = [j.lower() for j in self.tags]
-
-    def resolve_references(self, obj_dict):
-        x = []
-        for narrative_str in self.narratives_str:
-            try:
-                narrative_obj = obj_dict[process_identifier(narrative_str)]
-            except KeyError:
-                raise Exception("ERROR: Could not find narrative %s"%(narrative_str))
-            narrative_obj.set_summary(self)
-            x.append(narrative_obj)
-        self.narratives = x
-
-    def set_content(self, content):
-        self.content = content
+    def add_use_case(self, uc):
+        if uc not in self.use_cases:
+            self.use_cases.append(uc)
 
 
 class Persona(LibraryObject):
@@ -179,111 +165,6 @@ class Persona(LibraryObject):
         self.narratives.append(obj)
         # Note: narratives will not be sorted
         # when we retrieve this later
-
-
-class UserStory(LibraryObject):
-    obj_type = 'USER STORY'
-    template = 'user_story_page.md'
-
-    def __init__(self, ident, inp, output, task, tags):
-        self.validate('ident',ident)
-        self.validate('title',task)
-        self.validate('task',task)
-        self.validate('input',inp)
-        self.validate('output',output)
-        self.validate('tags',tags,[])
-        self.tags = [j.lower() for j in self.tags]
-        self.epics = []
-
-    def resolve_references(self, obj_dict): pass
-
-    def set_content(self, content):
-        self.content = content
-
-    def add_epic(self, epic):
-        if epic not in self.epics:
-            self.epics.append(epic)
-
-
-class Narrative(LibraryObject):
-    obj_type = 'NARRATIVE'
-    template = 'narrative_page.md'
-
-    def __init__(self, ident, title, blurb, persona_str, epics_str, tags):
-        self.validate('ident',ident,"")
-        self.validate('title',title,"")
-        self.validate('blurb',blurb,"")
-        self.validate('persona_str',persona_str,"")
-        self.validate('epics_str',epics_str,[]) # epics that belong to this narrative
-        self.validate('tags',tags,[])
-        self.tags = [j.lower() for j in self.tags]
-        self.summary = None
-        self.persona = None
-        self.epics = []
-
-    def resolve_references(self, obj_dict):
-        x = []
-        for epic in self.epics_str:
-            epic_key = process_identifier(epic)
-            if epic_key not in obj_dict.keys():
-                err = "Error: Missing epic %s, listed in narrative %s: "%(epic_key,self.ident)
-                err += "no epic file for %s exists in library/ directory"%(epic_key)
-                raise Exception(err)
-            epic_obj = obj_dict[epic_key]
-            epic_obj.set_narrative(self)
-            x.append(epic_obj)
-        self.epics = x
-
-        try:
-            self.persona = obj_dict[process_identifier(self.persona_str)]
-        except AssertionError:
-            err = "Error: persona process identifier was not a single item. "
-            err += "Try proving a single item instead of a list. "
-            err += "File: %s"%(self.ident)
-            raise Exception(err)
-
-        self.persona.add_narrative(self)
-
-    def set_content(self, content):
-        self.content = content
-
-    def set_summary(self, obj):
-        if self.summary:
-            assert self.summary == obj, obj.ident
-        self.summary = obj
-
-
-class Epic(LibraryObject):
-    obj_type = 'EPIC'
-    template = 'epic_page.md'
-
-    def __init__(self, ident, title, blurb, user_stories_str, tags):
-        self.validate('ident',ident)
-        self.validate('title',title)
-        self.validate('blurb',blurb)
-        self.validate('user_stories_str',user_stories_str)
-        self.validate('tags',tags,[])
-        self.narrative = None             # parent narrative object
-        self.user_stories = []
-
-    def resolve_references(self, obj_dict):
-        x = []
-        for story_str in self.user_stories_str:
-            story = obj_dict[process_identifier(story_str)]
-            story.add_epic(self)
-            x.append(story)
-
-        self.user_stories = x
-
-    def set_narrative(self, obj):
-        if self.narrative:
-            if self.narrative != obj:
-                msg = "for epic {}, narrative already set to {}; cannot set to {}".format(self.ident, self.narrative.ident, obj.ident)
-                raise ValueError(msg)
-        self.narrative = obj
-
-    def set_content(self, content):
-        self.content = content
 
 
 def get_type(filename):
