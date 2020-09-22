@@ -7,8 +7,12 @@
 {% if obj.personas %}
 
 {% for persona in obj.personas %}
-* {{ persona.ident }}: {{ make_title_link(personas) }}
+* {{ persona.ident }}: {{ make_title_link(persona) }}
 {% endfor %}
+
+{% else %}
+
+no personas.
 
 {% endif %}
 

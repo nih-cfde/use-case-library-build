@@ -74,12 +74,13 @@ class UseCase(LibraryObject):
     def __init__(self, ident, title, persona, objective, user_tasks, requirements):
         self.ident = ident
         self.validate('title', title)
-        self.validate('persona', persona)
+        self.validate('persona_names', persona)
         self.validate('objective', objective)
         self.validate('user_task_names', user_tasks, [])
         self.validate('requirement_names', requirements, [])
         self.user_tasks = []
         self.requirements = []
+        self.personas = []
 
     def resolve_references(self, obj_dict):
 
@@ -98,6 +99,14 @@ class UseCase(LibraryObject):
                 req.add_use_case(self)
             except KeyError:
                 raise Exception(f"could not find requirement {requirement_name} for use case {self.ident}")
+
+        for persona_name in self.persona_names:
+            try:
+                p = obj_dict[persona_name]
+                self.personas.append(p)
+                p.add_use_case(self)
+            except KeyError:
+                raise Exception(f"could not find persona {persona_name} for use case {self.ident}")
 
     def set_content(self, content):
         self.content = content
