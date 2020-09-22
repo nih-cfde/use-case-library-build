@@ -2,6 +2,17 @@
 
 <!-- **ID: {{ obj.ident }}** [(permalink)](...) -->
 
+## Persona
+
+{% if obj.personas %}
+
+{% for persona in obj.personas %}
+* {{ persona.ident }}: {{ make_title_link(personas) }}
+{% endfor %}
+
+{% endif %}
+
+
 ## Description
 
 {{ obj.content }}

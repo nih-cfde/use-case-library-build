@@ -10,7 +10,7 @@ prefixes = {'uc': 'USE CASE',
             't': 'TASK',
             'r': 'REQUIREMENT',
             'USERSTORY': 'USER STORY',
-            'PERSONA': 'PERSONA',
+            'p': 'PERSONA',
             'NARRATIVE': 'NARRATIVE',
             'SUMMARY': 'SUMMARY'}
 
@@ -29,7 +29,7 @@ class LibraryObject(object):
     """
     def validate(self,param_name,param_value,param_type=None):
         """
-        Validate the parameter named param_name is set to 
+        Validate the parameter named param_name is set to
         non-null value param_value (optionally, enforcing type
         checking to match type param_type).
 
@@ -39,7 +39,7 @@ class LibraryObject(object):
         param_value :       The value to set the parameter to (any type).
 
         param_type :        (optional) The type of object that param_value
-                            should be. If the types of param_value and 
+                            should be. If the types of param_value and
                             param_type do not match, an exception is raised.
         """
         try:
@@ -90,7 +90,7 @@ class UseCase(LibraryObject):
                 task.add_use_case(self)
             except KeyError:
                 raise Exception(f"could not find task {task_name} for use case {self.ident}")
-            
+
         for requirement_name in self.requirement_names:
             try:
                 req = obj_dict[requirement_name]
@@ -147,22 +147,23 @@ class Persona(LibraryObject):
     obj_type = 'PERSONA'
     template = 'persona_page.md'
 
-    def __init__(self, ident, title, blurb, tags):
-        self.validate('ident',ident)
-        self.validate('title',title)
-        self.validate('blurb',blurb)
-        self.validate('tags',tags,[])
-        self.tags = [j.lower() for j in self.tags]
-        self.narratives = []
+    def __init__(self, ident, title):
+        self.ident = ident
+        self.validate('title', title)
+        self.use_cases = []
+        #self.validate('blurb',blurb)
+        #self.validate('tags',tags,[])
+        #self.tags = [j.lower() for j in self.tags]
+        #self.narratives = []
 
     def resolve_references(self, obj_dict): pass
 
     def set_content(self, content):
         self.content = content
 
-    def add_narrative(self, obj):
-        assert obj.obj_type == 'NARRATIVE'
-        self.narratives.append(obj)
+    def add_use_case(self, uc):
+        if uc not in self.use_cases:
+            self.use_cases.append(uc)
         # Note: narratives will not be sorted
         # when we retrieve this later
 
@@ -191,16 +192,7 @@ def create_library_object(filename, header, content):
     elif filetype == 'REQUIREMENT':
         obj = Requirement(ident, header['title'])
     elif filetype == 'PERSONA':
-        if 'tags' not in header:
-            header['tags'] = []
-
-        required = ['title', 'blurb','tags']
-        if set(header) != set(required):
-            print('WARNING: extra header components in {}'.format(ident))
-            print('header   = %s'%(", ".join(header.keys())))
-            print('required = %s'%(", ".join(required)))
-
-        obj = Persona(ident, header['title'], header['blurb'], header['tags'])
+        obj = Persona(ident, header['title'])
     else:
         raise ValueError('unhandled file type: ' + filetype)
 
