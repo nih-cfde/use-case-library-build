@@ -16,6 +16,19 @@ no personas.
 
 {% endif %}
 
+## Objective
+
+{% if obj.objective %}
+
+{% for objective in obj.objectives %}
+* {{ objective.ident }}: {{ make_title_link(objective) }}
+{% endfor %}
+
+{% else %}
+
+no objectives.
+
+{% endif %}
 
 ## Description
 
