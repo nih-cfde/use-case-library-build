@@ -2,6 +2,7 @@ Still broken:
 
 - copy_images.py doesn't seem to work
 - also need to make it copy over the stylesheets folder to output
+- COC and LICENSE links from CONTRIBUTING are broken
 
 Other CTB asks:
 
