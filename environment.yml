@@ -1,4 +1,4 @@
-name: spacegraphcats
+name: usecaselibrary
 channels:
     - conda-forge
     - bioconda
