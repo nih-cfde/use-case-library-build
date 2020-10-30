@@ -34,6 +34,7 @@ nav:
   - Complete List of Contents: full_list.md
   - Glossary of Terms: glossary.md
   - Contributing Guide : CONTRIBUTING.md
+  - Code of Conduct : CODEOFCONDUCT.md
   - License : LICENSE.md
 
 theme:
