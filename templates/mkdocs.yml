@@ -1,6 +1,6 @@
 # this jinja2 template is filled out by process.py to build mkdocs.yml
 site_name: Use Case Library v1.0
-site_url: http://nih-data-commons.us/use-case-library
+site_url: https://cfde-usecases.readthedocs-hosted.com/en/latest/
 
 copyright: 'This website is available under the terms of the
 <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY license</a>.<br />
@@ -9,10 +9,18 @@ To contribute or open an issue, visit the
 GitHub repository.
 <br />'
 
-pages:
+nav:
   - Introduction: index.md
   - Use Cases:
 {% for obj in yield_objects('USE CASE') %}
+    - {{ obj.title }}: {{ obj.ident }}.md
+{% endfor %}
+  - Objectives:
+{% for obj in yield_objects('OBJECTIVE') %}
+    - {{ obj.title }}: {{ obj.ident }}.md
+{% endfor %}
+  - Personas:
+{% for obj in yield_objects('PERSONA') %}
     - {{ obj.title }}: {{ obj.ident }}.md
 {% endfor %}
   - Tasks:
@@ -23,42 +31,19 @@ pages:
 {% for obj in yield_objects('REQUIREMENT') %}
     - {{ obj.title }}: {{ obj.ident }}.md
 {% endfor %}
-  - Personas:
-{% for obj in yield_objects('PERSONA') %}
-    - {{ obj.title }}: {{ obj.ident }}.md
-{% endfor %}
-  - Objectives:
-{% for obj in yield_objects('OBJECTIVE') %}
-    - {{ obj.title }}: {{ obj.ident }}.md
-{% endfor %}
   - Complete List of Contents: full_list.md
   - Glossary of Terms: glossary.md
   - Contributing Guide : CONTRIBUTING.md
-  - Use Case Submission Form : use-case-template.md
   - License : LICENSE.md
 
-#theme:
-#  name: null
-#  custom_dir: 'mkdocs-material-dib/material'
-#  palette:
-#    primary: 'blue'
-#    accent: 'blue'
-#  logo: 'images/dcppc-logo.png'
-#  font:
-#    text: 'Roboto Slab'
-#    code: 'Roboto Mono'
+theme:
+  name: material
+  palette:
+    primary: white
+  features:
+    - navigation.tabs
+    - navigation.instant
+  logo: ./images/CFDE-logo.png
 
-# Extensions
-#markdown_extensions:
-#  - admonition
-#  - codehilite:
-#      guess_lang: false
-#  - toc:
-#      permalink: true
-
-#extra:
-#  # annotation
-#  hypothesis: true
-#  # disqus
-#  disqus: data-commons-use-case-library
-#  matomo: 5
+extra_css:
+  - stylesheets/extra.css

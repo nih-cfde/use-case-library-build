@@ -1,10 +1,14 @@
-CTB:
-- dig into sed_fixes
-- lightly document objects structure
-- look into copy images script
-- add personas, objectives
+Still broken:
 
-Someone else :)
-- Update CoC file in top level directory
-- Adjust mkdocs templates etc.; probably remove mkdocs-material-db
+- copy_images.py doesn't seem to work
+- also need to make it copy over the stylesheets folder to output
+
+Other CTB asks:
+
+- dig into sed_fixes
+- what does utilities.py do and do we need to move it here?
 - Fix deploy/gh-deploy stuff in Snakefile
+
+Amanda todos:
+- add in rest of use Cases
+- update CONTRIBUTING

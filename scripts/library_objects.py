@@ -9,11 +9,8 @@ import os.path
 prefixes = {'uc': 'USE CASE',
             't': 'TASK',
             'r': 'REQUIREMENT',
-            'USERSTORY': 'USER STORY',
             'obj': 'OBJECTIVE',
-            'p': 'PERSONA',
-            'NARRATIVE': 'NARRATIVE',
-            'SUMMARY': 'SUMMARY'}
+            'p': 'PERSONA'}
 
 def process_identifier(x):
     "Isolate the ident from the filename."

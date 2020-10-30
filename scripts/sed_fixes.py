@@ -3,17 +3,17 @@ import os, re, sys
 import glob
 
 
-# Make first char of header values uppercase 
+# Make first char of header values uppercase
 CASE='upper'
 
 
 HALP = """
 sed_fixes.py:
 This script uses regular expressions to
-perform fixes. It uses Python not sed, but 
+perform fixes. It uses Python not sed, but
 the fixes are in the spirit of sed.
 
-WARNING: This task will modify documents in the 
+WARNING: This task will modify documents in the
 use case library.
 
 Usage:
@@ -23,7 +23,7 @@ Usage:
 Examples:
 
     Run from root dir of repo, specifying library dir:
-    
+
         scripts/sed_fixes.sh library
 
     Run from this (scripts/) directory:
@@ -105,7 +105,7 @@ def main():
 
     # Loop over each type and apply the regular expression
 
-    types = ['EPIC','NARRATIVE','PERSONA','SUMMARY','USER']
+    types = ['TASK','NARRATIVE','PERSONA','OBJECTIVE']
 
     for t in types:
 
@@ -133,4 +133,3 @@ def main():
 
 if __name__=="__main__":
     main()
-
