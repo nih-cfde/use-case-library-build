@@ -23,8 +23,8 @@ you can submit it to dcppc.inbox@gmail.com, or follow the detailed instructions 
 
 View the comprehensive list of library entries [here](full_list.md).
 
-The Use Case Library contains {{ len(yield_objects('SUMMARY')) }} use
-case summaries, {{ len(yield_objects('NARRATIVE')) }} user narratives,
-{{ len(yield_objects('EPIC')) }} user epics, and 
-{{ len(yield_objects('USER STORY')) }} user stories, for 
+The Use Case Library contains {{ len(yield_objects('USE CASE')) }} use
+cases, {{ len(yield_objects('OBJECTIVE')) }} objectives,
+{{ len(yield_objects('TASK')) }} tasks, and
+{{ len(yield_objects('REQUIREMENT')) }} requirements, for
 {{ len(yield_objects('PERSONA')) }} personas.
