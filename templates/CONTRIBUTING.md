@@ -12,7 +12,7 @@ Hello, and thank you for your interest in contributing to the CFDE Use Case Repo
 By contributing to this repository, you agree:
 
 1.  To obey the [Code of Conduct](./CODEOFCONDUCT.md)
-2.  To release all your contributions under the same terms as the license itself: the [CC-BY Attribution 4.0 International](./LICENSE)
+2.  To release all your contributions under the same terms as the license itself: the [CC-BY Attribution 4.0 International](./LICENSE.md)
 
 If you are OK with these two conditions, then we welcome both you and your contribution!
 
