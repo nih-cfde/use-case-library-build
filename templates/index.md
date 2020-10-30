@@ -1,23 +1,35 @@
+---
+layout: default
+title: Home
+nav_order: 1
+has_children: true
+---
+
 # Use Case Library
 
-This Library contains a collection of Use Cases for the
-[NIH Data Commons Pilot Phase Consortium](https://nihdatacommons.us/).
-Note, not all use cases are being prioritized for implementation!
+The Use Case Library provides a set of high-level summaries that capture the essential scientific objectives
+and place them in the context of larger goals and the Common Fund Data Ecosystem timeline.
 
-For the structure of the Use Case Library, please see
-[the use case glossary](./glossary/).
+You can explore the library using the tabs above.
 
-If you want to contribute a new user narrative, please
-[make a copy of this template document](use-case-template.md),
-modify it, and then
-[create a new issue on GitHub under dcppc/use-case-library/](https://github.com/dcppc/use-case-library/issues). Alternatively,
-you can submit it to dcppc.inbox@gmail.com, or follow the detailed instructions in the [Contributing Guidelines](CONTRIBUTING.md).
+We welcome new contributions.
+Please read the [contributor guidelines](./about/contributing.md) before submitting a pull request.
 
-## Use Case Summaries
 
-{% for obj in yield_objects('SUMMARY') %}
-* {{ make_title_link(obj) }}
-{% endfor %}
+## Overview
+
+A **Use Case** consists of an **Objective** and a **Persona** -
+a person who can have an **Objective**. These are combined into a **summary**
+of specific use for the CFDE, which can be achieved by a series
+of **user tasks**. Each **User Task** is single step in the users workflow.
+The technical infrastucture required
+to enable a **User Task** are it's **Requirements**. In most cases, what
+appears to the user as a single step actually is a multistep process to the
+computer doing the work, so any given **User Task** will likely have many **Requirements**.
+Both **user tasks** and **requirements** can be shared across **Use Cases**
+
+
+![Use case library glossary image](./images/UseCaseTopDown.jpg)
 
 ## Full Listing of Library Entries
 
