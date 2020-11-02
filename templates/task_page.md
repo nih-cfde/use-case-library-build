@@ -12,3 +12,13 @@ Use cases that contain this task:
 
 {% endif %}
 
+
+## Requirements
+{% if obj.requirements %}
+
+Requirements belonging to this User Task:
+
+{% for req in obj.requirements %}
+* {{ req.ident }}: {{ make_title_link(req) }}
+{% endfor %}
+{% endif %}
