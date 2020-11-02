@@ -186,7 +186,6 @@ def main(argv=sys.argv[1:]):
 
     render_template('index.md')
     render_template('CONTRIBUTING.md')
-    render_template('use-case-template.md')
     render_template('full_list.md')
     render_template('glossary.md')
     render_template('LICENSE.md')
