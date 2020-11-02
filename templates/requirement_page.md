@@ -10,3 +10,16 @@ Use cases that contain this requirement:
 {% endfor %}
 
 {% endif %}
+
+
+{% if obj.user_tasks %}
+## User Tasks
+
+Tasks that contain this requirement:
+
+
+{% for task in obj.user_tasks %}
+* {{ task.ident }}: {{ make_title_link(task) }} - {{ task.blurb }}
+{% endfor %}
+
+{% endif %}
