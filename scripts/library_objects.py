@@ -107,6 +107,7 @@ class UseCase(LibraryObject):
                 p.add_use_case(self)
             except KeyError:
                 raise Exception(f"could not find persona {persona_name} for use case {self.ident}")
+
         for objective_name in self.objective_names:
             try:
                 p = obj_dict[objective_name]
@@ -205,10 +206,6 @@ class Objective(LibraryObject):
         self.ident = ident
         self.validate('title', title)
         self.use_cases = []
-        #self.validate('blurb',blurb)
-        #self.validate('tags',tags,[])
-        #self.tags = [j.lower() for j in self.tags]
-        #self.narratives = []
 
     def resolve_references(self, obj_dict): pass
 
@@ -218,8 +215,6 @@ class Objective(LibraryObject):
     def add_use_case(self, uc):
         if uc not in self.use_cases:
             self.use_cases.append(uc)
-        # Note: narratives will not be sorted
-        # when we retrieve this later
 
 
 def get_type(filename):

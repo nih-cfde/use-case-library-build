@@ -31,7 +31,7 @@ def parse_library_md(filename):
     rest = rest.strip()
 
     try:
-        yyheader = yaml.load("\n".join(header))
+        yyheader = yaml.safe_load("\n".join(header))
     except yaml.scanner.ScannerError:
         err = "Encountered scanner error while scanning YAML header\n"
         err += "File: %s\n"%(filename)

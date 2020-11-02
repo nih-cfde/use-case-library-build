@@ -37,6 +37,8 @@ rule process_library:
    input:
       glob.glob('library/*.md'),
       glob.glob('templates/*.md'),
+      glob.glob('images/*'),
+      glob.glob('stylesheets/*'),
       'templates/mkdocs.yml',
       glob.glob('scripts/*.py')
    output:
@@ -46,7 +48,8 @@ rule process_library:
       """
 #      {python} scripts/sed_fixes.py library
       {python} scripts/process.py library 
-#      {python} scripts/copy_images.py images
+      cp -r images/ output/docs/images/
+      cp -r stylesheets/ output/docs/stylesheets/
       """
 
 rule mkdocs:

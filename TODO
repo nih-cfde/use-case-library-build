@@ -13,3 +13,4 @@ Other CTB asks:
 Amanda todos:
 - add in rest of use Cases
 - update CONTRIBUTING
+- include the ID in all the output pages; right now when you go to the actual page for uc-0001, there's no indication that it's uc-0001 other than the URL.

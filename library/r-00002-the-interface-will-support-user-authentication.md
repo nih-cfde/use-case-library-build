@@ -1,3 +1,3 @@
 ---
-title: R00002 The interface will support user authentication
+title: The interface will support user authentication
 ---
