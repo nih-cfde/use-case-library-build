@@ -2,7 +2,8 @@
 title: Researcher Browse and Filter
 persona:
 - p-001
-objective: Multiple DCC Comparison
+objective:
+- obj-0001
 user_tasks:
 - t-0001
 - t-0006

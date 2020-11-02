@@ -10,6 +10,7 @@ prefixes = {'uc': 'USE CASE',
             't': 'TASK',
             'r': 'REQUIREMENT',
             'USERSTORY': 'USER STORY',
+            'obj': 'OBJECTIVE',
             'p': 'PERSONA',
             'NARRATIVE': 'NARRATIVE',
             'SUMMARY': 'SUMMARY'}
@@ -75,12 +76,13 @@ class UseCase(LibraryObject):
         self.ident = ident
         self.validate('title', title)
         self.validate('persona_names', persona)
-        self.validate('objective', objective)
+        self.validate('objective_names', objective)
         self.validate('user_task_names', user_tasks, [])
         self.validate('requirement_names', requirements, [])
         self.user_tasks = []
         self.requirements = []
         self.personas = []
+        self.objectives = []
 
     def resolve_references(self, obj_dict):
 
@@ -107,6 +109,13 @@ class UseCase(LibraryObject):
                 p.add_use_case(self)
             except KeyError:
                 raise Exception(f"could not find persona {persona_name} for use case {self.ident}")
+        for objective_name in self.objective_names:
+            try:
+                p = obj_dict[objective_name]
+                self.objectives.append(p)
+                p.add_use_case(self)
+            except KeyError:
+                raise Exception(f"could not find objective {objective_name} for use case {self.ident}")
 
     def set_content(self, content):
         self.content = content
@@ -176,6 +185,30 @@ class Persona(LibraryObject):
         # Note: narratives will not be sorted
         # when we retrieve this later
 
+class Objective(LibraryObject):
+    obj_type = 'OBJECTIVE'
+    template = 'objective_page.md'
+
+    def __init__(self, ident, title):
+        self.ident = ident
+        self.validate('title', title)
+        self.use_cases = []
+        #self.validate('blurb',blurb)
+        #self.validate('tags',tags,[])
+        #self.tags = [j.lower() for j in self.tags]
+        #self.narratives = []
+
+    def resolve_references(self, obj_dict): pass
+
+    def set_content(self, content):
+        self.content = content
+
+    def add_use_case(self, uc):
+        if uc not in self.use_cases:
+            self.use_cases.append(uc)
+        # Note: narratives will not be sorted
+        # when we retrieve this later
+
 
 def get_type(filename):
     basefile = os.path.basename(filename)
@@ -202,6 +235,8 @@ def create_library_object(filename, header, content):
         obj = Requirement(ident, header['title'])
     elif filetype == 'PERSONA':
         obj = Persona(ident, header['title'])
+    elif filetype == 'OBJECTIVE':
+        obj = Objective(ident, header['title'])
     else:
         raise ValueError('unhandled file type: ' + filetype)
 

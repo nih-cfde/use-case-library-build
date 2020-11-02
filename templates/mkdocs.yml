@@ -27,6 +27,10 @@ pages:
 {% for obj in yield_objects('PERSONA') %}
     - {{ obj.title }}: {{ obj.ident }}.md
 {% endfor %}
+  - Objectives:
+{% for obj in yield_objects('OBJECTIVE') %}
+    - {{ obj.title }}: {{ obj.ident }}.md
+{% endfor %}
   - Complete List of Contents: full_list.md
   - Glossary of Terms: glossary.md
   - Contributing Guide : CONTRIBUTING.md
