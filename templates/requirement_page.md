@@ -19,7 +19,7 @@ Tasks that contain this requirement:
 
 
 {% for task in obj.user_tasks %}
-* {{ task.ident }}: {{ make_title_link(task) }} - {{ task.blurb }}
+* {{ task.ident }}: {{ make_title_link(task) }}
 {% endfor %}
 
 {% endif %}
