@@ -18,6 +18,7 @@ no personas.
 
 ## Objective
 
+
 {% if obj.objective %}
 
 {% for objective in obj.objectives %}

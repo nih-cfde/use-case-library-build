@@ -12,6 +12,7 @@ prefixes = {'uc': 'USE CASE',
             'obj': 'OBJECTIVE',
             'p': 'PERSONA'}
 
+
 def process_identifier(x):
     "Isolate the ident from the filename."
     if x.endswith('.md'): x = x[:-3]
