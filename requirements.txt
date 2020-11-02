@@ -1,4 +1,0 @@
-jinja2
-PyYAML
-snakemake
-mkdocs==0.17

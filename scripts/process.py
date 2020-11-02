@@ -77,7 +77,7 @@ def main(argv=sys.argv[1:]):
 
     #
     # abbreviations (useful)
-    # 
+    #
 
     abf = os.path.join(os.path.dirname(os.path.realpath(__file__)),ABBREVIATIONS_REPLACE)
     with open(abf,'r') as f:
@@ -172,7 +172,7 @@ def main(argv=sys.argv[1:]):
             traceback.print_exc()
             print(' in file:', filename)
             return False
-        
+
         with open(outpath, 'wt') as fp:
             fp.write(rendered)
 
@@ -190,6 +190,7 @@ def main(argv=sys.argv[1:]):
     render_template('full_list.md')
     render_template('glossary.md')
     render_template('LICENSE.md')
+    render_template('CODEOFCONDUCT.md')
     render_template('mkdocs.yml', subdir('output/mkdocs.yml'))
 
     for obj in obj_dict.values():

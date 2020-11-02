@@ -18,7 +18,8 @@ no personas.
 
 ## Objective
 
-{% if obj.objectives %}
+
+{% if obj.objective %}
 
 {% for objective in obj.objectives %}
 * {{ objective.ident }}: {{ make_title_link(objective) }}
