@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "&#x2705; R00005 The catalog will store information relating Uberon terms to CF programs"
+title: "R00005 The catalog will store information relating Uberon terms to CF programs &#x2705; "
 nav_order: 3
 parent: Requirements
 has_children: false

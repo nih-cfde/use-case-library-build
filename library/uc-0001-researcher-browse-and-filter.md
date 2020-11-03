@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "&#x2705; UC0001 Researcher Browse and Filter"
+title: "UC0001 Researcher Browse and Filter &#x2705; "
 nav_order: 1
 parent: Use Cases
 completed: June 2020

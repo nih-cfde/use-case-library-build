@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "&#x2705; R00033 The catalog will links to original data sources"
+title: "R00033 The catalog will links to original data sources &#x2705; "
 nav_order: 3
 parent: Requirements
 has_children: false

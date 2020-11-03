@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "&#x2705; R00009 The interface will support free text search of results"
+title: "R00009 The interface will support free text search of results &#x2705; "
 nav_order: 3
 parent: Requirements
 has_children: false

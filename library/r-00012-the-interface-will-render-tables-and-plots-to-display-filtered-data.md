@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "&#x2705; R00012 The interface will render tables and plots to display filtered data"
+title: "R00012 The interface will render tables and plots to display filtered data &#x2705; "
 nav_order: 3
 parent: Requirements
 has_children: false

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "&#x2705; UC0002 Explore data availability to build policy"
+title: "UC0002 Explore data availability to build policy &#x2705; "
 nav_order: 2
 parent: Use Cases
 has_children: false

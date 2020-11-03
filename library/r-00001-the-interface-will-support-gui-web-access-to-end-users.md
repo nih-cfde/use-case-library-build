@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "&#x2705; R00001 The interface will support GUI web access to end users"
+title: "R00001 The interface will support GUI web access to end users &#x2705; "
 nav_order: 3
 parent: Requirements
 has_children: false

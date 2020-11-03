@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "&#x2705; R00003 The interface will support the selection of an Uberon term of interest"
+title: "R00003 The interface will support the selection of an Uberon term of interest &#x2705; "
 nav_order: 3
 parent: Requirements
 has_children: false
