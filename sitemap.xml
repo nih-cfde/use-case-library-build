@@ -1,47 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
-     <loc>http://nih-data-commons.us/use-case-library/</loc>
-     <lastmod>2020-08-06</lastmod>
+     <loc>https://cfde-usecases.readthedocs-hosted.com/en/latest/</loc>
+     <lastmod>2020-11-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://nih-data-commons.us/use-case-library/uc-0001/</loc>
-     <lastmod>2020-08-06</lastmod>
+     <loc>https://cfde-usecases.readthedocs-hosted.com/en/latest/uc-0001/</loc>
+     <lastmod>2020-11-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://nih-data-commons.us/use-case-library/t-0001/</loc>
-     <lastmod>2020-08-06</lastmod>
+     <loc>https://cfde-usecases.readthedocs-hosted.com/en/latest/obj-0001/</loc>
+     <lastmod>2020-11-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://nih-data-commons.us/use-case-library/t-0006/</loc>
-     <lastmod>2020-08-06</lastmod>
+     <loc>https://cfde-usecases.readthedocs-hosted.com/en/latest/p-001/</loc>
+     <lastmod>2020-11-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://nih-data-commons.us/use-case-library/r-00001/</loc>
-     <lastmod>2020-08-06</lastmod>
+     <loc>https://cfde-usecases.readthedocs-hosted.com/en/latest/t-0001/</loc>
+     <lastmod>2020-11-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://nih-data-commons.us/use-case-library/r-00003/</loc>
-     <lastmod>2020-08-06</lastmod>
+     <loc>https://cfde-usecases.readthedocs-hosted.com/en/latest/t-0006/</loc>
+     <lastmod>2020-11-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://nih-data-commons.us/use-case-library/full_list/</loc>
-     <lastmod>2020-08-06</lastmod>
+     <loc>https://cfde-usecases.readthedocs-hosted.com/en/latest/r-00001/</loc>
+     <lastmod>2020-11-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://nih-data-commons.us/use-case-library/glossary/</loc>
-     <lastmod>2020-08-06</lastmod>
+     <loc>https://cfde-usecases.readthedocs-hosted.com/en/latest/r-00002/</loc>
+     <lastmod>2020-11-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://nih-data-commons.us/use-case-library/CONTRIBUTING/</loc>
-     <lastmod>2020-08-06</lastmod>
+     <loc>https://cfde-usecases.readthedocs-hosted.com/en/latest/r-00003/</loc>
+     <lastmod>2020-11-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://nih-data-commons.us/use-case-library/use-case-template/</loc>
-     <lastmod>2020-08-06</lastmod>
+     <loc>https://cfde-usecases.readthedocs-hosted.com/en/latest/full_list/</loc>
+     <lastmod>2020-11-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://nih-data-commons.us/use-case-library/LICENSE/</loc>
-     <lastmod>2020-08-06</lastmod>
+     <loc>https://cfde-usecases.readthedocs-hosted.com/en/latest/glossary/</loc>
+     <lastmod>2020-11-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://cfde-usecases.readthedocs-hosted.com/en/latest/CONTRIBUTING/</loc>
+     <lastmod>2020-11-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://cfde-usecases.readthedocs-hosted.com/en/latest/CODEOFCONDUCT/</loc>
+     <lastmod>2020-11-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://cfde-usecases.readthedocs-hosted.com/en/latest/LICENSE/</loc>
+     <lastmod>2020-11-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
