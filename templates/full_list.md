@@ -1,5 +1,11 @@
 # Contents
 
+## Use Cases
+
+{% for uc in yield_objects('USE CASE') %}
+* {{ uc.ident }}: {{ make_title_link(uc) }}
+{% endfor %}
+
 ## Objectives
 
 {% for obj in yield_objects('OBJECTIVE') %}
@@ -15,7 +21,7 @@
 ## Tasks
 
 {% for obj in yield_objects('TASK') %}
-* {{ obj.ident }}: {{ make_title_link(obj) }} 
+* {{ obj.ident }}: {{ make_title_link(obj) }}
 {% endfor %}
 
 ## Requirements
