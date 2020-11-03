@@ -1,4 +1,4 @@
-# {{ obj.title }}
+# {{ obj.ident }}: {{ obj.title }}
 
 <!-- **ID: {{ obj.ident }}** [(permalink)](...) -->
 

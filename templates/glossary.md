@@ -20,7 +20,7 @@ Both **user tasks** and **requirements** can be shared across **Use Cases**
 
 ## Overview
 
-![Use case library glossary image](../images/UseCaseTopDown.jpg)
+![Use case library glossary image](./images/UseCaseTopDown.jpg)
 
 ## Definitions
 
