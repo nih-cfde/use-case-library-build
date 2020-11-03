@@ -121,7 +121,7 @@ requirements:
 - Use the [objective file template](https://github.com/nih-cfde/use-case-library-build/tree/latest/library_file_templates/library-obj-template.md) to enter the required sections
 - Required sections:
     - yaml index header with `title:`
-    - **STILL NEEDED????** `<name of the task>`: brief ~1 sentence description of the task
+    - a brief ~1-2 sentence description of the objective
 
 ### `User task` files <a name="user-task-files"></a>
 - The User Tasks title should be short and self-explanatory, but please add a short description as needed for clarity
