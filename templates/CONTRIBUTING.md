@@ -81,7 +81,7 @@ snakemake -j 1
 snakemake serve -j 1
 ```
 
-If this command executes successfully, copy the web address (`http://127.0.0.1:8000/`) to a web browser to check the changes you made. This is the local, offline version of the website! Note that if you continue to edit documents, you will need to use the `ctrl+c` keys on your keyboard to exit snakemake, save new changes, and re-run the `snakemake serve -j 1` command to view new changes.
+If this command executes successfully, copy the web address (`http://127.0.0.1:8000/`) to a web browser to check the changes you made. This is the local, offline version of the website! Note that if you continue to edit documents, you will need to use the `ctrl+c` keys on your keyboard to close the server, save changes, and re-run the `snakemake serve -j 1` command to view new changes.
 
 Your terminal should show the following if the local render succeeds:
 ```
