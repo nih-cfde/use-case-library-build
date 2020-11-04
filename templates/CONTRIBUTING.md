@@ -138,14 +138,22 @@ Thank you for being here and for being a part of the CFDE project!
 ## Use Case Repository Style Guide <a name="usecasestyle"></a>
 
 ### Use Case Structure
-- All Use Cases must have:
-    - a **Persona**
-    - an **Objective**
-    - a **Summary** of the Objective
-    - specific **User Tasks**
-    - technical infrastructure **Requirements** for each User Task
-- See [glossary](./glossary.md) for definitions
-- Each persona, objective, user task, and requirement needs its own description page that will be linked to the corresponding use case page(s). Common user tasks and requirements should be reused across use cases.
+
+- All use cases must have:
+    - a [**persona**](./glossary.md#persona)
+    - an [**objective**](./glossary.md#objective)
+    - a [**summary**](./glossary.md#summary) of the objective
+    - technical infrastructure [**requirements**](./glossary.md#requirement)
+    - specific [**user tasks**](./glossary.md#user-task)
+
+- Each use case submission consists of five types of file:
+    - 1 [use case file](#use-case-files)
+    - 1 [persona files](#persona-files)
+    - 1 [objective file](#obj-files)
+    - 1 or more [requirement files](#req-files)
+    - 1 or more [user task files](#user-task-files)
+
+Each persona, objective, requirement, and user task needs its own page and will be linked to the associated use case page(s). Common user tasks and requirements should be reused across use cases.
 
 ### General File Format Guidelines
 
@@ -156,8 +164,8 @@ Thank you for being here and for being a part of the CFDE project!
    use case | uc-0000 | uc-0001-researcher-browse-and-filter.md
    persona | p-000 | p-001-clinical-researcher.md
    objective | obj-0000 | obj-0001-create-data-release.md
-   user task | t-0000 | t-0001-access-cfde-interface.md
    requirement | r-00000 | r-00001-the-interface-will-support-gui-web-access-to-end-users.md
+   user task | t-0000 | t-0001-access-cfde-interface.md
 
 The **file format** for all files should be written in Markdown.
 
@@ -171,7 +179,7 @@ The **file format** for all files should be written in Markdown.
 [Clinical Researcher](./p-001-clinical-researcher.md)
 ```
 
-The **site index** is automatically created by yaml headers at the top of each file. These headers will automatically render links to the corresponding persona, objective, user task, and requirements files associated with a given use case. The Use Case committee will check yaml headers to ensure the indices do not clash with existing files.
+The **site index** is automatically created by yaml headers at the top of each file. These headers will automatically render links to a use case's corresponding persona, objective, user task, and requirements files associated. The Use Case committee will check yaml headers to ensure the indices do not clash with existing files.
 
 Yaml format begins and ends with "---". Every use case library page should have a `title:` key. For the [use case](#use-case-files) (uc-0000) and [user task](#user-task-files) (t-0000) files, additional keys and values are currently required. The additional keys (e.g., `requirements:`) are followed by a colon ":" and their corresponding values are listed after with a hyphen "-" and the file ID. Yaml keys may have one or more values. For example, the `requirements:` key below is linked to the `r-00003` and `r-00004` requirements file IDs:
 
@@ -184,33 +192,35 @@ requirements:
 ---
 ```
 
-### `Use Case` files <a name="use-case-files"></a>
+### Specific File Format Guidelines
+
+#### `Use Case` files <a name="use-case-files"></a>
 - Use the [use case file template](https://github.com/nih-cfde/use-case-library-build/tree/latest/library_file_templates/library-uc-template.md) to enter the required sections
 - Required sections:
     - yaml index header, including keys for `title:`, `persona:`, `objective:`, `user_tasks:`, and `requirements:`
     - a short summary of the use case
 
-### `Persona` files
+#### `Persona` files <a name="persona-files"></a>
 - Use the [persona file template](https://github.com/nih-cfde/use-case-library-build/tree/latest/library_file_templates/library-persona-template.md) to enter the required sections
 - Required sections:
     - yaml index header with `title:`
     - Short description of the persona's biological/computational experience, their role and responsibilities, and relation to any of the other personas in the Use Case Library
     - A bullet point section listing assumptions about the persona's credentials e.g., access to the CFDE
 
-### `Objective` files
+#### `Objective` files <a name="obj-files"></a>
 - Use the [objective file template](https://github.com/nih-cfde/use-case-library-build/tree/latest/library_file_templates/library-obj-template.md) to enter the required sections
 - Required sections:
     - yaml index header with `title:`
     - a brief ~1-2 sentence description of the objective
 
-### `User task` files <a name="user-task-files"></a>
-- The User Tasks title should be short and self-explanatory, but please add a short description as needed for clarity
-- Use the [user task file template](https://github.com/nih-cfde/use-case-library-build/tree/latest/library_file_templates/library-task-template.md) to enter the required sections
-- Required sections:
-    - yaml index header with `title:` and `requirements:`
-
-### `Requirement` files
+#### `Requirement` files <a name="req-files"></a>
 - The Requirements title should be short and self-explanatory, but please add a short description as needed for clarity
 - Use the [requirement file template](https://github.com/nih-cfde/use-case-library-build/tree/latest/library_file_templates/library-reqs-template.md) to enter the required sections
 - Required sections:
     - yaml index header with `title:`
+
+#### `User task` files <a name="user-task-files"></a>
+- The User Tasks title should be short and self-explanatory, but please add a short description as needed for clarity
+- Use the [user task file template](https://github.com/nih-cfde/use-case-library-build/tree/latest/library_file_templates/library-task-template.md) to enter the required sections
+- Required sections:
+    - yaml index header with `title:` and `requirements:`
