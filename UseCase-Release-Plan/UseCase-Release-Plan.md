@@ -28,7 +28,7 @@ For example, *Oct-2020*.
 
 The Github repo for the use case library website will host a release section and associated tag information.
 
-For documentation version numbering system we will follow the release date convention. Thus our release tag would have the format: **`YYYY.MM`**
+For documentation version numbering system we will follow the release semantics with Major and Minor numbering. Thus our release tag would have the format: **`Major.Minor`**
 
 For example October 2020 release would have the tag **`2020.10`**. This would follow the same convention as set for labels on GitHub repo.
 
