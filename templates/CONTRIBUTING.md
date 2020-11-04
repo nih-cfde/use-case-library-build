@@ -27,18 +27,98 @@ If you are familiar with GitHub please either:
   - Or write up your use case and submit it as a pull request (PR). Please follow the [Use Case Style Guide](#usecasestyle) below.
 
 ### PR process
-If you are submitting a pull request, please create one pull request per use case so admin can check the complete change.
 
-  - [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the [use case library repo](https://github.com/nih-cfde/use-case-library-build) and create a new branch in your forked version.
+If you are submitting a pull request, please create one pull request per new use case so admin can check the complete change. Please check that the new additions render correctly on the website before submitting the PR by rendering the website locally on your computer. You will need to make a [Github account](https://github.com/) and install [`git`](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git/) and [`conda`](https://conda.io/projects/conda/en/latest/user-guide/install/index.html) (e.g., by downloading Miniconda) on your computer. The instructions below have been tested on MacOS.
 
-  **New use case files should ONLY be added to the [`library` directory](https://github.com/nih-cfde/use-case-library-build/tree/latest/library). Please do not change any other files in the repository!**
+1\. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the [use case library repo](https://github.com/nih-cfde/use-case-library-build) and create a new branch in your forked version. For those onboarded to the CFDE, you may have permissions to edit the use case library repo directly instead of forking.
 
-  - Use the [use case file templates](https://github.com/nih-cfde/use-case-library-build/tree/latest/library_file_templates) to format and add your new use case files to the `library` directory on your branch.
-  - After you add changes to your branch, you should see a message near the top of the repo page indicating that your branch is x number of commits ahead of `nih-cfde:latest`. There should be a button for "Pull request" and/or "Compare" - they lead to the same page to create a PR. Submit a PR pushing changes from your branch to `nih-cfde:latest`.
-  - Request reviews from Use Case maintainers by typing `@ACharbonneau` and `@marisalim` in your PR text box
-  - Please allow up to one week for admin to review your request
+2\. Clone the repository to your local computer. Be sure to edit the command below with the correct Github user name:
+
+```
+git clone https://github.com/<your user name here>/use-case-library-test.git
+cd use-case-library-build
+```
+
+3\. Create a conda environment to specify the software used to build the use case library website. The name of the environment is specified by the `-n` flag, for example "usecaselibrary". The `-f` flag specifies the file that has all the software requirements. This website stores those requirements in a file called "environment.yml". Once you have made the conda environment, you can skip to step 4 for future edits (assuming you don't delete this conda environment!).
+
+```
+conda env create -n usecaselibrary -f environment.yml
+```
+
+4\. Activate the conda environment.
+
+```
+conda activate usecaselibrary
+```
+
+5\. Now, either make a branch or switch to the branch you're making edits on if it already exists (e.g., if you created a branch on Github, you can switch to work on the remote branch).
+
+```
+# make branch
+git branch <name of branch>
+
+# switch to local branch
+git checkout <name of branch>
+```
+```
+# OR switch to remote branch
+git checkout --track origin/<name of branch>
+```
+
+**New use case files should ONLY be added to the [`library` directory](https://github.com/nih-cfde/use-case-library-build/tree/latest/library). Please do not change any other files in the repository to prevent website rendering issues!**
+
+Use the [use case file templates](https://github.com/nih-cfde/use-case-library-build/tree/latest/library_file_templates) to format and add your new use case files to the `library` directory on your branch.
+
+6\. After you've added the new use case files, preview how they look on the website! The website is built using snakemake rules. First, build the website's output directory. This should be done once. The `-j` flag specifies the number of cores to use; `-j 1` is sufficient for this website.
+
+```
+snakemake -j 1
+```
+
+7\. Generate the local render of the website. Scripts in this repository take the new files from the `library` directory, format them according to the website's stylesheets, and render them on the website.
+
+```
+snakemake serve -j 1
+```
+
+If this command executes successfully, copy the web address (`http://127.0.0.1:8000/`) to a web browser to check the changes you made. This is the local, offline version of the website! Note that if you continue to edit documents, you will need to use the `ctrl+c` keys on your keyboard to exit snakemake, save new changes, and re-run the `snakemake serve -j 1` command to view new changes.
+
+Your terminal should show the following if the local render succeeds:
+```
+INFO    -  Building documentation...
+INFO    -  Cleaning site directory
+INFO    -  Building documentation to directory: /var/folders/2k/dcjr_t3151z_s1yq8mlcv3f80000gn/T/mkdocs_alu91pc_
+INFO    -  Documentation built in 0.35 seconds
+INFO    -  Running at: http://127.0.0.1:8000/
+INFO    -  Hold ctrl+c to quit.
+```
+
+8\. If you are satisfied with the changes, you can add, commit, and push the changes to your forked repo.
+
+```
+# add all new changes
+git add .
+
+# commit changes
+git commit -am "short description of new changes"
+
+# push changes
+git push origin <name of branch>
+```
+
+If you are done working on the website, you can exit the conda environment to return to your base terminal environment.
+
+```
+conda deactivate
+```
+
+9\. After you push changes to your branch, you should see a message near the top of the Github repo page indicating that your branch is x number of commits ahead of `nih-cfde:latest`. There should be a button for "Pull request" and/or "Compare" - they lead to the same page to create a PR.
+- Submit a PR pushing changes from your branch to `nih-cfde:latest`.
+- Request reviews from Use Case maintainers by typing `@ACharbonneau` and `@marisalim` in your PR text box. Please check the to list in the PR text box (e.g., is the PR mergeable, etc.). You can continue to edit your PR after it has been submitted!
+- Please allow up to one week for admin to review your request.
 
 If you need help at any point in this process, please submit a [`HelpWanted issue`](https://github.com/nih-cfde/use-case-library-build/issues/new?labels=help+wanted&template=help_template.md&title=Add+problem+title)! Please include a reference (using `#`) to your PR number so we can check the submission.
+
 
 ### Use Case approval process
 
