@@ -2,12 +2,8 @@
 site_name: Use Case Library v1.0
 site_url: https://cfde-usecases.readthedocs-hosted.com/en/latest/
 
-copyright: 'This website is available under the terms of the
-<a href="https://creativecommons.org/licenses/by/4.0/">CC-BY license</a>.<br />
-To contribute or open an issue, visit the
-<a href="https://github.com/nih-cfde/use-case-library-build">nih-cfde/use-case-library-build</a>
-GitHub repository.
-<br />'
+copyright: 'To contribute or open an issue, visit the
+<a href="https://github.com/nih-cfde/use-case-library-build">Use Case</a> repository'
 
 nav:
   - Introduction: index.md
@@ -46,6 +42,17 @@ theme:
     - navigation.instant
   logo: ./images/CFDE-logo.png
 docs_dir: docs
+extra:
+  social:
+      - icon: fontawesome/brands/creative-commons
+        link: https://creativecommons.org/licenses/by/4.0/
+      - icon: fontawesome/solid/envelope
+        link: mailto:CFDE-HelpDesk%20<support@cfde.atlassian.net>
+      - icon: fontawesome/brands/twitter
+        link: https://twitter.com/CfdeNih
+      - icon: fontawesome/brands/github
+        link: https://github.com/nih-cfde/use-case-library-build
+
 
 extra_css:
   - stylesheets/extra.css
