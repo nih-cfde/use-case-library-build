@@ -30,7 +30,7 @@ The Github repo for the use case library website will host a release section and
 
 For documentation version numbering system we will follow the release semantics with Major and Minor numbering. Thus our release tag would have the format: **`Major.Minor`**
 
-For example October 2020 release would have the tag **`2020.10`**. This would follow the same convention as set for labels on GitHub repo.
+The current version of the use case library is at `v1.0`. Any subsequent updates via PRs to the repo will be documented and can be released as either a `Minor` or `Major` release depending on the scope of the content. For example updates to an existing use case might be tagged with a `Minor` tag as **`v1.1`**. 
 
 A draft of the release notes will be auto generated based on PR merges into `latest`.
 To access the draft
