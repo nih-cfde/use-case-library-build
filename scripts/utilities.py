@@ -1,3 +1,4 @@
+import sys
 import os
 from library_objects import create_library_object
 import parse_input_files
@@ -133,7 +134,13 @@ def md_files_to_obj_dict(markdown_files):
         header, content = parse_input_files.parse_library_md(filename)
 
         # create library object according to filename & header
-        obj = create_library_object(filename, header, content)
+        try:
+            obj = create_library_object(filename, header, content)
+        except KeyError as exc:
+            print(f'missing key in YAML header {filename}')
+            print(str(exc))
+            sys.exit(-1)
+
         if obj.ident in obj_dict:
             raise Exception("Duplicate identity: " + obj.ident)
 
