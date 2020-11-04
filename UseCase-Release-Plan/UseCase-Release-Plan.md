@@ -2,28 +2,6 @@
 
 This is the release plan for the [CFDE use case website](https://cfde-usecases.readthedocs-hosted.com/en/latest/).
 
-## Release Dates
-
-Timeline for release 2020-2021
-
-
-| Release # | Date | Month     | Year | Version tag |
-| --------- | ---- | --------- | ---- | ----------- |
-| 1         | 15   | August    | 2020 | 2020.08     |
-| 2         | 15   | October   | 2020 | 2020.10     |
-| 3         | 15   | December  | 2020 | 2020.12     |
-| 4         | 15   | March     | 2021 | 2021.03     |
-| 5         | 15   | June      | 2021 | 2021.06     |
-| 6         | 15   | September | 2021 | 2021.09     |
-| 7         | 15   | December  | 2021 | 2021.12     |
-
-
-Our current release dates are set to coincide with NIH deliverable dates.
-
-#### Labels Format
-Name: release.month(short form)-release.year
-For example, *Oct-2020*.
-
 ## Release Documentation
 
 The Github repo for the use case library website will host a release section and associated tag information.
@@ -48,4 +26,4 @@ When creating a tag associated with the release notes it is important to tag the
     - Click `Publish release` after checking for contents
     - This will create the public release visible on main repo page
 
-Note that the very first release draft will not have version number and has to be manually added to the title of the draft as well as the tag. All subsequent release drafts will be automatically versioned and tagged. 
+Note that the very first release draft will not have version number and has to be manually added to the title of the draft as well as the tag. All subsequent release drafts will be automatically versioned and tagged.
