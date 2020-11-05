@@ -1,9 +1,6 @@
 ---
-layout: default
 title: T0012 Search/filter CF Programs by type terms
-nav_order: 3
-parent: User Tasks
-has_children: false
+requirements:
 ---
 
 ## Appears in Use Cases:

@@ -1,9 +1,6 @@
 ---
-layout: default
 title: T0003 Export a file of results
-nav_order: 3
-parent: User Tasks
-has_children: false
+requirements:
 ---
 
 ## Appears in Use Cases:

@@ -1,9 +1,6 @@
 ---
-layout: default
 title: T0011 Search/filter CF Programs by phenotypic terms
-nav_order: 3
-parent: User Tasks
-has_children: false
+requirements:
 ---
 
 ## Appears in Use Cases:

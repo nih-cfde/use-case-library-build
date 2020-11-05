@@ -1,9 +1,6 @@
 ---
-layout: default
 title: T0014 Install the CFDE ingest tool
-nav_order: 3
-parent: User Tasks
-has_children: false
+requirements:
 ---
 
 ## Appears in Use Cases:

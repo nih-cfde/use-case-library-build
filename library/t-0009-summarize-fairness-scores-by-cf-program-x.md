@@ -1,9 +1,6 @@
 ---
-layout: default
 title: T0009 Summarize FAIRness scores by CF Program X
-nav_order: 3
-parent: User Tasks
-has_children: false
+requirements:
 ---
 
 ## Appears in Use Cases:

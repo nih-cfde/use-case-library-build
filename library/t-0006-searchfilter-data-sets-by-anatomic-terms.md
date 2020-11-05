@@ -1,9 +1,6 @@
 ---
-layout: default
 title: T0006 Search/filter data sets by anatomic terms
-nav_order: 3
-parent: User Tasks
-has_children: false
+requirements:
 ---
 
 ## Appears in Use Cases:
