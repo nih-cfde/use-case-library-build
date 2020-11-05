@@ -1,6 +1,8 @@
 ---
-title: T0014 Install the CFDE ingest tool
+title: Install the CFDE ingest tool
 requirements:
+- r-00023
+- r-00024
 ---
 
 ## Appears in Use Cases:

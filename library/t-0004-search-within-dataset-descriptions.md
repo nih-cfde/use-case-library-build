@@ -1,6 +1,7 @@
 ---
-title: T0004 Search within dataset descriptions
+title: Search within dataset descriptions
 requirements:
+- r-00009
 ---
 
 ## Appears in Use Cases:

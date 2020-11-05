@@ -1,6 +1,7 @@
 ---
-title: T0010 Visualize a table of all datasets that match query
-requirements: UC0001
+title: Visualize a table of all datasets that match query
+requirements: 
+- r-00012
 ---
 
 ## Appears in Use Cases:

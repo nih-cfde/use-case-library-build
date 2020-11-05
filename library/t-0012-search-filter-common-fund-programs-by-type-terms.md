@@ -1,6 +1,9 @@
 ---
-title: T0012 Search/filter CF Programs by type terms
+title: Search/filter CF Programs by type terms
 requirements:
+- r-00006
+- r-00007
+- r-00008
 ---
 
 ## Appears in Use Cases:

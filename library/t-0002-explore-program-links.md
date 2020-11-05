@@ -1,5 +1,7 @@
 ---
-title: T0002 Explore Program links
+title: Explore Program links
 requirements:
-- UC-0001
+- r-00013
+- r-00032
+- r-00033
 ---
