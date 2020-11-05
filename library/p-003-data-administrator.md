@@ -1,9 +1,5 @@
 ---
-layout: default
 title: Data Administrator
-nav_order: 1
-parent: Personas
-has_children: false
 ---
 
 This user is a technical administrator of raw data, pipelines, portal, tools and/or processed data. They are supervised by a Data Custodian.

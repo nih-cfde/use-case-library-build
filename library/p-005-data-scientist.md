@@ -1,9 +1,5 @@
 ---
-layout: default
 title: Data Scientist
-nav_order: 2
-parent: Personas
-has_children: false
 ---
 
 This end user understands computation, and is comfortable with the command line interface (CLI) and at least one other programming language, however they are not experts in biology.
