@@ -1,5 +1,5 @@
 # this jinja2 template is filled out by process.py to build mkdocs.yml
-site_name: Use Case Library v1.0
+site_name: Common Fund Data Ecosystem Use Cases
 site_url: https://nih-cfde.github.io/use-case-library-build/
 
 copyright: 'To contribute or open an issue, visit
