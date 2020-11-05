@@ -1,9 +1,5 @@
 ---
-layout: default
 title: Discover Datasets
-nav_order: 1
-parent: Objectives
-has_children: false
 ---
 
 Obtain as many datasets as possible about a biological question to help describe

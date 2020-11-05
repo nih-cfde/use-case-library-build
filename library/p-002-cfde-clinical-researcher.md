@@ -1,9 +1,5 @@
 ---
-layout: default
 title: CFDE Clinical Researcher
-nav_order: 4
-parent: Personas
-has_children: false
 ---
 
 This end user understands biology, and is comfortable with point and click interfaces,
