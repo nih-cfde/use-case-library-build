@@ -27,7 +27,7 @@ jobs:
         uses: s-weigand/setup-conda@v1
         with:
             activate-conda: false
-      - run: conda env update -f environment.yml
+      - run: conda env update -f environment.yml -n base
 
       - name: Build
         run: snakemake build
