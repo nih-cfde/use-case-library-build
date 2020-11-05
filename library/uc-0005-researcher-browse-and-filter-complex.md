@@ -1,15 +1,11 @@
 ---
 layout: default
-title: "UC0001 Researcher Browse and Filter &#x2705; "
-nav_order: 1
+title: UC0005 Researcher Browse and Filter- complex
+nav_order: 5
 parent: Use Cases
-completed: June 2020
 has_children: false
 ---
-
-# Use Case UC0001 Researcher Browse and Filter
-
-**Completed:** June 2020
+# Use Case UC0005 Researcher Browse and Filter- complex
 
 **Persona:** [Clinical Researcher](../personas/clinical-researcher.md)
 
@@ -17,12 +13,14 @@ has_children: false
 
 ### Summary
 
+Pam would like to use the CFDE interface to explain their preliminary results as they writes their next grant. They have preliminary data from a GWAS study performed in their lab that GeneX, a transcription factor, is implicated in Focal Cortical Dysplasia (FCD) and want to know what additional information is available from the Common Fund data sets.
 Pam wants to build a table of the summarized metadata and summary statistics
 from each RNA-Seq dataset in the Common Fund that relates to Focal Cortical Dysplasia.
 
-Pam logs on to the CFDE interface and searches for brain data, and then filters the results to those studies that used RNASeq. They then search within these results
+
+Pam logs on to the CFDE interface and searches for brain data, and then filters the results to those studies that used RNASeq on the cerebral cortex. They then search within these results
 for "FCD" or "Focal Cortical Dysplasia".
-Their initial search with cerebral cortex identifies GTEx and HuBMAP as containing information about gene expression in the cortex. Searching with FCD identifies KidsFirst addtional cohorts that included this clinical finding.
+Their initial search with cerebral cortex identifies GTEx and HuBMAP as containing information about gene expression in the cortex. Searching with FCD identifies Kids First cohorts that included this clinical finding. Pam follows links to the GTEx site, and quickly confirms that GeneX is expressed in the cerebral cortex. They then use the HuBMAP datasets identified by their search to examine expression of GeneX and the other genes in finer detail and discovers that GeneX is exclusively expressed in Cajal–Retzius cells in the cerebral cortex. Pam notes the additional data types available, number of participants, and age ranges and consent data for the relevant studies.
 
 Using links in these search results, Pam accesses the Program
 page for each dataset and requests access to the ones that fit their needs. They also send
@@ -44,7 +42,7 @@ their final table to their postdoc, Lacey, who will do the actual analysis.
 #### T0001 Access CFDE interface
 
 -   [R00001 The interface will support GUI web access to end users](../requirements/r00001-the-interface-will-support-gui-web-access-to-end-users.md)
-
+-   [R00002 The interface will support user authentication](../requirements/r00002-the-interface-will-support-user-authentication.md)
 
 #### T0006 Search/filter data sets by anatomic terms
 
@@ -52,6 +50,13 @@ their final table to their postdoc, Lacey, who will do the actual analysis.
 -   [R00004 The C2M2 model will support information relating Uberon terms to CF programs](../requirements/r00004-the-c2m2-model-will-support-information-relating-uberon-terms-to-cf-programs.md)
 -   [R00005 The catalog will store information relating Uberon terms to CF programs](../requirements/r00005-the-catalog-will-store-information-relating-uberon-terms-to-cf-programs.md)
 
+
+#### T0013 Search/filter data sets by disease terms
+
+-   new requirements: support disease terms
+-   new requirements: mechanism to determine user access rights to controlled
+-   new requirements: CFDE is allowed to host controlled metadata
+-   new requirements: Deriva ATO to display controlled metadata
 
 #### T0005 Search/filter data sets by type terms
 
@@ -69,12 +74,15 @@ their final table to their postdoc, Lacey, who will do the actual analysis.
 #### T0010 Visualize a table of all projects that match query
 
 -   [R00012 The interface will render tables and plots to display filtered data](../requirements/r00012-the-interface-will-render-tables-and-plots-to-display-filtered-data.md)
+-   new requirements support number of participants
+-   new requirements support age ranges
+-   new requirements: The C2M2 supports consents or other information necessary to limit data discovery based on DCC guidelines
+-   new requirements: Catalog implementing authorization verification according to DCC guidelines
+-   new requirements: Secure CFDE CC cloud system hosting catalog, interface, and other services
 
 #### T0002 Explore Program links
 
 -   [R00013 The interface will support links to original data sources within the results](../requirements/r00013-the-interface-will-support-links-to-original-data-sources-within-the-results.md)
--   [R00032 The C2M2 model will support links to original data sources](../requirements/r00032-the-c2m2-model-will-support-links-to-original-data-sources.md)
--   [R00033 The catalog will links to original data sources](../requirements/r00033-the-catalog-will-links-to-original-data-sources.md)
 
 #### T0003 Export a file of results
 
