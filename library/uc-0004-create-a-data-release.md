@@ -1,17 +1,34 @@
 ---
-layout: default
-title: UC0004 Create a Data Release
-nav_order: 4
-parent: Use Cases
-has_children: true
+title: Create a Data Release
+persona:
+- p-003
+objective:
+- obj-0002
+user_tasks:
+- t-0001
+- t-0013
+- t-0014
+- t-0015
+- t-0016
+requirements:
+- r-00001
+- r-00002
+- r-00004
+- r-00007
+- r-00011
+- r-00016
+- r-00019
+- r-00022
+- r-00023
+- r-00024
+- r-00025
+- r-00026
+- r-00027
+- r-00028
+- r-00029
+- r-00030
+- r-00031
 ---
-# Use Case UC0004 Create a Data Release
-
-**Persona:** [Data Administrator](../personas/data-administrator.md)
-
-**Objective:** [Create a Data Release](../objectives/create-data-release.md)
-
-# Summary
 
 Jordan is a Data Administrator for a Common Fund Data Coordinating Center. They need
 to provide a description of the Data Coordinating Center’s data to the CFDE so that:
