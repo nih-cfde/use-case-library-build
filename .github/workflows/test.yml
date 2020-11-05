@@ -30,4 +30,4 @@ jobs:
       - run: conda env update -f environment.yml -n base
 
       - name: Build
-        run: snakemake build
+        run: snakemake build -j 1
