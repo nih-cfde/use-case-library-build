@@ -35,7 +35,6 @@ Pam would like to use the CFDE interface to explain their preliminary results as
 Pam wants to build a table of the summarized metadata and summary statistics
 from each RNA-Seq dataset in the Common Fund that relates to Focal Cortical Dysplasia.
 
-
 Pam logs on to the CFDE interface and searches for brain data, and then filters the results to those studies that used RNASeq on the cerebral cortex. They then search within these results
 for "FCD" or "Focal Cortical Dysplasia".
 Their initial search with cerebral cortex identifies GTEx and HuBMAP as containing information about gene expression in the cortex. Searching with FCD identifies Kids First cohorts that included this clinical finding. Pam follows links to the GTEx site, and quickly confirms that GeneX is expressed in the cerebral cortex. They then use the HuBMAP datasets identified by their search to examine expression of GeneX and the other genes in finer detail and discovers that GeneX is exclusively expressed in Cajal–Retzius cells in the cerebral cortex. Pam notes the additional data types available, number of participants, and age ranges and consent data for the relevant studies.

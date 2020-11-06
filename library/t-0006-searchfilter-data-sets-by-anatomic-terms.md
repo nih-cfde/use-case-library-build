@@ -1,5 +1,5 @@
 ---
-title: T0006 Search/filter data sets by anatomic terms
+title: Search/filter data sets by anatomic terms
 requirements:
 - r-00003
 - r-00004
