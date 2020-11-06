@@ -11,13 +11,15 @@ rule build:
    input:
       'output/docs',
       'output/site',
-      'output/mkdocs.yml'
+      'output/mkdocs.yml',
+      'output/custom'
 
 rule deploy:
    input:
       'output/docs',
       'output/site',
-      'output/mkdocs.yml'
+      'output/mkdocs.yml',
+      'output/custom'
    shell:
       "cd output && {python} -m mkdocs gh-deploy"
 
@@ -25,7 +27,8 @@ rule serve:
    input:
       'output/docs',
       'output/site',
-      'output/mkdocs.yml'
+      'output/mkdocs.yml',
+      'output/custom'
    shell:
       "cd output && {python} -m mkdocs serve --no-livereload"
 
@@ -40,9 +43,11 @@ rule process_library:
       glob.glob('images/*'),
       glob.glob('stylesheets/*'),
       'templates/mkdocs.yml',
-      glob.glob('scripts/*.py')
+      glob.glob('scripts/*.py'),
+      glob.glob('custom/*')
    output:
       directory('output/docs'),
+      directory('output/custom'),
       'output/mkdocs.yml'
    shell:
       """
@@ -50,12 +55,14 @@ rule process_library:
       {python} scripts/process.py library 
       cp -r images/ output/docs/images/
       cp -r stylesheets/ output/docs/stylesheets/
+      cp -r custom/ output/custom/
       """
 
 rule mkdocs:
    input:
       'output/docs',
-      'output/mkdocs.yml'
+      'output/mkdocs.yml',
+      'output/custom'
    output:
       directory('output/site')
    shell:
