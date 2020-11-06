@@ -7,6 +7,3 @@ requirements:
 - r-00021
 ---
 
-## Appears in Use Cases:
-
--   [UC0003 Monitor Data Releases as a Data Custodian](../use-cases/uc0003-monitor-data-releases-as-a-data-custodian.md)
