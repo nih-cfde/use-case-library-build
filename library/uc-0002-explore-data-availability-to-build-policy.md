@@ -28,14 +28,6 @@ requirements:
 
 ---
 
-# Use Case UC0002 Explore data availability to build policy
-
-**Completed:** June 2020
-
-**Persona:** [Program Officer](../personas/program-officer.md)
-
-**Objective:** [Multiple DCC Comparison](../objectives/multi-dcc-comparison.md)
-
 Jon is a leader at the Common Fund, and wants to build summary tables of
 Common Fund assets for use in both tracking progress and for finding gaps that
 should be filled by future initiatives. They would like to use the CFDE interface
