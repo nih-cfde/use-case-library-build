@@ -16,7 +16,7 @@ By contributing to this repository, you agree:
 
 If you are OK with these two conditions, then we welcome both you and your contribution!
 
-## How to develop a new use case
+## Developing a new use case
 
 Each **use case** must include:
 
@@ -26,23 +26,42 @@ Each **use case** must include:
 - specific [**user tasks**](./glossary.md#user-task)
 - technical infrastructure [**requirements**](./glossary.md#requirement) associated with user tasks
 
-Start by drafting the components of your new use case idea and then read through the [use case library's](./full_list.md) existing persona, objective, user task, and requirement definitions. If any of them apply to your new use case, please reuse them! For example, multiple use cases may involve the persona "clinical researcher" (p-001) or the user task "access CFDE interface" (t-0001), so these *existing* files can be referenced in the new use case files and do *not* need to be recreated.
+Start by drafting the components of your new use case idea and then read through the [use case library's](./full_list.md) existing persona, objective, user task, and requirement definitions. If any of them apply to your new use case, *please reuse them*! For example, multiple use cases may involve the persona "clinical researcher" (p-001) or the user task "access CFDE interface" (t-0001), so these *existing* files can be referenced in the new use case files and do *not* need to be recreated.
 
 As necessary, you can also create new persona, objective, user task, or requirement files (see below for [file naming guidelines](#file-format-guide)). In particular, requirement files define the technical implementation for what needs to happen in user tasks. These may be difficult to define. You can include ideas for requirements with your use case submission and/or request help and we will reach out to the CFDE technical team for guidance.
 
-Please see the [Use Case Library Style Guide](#usecasestyle) for format instructions!
+Please see the [Use Case Library Style Guide](#usecasestyle) for format instructions.
 
-## How to add content
+## Suggesting a new use case
 
-If you have a suggestion for a new use case concept and are not familiar with GitHub, you can [email your idea to us](mailto:support@cfde.atlassian.net).
+- If you have a suggestion for a new use case concept and are not familiar with GitHub, you can [email your idea to us](mailto:support@cfde.atlassian.net).
 
-If you are familiar with GitHub please either:
+- If you are familiar with GitHub please either:
 
-  - Open a [`NewUseCase issue`](https://github.com/nih-cfde/use-case-library-build/issues/new?labels=new+use+case&template=NewUseCase_template.md&title=Add+use+case+idea+title) describing your new use case idea
+    - Open a [`NewUseCase issue`](https://github.com/nih-cfde/use-case-library-build/issues/new?labels=new+use+case&template=NewUseCase_template.md&title=Add+use+case+idea+title) describing your new use case idea
 
-  - Or write up your use case and submit it as a pull request (PR).
+    - Or write up your use case and submit it as a pull request (PR) ([instructions below](#submit-pr)).
 
-### PR process
+### Use Case approval process
+
+Please allow up to one week for admin to review your suggestion.
+
+For use cases submitted as PRs, the Use Case committee will mark proposed use cases, and corresponding requirements pages, as `in progress`=&#x23F3;, `approved`=&#x1F44C;, and `done`=&#x2705;, as appropriate.
+
+Thank you for being here and for being a part of the CFDE project!
+
+## Getting help
+
+If you have any questions about contributing, please submit an issue and we will lend a hand as soon as possible:
+
+Issue templates | About
+--- | ---
+[`NewUseCase issue`](https://github.com/nih-cfde/use-case-library-build/issues/new?labels=new+use+case&template=NewUseCase_template.md&title=Add+use+case+idea+title) | To describe and suggest a new use case idea
+[`Enhancements issue`](https://github.com/nih-cfde/use-case-library-build/issues/new?labels=enhancement&template=Enhancement_template.md&title=Add+suggested+enhancement+title) | To suggest general improvements to the Use Case Library
+[`HelpWanted issue`](https://github.com/nih-cfde/use-case-library-build/issues/new?labels=help+wanted&template=help_template.md&title=Add+problem+title) | To request general help
+[`Bug report issue`](https://github.com/nih-cfde/use-case-library-build/issues/new?labels=bug&template=bug_template.md&title=Add+bug+title) | To report a bug
+
+## Previewing content and submitting PR <a name="submit-pr"></a>
 
 If you are submitting a pull request, please create one pull request per new use case so admin can check the complete change. Please check that the new additions render correctly on the website before submitting the PR by rendering the website locally on your computer. You will need to make a [Github account](https://github.com/) and install [`git`](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git/) and [`conda`](https://conda.io/projects/conda/en/latest/user-guide/install/index.html) (e.g., by downloading Miniconda) on your computer. The instructions below have been tested on MacOS.
 
@@ -97,8 +116,6 @@ snakemake -j 1
 snakemake serve -j 1
 ```
 
-If this command executes successfully, copy the web address (`http://127.0.0.1:8000/`) to a web browser to check the changes you made. This is the local, offline version of the website! Note that if you continue to edit documents, you will need to use the `ctrl+c` keys on your keyboard to close the server, save changes, and re-run the `snakemake serve -j 1` command to view new changes.
-
 Your terminal should show the following if the local render succeeds:
 ```
 INFO    -  Building documentation...
@@ -108,6 +125,8 @@ INFO    -  Documentation built in 0.35 seconds
 INFO    -  Running at: http://127.0.0.1:8000/
 INFO    -  Hold ctrl+c to quit.
 ```
+
+If this command executes successfully, copy the web address (`http://127.0.0.1:8000/`) to a web browser to check the changes you made. This is the local, offline version of the website! Note that if you continue to edit documents, you will need to use the `ctrl+c` keys on your keyboard to close the server, save changes, and re-run the `snakemake serve -j 1` command to view new changes.
 
 8\. If you are satisfied with the changes, you can add, commit, and push the changes to your forked repo.
 
@@ -131,26 +150,10 @@ conda deactivate
 9\. After you push changes to your branch, you should see a message near the top of the Github repo page indicating that your branch is x number of commits ahead of `nih-cfde:latest`. There should be a button for "Pull request" and/or "Compare" - they lead to the same page to create a PR.
 
 - Submit a PR pushing changes from your branch to `nih-cfde:latest`.
-- Request reviews from Use Case maintainers by typing `@ACharbonneau` and `@marisalim` in your PR text box. Please check the to list in the PR text box (e.g., is the PR mergeable, etc.). You can continue to edit your PR after it has been submitted!
+- Request reviews from Use Case maintainers by typing `@ACharbonneau` and `@marisalim` in your PR text box. Please check the to do list in the PR text box (e.g., is the PR mergeable?, etc.). You can continue to edit your PR after it has been submitted!
 - Please allow up to one week for admin to review your request.
 
-If you need help at any point in this process, please submit a [`HelpWanted issue`](https://github.com/nih-cfde/use-case-library-build/issues/new?labels=help+wanted&template=help_template.md&title=Add+problem+title)! Please include a reference (using `#`) to your PR number so we can check the submission.
-
-
-### Use Case approval process
-
-The Use Case committee will mark proposed use cases, and corresponding requirements pages, as `in progress`=&#x23F3;, `approved`=&#x1F44C;, and `done`=&#x2705;, as appropriate.
-
-If you have any questions about contributing, please submit an issue and we will lend a hand as soon as possible:
-
-Issue templates | About
---- | ---
-[`NewUseCase issue`](https://github.com/nih-cfde/use-case-library-build/issues/new?labels=new+use+case&template=NewUseCase_template.md&title=Add+use+case+idea+title) | To describe and suggest a new use case idea
-[`Enhancements issue`](https://github.com/nih-cfde/use-case-library-build/issues/new?labels=enhancement&template=Enhancement_template.md&title=Add+suggested+enhancement+title) | To suggest general improvements to the Use Case Library
-[`HelpWanted issue`](https://github.com/nih-cfde/use-case-library-build/issues/new?labels=help+wanted&template=help_template.md&title=Add+problem+title) | To request general help
-[`Bug report issue`](https://github.com/nih-cfde/use-case-library-build/issues/new?labels=bug&template=bug_template.md&title=Add+bug+title) | To report a bug
-
-Thank you for being here and for being a part of the CFDE project!
+If you need help at any point in this process, please submit a [`HelpWanted issue`](https://github.com/nih-cfde/use-case-library-build/issues/new?labels=help+wanted&template=help_template.md&title=Add+problem+title)! Please include a reference (using `#`) to your PR number so we can check the correct submission.
 
 ## Use Case Library Style Guide <a name="usecasestyle"></a>
 
