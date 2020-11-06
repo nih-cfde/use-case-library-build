@@ -129,6 +129,7 @@ conda deactivate
 ```
 
 9\. After you push changes to your branch, you should see a message near the top of the Github repo page indicating that your branch is x number of commits ahead of `nih-cfde:latest`. There should be a button for "Pull request" and/or "Compare" - they lead to the same page to create a PR.
+
 - Submit a PR pushing changes from your branch to `nih-cfde:latest`.
 - Request reviews from Use Case maintainers by typing `@ACharbonneau` and `@marisalim` in your PR text box. Please check the to list in the PR text box (e.g., is the PR mergeable, etc.). You can continue to edit your PR after it has been submitted!
 - Please allow up to one week for admin to review your request.
