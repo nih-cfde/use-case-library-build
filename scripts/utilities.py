@@ -128,16 +128,36 @@ def md_files_to_obj_dict(markdown_files):
     return obj_dict.
     """
     obj_dict = {}
+
+    errors = []
+    n_total_files = 0
+    n_error_files = 0
     for filename in markdown_files:
+        n_total_files += 1
+
         # load markdown file + header
         header, content = parse_input_files.parse_library_md(filename)
 
         # create library object according to filename & header
-        obj = create_library_object(filename, header, content)
+        try:
+            obj = create_library_object(filename, header, content)
+        except KeyError as exc:
+            errors.append(f'missing key in YAML header {filename}: {str(exc)}')
+            n_error_files += 1
+            continue
+
         if obj.ident in obj_dict:
-            raise Exception("Duplicate identity: " + obj.ident)
+            errors.append(f"{filename}: Duplicate identity: {obj.ident})")
+            n_error_files += 1
+            continue
 
         obj_dict[obj.ident] = obj
+
+    if errors:
+        error_string = "\n".join(errors)
+        print(f"** ERROR: problems found in {n_error_files} of {n_total_files} files!")
+        print(error_string)
+        sys.exit(-1)
 
     return obj_dict
 
