@@ -223,7 +223,7 @@ requirements:
 #### `User task` files <a name="user-task-files"></a>
 - Use the [user task file template](https://github.com/nih-cfde/use-case-library-build/tree/latest/library_file_templates/library-task-template.md) to enter the required sections
 - The User Tasks title should be short and self-explanatory. You can add a short description in the main text (not yaml header) as needed for clarity.
-- Each user task must reference 1 or more requirements in the yaml header for the website to render properly. **This list should only include requirements listed in the [use case file's](#use-case-files) yaml requirements section.**
+- Each user task must reference 1 or more requirements in the yaml header for the website to render properly. **This list should include the subset of requirements corresponding to the specific user task that are listed in the [use case file's](#use-case-files) yaml requirements section.**
 - Required sections:
     - yaml index header with `title:` and `requirements:`
 
