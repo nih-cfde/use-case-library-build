@@ -5,9 +5,9 @@ parent: Home
 nav_order: 2
 ---
 
-# Contributing to the nih-cfde Use Case Repository
+# Contributing to the NIH CFDE Use Case Library
 
-Hello, and thank you for your interest in contributing to the CFDE Use Case Repository!
+Hello, and thank you for your interest in contributing to the CFDE Use Case Library!
 
 By contributing to this repository, you agree:
 
@@ -15,6 +15,22 @@ By contributing to this repository, you agree:
 2.  To release all your contributions under the same terms as the license itself: the [CC-BY Attribution 4.0 International](./LICENSE.md)
 
 If you are OK with these two conditions, then we welcome both you and your contribution!
+
+## How to develop a new use case
+
+Each **use case** must include:
+
+- a [**persona**](./glossary.md#persona)
+- an [**objective**](./glossary.md#objective)
+- a [**summary**](./glossary.md#summary) of the objective
+- specific [**user tasks**](./glossary.md#user-task)
+- technical infrastructure [**requirements**](./glossary.md#requirement) associated with user tasks
+
+Start by drafting the components of your new use case idea and then read through the [use case library's](./full_list.md) existing persona, objective, user task, and requirement definitions. If any of them apply to your new use case, please reuse them! For example, multiple use cases may involve the persona "clinical researcher" (p-001) or the user task "access CFDE interface" (t-0001), so these *existing* files can be referenced in the new use case files and do *not* need to be recreated.
+
+As necessary, you can also create new persona, objective, user task, or requirement files (see below for [file naming guidelines](#file-format-guide)). In particular, requirement files define the technical implementation for what needs to happen in user tasks. These may be difficult to define. You can include ideas for requirements with your use case submission and/or request help and we will reach out to the CFDE technical team for guidance.
+
+Please see the [Use Case Style Guide](#usecasestyle) for format instructions!
 
 ## How to add content
 
@@ -24,7 +40,7 @@ If you are familiar with GitHub please either:
 
   - Open a [`NewUseCase issue`](https://github.com/nih-cfde/use-case-library-build/issues/new?labels=new+use+case&template=NewUseCase_template.md&title=Add+use+case+idea+title) describing your new use case idea
 
-  - Or write up your use case and submit it as a pull request (PR). Please follow the [Use Case Style Guide](#usecasestyle) below.
+  - Or write up your use case and submit it as a pull request (PR).
 
 ### PR process
 
@@ -137,25 +153,7 @@ Thank you for being here and for being a part of the CFDE project!
 
 ## Use Case Repository Style Guide <a name="usecasestyle"></a>
 
-### Use Case Structure
-
-- All use cases must have:
-    - a [**persona**](./glossary.md#persona)
-    - an [**objective**](./glossary.md#objective)
-    - a [**summary**](./glossary.md#summary) of the objective
-    - technical infrastructure [**requirements**](./glossary.md#requirement)
-    - specific [**user tasks**](./glossary.md#user-task)
-
-- Each use case submission consists of five types of file:
-    - 1 [use case file](#use-case-files)
-    - 1 [persona files](#persona-files)
-    - 1 [objective file](#obj-files)
-    - 1 or more [requirement files](#req-files)
-    - 1 or more [user task files](#user-task-files)
-
-Each persona, objective, requirement, and user task needs its own page and will be linked to the associated use case page(s). Common user tasks and requirements should be reused across use cases.
-
-### General File Format Guidelines
+### General File Format Guidelines <a name="file-format-guide"></a>
 
 **File names** should be lower case, use hyphens between words, and match the page titles (but try to keep them concise). All files should include a unique file ID. As indicated below, please add the appropriate number of leading 0's to the file IDs. The Use Case committee will finalize file IDs to ensure they do not clash with existing IDs.
 
@@ -164,8 +162,8 @@ Each persona, objective, requirement, and user task needs its own page and will 
    use case | uc-0000 | uc-0001-researcher-browse-and-filter.md
    persona | p-000 | p-001-clinical-researcher.md
    objective | obj-0000 | obj-0001-create-data-release.md
-   requirement | r-00000 | r-00001-the-interface-will-support-gui-web-access-to-end-users.md
    user task | t-0000 | t-0001-access-cfde-interface.md
+   requirement | r-00000 | r-00001-the-interface-will-support-gui-web-access-to-end-users.md
 
 The **file format** for all files should be written in Markdown.
 
@@ -196,6 +194,11 @@ requirements:
 
 #### `Use Case` files <a name="use-case-files"></a>
 - Use the [use case file template](https://github.com/nih-cfde/use-case-library-build/tree/latest/library_file_templates/library-uc-template.md) to enter the required sections
+- Each use case file submission must reference four types of file in the yaml header for the website to render properly:
+    - 1 or more [persona files](#persona-files)
+    - 1 or more [objective files](#obj-files)
+    - 1 or more [user task files](#user-task-files)
+    - 1 or more [requirement files](#req-files)
 - Required sections:
     - yaml index header, including keys for `title:`, `persona:`, `objective:`, `user_tasks:`, and `requirements:`
     - a short summary of the use case
@@ -213,14 +216,15 @@ requirements:
     - yaml index header with `title:`
     - a brief ~1-2 sentence description of the objective
 
-#### `Requirement` files <a name="req-files"></a>
-- The Requirements title should be short and self-explanatory, but please add a short description as needed for clarity
-- Use the [requirement file template](https://github.com/nih-cfde/use-case-library-build/tree/latest/library_file_templates/library-reqs-template.md) to enter the required sections
-- Required sections:
-    - yaml index header with `title:`
-
 #### `User task` files <a name="user-task-files"></a>
-- The User Tasks title should be short and self-explanatory, but please add a short description as needed for clarity
 - Use the [user task file template](https://github.com/nih-cfde/use-case-library-build/tree/latest/library_file_templates/library-task-template.md) to enter the required sections
+- The User Tasks title should be short and self-explanatory. You can add a short description in the main text (not yaml header) as needed for clarity.
+- Each user task must reference 1 or more requirements in the yaml header for the website to render properly
 - Required sections:
     - yaml index header with `title:` and `requirements:`
+
+#### `Requirement` files <a name="req-files"></a>
+- Use the [requirement file template](https://github.com/nih-cfde/use-case-library-build/tree/latest/library_file_templates/library-reqs-template.md) to enter the required sections
+- The Requirements title should be short and self-explanatory. You can add a short description in the main text (not yaml header) as needed for clarity.
+- Required sections:
+    - yaml index header with `title:`
