@@ -30,7 +30,7 @@ Start by drafting the components of your new use case idea and then read through
 
 As necessary, you can also create new persona, objective, user task, or requirement files (see below for [file naming guidelines](#file-format-guide)). In particular, requirement files define the technical implementation for what needs to happen in user tasks. These may be difficult to define. You can include ideas for requirements with your use case submission and/or request help and we will reach out to the CFDE technical team for guidance.
 
-Please see the [Use Case Style Guide](#usecasestyle) for format instructions!
+Please see the [Use Case Library Style Guide](#usecasestyle) for format instructions!
 
 ## How to add content
 
