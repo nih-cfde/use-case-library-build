@@ -151,7 +151,7 @@ Issue templates | About
 
 Thank you for being here and for being a part of the CFDE project!
 
-## Use Case Repository Style Guide <a name="usecasestyle"></a>
+## Use Case Library Style Guide <a name="usecasestyle"></a>
 
 ### General File Format Guidelines <a name="file-format-guide"></a>
 
