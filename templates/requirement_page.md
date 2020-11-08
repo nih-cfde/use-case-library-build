@@ -1,5 +1,7 @@
 # {{ obj.ident }}: {{ obj.title }}
 
+{{ obj.content }}
+
 <!-- **ID: {{ obj.ident }}** [(permalink)](...) -->
 {% if obj.use_cases %}
 

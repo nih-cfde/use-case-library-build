@@ -2,6 +2,8 @@
 
 <!-- **ID: {{ obj.ident }}** [(permalink)](...) -->
 
+{{ obj.content }}
+
 {% if obj.use_cases %}
 
 Use cases that contain this task:

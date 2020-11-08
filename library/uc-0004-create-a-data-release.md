@@ -5,7 +5,7 @@ persona:
 objective:
 - obj-0002
 user_tasks:
-- t-0001
+- t-0017
 - t-0013
 - t-0014
 - t-0015
@@ -39,12 +39,11 @@ Jordan has previously been registered with CFDE and authorized by their Data
 Coordinating Center to act as a data administrator on its behalf.
 
 Jordan first reviews the documentation for the C2M2 data model. If they have not
-previously installed CFDE’s ingest tool, they does so. They then extract the required
+previously installed CFDE’s ingest tool, they do so. They then extract the required
 metadata from their Data Coordinating Center’s data and transform it into the C2M2
-data model. Once the metadata is in the C2M2 model, they run CFDE’s ingest tool to
-ingest the metadata. When the ingest completes, Jordan accesses the CFDE interface
+data model. Once the metadata is in the C2M2 model, they run CFDE’s submission tool to
+submit the metadata. When the submission completes, Jordan accesses the CFDE interface
 and views the results in a non-public reviewing view. If the results are not
-satisfactory, they adjust the metadata and re-runs the ingest tool, repeating until
+satisfactory, they adjust the metadata and re-run the ingest tool, repeating until
 the results are satisfactory. If the results are satisfactory, they approves the data
 release and it is marked for review by CFDE personnel.
-

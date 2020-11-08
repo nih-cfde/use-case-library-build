@@ -5,13 +5,14 @@ persona:
 objective:
 - obj-0001
 user_tasks:
-- t-0001
+- t-0017
 - t-0002
-- t-0003
+- t-0019
 - t-0004
 - t-0005
 - t-0006
 - t-0010
+- t-0003
 requirements:
 - r-00001
 - r-00002
@@ -42,4 +43,3 @@ Their initial search with cerebral cortex identifies GTEx and HuBMAP as containi
 Using links in these search results, Pam accesses the Program
 page for each dataset and requests access to the ones that fit their needs. They also send
 their final table to their postdoc, Lacey, who will do the actual analysis.
-
