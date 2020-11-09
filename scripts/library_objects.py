@@ -81,7 +81,10 @@ class UseCase(LibraryObject):
         self.requirements = []
         self.personas = []
         self.objectives = []
-        self.completed = completed
+        if completed is None:
+            self.completed = ''
+        else:
+            self.completed = completed
         self.tutorial = tutorial
         self.goal = goal
 
@@ -165,7 +168,10 @@ class Requirement(LibraryObject):
         self.validate('title', title)
         self.use_cases = []
         self.user_tasks = []
-        self.completed = completed
+        if completed is None:
+            self.completed = ''
+        else:
+            self.completed = completed
 
     def resolve_references(self, obj_dict): pass
 
