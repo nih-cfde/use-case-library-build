@@ -20,6 +20,7 @@ rule deploy:
       'output/site',
       'output/mkdocs.yml',
       'output/custom'
+   conda: "env/mkdocs.yml"
    shell:
       "cd output && {python} -m mkdocs gh-deploy"
 
@@ -29,6 +30,7 @@ rule serve:
       'output/site',
       'output/mkdocs.yml',
       'output/custom'
+   conda: "env/mkdocs.yml"
    shell:
       "cd output && {python} -m mkdocs serve --no-livereload"
 
@@ -49,6 +51,7 @@ rule process_library:
       directory('output/docs'),
       directory('output/custom'),
       'output/mkdocs.yml'
+   conda: "env/mkdocs.yml"
    shell:
       """
 #      {python} scripts/sed_fixes.py library
@@ -65,6 +68,7 @@ rule mkdocs:
       'output/custom'
    output:
       directory('output/site')
+   conda: "env/mkdocs.yml"
    shell:
       "cd output && {python} -m mkdocs build"
 

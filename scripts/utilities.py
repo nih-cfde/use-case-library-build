@@ -1,3 +1,4 @@
+import sys
 import os
 from library_objects import create_library_object
 import parse_input_files
@@ -19,36 +20,33 @@ def check_library_refs(obj_dict):
     to other library items that they ought to.
     """
     warnings = []
+    fail = False
     for obj in obj_dict.values():
 
         # User stories that aren't called from any epics
-        if obj.obj_type=='USER STORY' and len(obj.epics)==0:
-            warn = 'WARNING: orphaned user story {} has no parent epic!'.format(obj.ident)
-            warnings.append(warn)
+        if obj.obj_type == 'USE CASE':
+            uc_reqs = obj.requirements
+            task_reqs = []
+            for t in obj.user_tasks:
+                task_reqs.extend(t.requirements)
 
-        # Epics that aren't called from any narratives
-        if obj.obj_type=='EPIC' and obj.narrative is None:
-            warn = 'WARNING: orphaned user epic {} has no parent narrative!'.format(obj.ident)
-            warnings.append(warn)
+            uc_reqs = set([ r.ident for r in uc_reqs ])
+            task_reqs = set([ r.ident for r in task_reqs ])
+            if task_reqs != uc_reqs:
+                remainder = task_reqs ^ uc_reqs
+                idents = ", ".join(remainder)
+                warn = f"ERROR: use case has disjoint requirements with its tasks' requirements for {obj.ident}! Requirements are: {idents}"
+                warnings.append(warn)
+                fail = True
 
-        # Epics that don't have user stories
-        if obj.obj_type=='EPIC' and len(obj.user_stories)==0:
-            warn = 'WARNING: childless user epic {} has no user stories!'.format(obj.ident)
-            warnings.append(warn)
-
-        # Narratives that aren't called from any summaries
-        if obj.obj_type=='NARRATIVE' and obj.summary is None:
-            warn = 'WARNING: orphaned narrative {} has no parent summary!'.format(obj.ident)
-            warnings.append(warn)
-
-        # Narratives that don't have epics
-        if obj.obj_type=='NARRATIVE' and len(obj.epics)==0:
-            warn = 'WARNING: childless narrative {} has no epics!'.format(obj.ident)
-            warnings.append(warn)
 
     warnings = sorted(warnings)
     for warning in warnings:
         print(warning)
+
+    if fail:
+        print('one or more errors are actually fatal. dying now.')
+        sys.exit(-1)
 
 
 def resolve_library_refs(obj_dict):
