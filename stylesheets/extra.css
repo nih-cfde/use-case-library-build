@@ -154,3 +154,7 @@ a:active {
 }
 
 .tooltip_templates { display: none; }
+
+.md-sidebar--secondary {
+  display: none;
+}
