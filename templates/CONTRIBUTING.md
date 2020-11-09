@@ -147,6 +147,10 @@ git commit -am "short description of new changes"
 
 # push changes
 git push origin <name of branch>
+
+# if you want to push a new local branch that is not on the remote repo yet
+# add the -u flag (also known as --set-upstream)
+# git push -u origin <name of branch>
 ```
 
 If you are done working on the website, you can exit the conda environment to return to your base terminal environment.
