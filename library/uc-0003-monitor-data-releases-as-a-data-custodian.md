@@ -24,6 +24,8 @@ requirements:
 - r-00021
 ---
 
+**NIH Goal:** Support the storage, sharing, and sustainability of CF data sets
+
 Janice is the PI for data coordinating center. They would like
 to use the CFDE interface to help write a progress report for their funding agency.
 Using the browse and filter functions on the CFDE interface they create a report

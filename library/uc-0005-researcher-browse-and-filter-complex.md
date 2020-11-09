@@ -32,6 +32,9 @@ requirements:
 - r-00033
 ---
 
+
+**NIH Goal:**  Enhance the ability to ask scientific questions across data sets
+
 Pam would like to use the CFDE interface to explain their preliminary results as they writes their next grant. They have preliminary data from a GWAS study performed in their lab that GeneX, a transcription factor, is implicated in Focal Cortical Dysplasia (FCD) and want to know what additional information is available from the Common Fund data sets.
 Pam wants to build a table of the summarized metadata and summary statistics
 from each RNA-Seq dataset in the Common Fund that relates to Focal Cortical Dysplasia.

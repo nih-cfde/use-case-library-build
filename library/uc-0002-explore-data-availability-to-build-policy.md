@@ -1,5 +1,5 @@
 ---
-title: Explore data availability to build policy
+title: "Explore data availability to build policy &#x2705;"
 persona:
 - p-006
 objective:
@@ -10,6 +10,7 @@ user_tasks:
 - t-0010
 - t-0011
 - t-0012
+- t-0020
 requirements:
 - r-00001
 - r-00002
@@ -26,6 +27,9 @@ requirements:
 - r-00017
 
 ---
+
+
+**NIH Goal:** Support the storage, sharing, and sustainability of CF data sets
 
 Jon is a leader at the Common Fund, and wants to build summary tables of
 Common Fund assets for use in both tracking progress and for finding gaps that

@@ -2,3 +2,4 @@
 title: The interface will support the selection of a time period of interest
 ---
 
+A user should be able to request results that were updated within a specific time period.

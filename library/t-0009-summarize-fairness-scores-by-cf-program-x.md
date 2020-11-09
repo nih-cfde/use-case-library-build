@@ -6,3 +6,4 @@ requirements:
 - r-00020
 ---
 
+A user should be able to see a summary of the current FAIR scores of a give Common Fund Program.

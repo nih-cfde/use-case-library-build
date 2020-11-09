@@ -6,10 +6,10 @@
 
 {% if obj.use_cases %}
 
-Use cases that contain this persona:
+### Use cases that contain this persona:
 
 {% for uc in obj.use_cases %}
-* {{ uc.ident }}: {{ make_title_link(uc) }}
+* **{{ uc.ident }}:** {{ make_title_link(uc) }}
 {% endfor %}
 
 {% endif %}

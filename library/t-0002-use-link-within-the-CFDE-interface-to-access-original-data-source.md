@@ -1,5 +1,5 @@
 ---
-title: use link within the CFDE interface to access original data source
+title: Use link within the CFDE interface to access original data source
 requirements:
 - r-00013
 - r-00032

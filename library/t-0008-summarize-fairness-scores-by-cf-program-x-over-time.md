@@ -7,3 +7,4 @@ requirements:
 - r-00021
 ---
 
+A user should be able to see a plot of how FAIR scores for a give Common Fund Program have changed over a given time period.
