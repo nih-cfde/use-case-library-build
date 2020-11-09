@@ -42,11 +42,19 @@ Please see the [Use Case Library Style Guide](#usecasestyle) for format instruct
 
     - Or write up your use case and submit it as a pull request (PR) ([instructions below](#submit-pr)).
 
-### Use Case approval process
+### Use Case approval process <a name="approval-process"></a>
 
 Please allow up to one week for admin to review your suggestion.
 
-For use cases submitted as PRs, the Use Case committee will mark proposed use cases, and corresponding requirements pages, as `in progress`=&#x23F3;, `approved`=&#x1F44C;, and `done`=&#x2705;, as appropriate.
+For use cases submitted as PRs, the Use Case committee will mark proposed use cases, and corresponding user task and requirement pages, with status and completion date. This information is added to the [yaml headers](#yaml-headers):
+
+- `in progress`=&#x23F3;
+
+- `approved`=&#x1F44C;
+
+- `done`=&#x2705;
+
+Please do not delete these values as you edit files!
 
 Thank you for being here and for being a part of the CFDE project!
 
@@ -181,6 +189,8 @@ The **file format** for all files should be written in Markdown.
 [Clinical Researcher](./p-001-clinical-researcher.md)
 ```
 
+#### Yaml headers <a name="yaml-headers"></a>
+
 The **site index** is automatically created by yaml headers at the top of each file. These headers will automatically render links to a use case's corresponding persona, objective, user task, and requirements files associated. The Use Case committee will check yaml headers to ensure the indices do not clash with existing files.
 
 Yaml format begins and ends with "---". Every use case library page should have a `title:` key. For the [use case](#use-case-files) (uc-0000) and [user task](#user-task-files) (t-0000) files, additional keys and values are currently required. The additional keys (e.g., `requirements:`) are followed by a colon ":" and their corresponding values are listed after with a hyphen "-" and the file ID. Yaml keys may have one or more values. For example, the `requirements:` key below is linked to the `r-00003` and `r-00004` requirements file IDs:
@@ -203,32 +213,34 @@ requirements:
     - 1 or more [objective files](#obj-files)
     - 1 or more [user task files](#user-task-files)
     - 1 or more [requirement files](#req-files)
-- Required sections:
-    - yaml index header, including keys for `title:`, `persona:`, `objective:`, `user_tasks:`, and `requirements:`
+- **Required sections:**
+    - yaml index header, including keys for `title:`, `completed:`, `tutorial:`, `goals:`, `persona:`, `objective:`, `user_tasks:`, and `requirements:`. The `completed:`, `tutorial:`, and `goals:` keys should be left empty; the Use Case committee will add information during the [approval process](#approval-process).
     - a short summary of the use case
 
 #### `Persona` files <a name="persona-files"></a>
 - Use the [persona file template](https://github.com/nih-cfde/use-case-library-build/tree/latest/library_file_templates/library-persona-template.md) to enter the required sections
-- Required sections:
+- **Required sections:**
     - yaml index header with `title:`
     - Short description of the persona's biological/computational experience, their role and responsibilities, and relation to any of the other personas in the Use Case Library
     - A bullet point section listing assumptions about the persona's credentials e.g., access to the CFDE
 
 #### `Objective` files <a name="obj-files"></a>
 - Use the [objective file template](https://github.com/nih-cfde/use-case-library-build/tree/latest/library_file_templates/library-obj-template.md) to enter the required sections
-- Required sections:
+- **Required sections:**
     - yaml index header with `title:`
     - a brief ~1-2 sentence description of the objective
 
 #### `User task` files <a name="user-task-files"></a>
 - Use the [user task file template](https://github.com/nih-cfde/use-case-library-build/tree/latest/library_file_templates/library-task-template.md) to enter the required sections
-- The User Tasks title should be short and self-explanatory. You can add a short description in the main text (not yaml header) as needed for clarity.
+- The User Tasks title should be short and self-explanatory
 - Each user task must reference 1 or more requirements in the yaml header for the website to render properly. **This list should include the subset of requirements corresponding to the specific user task that are listed in the [use case file's](#use-case-files) yaml requirements section.**
-- Required sections:
-    - yaml index header with `title:` and `requirements:`
+- **Required sections:**
+    - yaml index header with `title:`, `completed:`, and `requirements:`. The `completed:` key should be left empty; the Use Case committee will add information during the [approval process](#approval-process).
+    - a brief ~1-2 sentence description of the user task
 
 #### `Requirement` files <a name="req-files"></a>
 - Use the [requirement file template](https://github.com/nih-cfde/use-case-library-build/tree/latest/library_file_templates/library-reqs-template.md) to enter the required sections
-- The Requirements title should be short and self-explanatory. You can add a short description in the main text (not yaml header) as needed for clarity.
-- Required sections:
-    - yaml index header with `title:`
+- The Requirements title should be short and self-explanatory.
+- **Required sections:**
+    - yaml index header with `title:` and `completed:`. The `completed:` key should be left empty; the Use Case committee will add information during the [approval process](#approval-process).
+    - a brief ~1-2 sentence description of the requirement
