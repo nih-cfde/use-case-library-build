@@ -131,7 +131,10 @@ class Task(LibraryObject):
         self.ident = ident
         self.validate('title', title)
         self.validate('reqs_str',reqs_str)
-        self.completed = completed
+        if completed is None:
+            self.completed = ''
+        else:
+            self.completed = completed
         self.use_cases = []
         self.requirements = []
 
