@@ -6,11 +6,13 @@
 {% endif %}
 
 {% if obj.tutorial %}
-## {{obj.tutorial}}
+### {{obj.tutorial}}
 {% endif %}
 
 {% if obj.tutorial %}
-## {{obj.goal}}
+## NIH Goal:
+
+{{obj.goal}}
 {% endif %}
 
 ## Persona
