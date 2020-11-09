@@ -2,7 +2,7 @@
 title: Add use case title without file ID
 completed: This date will be added by Use Case committee
 tutorial: If applicable, tutorial link will be added by Use Case committee
-goals: Goals will be added by Use Case committee
+goal: You can add goals or Use Case committee can add them
 persona:
 - Add persona file ID (e.g., p-001)
 objective:

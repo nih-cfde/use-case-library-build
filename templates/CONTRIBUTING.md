@@ -214,7 +214,7 @@ requirements:
     - 1 or more [user task files](#user-task-files)
     - 1 or more [requirement files](#req-files)
 - **Required sections:**
-    - yaml index header, including keys for `title:`, `completed:`, `tutorial:`, `goals:`, `persona:`, `objective:`, `user_tasks:`, and `requirements:`. The `completed:`, `tutorial:`, and `goals:` keys should be left empty; the Use Case committee will add information during the [approval process](#approval-process).
+    - yaml index header, including keys for `title:`, `completed:`, `tutorial:`, `goal:`, `persona:`, `objective:`, `user_tasks:`, and `requirements:`. The `completed:`, and `tutorial:` keys should be left empty; the Use Case committee will add information during the [approval process](#approval-process). Optional: You can fill in the `goal:` key according to the [list of CFDE program goals](#cfde-goals).
     - a short summary of the use case
 
 #### `Persona` files <a name="persona-files"></a>
@@ -244,3 +244,42 @@ requirements:
 - **Required sections:**
     - yaml index header with `title:` and `completed:`. The `completed:` key should be left empty; the Use Case committee will add information during the [approval process](#approval-process).
     - a brief ~1-2 sentence description of the requirement
+
+## CFDE Program goals and objectives <a name="cfde-goals"></a>
+
+The following four goals may be added to [use case file yaml header](#use-case-files) if appropriate, for example, this is the beginning of the yaml header for the Researcher Browse and Filter use case:
+
+```
+---
+title: Researcher Browse and Filter
+completed:
+tutorial:
+goal: Enhance the ability to ask scientific questions across data sets
+---
+```
+
+The four key goals of the CFDE are detailed below:
+
+### Goal 1: Enhance the ability to ask scientific questions across data sets
+- 1a. Novel scientific and clinical research is enabled through cross-data set discovery
+- 1b. A standard Authentication/Authorization (AuthN/AuthZ) strategy is implemented to permit appropriate access to and compute on controlled access data
+- 1c. (Eval only) CFDE activities are having a positive impact on CF DCCs’ ability to manage and use data
+
+### Goal 2: Enable the uptake, reuse, and addition of NIH data and tools from future, current, and ended programs
+- 2a. Data and metadata structure, descriptions, and organization are optimized so data can be found and combined across data sets
+- 2b. Common standards, methods, tools, and processes are provided enabling data managers to load, update, maintain and version, and monitor data sets on the cloud
+- 2c. Common tools and processes are provided to assess and improve FAIR-ness of data and other digital objects to optimize the query, retrieval, and use
+- 2d. A central, externally facing, scalable portal is provided, serving as the directory to all CF data sets and tools, FAIR-ness metrics, use cases, and the like
+- 2e. CF DCCs and their users are engaged in the design of self-governed standards applicable to existing and future CF data programs
+
+### Goal 3: Support the storage, sharing, and sustainability of CF data sets
+- 3a. CF data sets are stored and managed in cloud environments to increase availability and accessibility of key data sets
+- 3b. CF Programs use the STRIDES agreements for storage and compute, leveraging
+pre-paid funding from the CF
+- 3c. NIH retains ownership and oversight of data sets after programs have ended
+- 3d. Practices and policies that can accommodate new CF programs are adopted
+
+### Goal 4: Provide training that maximizes a scientist’s ability to upload data and use CF data and other resources
+- 4a. Training material is provided for researchers to access, analyze and understand the CF data sets and tools provided by CF Programs
+- 4b. Use case scenarios are posted to the Data Ecosystem community
+- 4c. A Data Ecosystem user guide and site documentation are created and accessible
