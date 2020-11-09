@@ -191,20 +191,27 @@ The **file format** for all files should be written in Markdown.
 
 #### Yaml headers <a name="yaml-headers"></a>
 
-The **site index** is automatically created by yaml headers at the top of each file. These headers will automatically render links to a use case's corresponding persona, objective, user task, and requirements files associated. The Use Case committee will check yaml headers to ensure the indices do not clash with existing files.
+The **site index** is automatically created by yaml headers at the top of each file. These headers will automatically render links to a use case's corresponding persona, objective, user task, and requirements files. The Use Case committee will check yaml headers to ensure the indices do not clash with existing files.
 
-Yaml format begins and ends with "---". Every use case library page should have a `title:` key. For the [use case](#use-case-files) (uc-0000) and [user task](#user-task-files) (t-0000) files, additional keys and values are currently required. The additional keys (e.g., `requirements:`) are followed by a colon ":" and their corresponding values are listed after with a hyphen "-" and the file ID. Yaml keys may have one or more values. For example, the `requirements:` key below is linked to the `r-00003` and `r-00004` requirements file IDs:
+Yaml format begins and ends with "---". Every use case library page should have a `title:` key. For the [use case](#use-case-files) (uc-0000), [user task](#user-task-files) (t-0000), and [requirement](#req-files) (r-00000) files, additional keys and values are required (see file sections for [details](#specific-guide)).
+
+The `completed:` and `tutorial:` keys must be included in the yaml header, but their values should be left empty; the Use Case committee will fill them in. The `goal:` key may be filled in with applicable [CFDE program goals](#cfde-goals) or left for the Use Case committee to fill in.
+
+The other additional keys (`persona:`, `objective:`, `user_tasks:`, `requirements:`) are followed by a colon ":" and their corresponding values are listed after with a hyphen "-" and the file ID. These yaml keys may have one or more values.
+
+For example, the `requirements:` key below is linked to the `r-00003` and `r-00004` requirements file IDs and the `completed:` key is left empty:
 
 ```
 ---
 title: example user task
+completed:
 requirements:
 - r-00003
 - r-00004
 ---
 ```
 
-### Specific File Format Guidelines
+### Specific File Format Guidelines <a name="specific-guide"></a>
 
 #### `Use Case` files <a name="use-case-files"></a>
 - Use the [use case file template](https://github.com/nih-cfde/use-case-library-build/tree/latest/library_file_templates/library-uc-template.md) to enter the required sections
@@ -222,7 +229,7 @@ requirements:
 - **Required sections:**
     - yaml index header with `title:`
     - Short description of the persona's biological/computational experience, their role and responsibilities, and relation to any of the other personas in the Use Case Library
-    - A bullet point section listing assumptions about the persona's credentials e.g., access to the CFDE
+    - A bullet point section listing assumptions about the persona e.g., access to the CFDE
 
 #### `Objective` files <a name="obj-files"></a>
 - Use the [objective file template](https://github.com/nih-cfde/use-case-library-build/tree/latest/library_file_templates/library-obj-template.md) to enter the required sections
