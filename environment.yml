@@ -8,7 +8,8 @@ dependencies:
     - snakemake-minimal=5.20.1
     - pip
     - pip:
-      - mkdocs-material
-      - mkdocs-git-revision-date-localized-plugin
-      - mkdocs-htmlproofer-plugin
-      - mkdocs-awesome-pages-plugin
+      - mkdocs-material==6.1.4
+      - mkdocs-git-revision-date-localized-plugin==0.7.3
+      - mkdocs-htmlproofer-plugin==0.0.3
+      - mkdocs-awesome-pages-plugin==2.4.0
+      - mkdocs-material-extensions==1.0.1
