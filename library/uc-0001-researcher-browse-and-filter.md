@@ -1,5 +1,8 @@
 ---
 title: Researcher Browse and Filter
+completed:
+tutorial:
+goal: Enhance the ability to ask scientific questions across data sets
 persona:
 - p-001
 objective:
@@ -30,9 +33,6 @@ requirements:
 - r-00032
 - r-00033
 ---
-
-
-**NIH Goal:** Enhance the ability to ask scientific questions across data sets
 
 Pam wants to build a table of the summarized metadata and summary statistics
 from each RNA-Seq dataset in the Common Fund that relates to Focal Cortical Dysplasia.

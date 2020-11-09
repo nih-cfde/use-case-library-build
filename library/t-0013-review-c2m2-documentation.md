@@ -1,5 +1,6 @@
 ---
-title: "Review C2M2 documentation &#x2705;"
+title: "Review C2M2 documentation"
+completed: "&#x2705; June 2020"
 requirements:
 - r-00004
 - r-00007
@@ -8,6 +9,5 @@ requirements:
 - r-00019
 - r-00022
 ---
-&#x2705; **Completed June 2020**
 
 A user should be able to access documentation about the CrossCut Metadata Model used by the CFDE portal.

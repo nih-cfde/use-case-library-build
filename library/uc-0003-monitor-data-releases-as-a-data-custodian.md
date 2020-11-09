@@ -1,5 +1,8 @@
 ---
 title: Monitor Data Releases as a Data Custodian
+completed:
+tutorial:
+goal: Support the storage, sharing, and sustainability of CF data sets
 persona:
 - p-004
 objective:
@@ -24,7 +27,7 @@ requirements:
 - r-00021
 ---
 
-**NIH Goal:** Support the storage, sharing, and sustainability of CF data sets
+
 
 Janice is the PI for data coordinating center. They would like
 to use the CFDE interface to help write a progress report for their funding agency.

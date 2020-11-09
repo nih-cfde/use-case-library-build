@@ -1,5 +1,8 @@
 ---
-title: "Compiling datasets of movement related disorders &#x2705;"
+title: Compiling datasets of movement related disorders
+completed: "&#x2705; September 2020"
+tutorial: "[Tutorial walkthrough of this use case](https://cfde-training-and-engagement.readthedocs-hosted.com/en/latest/Bioinformatics-Skills/CFDE-Portal/Movement-Related-Disorders/movement-disorders-portal-export/)"
+goal: Enhance the ability to ask scientific questions across data sets
 persona:
 - p-001
 objective:
@@ -26,10 +29,6 @@ requirements:
 - r-00011
 - r-00014
 ---
-
-&#x2705; **Completed September 2020: [Tutorial walkthrough of this use case](https://cfde-training-and-engagement.readthedocs-hosted.com/en/latest/Bioinformatics-Skills/CFDE-Portal/Movement-Related-Disorders/movement-disorders-portal-export/)**
-
-**NIH Goal:** Enhance the ability to ask scientific questions across data sets
 
 Movement-related disorders affect the neuromuscular system, disrupting the ability of the nervous and muscular systems to work together. There are several known movement-related disorders, including Amyotrophic Lateral Sclerosis (ALS) or Lou Gehrig’s disease, Parkinson's disease, Spinal Muscular Atrophy (SMA) and Multiple Sclerosis (MS). A few common features of these neuromuscular disorders are that they all involve the brain, share many symptoms, and are all difficult to diagnose in their early stages. Natasha is interested in scanning what data already exists that may help in identifying key genomic, transcriptomic and/or proteomic differences between these conditions along with potential biomarkers that may aide in early diagnosis and/or targeted drug development.
 

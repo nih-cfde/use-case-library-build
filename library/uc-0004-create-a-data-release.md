@@ -1,5 +1,8 @@
 ---
 title: Create a Data Release
+completed:
+tutorial:
+goal: Support the storage, sharing, and sustainability of CF data sets
 persona:
 - p-003
 objective:
@@ -30,7 +33,7 @@ requirements:
 - r-00031
 ---
 
-**NIH Goal:** Support the storage, sharing, and sustainability of CF data sets
+
 
 Jordan is a Data Administrator for a Common Fund Data Coordinating Center. They need
 to provide a description of the Data Coordinating Center’s data to the CFDE so that:

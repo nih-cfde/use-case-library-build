@@ -1,5 +1,9 @@
 # {{ obj.ident }}: {{ obj.title }}
 
+{% if obj.completed %}
+## Completion Date: {{obj.completed}}
+{% endif %}
+
 <!-- **ID: {{ obj.ident }}** [(permalink)](...) -->
 ## User Task Description
 
@@ -10,7 +14,7 @@
 ### Use cases that contain this User Task:
 
 {% for uc in obj.use_cases %}
-* **{{ uc.ident }}:** {{ make_title_link(uc) }}
+* **{{ uc.ident }}:** {{ make_title_link(uc) }} {{uc.completed}}
 {% endfor %}
 {% endif %}
 
@@ -21,6 +25,6 @@
 ### Requirements belonging to this User Task:
 
 {% for req in obj.requirements %}
-* **{{ req.ident }}:** {{ make_title_link(req) }}
+* **{{ req.ident }}:** {{ make_title_link(req) }} {{req.completed}}
 {% endfor %}
 {% endif %}

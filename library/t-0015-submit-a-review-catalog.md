@@ -1,5 +1,6 @@
 ---
 title: Submit a Review Catalog
+completed:
 requirements:
 - r-00025
 - r-00026

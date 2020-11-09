@@ -1,5 +1,6 @@
 ---
 title: Review and approve/reject a Review Catalog
+completed:
 requirements:
 - r-00029
 - r-00030

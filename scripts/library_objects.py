@@ -70,7 +70,7 @@ class UseCase(LibraryObject):
     obj_type = 'USE CASE'
     template = 'use_case_page.md'
 
-    def __init__(self, ident, title, persona, objective, user_tasks, requirements):
+    def __init__(self, ident, title, persona, objective, user_tasks, requirements, completed, tutorial, goal):
         self.ident = ident
         self.validate('title', title)
         self.validate('persona_names', persona)
@@ -81,6 +81,9 @@ class UseCase(LibraryObject):
         self.requirements = []
         self.personas = []
         self.objectives = []
+        self.completed = completed
+        self.tutorial = tutorial
+        self.goal = goal
 
     def resolve_references(self, obj_dict):
 
@@ -124,10 +127,11 @@ class Task(LibraryObject):
     obj_type = 'TASK'
     template = 'task_page.md'
 
-    def __init__(self, ident, title, reqs_str):
+    def __init__(self, ident, title, reqs_str, completed):
         self.ident = ident
         self.validate('title', title)
         self.validate('reqs_str',reqs_str)
+        self.completed = completed
         self.use_cases = []
         self.requirements = []
 
@@ -153,11 +157,12 @@ class Requirement(LibraryObject):
     obj_type = 'REQUIREMENT'
     template = 'requirement_page.md'
 
-    def __init__(self, ident, title):
+    def __init__(self, ident, title, completed):
         self.ident = ident
         self.validate('title', title)
         self.use_cases = []
         self.user_tasks = []
+        self.completed = completed
 
     def resolve_references(self, obj_dict): pass
 
@@ -235,11 +240,12 @@ def create_library_object(filename, header, content):
     if filetype == 'USE CASE':
         obj = UseCase(ident, header['title'], header['persona'],
                       header['objective'], header['user_tasks'],
-                      header['requirements'])
+                      header['requirements'], header['completed'],
+                      header['tutorial'], header['goal'])
     elif filetype == 'TASK':
-        obj = Task(ident, header['title'], header['requirements'])
+        obj = Task(ident, header['title'], header['requirements'], header['completed'])
     elif filetype == 'REQUIREMENT':
-        obj = Requirement(ident, header['title'])
+        obj = Requirement(ident, header['title'], header['completed'])
     elif filetype == 'PERSONA':
         obj = Persona(ident, header['title'])
     elif filetype == 'OBJECTIVE':

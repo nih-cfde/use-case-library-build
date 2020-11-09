@@ -1,5 +1,6 @@
 ---
 title: Install the CFDE data submission tool
+completed:
 requirements:
 - r-00023
 - r-00024

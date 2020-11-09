@@ -1,5 +1,8 @@
 ---
-title: "Gathering blood cancer data sets &#x2705;"
+title: "Gathering blood cancer data sets"
+completed: "&#x2705; September 2020"
+tutorial: "[Tutorial walkthrough of this use case](https://cfde-training-and-engagement.readthedocs-hosted.com/en/latest/Bioinformatics-Skills/CFDE-Portal/Blood-Cancer/blood-cancer-portal-export/)"
+goal: Enhance the ability to ask scientific questions across data sets
 persona:
 - p-001
 objective:
@@ -26,10 +29,6 @@ requirements:
 - r-00011
 - r-00014
 ---
-&#x2705; **Completed September 2020: [Tutorial walkthrough of this use case](https://cfde-training-and-engagement.readthedocs-hosted.com/en/latest/Bioinformatics-Skills/CFDE-Portal/Blood-Cancer/blood-cancer-portal-export/)**
-
-**NIH Goal:** Enhance the ability to ask scientific questions across data sets
-
 
 Acute Myeloid Leukemia (AML) is a type of blood cancer. In AML, the affected myeloid cells, a type of white blood cells, are not functional and build up in the bone marrow leaving reduced capacity for healthy white and red blood cells. While risk factors for developing AML exist, often times the underlying cause remains unknown. Gene mutations and chromosomal abnormality in the leukemia cells occur sporadically. Characterization of the wide spectrum of genetic events involved in AML will aide in better understanding of its etiology and ultimately in development of improved therapy.
 

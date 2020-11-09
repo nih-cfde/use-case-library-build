@@ -1,5 +1,6 @@
 ---
 title: Summarize FAIRness scores by CF Program X over time
+completed:
 requirements:
 - r-00018
 - r-00019

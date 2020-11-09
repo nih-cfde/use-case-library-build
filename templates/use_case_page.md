@@ -1,7 +1,17 @@
 # {{ obj.ident }}: {{ obj.title }}
 
 <!-- **ID: {{ obj.ident }}** [(permalink)](...) -->
+{% if obj.completed %}
+## Completion Date: {{obj.completed}}
+{% endif %}
 
+{% if obj.tutorial %}
+## {{obj.tutorial}}
+{% endif %}
+
+{% if obj.tutorial %}
+## {{obj.goal}}
+{% endif %}
 
 ## Persona
 
@@ -42,7 +52,7 @@ no objectives.
 ## Tasks for this use case:
 
 {% for task in obj.user_tasks %}
-* **{{ task.ident }}:** {{ make_title_link(task) }}
+* **{{ task.ident }}:** {{ make_title_link(task) }} {{task.completed}}
 {% endfor %}
 
 {% endif %}
@@ -54,7 +64,7 @@ no objectives.
 
 ## Requirements for this use case:
 {% for requirement in obj.requirements %}
-* **{{ requirement.ident }}:** {{ make_title_link(requirement) }}
+* **{{ requirement.ident }}:** {{ make_title_link(requirement) }} {{requirement.completed}}
 {% endfor %}
 
 {% endif %}
