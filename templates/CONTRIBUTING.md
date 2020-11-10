@@ -246,7 +246,7 @@ requirements:
 
 ## CFDE Program goals and objectives <a name="cfde-goals"></a>
 
-The following four goals may be added to [use case file yaml header](#use-case-files) if appropriate, for example, this is the beginning of the yaml header for the Researcher Browse and Filter use case:
+The following four goals may be added to the [use case file yaml header](#use-case-files) if appropriate. For example, this is the beginning of the yaml header for the "Researcher Browse and Filter" use case:
 
 ```
 ---
