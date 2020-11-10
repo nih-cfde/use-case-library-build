@@ -14,7 +14,7 @@ By contributing to this repository, you agree:
 1.  To obey the [Code of Conduct](./CODEOFCONDUCT.md)
 2.  To release all your contributions under the same terms as the license itself: the [CC-BY Attribution 4.0 International](./LICENSE.md)
 
-If you are OK with these two conditions, then we welcome both you and your contribution!
+If you are OK with these two conditions, then we welcome both you and your contribution to the CFDE project!
 
 ## Developing a new use case
 
@@ -48,15 +48,13 @@ Please allow up to one week for admin to review your suggestion.
 
 For use cases submitted as PRs, the Use Case committee will mark proposed use cases, and corresponding user task and requirement pages, with status and completion date. This information is added to the [yaml headers](#yaml-headers):
 
-- `in progress`=&#x23F3;
+- `in progress` = &#x23F3;
 
-- `approved`=&#x1F44C;
+- `approved` = &#x1F44C;
 
-- `done`=&#x2705;
+- `done` = &#x2705;
 
-Please do not delete these values as you edit files!
-
-Thank you for being here and for being a part of the CFDE project!
+Please do not delete these values as you edit files! We use these markers to keep track of complete use case files.
 
 ## Getting help
 
@@ -71,9 +69,9 @@ Issue templates | About
 
 ## Previewing content and submitting PR <a name="submit-pr"></a>
 
-If you are submitting a pull request, please create one pull request per new use case so admin can check the complete change. Please check that the new additions render correctly on the website before submitting the PR by rendering the website locally on your computer. You will need to make a [Github account](https://github.com/) and install [`git`](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git/) and [`conda`](https://conda.io/projects/conda/en/latest/user-guide/install/index.html) (e.g., by downloading Miniconda) on your computer. The instructions below have been tested on MacOS.
+If you are submitting a pull request, please create one pull request per new use case so admin can check the complete change. Please check that the new additions render correctly on the website before submitting the PR by rendering the website locally on your computer. You will need to make a [Github account](https://github.com/) and install [`git`](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git/) and [`conda`](https://conda.io/projects/conda/en/latest/user-guide/install/index.html) (e.g., by downloading Miniconda. [(MacOS Miniconda tutorial)](https://cfde-training-and-engagement.readthedocs-hosted.com/en/latest/Bioinformatics-Skills/install_conda_tutorial/)) on your computer. The instructions below have been tested on MacOS.
 
-1\. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the [use case library repo](https://github.com/nih-cfde/use-case-library-build) and create a new branch in your forked version. For those onboarded to the CFDE, you may have permissions to edit the use case library repo directly instead of forking.
+1\. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the [use case library repo](https://github.com/nih-cfde/use-case-library-build) and create a new branch in your forked version. For those onboarded to the CFDE, you may have permissions to edit the use case library repo directly instead of forking, in which case, start at step 2.
 
 2\. Clone the repository to your local computer. Be sure to edit the command below with the correct Github user name:
 
@@ -181,17 +179,7 @@ If you need help at any point in this process, please submit a [`HelpWanted issu
    user task | t-0000 | t-0001-access-cfde-interface.md
    requirement | r-00000 | r-00001-the-interface-will-support-gui-web-access-to-end-users.md
 
-The **file format** for all files should be written in Markdown.
-
-- For help with Markdown syntax, see this [basic syntax guide](https://www.markdownguide.org/basic-syntax/)
-- To add links to other pages:
-```
-# syntax
-[<text to click on>](<Github repo relative path to file>)
-
-# This is an example for a link to the Personas description page for "Clinical Researcher":
-[Clinical Researcher](./p-001-clinical-researcher.md)
-```
+The **file format** for all files should be written in Markdown. For help with Markdown syntax, see this [basic syntax guide](https://www.markdownguide.org/basic-syntax/).
 
 #### Yaml headers <a name="yaml-headers"></a>
 
