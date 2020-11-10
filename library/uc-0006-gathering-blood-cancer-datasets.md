@@ -1,5 +1,5 @@
 ---
-title: "Gathering blood cancer data sets"
+title: Gathering blood cancer data sets
 completed: "&#x2705; September 2020"
 tutorial: "[Tutorial walkthrough of this use case](https://cfde-training-and-engagement.readthedocs-hosted.com/en/latest/Bioinformatics-Skills/CFDE-Portal/Blood-Cancer/blood-cancer-portal-export/)"
 goal: Enhance the ability to ask scientific questions across data sets
@@ -16,6 +16,7 @@ user_tasks:
 - t-0003
 requirements:
 - r-00001
+- r-00002
 - r-00034
 - r-00035
 - r-00036

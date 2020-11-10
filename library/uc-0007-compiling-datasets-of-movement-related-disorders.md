@@ -16,6 +16,7 @@ user_tasks:
 - t-0003
 requirements:
 - r-00001
+- r-00002
 - r-00034
 - r-00035
 - r-00036
