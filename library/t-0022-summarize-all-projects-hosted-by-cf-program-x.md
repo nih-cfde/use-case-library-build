@@ -1,6 +1,6 @@
 ---
 title: Summarize all projects hosted by CF Program X
-completed:
+completed: "&#x2705; September 2020"
 requirements:
 - r-00010
 - r-00011

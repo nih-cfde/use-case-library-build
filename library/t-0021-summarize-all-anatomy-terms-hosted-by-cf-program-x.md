@@ -1,6 +1,6 @@
 ---
 title: Summarize all anatomy terms hosted by CF Program X
-completed:
+completed: "&#x2705; September 2020"
 requirements:
 - r-00004
 - r-00005
