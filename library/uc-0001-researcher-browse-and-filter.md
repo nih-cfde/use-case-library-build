@@ -18,6 +18,7 @@ user_tasks:
 - t-0003
 requirements:
 - r-00001
+- r-00002
 - r-00003
 - r-00004
 - r-00005
@@ -32,6 +33,7 @@ requirements:
 - r-00014
 - r-00032
 - r-00033
+- r-00037
 ---
 
 Pam wants to build a table of the summarized metadata and summary statistics

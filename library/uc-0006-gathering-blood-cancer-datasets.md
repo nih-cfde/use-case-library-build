@@ -16,6 +16,7 @@ user_tasks:
 - t-0003
 requirements:
 - r-00001
+- r-00002
 - r-00034
 - r-00035
 - r-00036
@@ -28,6 +29,7 @@ requirements:
 - r-00010
 - r-00011
 - r-00014
+- r-00037
 ---
 
 Acute Myeloid Leukemia (AML) is a type of blood cancer. In AML, the affected myeloid cells, a type of white blood cells, are not functional and build up in the bone marrow leaving reduced capacity for healthy white and red blood cells. While risk factors for developing AML exist, often times the underlying cause remains unknown. Gene mutations and chromosomal abnormality in the leukemia cells occur sporadically. Characterization of the wide spectrum of genetic events involved in AML will aide in better understanding of its etiology and ultimately in development of improved therapy.
