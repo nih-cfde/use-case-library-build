@@ -33,7 +33,6 @@ requirements:
 - r-00014
 - r-00032
 - r-00033
-- r-00037
 ---
 
 Pam wants to build a table of the summarized metadata and summary statistics

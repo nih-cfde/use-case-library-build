@@ -29,7 +29,6 @@ requirements:
 - r-00010
 - r-00011
 - r-00014
-- r-00037
 ---
 
 Movement-related disorders affect the neuromuscular system, disrupting the ability of the nervous and muscular systems to work together. There are several known movement-related disorders, including Amyotrophic Lateral Sclerosis (ALS) or Lou Gehrig’s disease, Parkinson's disease, Spinal Muscular Atrophy (SMA) and Multiple Sclerosis (MS). A few common features of these neuromuscular disorders are that they all involve the brain, share many symptoms, and are all difficult to diagnose in their early stages. Natasha is interested in scanning what data already exists that may help in identifying key genomic, transcriptomic and/or proteomic differences between these conditions along with potential biomarkers that may aide in early diagnosis and/or targeted drug development.

@@ -8,8 +8,8 @@ persona:
 objective:
 - obj-0006
 user_tasks:
-- t-0001
 - t-0007
+- t-0017
 - t-0021
 - t-0022
 - t-0023
