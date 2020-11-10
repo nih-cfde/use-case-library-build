@@ -35,7 +35,7 @@ def check_library_refs(obj_dict):
             if task_reqs != uc_reqs:
                 remainder = task_reqs ^ uc_reqs
                 idents = ", ".join(remainder)
-                warn = f"ERROR: use case has disjoint requirements with its tasks' requirements for {obj.ident}! Requirements are: {idents}"
+                warn = f"ERROR: use case has disjoint requirements with its tasks' requirements for {obj.ident}! Check these requirements: {idents}"
                 warnings.append(warn)
                 fail = True
 
@@ -51,7 +51,7 @@ def check_library_refs(obj_dict):
 
 def resolve_library_refs(obj_dict):
     """
-    For each library item, 
+    For each library item,
     resolve the references
     to other library items
     in the object dictionary.
@@ -122,7 +122,7 @@ def md_files_to_obj_dict(markdown_files):
     Given a set of Markdown files, load each
     markdown file header and content. Then
     create the appropriate library object,
-    and add it to obj_dict. When finished, 
+    and add it to obj_dict. When finished,
     return obj_dict.
     """
     obj_dict = {}
@@ -158,4 +158,3 @@ def md_files_to_obj_dict(markdown_files):
         sys.exit(-1)
 
     return obj_dict
-
