@@ -28,12 +28,13 @@ requirements:
 - r-00039
 ---
 
-Kristin would like to view the metadata associated with her DCC that currently exists
-in the CFDE portal.
+Kristin has just used the CFDE submission tool to make a new Review Catalog. They
+would like to preview that catalog in the CFDE portal, and approve it to be included
+in the Release Catalog.
 
-She logs in to the portal using an existing identity, which takes her to
-a restricted page showing summary statistics about what data her DCC currently has
-in the portal. This display helps her answer questions like:
+Kristin logs in to the portal using an existing identity, and clicks through to the Review 
+page, a restricted page showing summary statistics about the current Review Catalog. 
+This display helps her answer questions like:
 
 -   How many data files exist for her DCC overall?
 -   How many subjects are represented?
@@ -44,5 +45,6 @@ in the portal. This display helps her answer questions like:
 -   How many data_types are in those Projects?
 
 By comparing the summary statistics supplied by the interface, Kristin can determine
-whether the data currently available at the CFDE is up to date with her current
-internal data holdings, and decide whether it should be released for public view.
+whether the Review Catalog they submitted is what they expected given their data submission.
+Kristin can also do spot checks of the data, or see the outcome of specific searches by browsing
+the Review Catalog. 
