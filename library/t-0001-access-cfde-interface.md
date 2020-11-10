@@ -6,4 +6,4 @@ requirements:
 - r-00002
 ---
 
-A user should be able to access the CFDE interface and do basic searching and exploration.
+A user should be able to access the CFDE interface and perform basic searching and exploration.
