@@ -22,7 +22,7 @@ rule deploy:
       'output/custom'
    conda: "env/mkdocs.yml"
    shell:
-      "cd output && {python} -m mkdocs gh-deploy"
+      "cd output && python -m mkdocs gh-deploy"
 
 rule serve:
    input:
@@ -32,7 +32,7 @@ rule serve:
       'output/custom'
    conda: "env/mkdocs.yml"
    shell:
-      "cd output && {python} -m mkdocs serve --no-livereload"
+      "cd output && python -m mkdocs serve --no-livereload"
 
 rule clean:
    shell:
@@ -55,7 +55,7 @@ rule process_library:
    shell:
       """
 #      {python} scripts/sed_fixes.py library
-      {python} scripts/process.py library 
+      {python} scripts/process.py library
       cp -r images/ output/docs/images/
       cp -r stylesheets/ output/docs/stylesheets/
       cp -r custom/ output/custom/
@@ -70,5 +70,4 @@ rule mkdocs:
       directory('output/site')
    conda: "env/mkdocs.yml"
    shell:
-      "cd output && {python} -m mkdocs build"
-
+      "cd output && python -m mkdocs build"
