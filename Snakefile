@@ -5,7 +5,6 @@
 
 import glob
 
-python=sys.executable
 
 rule build:
    input:
@@ -54,8 +53,8 @@ rule process_library:
    conda: "env/mkdocs.yml"
    shell:
       """
-#      {python} scripts/sed_fixes.py library
-      {python} scripts/process.py library
+#     python scripts/sed_fixes.py library
+      python scripts/process.py library
       cp -r images/ output/docs/images/
       cp -r stylesheets/ output/docs/stylesheets/
       cp -r custom/ output/custom/
