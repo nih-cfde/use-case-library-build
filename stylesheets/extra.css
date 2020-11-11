@@ -154,3 +154,6 @@ a:active {
 }
 
 .tooltip_templates { display: none; }
+
+.md-announce{overflow:auto;background-color:#C3E1E6}
+.md-announce__inner{margin:.6rem auto;padding:0 .8rem;color:var(--md-footer-fg-color);font-size:.7rem}@media print{.md-announce{display:none}}
