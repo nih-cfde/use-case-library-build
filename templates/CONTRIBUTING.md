@@ -119,7 +119,7 @@ snakemake -j 1
 7\. Generate the local render of the website. Scripts in this repository take the new files from the `library` directory, format them according to the website's stylesheets, and render them on the website.
 
 ```
-snakemake serve -j 1
+snakemake serve --use-conda -j 1
 ```
 
 Your terminal should show the following if the local render succeeds:
