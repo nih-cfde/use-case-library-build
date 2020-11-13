@@ -82,7 +82,7 @@ cd use-case-library-build
 
 If you have permissions to edit the repo directly:
 ```
-git clone use-case-library-build.git
+git clone https://github.com/nih-cfde/use-case-library-build.git
 cd use-case-library-build
 ```
 
