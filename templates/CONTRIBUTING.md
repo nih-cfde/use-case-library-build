@@ -80,6 +80,12 @@ git clone https://github.com/<your user name here>/use-case-library-build.git
 cd use-case-library-build
 ```
 
+If you have permissions to edit the repo directly:
+```
+git clone use-case-library-build.git
+cd use-case-library-build
+```
+
 3\. Create a conda environment to specify the software used to build the use case library website. The name of the environment is specified by the `-n` flag, for example "usecaselibrary". The `-f` flag specifies the file that has all the software requirements. This website stores those requirements in a file called "environment.yml". Once you have made the conda environment, you can skip to step 4 for future edits (assuming you don't delete this conda environment!).
 
 ```
