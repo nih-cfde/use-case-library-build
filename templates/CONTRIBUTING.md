@@ -76,7 +76,7 @@ If you are submitting a pull request, please create one pull request per new use
 2\. Clone the repository to your local computer. Be sure to edit the command below with the correct Github user name:
 
 ```
-git clone https://github.com/<your user name here>/use-case-library-test.git
+git clone https://github.com/<your user name here>/use-case-library-build.git
 cd use-case-library-build
 ```
 
