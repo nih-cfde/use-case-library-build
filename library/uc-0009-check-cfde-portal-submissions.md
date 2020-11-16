@@ -9,7 +9,7 @@ persona:
 objective:
 - obj-0004
 user_tasks:
-- t-0001 #<- should this be task 17? if so, need to add req 37
+- t-0017
 - t-0024
 - t-0025
 - t-0026
@@ -19,6 +19,7 @@ requirements:
 - r-00001
 - r-00002
 - r-00029
+- r-00037
 - r-00040
 - r-00041
 ---
