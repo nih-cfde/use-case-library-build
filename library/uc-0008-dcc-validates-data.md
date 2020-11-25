@@ -42,7 +42,7 @@ This display helps her answer questions like:
 -   How many and which anatomy terms are represented?
 -   What Project names are associated with her DCC?
 -   How many biosamples are in those Projects?
--   How many data_types are in those Projects?
+-   How many data types are in those Projects?
 
 By comparing the summary statistics supplied by the interface, Kristin can determine
 whether the Review Catalog they submitted is what they expected given their data submission.
