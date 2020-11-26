@@ -24,8 +24,24 @@ requirements:
 - r-00041
 ---
 
-Melinda wants to check her team's data submissions on the CFDE portal so they
-can review which are ready to incorporate into the portal.
+Melinda, a Data Custodian, wants to check her team's data submissions on the CFDE portal so they can review which are ready to incorporate into the portal.
 
-She logs on to the portal interface and looks at summaries of their data submissions.
+She logs on to the portal interface and looks at summaries of her team's data submissions. She navigates to the Review Catalog belonging to her team and views a dynamically generated set of plots. For additional help, she pulls up the Review Page documentation and the walkthrough tutorial.
+
 Next she notifies Ann, a Data Administrator on her team who makes the final decision, that it is time to do a final review of the data.
+
+## have added tasks and reqs that already exist. have not added the new ones yet
+
+
+
+
+## need to add these
+
+will C2M2 docs have this info? t-0013 is C2M2 docs
+    - consult documentation about Review Page
+
+is this tutorial of the data submission process? if so, should be same task as uc-0011 tutorial task
+    - May use tutorial walkthrough
+
+this is new task (requirement will be that dynamic plots are generated)
+    - View a dynamically generated set of plots/Review catalog
