@@ -13,7 +13,7 @@ and place them in the context of larger goals and the Common Fund Data Ecosystem
 You can explore the library using the tabs above.
 
 We welcome new contributions.
-Please read the [contributor guidelines](./about/contributing.md) before submitting a pull request.
+Please read the [contributor guidelines](./templates/CONTRIBUTING.md) before submitting a pull request.
 
 
 ## Overview
