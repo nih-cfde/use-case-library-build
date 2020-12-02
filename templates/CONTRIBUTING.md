@@ -76,7 +76,13 @@ If you are submitting a pull request, please create one pull request per new use
 2\. Clone the repository to your local computer. Be sure to edit the command below with the correct Github user name:
 
 ```
-git clone https://github.com/<your user name here>/use-case-library-test.git
+git clone https://github.com/<your user name here>/use-case-library-build.git
+cd use-case-library-build
+```
+
+If you have permissions to edit the repo directly:
+```
+git clone https://github.com/nih-cfde/use-case-library-build.git
 cd use-case-library-build
 ```
 
@@ -119,7 +125,7 @@ snakemake -j 1
 7\. Generate the local render of the website. Scripts in this repository take the new files from the `library` directory, format them according to the website's stylesheets, and render them on the website.
 
 ```
-snakemake serve -j 1
+snakemake serve --use-conda -j 1
 ```
 
 Your terminal should show the following if the local render succeeds:
