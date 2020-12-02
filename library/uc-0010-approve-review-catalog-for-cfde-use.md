@@ -1,5 +1,5 @@
 ---
-title: Approve a Review Catalog for use by CFDE
+title: Approve a Review Catalog for use by the CFDE
 completed:
 tutorial:
 goal:
@@ -27,7 +27,7 @@ requirements:
 
 Ann was notified that her team has new Review Catalogs that need to be reviewed. She logs in to the portal as a recognized Data Administrator for her DCC. After navigating to a Review Catalog belonging to her team, she checks the submission by looking at dynamically generated plots for the catalog.
 
-If any of her team's catalogs are incorrect, she can reject or delete a Review Catalog. Or, if they look correct, she can approve one Review Catalog at a time for her team. Once Ann approves a catalog, she will be notified that 1) her approval has been recorded and 2) the data will appear in the next Release Catalog pending review by the CFDE.
+If any of her team's catalogs are incorrect, she can reject or delete a Review Catalog. If they look correct, she can approve one Review Catalog at a time for her team. Once Ann approves a catalog, she will be notified that 1) her approval has been recorded and 2) the data will appear in the next Release Catalog pending review by the CFDE.
 
 <!-- A data administrator should be able to:
 
