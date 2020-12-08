@@ -28,7 +28,7 @@ requirements:
 - r-99999
 ---
 
-Melinda, a Data Custodian, wants to check her team's data submissions on the CFDE portal so they can review which are ready to incorporate into the portal.
+Melinda, a Data Custodian, wants to check her team's data submissions on the CFDE portal so they can review which submissions are ready to incorporate into the portal.
 
 She logs on to the portal interface and looks at summaries of her team's data submissions. After navigating to a Review Catalog belonging to her team, she checks the submission by looking at dynamically generated plots for the catalog. For additional help, she pulls up the Review Page documentation and refers to the walkthrough tutorial.
 
