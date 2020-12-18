@@ -7,26 +7,26 @@ has_children: true
 
 # Use Case Library
 
-The Use Case Library provides a set of high-level summaries that capture the essential scientific objectives
-and place them in the context of larger goals and the Common Fund Data Ecosystem timeline.
+The Use Case Library provides a set of high-level summaries that captures essential scientific objectives
+and places them in the context of larger goals in the Common Fund Data Ecosystem timeline.
 
 You can explore the library using the tabs above.
 
 We welcome new contributions.
-Please read the [contributor guidelines](./templates/CONTRIBUTING.md) before submitting a pull request.
+Please read the [contributor guidelines](./templates/CONTRIBUTING.md) before submitting a new use case.
 
 
 ## Overview
 
 A **Use Case** consists of an **Objective** and a **Persona** -
 a person who can have an **Objective**. These are combined into a **summary**
-of specific use for the CFDE, which can be achieved by a series
-of **user tasks**. Each **User Task** is single step in the users workflow.
-The technical infrastucture required
+of specific use cases for the CFDE, which can be achieved by a series
+of **user tasks**. Each **User Task** is a single step in the user's workflow.
+The technical infrastructure required
 to enable a **User Task** are its **Requirements**. In most cases, what
-appears to the user as a single step actually is a multistep process to the
+appears to the user as a single step actually is a multi-step process to the
 computer doing the work, so any given **User Task** will likely have many **Requirements**.
-Both **user tasks** and **requirements** can be shared across **Use Cases**
+Both **user tasks** and **requirements** can be shared across **Use Cases**.
 
 
 ![Use case library glossary image](./images/UseCaseTopDown.jpg)
