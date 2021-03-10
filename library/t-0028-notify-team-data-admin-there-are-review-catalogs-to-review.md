@@ -1,6 +1,6 @@
 ---
 title: Notify team data administrator there are Review Catalogs to review
-completed:
+completed: "&#x23F3;"
 requirements:
 - r-00029
 ---
