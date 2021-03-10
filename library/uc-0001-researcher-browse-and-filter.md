@@ -9,13 +9,13 @@ objective:
 - obj-0001
 user_tasks:
 - t-0001
-- t-0002
 - t-0019
 - t-0004
 - t-0005
 - t-0006
 - t-0010
 - t-0003
+- t-0002
 requirements:
 - r-00001
 - r-00002
