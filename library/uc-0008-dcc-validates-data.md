@@ -31,23 +31,20 @@ requirements:
 - r-00039
 ---
 
-Kristin has just used the CFDE submission tool to make a new Review Catalog. They
-would like to preview that catalog in the CFDE portal, and approve it to be included
-in the Release Catalog.
+Kristin has just used the CFDE submission tool to make a new Review Catalog. She would like to preview that catalog in the CFDE portal, and approve it to be included in the Release Catalog.
 
-Kristin logs in to the portal using an existing identity. After selecting the "Data Review" page, she finds links on the "Submitted Datapackage" page, a restricted page, leading to pages with summary statistics about the current Review Catalog.
+Kristin logs in to the portal using an existing identity. After selecting the "Data Review" tab, she finds links on the "Submitted Datapackage" page, a restricted page, leading to pages with summary statistics about the current Review Catalog.
 
-By clicking on links to "Browse Data", see "Summary Charts", or "View details" (from the "View" column), she can answer questions like:
+By clicking on links to "Browse Data", see "Summary Charts", or "View details" (icon from the "View" column), she can answer questions like:
 
 -   How many data files exist for her DCC overall?
 -   How many subjects are represented?
 -   How many and which data types are represented?
 -   How many and which anatomy terms are represented?
 -   What Project names are associated with her DCC?
--   How many biosamples are in those Projects?
--   How many data types are in those Projects?
+-   How many biosamples are in those Projects (or if applicable, Collections)?
+-   How many data types are in those Projects (or if applicable, Collections)?
 
-By comparing the summary statistics supplied by the interface, Kristin can determine
-whether the Review Catalog they submitted is what they expected given their data submission.
-Kristin can also do spot checks of the data, or see the outcome of specific searches by browsing
-the Review Catalog by clicking the "Browse Data" link.
+Kristin can do spot checks of the data, or see the outcome of specific searches by browsing the Review Catalog by clicking the "Browse Data" link.
+
+By comparing the summary statistics supplied by the interface, Kristin can determine whether the Review Catalog she submitted looks as expected.
