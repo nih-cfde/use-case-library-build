@@ -33,9 +33,7 @@ Common Fund assets for use in both tracking progress and for finding gaps that
 should be filled by future initiatives. They would like to use the CFDE interface
 to download simple tables or graphs that show what assets exist, and where.
 
-Using a web browser, Jon uses a point and click interface to get a matrix of
-Uberon tissue terms by DCC. With a few more clicks, they get similar tables showing
-Species, and Assay Types by Program.
+From the CFDE portal home page, Jon uses the axis and stack by dropdown menus on the dynamic stacked bar plot to download a matrix of Anatomy terms by CF Program. With the same procedure, they download similar tables showing Species and Assay Types by CF Program.
 
 Since these are simple matrices, Jon can re-plot the data in almost any
 piece of plotting software, or look at the results in Excel. Jon downloads
