@@ -8,24 +8,25 @@ persona:
 objective:
 - obj-0006
 user_tasks:
-- t-0007
 - t-0017
+- t-0007
 - t-0021
 - t-0022
 - t-0023
+- t-0038
 requirements:
 - r-00001
 - r-00002
 - r-00004
 - r-00005
-- r-00007
-- r-00008
+- r-00046
+- r-00047
 - r-00010
 - r-00011
 - r-00018
 - r-00037
-- r-00038
-- r-00039
+- r-00035
+- r-00036
 ---
 
 Kristin has just used the CFDE submission tool to make a new Review Catalog. They
