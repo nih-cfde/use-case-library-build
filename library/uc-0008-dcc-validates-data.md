@@ -35,9 +35,9 @@ Kristin has just used the CFDE submission tool to make a new Review Catalog. The
 would like to preview that catalog in the CFDE portal, and approve it to be included
 in the Release Catalog.
 
-Kristin logs in to the portal using an existing identity, and clicks through to the Review
-page, a restricted page showing summary statistics about the current Review Catalog.
-This display helps her answer questions like:
+Kristin logs in to the portal using an existing identity. After selecting the "Data Review" page, she finds links on the "Submitted Datapackage" page, a restricted page, leading to pages with summary statistics about the current Review Catalog.
+
+By clicking on links to "Browse Data", see "Summary Charts", or "View details" (from the "View" column), she can answer questions like:
 
 -   How many data files exist for her DCC overall?
 -   How many subjects are represented?
@@ -50,4 +50,4 @@ This display helps her answer questions like:
 By comparing the summary statistics supplied by the interface, Kristin can determine
 whether the Review Catalog they submitted is what they expected given their data submission.
 Kristin can also do spot checks of the data, or see the outcome of specific searches by browsing
-the Review Catalog.
+the Review Catalog by clicking the "Browse Data" link.
