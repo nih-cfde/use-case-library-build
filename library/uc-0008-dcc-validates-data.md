@@ -27,6 +27,8 @@ requirements:
 - r-00037
 - r-00035
 - r-00036
+- r-00038
+- r-00039
 ---
 
 Kristin has just used the CFDE submission tool to make a new Review Catalog. They
