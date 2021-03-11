@@ -1,7 +1,7 @@
 ---
 title: Check CFDE portal submissions
 completed:
-tutorial:
+tutorial: "[Wiki walkthrough of this use case](https://github.com/nih-cfde/published-documentation/wiki/How-to-review-a-datapackage)"
 goal:
 persona:
 - p-003
