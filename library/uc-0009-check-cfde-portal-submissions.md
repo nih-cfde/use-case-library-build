@@ -2,7 +2,7 @@
 title: Check CFDE portal submissions
 completed:
 tutorial: "[Wiki walkthrough of this use case](https://github.com/nih-cfde/published-documentation/wiki/How-to-review-a-datapackage)"
-goal:
+goal: Support the storage, sharing, and sustainability of CF data sets
 persona:
 - p-003
 - p-004
