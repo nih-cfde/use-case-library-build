@@ -2,8 +2,8 @@
 title: "Summarize datatypes hosted by CF Program X"
 completed: "&#x2705; June 2020"
 requirements:
-- r-00007
-- r-00008
+- r-00046
+- r-00047
 - r-00018
 ---
 
