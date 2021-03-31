@@ -16,7 +16,7 @@
     
     
       
-        <title>Check CFDE portal submissions - CFDE Use Case Library</title>
+        <title>Review CFDE portal submissions - CFDE Use Case Library</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#uc-0009-check-cfde-portal-submissions" class="md-skip">
+        <a href="#uc-0009-review-cfde-portal-submissions" class="md-skip">
           Skip to content
         </a>
       
@@ -77,6 +77,23 @@
       
 
 <header class="md-header" data-md-component="header">
+  <!-- Matomo Code -->
+  <script type="text/javascript">
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.use-cases.nih-cfde.org"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://nihcfde.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '6']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.src='//cdn.matomo.cloud/nihcfde.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+  </script>
+<!-- End Matomo Code -->
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://nih-cfde.github.io/use-case-library-build/" title="CFDE Use Case Library" class="md-header-nav__button md-logo" aria-label="CFDE Use Case Library">
       
@@ -96,7 +113,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Check CFDE portal submissions
+              Review CFDE portal submissions
             
           </span>
         </div>
@@ -406,12 +423,12 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Check CFDE portal submissions
+        Review CFDE portal submissions
         <span class="md-nav__icon md-icon"></span>
       </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
-      Check CFDE portal submissions
+      Review CFDE portal submissions
     </a>
     
       
@@ -426,6 +443,20 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wiki-walkthrough-of-this-use-case" class="md-nav__link">
+    Wiki walkthrough of this use case
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nih-goal" class="md-nav__link">
+    NIH Goal:
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#persona" class="md-nav__link">
@@ -1177,6 +1208,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../t-0038/" class="md-nav__link">
+      Summarize all biosamples hosted by CF Program X
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../t-9999/" class="md-nav__link">
       Task to be determined
     </a>
@@ -1755,6 +1798,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../r-00046/" class="md-nav__link">
+      The C2M2 model will support information relating data types to CF programs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../r-00047/" class="md-nav__link">
+      The catalog will store information relating data types to CF programs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../r-99999/" class="md-nav__link">
       requirement to be determined
     </a>
@@ -1850,6 +1917,20 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#wiki-walkthrough-of-this-use-case" class="md-nav__link">
+    Wiki walkthrough of this use case
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nih-goal" class="md-nav__link">
+    NIH Goal:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#persona" class="md-nav__link">
     Persona
   </a>
@@ -1897,9 +1978,12 @@
               
                 
                 
-                <h1 id="uc-0009-check-cfde-portal-submissions">uc-0009: Check CFDE portal submissions</h1>
+                <h1 id="uc-0009-review-cfde-portal-submissions">uc-0009: Review CFDE portal submissions</h1>
 <!-- **ID: uc-0009** [(permalink)](...) -->
 
+<h3 id="wiki-walkthrough-of-this-use-case"><a href="https://github.com/nih-cfde/published-documentation/wiki/How-to-review-a-datapackage">Wiki walkthrough of this use case</a></h3>
+<h2 id="nih-goal">NIH Goal:</h2>
+<p>Support the storage, sharing, and sustainability of CF data sets</p>
 <h2 id="persona">Persona</h2>
 <p><strong>p-003:</strong> <a href="../p-003/">Data Administrator</a></p>
 <p><strong>p-004:</strong> <a href="../p-004/">Data Custodian</a></p>
@@ -1907,7 +1991,7 @@
 <p><strong>obj-0006:</strong> <a href="../obj-0006/">View a Review Catalog</a></p>
 <h2 id="description">Description</h2>
 <p>Melinda, a Data Custodian, wants to check her team's data submissions on the CFDE portal so they can review which submissions are ready to incorporate into the portal.</p>
-<p>She logs on to the portal interface and looks at summaries of her team's data submissions. After navigating to a Review Catalog belonging to her team, she checks the submission by looking at dynamically generated plots for the catalog. For additional help, she pulls up the Review Page documentation and refers to the walkthrough tutorial.</p>
+<p>She logs on to the portal interface Web site and looks at summaries of her team's data submissions by clicking the "Data Review" tab and clicking links from the "Submitted Datapackage" page. She checks the submission by looking at dynamically generated plots for the catalog ("Summary Charts"). For additional help, she pulls up the User Guide documentation and refers to walkthrough tutorials on the documentation Github wiki pages.</p>
 <p>Next she notifies Ann, the Data Administrator on her team who makes the final decision, that it is time to do a final review of the data.</p>
 <!-- these were added:
 new task for docs about portal interface - t-0030
@@ -1925,28 +2009,28 @@ this is new task (requirement will be that dynamic plots are generated) - added 
 <p><strong>t-0017:</strong> <a href="../t-0017/">Authenticated access to the CFDE interface</a> &#x2705; September 2020</p>
 </li>
 <li>
-<p><strong>t-0024:</strong> <a href="../t-0024/">See team data submission activity</a> </p>
+<p><strong>t-0025:</strong> <a href="../t-0025/">Navigate to team Review Catalogs</a> &#x2705; March 2021</p>
 </li>
 <li>
-<p><strong>t-0025:</strong> <a href="../t-0025/">Navigate to team Review Catalogs</a> </p>
+<p><strong>t-0024:</strong> <a href="../t-0024/">See team data submission activity</a> &#x2705; March 2021</p>
 </li>
 <li>
-<p><strong>t-0026:</strong> <a href="../t-0026/">Compare different available team Review Catalogs</a> </p>
+<p><strong>t-0026:</strong> <a href="../t-0026/">Compare different available team Review Catalogs</a> &#x23F3;</p>
 </li>
 <li>
-<p><strong>t-0027:</strong> <a href="../t-0027/">Reject/delete available team Review Catalog</a> </p>
-</li>
-<li>
-<p><strong>t-0028:</strong> <a href="../t-0028/">Notify team data administrator there are Review Catalogs to review</a> </p>
-</li>
-<li>
-<p><strong>t-0029:</strong> <a href="../t-0029/">View a dynamically generated set of plots</a> </p>
+<p><strong>t-0029:</strong> <a href="../t-0029/">View a dynamically generated set of plots</a> &#x2705; March 2021</p>
 </li>
 <li>
 <p><strong>t-0030:</strong> <a href="../t-0030/">Consult documentation about Review Page</a> </p>
 </li>
 <li>
-<p><strong>t-0031:</strong> <a href="../t-0031/">Follow a tutorial for data submission</a> </p>
+<p><strong>t-0031:</strong> <a href="../t-0031/">Follow a tutorial for data submission</a> &#x2705; March 2021</p>
+</li>
+<li>
+<p><strong>t-0028:</strong> <a href="../t-0028/">Notify team data administrator there are Review Catalogs to review</a> &#x23F3;</p>
+</li>
+<li>
+<p><strong>t-0027:</strong> <a href="../t-0027/">Reject/delete available team Review Catalog</a> &#x2705; March 2021</p>
 </li>
 </ul>
 <h2 id="requirements-for-this-use-case">Requirements for this use case:</h2>
@@ -1958,19 +2042,19 @@ this is new task (requirement will be that dynamic plots are generated) - added 
 <p><strong>r-00002:</strong> <a href="../r-00002/">The interface will support user authentication</a> &#x2705; June 2020</p>
 </li>
 <li>
-<p><strong>r-00029:</strong> <a href="../r-00029/">The interface allows data administrators to access a Review Catalog(s)</a> </p>
+<p><strong>r-00029:</strong> <a href="../r-00029/">The interface allows data administrators to access a Review Catalog(s)</a> &#x2705; March 2021</p>
 </li>
 <li>
 <p><strong>r-00037:</strong> <a href="../r-00037/">The interface will support linking an SSO identity to an organization profile</a> &#x2705; September 2020</p>
 </li>
 <li>
-<p><strong>r-00040:</strong> <a href="../r-00040/">The interface will show recent submissions</a> </p>
+<p><strong>r-00040:</strong> <a href="../r-00040/">The interface will show recent submissions</a> &#x2705; March 2021</p>
 </li>
 <li>
-<p><strong>r-00041:</strong> <a href="../r-00041/">The cfde ingest tool shows errors/warnings/summaries</a> </p>
+<p><strong>r-00041:</strong> <a href="../r-00041/">The cfde ingest tool shows errors/warnings/summaries</a> &#x2705; March 2021</p>
 </li>
 <li>
-<p><strong>r-99999:</strong> <a href="../r-99999/">requirement to be determined</a> </p>
+<p><strong>r-99999:</strong> <a href="../r-99999/">requirement to be determined</a> &#x23F3;</p>
 </li>
 </ul>
 <div id="dcppc-tags" style="visibility: hidden;">

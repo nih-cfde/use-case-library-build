@@ -77,6 +77,23 @@
       
 
 <header class="md-header" data-md-component="header">
+  <!-- Matomo Code -->
+  <script type="text/javascript">
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.use-cases.nih-cfde.org"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://nihcfde.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '6']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.src='//cdn.matomo.cloud/nihcfde.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+  </script>
+<!-- End Matomo Code -->
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://nih-cfde.github.io/use-case-library-build/" title="CFDE Use Case Library" class="md-header-nav__button md-logo" aria-label="CFDE Use Case Library">
       
@@ -464,7 +481,7 @@
 
   <li class="md-nav__item">
     <a href="../uc-0009/" class="md-nav__link">
-      Check CFDE portal submissions
+      Review CFDE portal submissions
     </a>
   </li>
 
@@ -1177,6 +1194,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../t-0038/" class="md-nav__link">
+      Summarize all biosamples hosted by CF Program X
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../t-9999/" class="md-nav__link">
       Task to be determined
     </a>
@@ -1755,6 +1784,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../r-00046/" class="md-nav__link">
+      The C2M2 model will support information relating data types to CF programs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../r-00047/" class="md-nav__link">
+      The catalog will store information relating data types to CF programs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../r-99999/" class="md-nav__link">
       requirement to be determined
     </a>
@@ -1909,23 +1962,12 @@
 Common Fund assets for use in both tracking progress and for finding gaps that
 should be filled by future initiatives. They would like to use the CFDE interface
 to download simple tables or graphs that show what assets exist, and where.</p>
-<p>Using a web browser, Jon uses a point and click interface to get a matrix of
-Uberon tissue terms by DCC. With a few more clicks, they get similar tables showing
-Species, and Assay Types by Program.</p>
+<p>From the CFDE portal home page, Jon uses the axis and stack by dropdown menus on the dynamic stacked bar plot to download a matrix of Anatomy terms by CF Program. With the same procedure, they download similar tables showing Species and Assay Types by CF Program.</p>
 <p>Since these are simple matrices, Jon can re-plot the data in almost any
 piece of plotting software, or look at the results in Excel. Jon downloads
 the underlying data to add to a report they are making about Common Fund assets.</p>
 <h2 id="tasks-for-this-use-case">Tasks for this use case:</h2>
 <ul>
-<li>
-<p><strong>t-0017:</strong> <a href="../t-0017/">Authenticated access to the CFDE interface</a> &#x2705; September 2020</p>
-</li>
-<li>
-<p><strong>t-0003:</strong> <a href="../t-0003/">Export a file of results</a> &#x2705; June 2020</p>
-</li>
-<li>
-<p><strong>t-0010:</strong> <a href="../t-0010/">Visualize a table of all datasets that match query</a> &#x2705; June 2020</p>
-</li>
 <li>
 <p><strong>t-0011:</strong> <a href="../t-0011/">Search/filter CF Programs by anatomic terms</a> &#x2705; June 2020</p>
 </li>
@@ -1935,15 +1977,12 @@ the underlying data to add to a report they are making about Common Fund assets.
 <li>
 <p><strong>t-0020:</strong> <a href="../t-0020/">Search/filter CF Programs by species terms</a> &#x2705; June 2020</p>
 </li>
+<li>
+<p><strong>t-0003:</strong> <a href="../t-0003/">Export a file of results</a> &#x2705; June 2020</p>
+</li>
 </ul>
 <h2 id="requirements-for-this-use-case">Requirements for this use case:</h2>
 <ul>
-<li>
-<p><strong>r-00001:</strong> <a href="../r-00001/">The interface will support GUI web access to end users</a> &#x2705; June 2020</p>
-</li>
-<li>
-<p><strong>r-00002:</strong> <a href="../r-00002/">The interface will support user authentication</a> &#x2705; June 2020</p>
-</li>
 <li>
 <p><strong>r-00003:</strong> <a href="../r-00003/">The interface will support the selection of an Uberon term of interest</a> &#x2705; June 2020</p>
 </li>
@@ -1963,9 +2002,6 @@ the underlying data to add to a report they are making about Common Fund assets.
 <p><strong>r-00008:</strong> <a href="../r-00008/">The catalog will store information relating assay types to CF programs</a> &#x2705; June 2020</p>
 </li>
 <li>
-<p><strong>r-00012:</strong> <a href="../r-00012/">The interface will render tables and plots to display filtered data</a> &#x2705; June 2020</p>
-</li>
-<li>
 <p><strong>r-00014:</strong> <a href="../r-00014/">The interface will support end user download of tables and figures in common formats</a> &#x2705; June 2020</p>
 </li>
 <li>
@@ -1976,9 +2012,6 @@ the underlying data to add to a report they are making about Common Fund assets.
 </li>
 <li>
 <p><strong>r-00017:</strong> <a href="../r-00017/">The catalog will store information relating species terms to CF programs</a> &#x2705; June 2020</p>
-</li>
-<li>
-<p><strong>r-00037:</strong> <a href="../r-00037/">The interface will support linking an SSO identity to an organization profile</a> &#x2705; September 2020</p>
 </li>
 </ul>
 <div id="dcppc-tags" style="visibility: hidden;">

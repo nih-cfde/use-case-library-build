@@ -77,6 +77,23 @@
       
 
 <header class="md-header" data-md-component="header">
+  <!-- Matomo Code -->
+  <script type="text/javascript">
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.use-cases.nih-cfde.org"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://nihcfde.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '6']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.src='//cdn.matomo.cloud/nihcfde.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+  </script>
+<!-- End Matomo Code -->
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://nih-cfde.github.io/use-case-library-build/" title="CFDE Use Case Library" class="md-header-nav__button md-logo" aria-label="CFDE Use Case Library">
       
@@ -464,7 +481,7 @@
 
   <li class="md-nav__item">
     <a href="../uc-0009/" class="md-nav__link">
-      Check CFDE portal submissions
+      Review CFDE portal submissions
     </a>
   </li>
 
@@ -1177,6 +1194,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../t-0038/" class="md-nav__link">
+      Summarize all biosamples hosted by CF Program X
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../t-9999/" class="md-nav__link">
       Task to be determined
     </a>
@@ -1755,6 +1784,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../r-00046/" class="md-nav__link">
+      The C2M2 model will support information relating data types to CF programs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../r-00047/" class="md-nav__link">
+      The catalog will store information relating data types to CF programs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../r-99999/" class="md-nav__link">
       requirement to be determined
     </a>
@@ -1905,21 +1958,13 @@
 <h2 id="objective">Objective</h2>
 <p><strong>obj-0001:</strong> <a href="../obj-0001/">Multi DCC Comparison</a></p>
 <h2 id="description">Description</h2>
-<p>Pam wants to build a table of the summarized metadata and summary statistics
-from each RNA-Seq dataset in the Common Fund that relates to Focal Cortical Dysplasia.</p>
-<p>Pam logs on to the CFDE interface and searches for brain data, and then filters the results to those studies that used RNASeq. They then search within these results
-for "FCD" or "Focal Cortical Dysplasia".
-Their initial search with cerebral cortex identifies GTEx and HuBMAP as containing information about gene expression in the cortex. Searching with FCD identifies KidsFirst addtional cohorts that included this clinical finding.</p>
-<p>Using links in these search results, Pam accesses the Program
-page for each dataset and requests access to the ones that fit their needs. They also send
-their final table to their postdoc, Lacey, who will do the actual analysis.</p>
+<p>Pam wants to build a table of the summarized metadata from each RNA-Seq dataset in the Common Fund that relates to the liver.</p>
+<p>Pam connects to the CFDE interface Web site and decides to browse the portal by Project. They narrow the results to studies that used RNA-seq assay type and liver anatomy terms with the Refine search filters. Pam exports the search results by clicking "Export".</p>
+<p>Using data portal links on the exported manifest, Pam accesses the Common Fund Program data portals for each dataset, where they can request access to the data that fits their needs. They also send their final table to their postdoc, Lacey, who will do the actual analysis.</p>
 <h2 id="tasks-for-this-use-case">Tasks for this use case:</h2>
 <ul>
 <li>
 <p><strong>t-0001:</strong> <a href="../t-0001/">Access CFDE interface</a> &#x2705; June 2020</p>
-</li>
-<li>
-<p><strong>t-0002:</strong> <a href="../t-0002/">Use link within the CFDE interface to access original data source</a> </p>
 </li>
 <li>
 <p><strong>t-0019:</strong> <a href="../t-0019/">Search/filter data sets by project</a> &#x2705; June 2020</p>
@@ -1938,6 +1983,9 @@ their final table to their postdoc, Lacey, who will do the actual analysis.</p>
 </li>
 <li>
 <p><strong>t-0003:</strong> <a href="../t-0003/">Export a file of results</a> &#x2705; June 2020</p>
+</li>
+<li>
+<p><strong>t-0002:</strong> <a href="../t-0002/">Use link within the CFDE interface to access original data source</a> </p>
 </li>
 </ul>
 <h2 id="requirements-for-this-use-case">Requirements for this use case:</h2>

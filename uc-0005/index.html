@@ -77,6 +77,23 @@
       
 
 <header class="md-header" data-md-component="header">
+  <!-- Matomo Code -->
+  <script type="text/javascript">
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.use-cases.nih-cfde.org"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://nihcfde.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '6']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.src='//cdn.matomo.cloud/nihcfde.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+  </script>
+<!-- End Matomo Code -->
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://nih-cfde.github.io/use-case-library-build/" title="CFDE Use Case Library" class="md-header-nav__button md-logo" aria-label="CFDE Use Case Library">
       
@@ -464,7 +481,7 @@
 
   <li class="md-nav__item">
     <a href="../uc-0009/" class="md-nav__link">
-      Check CFDE portal submissions
+      Review CFDE portal submissions
     </a>
   </li>
 
@@ -1177,6 +1194,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../t-0038/" class="md-nav__link">
+      Summarize all biosamples hosted by CF Program X
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../t-9999/" class="md-nav__link">
       Task to be determined
     </a>
@@ -1755,6 +1784,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../r-00046/" class="md-nav__link">
+      The C2M2 model will support information relating data types to CF programs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../r-00047/" class="md-nav__link">
+      The catalog will store information relating data types to CF programs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../r-99999/" class="md-nav__link">
       requirement to be determined
     </a>
@@ -1908,7 +1961,7 @@
 <p>Pam would like to use the CFDE interface to explain their preliminary results as they writes their next grant. They have preliminary data from a GWAS study performed in their lab that GeneX, a transcription factor, is implicated in Focal Cortical Dysplasia (FCD) and want to know what additional information is available from the Common Fund data sets.
 Pam wants to build a table of the summarized metadata and summary statistics
 from each RNA-Seq dataset in the Common Fund that relates to Focal Cortical Dysplasia.</p>
-<p>Pam logs on to the CFDE interface and searches for brain data, and then filters the results to those studies that used RNASeq on the cerebral cortex. They then search within these results
+<p>Pam connects to the CFDE interface Web site and searches for brain data, and then filters the results to those studies that used RNASeq on the cerebral cortex. They then search within these results
 for "FCD" or "Focal Cortical Dysplasia".
 Their initial search with cerebral cortex identifies GTEx and HuBMAP as containing information about gene expression in the cortex. Searching with FCD identifies Kids First cohorts that included this clinical finding. Pam follows links to the GTEx site, and quickly confirms that GeneX is expressed in the cerebral cortex. They then use the HuBMAP datasets identified by their search to examine expression of GeneX and the other genes in finer detail and discovers that GeneX is exclusively expressed in Cajal–Retzius cells in the cerebral cortex. Pam notes the additional data types available, number of participants, and age ranges and consent data for the relevant studies.</p>
 <p>Using links in these search results, Pam accesses the Program

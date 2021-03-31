@@ -77,6 +77,23 @@
       
 
 <header class="md-header" data-md-component="header">
+  <!-- Matomo Code -->
+  <script type="text/javascript">
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.use-cases.nih-cfde.org"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://nihcfde.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '6']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.src='//cdn.matomo.cloud/nihcfde.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+  </script>
+<!-- End Matomo Code -->
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://nih-cfde.github.io/use-case-library-build/" title="CFDE Use Case Library" class="md-header-nav__button md-logo" aria-label="CFDE Use Case Library">
       
@@ -464,7 +481,7 @@
 
   <li class="md-nav__item">
     <a href="../uc-0009/" class="md-nav__link">
-      Check CFDE portal submissions
+      Review CFDE portal submissions
     </a>
   </li>
 
@@ -1177,6 +1194,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../t-0038/" class="md-nav__link">
+      Summarize all biosamples hosted by CF Program X
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../t-9999/" class="md-nav__link">
       Task to be determined
     </a>
@@ -1755,6 +1784,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../r-00046/" class="md-nav__link">
+      The C2M2 model will support information relating data types to CF programs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../r-00047/" class="md-nav__link">
+      The catalog will store information relating data types to CF programs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../r-99999/" class="md-nav__link">
       requirement to be determined
     </a>
@@ -1905,32 +1958,27 @@
 <h2 id="objective">Objective</h2>
 <p><strong>obj-0006:</strong> <a href="../obj-0006/">View a Review Catalog</a></p>
 <h2 id="description">Description</h2>
-<p>Kristin has just used the CFDE submission tool to make a new Review Catalog. They
-would like to preview that catalog in the CFDE portal, and approve it to be included
-in the Release Catalog.</p>
-<p>Kristin logs in to the portal using an existing identity, and clicks through to the Review
-page, a restricted page showing summary statistics about the current Review Catalog.
-This display helps her answer questions like:</p>
+<p>Kristin has just used the CFDE submission tool to make a new Review Catalog. She would like to preview that catalog in the CFDE portal, and approve it to be included in the Release Catalog.</p>
+<p>Kristin logs in to the portal using an existing identity. After selecting the "Data Review" tab, she finds links on the "Submitted Datapackage" page, a restricted page, leading to pages with summary statistics about the current Review Catalog.</p>
+<p>By clicking on links to "Browse Data", see "Summary Charts", or "View details" (icon from the "View" column), she can answer questions like:</p>
 <ul>
 <li>How many data files exist for her DCC overall?</li>
 <li>How many subjects are represented?</li>
 <li>How many and which data types are represented?</li>
 <li>How many and which anatomy terms are represented?</li>
 <li>What Project names are associated with her DCC?</li>
-<li>How many biosamples are in those Projects?</li>
-<li>How many data types are in those Projects?</li>
+<li>How many biosamples are in those Projects (or if applicable, Collections)?</li>
+<li>How many data types are in those Projects (or if applicable, Collections)?</li>
 </ul>
-<p>By comparing the summary statistics supplied by the interface, Kristin can determine
-whether the Review Catalog they submitted is what they expected given their data submission.
-Kristin can also do spot checks of the data, or see the outcome of specific searches by browsing
-the Review Catalog.</p>
+<p>Kristin can do spot checks of the data, or see the outcome of specific searches by browsing the Review Catalog by clicking the "Browse Data" link.</p>
+<p>By comparing the summary statistics supplied by the interface, Kristin can determine whether the Review Catalog she submitted looks as expected.</p>
 <h2 id="tasks-for-this-use-case">Tasks for this use case:</h2>
 <ul>
 <li>
-<p><strong>t-0007:</strong> <a href="../t-0007/">Summarize datatypes hosted by CF Program X</a> &#x2705; June 2020</p>
+<p><strong>t-0017:</strong> <a href="../t-0017/">Authenticated access to the CFDE interface</a> &#x2705; September 2020</p>
 </li>
 <li>
-<p><strong>t-0017:</strong> <a href="../t-0017/">Authenticated access to the CFDE interface</a> &#x2705; September 2020</p>
+<p><strong>t-0007:</strong> <a href="../t-0007/">Summarize datatypes hosted by CF Program X</a> &#x2705; June 2020</p>
 </li>
 <li>
 <p><strong>t-0021:</strong> <a href="../t-0021/">Summarize all anatomy terms hosted by CF Program X</a> &#x2705; September 2020</p>
@@ -1940,6 +1988,9 @@ the Review Catalog.</p>
 </li>
 <li>
 <p><strong>t-0023:</strong> <a href="../t-0023/">Summarize all subjects hosted by CF Program X</a> &#x2705; September 2020</p>
+</li>
+<li>
+<p><strong>t-0038:</strong> <a href="../t-0038/">Summarize all biosamples hosted by CF Program X</a> </p>
 </li>
 </ul>
 <h2 id="requirements-for-this-use-case">Requirements for this use case:</h2>
@@ -1957,10 +2008,10 @@ the Review Catalog.</p>
 <p><strong>r-00005:</strong> <a href="../r-00005/">The catalog will store information relating anatomy terms to CF programs</a> &#x2705; June 2020</p>
 </li>
 <li>
-<p><strong>r-00007:</strong> <a href="../r-00007/">The C2M2 model will support information relating assay types to CF programs</a> &#x2705; June 2020</p>
+<p><strong>r-00046:</strong> <a href="../r-00046/">The C2M2 model will support information relating data types to CF programs</a> </p>
 </li>
 <li>
-<p><strong>r-00008:</strong> <a href="../r-00008/">The catalog will store information relating assay types to CF programs</a> &#x2705; June 2020</p>
+<p><strong>r-00047:</strong> <a href="../r-00047/">The catalog will store information relating data types to CF programs</a> &#x2705; June 2020</p>
 </li>
 <li>
 <p><strong>r-00010:</strong> <a href="../r-00010/">The catalog will store information relating projects to CF programs</a> &#x2705; June 2020</p>
@@ -1973,6 +2024,12 @@ the Review Catalog.</p>
 </li>
 <li>
 <p><strong>r-00037:</strong> <a href="../r-00037/">The interface will support linking an SSO identity to an organization profile</a> &#x2705; September 2020</p>
+</li>
+<li>
+<p><strong>r-00035:</strong> <a href="../r-00035/">The C2M2 model will support information relating biosamples to CF programs</a> &#x2705; June 2020</p>
+</li>
+<li>
+<p><strong>r-00036:</strong> <a href="../r-00036/">The catalog will store information relating Uberon terms to CF programs</a> &#x2705; June 2020</p>
 </li>
 <li>
 <p><strong>r-00038:</strong> <a href="../r-00038/">The catalog will store information relating subjects to CF programs</a> &#x2705; September 2020</p>
@@ -2024,7 +2081,7 @@ the Review Catalog.</p>
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Check CFDE portal submissions
+                Review CFDE portal submissions
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

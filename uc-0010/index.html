@@ -77,6 +77,23 @@
       
 
 <header class="md-header" data-md-component="header">
+  <!-- Matomo Code -->
+  <script type="text/javascript">
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.use-cases.nih-cfde.org"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://nihcfde.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '6']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.src='//cdn.matomo.cloud/nihcfde.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+  </script>
+<!-- End Matomo Code -->
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://nih-cfde.github.io/use-case-library-build/" title="CFDE Use Case Library" class="md-header-nav__button md-logo" aria-label="CFDE Use Case Library">
       
@@ -398,7 +415,7 @@
 
   <li class="md-nav__item">
     <a href="../uc-0009/" class="md-nav__link">
-      Check CFDE portal submissions
+      Review CFDE portal submissions
     </a>
   </li>
 
@@ -1177,6 +1194,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../t-0038/" class="md-nav__link">
+      Summarize all biosamples hosted by CF Program X
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../t-9999/" class="md-nav__link">
       Task to be determined
     </a>
@@ -1755,6 +1784,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../r-00046/" class="md-nav__link">
+      The C2M2 model will support information relating data types to CF programs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../r-00047/" class="md-nav__link">
+      The catalog will store information relating data types to CF programs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../r-99999/" class="md-nav__link">
       requirement to be determined
     </a>
@@ -1934,28 +1987,28 @@ sounds like r-00031 (part of t-0016)
 <h2 id="tasks-for-this-use-case">Tasks for this use case:</h2>
 <ul>
 <li>
-<p><strong>t-0028:</strong> <a href="../t-0028/">Notify team data administrator there are Review Catalogs to review</a> </p>
+<p><strong>t-0028:</strong> <a href="../t-0028/">Notify team data administrator there are Review Catalogs to review</a> &#x23F3;</p>
 </li>
 <li>
 <p><strong>t-0017:</strong> <a href="../t-0017/">Authenticated access to the CFDE interface</a> &#x2705; September 2020</p>
 </li>
 <li>
-<p><strong>t-0025:</strong> <a href="../t-0025/">Navigate to team Review Catalogs</a> </p>
+<p><strong>t-0025:</strong> <a href="../t-0025/">Navigate to team Review Catalogs</a> &#x2705; March 2021</p>
 </li>
 <li>
-<p><strong>t-0027:</strong> <a href="../t-0027/">Reject/delete available team Review Catalog</a> </p>
+<p><strong>t-0027:</strong> <a href="../t-0027/">Reject/delete available team Review Catalog</a> &#x2705; March 2021</p>
 </li>
 <li>
 <p><strong>t-0016:</strong> <a href="../t-0016/">Review and approve/reject a Review Catalog</a> </p>
 </li>
 <li>
-<p><strong>t-0029:</strong> <a href="../t-0029/">View a dynamically generated set of plots</a> </p>
+<p><strong>t-0029:</strong> <a href="../t-0029/">View a dynamically generated set of plots</a> &#x2705; March 2021</p>
 </li>
 </ul>
 <h2 id="requirements-for-this-use-case">Requirements for this use case:</h2>
 <ul>
 <li>
-<p><strong>r-00029:</strong> <a href="../r-00029/">The interface allows data administrators to access a Review Catalog(s)</a> </p>
+<p><strong>r-00029:</strong> <a href="../r-00029/">The interface allows data administrators to access a Review Catalog(s)</a> &#x2705; March 2021</p>
 </li>
 <li>
 <p><strong>r-00001:</strong> <a href="../r-00001/">The interface will support GUI web access to end users</a> &#x2705; June 2020</p>
@@ -1967,7 +2020,7 @@ sounds like r-00031 (part of t-0016)
 <p><strong>r-00037:</strong> <a href="../r-00037/">The interface will support linking an SSO identity to an organization profile</a> &#x2705; September 2020</p>
 </li>
 <li>
-<p><strong>r-00029:</strong> <a href="../r-00029/">The interface allows data administrators to access a Review Catalog(s)</a> </p>
+<p><strong>r-00029:</strong> <a href="../r-00029/">The interface allows data administrators to access a Review Catalog(s)</a> &#x2705; March 2021</p>
 </li>
 <li>
 <p><strong>r-00030:</strong> <a href="../r-00030/">The interface allows data administrators to approve a recent candidate data release</a> </p>
@@ -1976,7 +2029,7 @@ sounds like r-00031 (part of t-0016)
 <p><strong>r-00031:</strong> <a href="../r-00031/">When a recent candidate data release is approved by the data administrator, the candidate data release is marked for review by CFDE personnel</a> </p>
 </li>
 <li>
-<p><strong>r-99999:</strong> <a href="../r-99999/">requirement to be determined</a> </p>
+<p><strong>r-99999:</strong> <a href="../r-99999/">requirement to be determined</a> &#x23F3;</p>
 </li>
 </ul>
 <div id="dcppc-tags" style="visibility: hidden;">
@@ -2010,7 +2063,7 @@ sounds like r-00031 (part of t-0016)
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Check CFDE portal submissions
+                Review CFDE portal submissions
               </div>
             </div>
           </a>
