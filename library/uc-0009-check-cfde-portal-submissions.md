@@ -1,5 +1,5 @@
 ---
-title: Check CFDE portal submissions
+title: Review CFDE portal submissions
 completed:
 tutorial: "[Wiki walkthrough of this use case](https://github.com/nih-cfde/published-documentation/wiki/How-to-review-a-datapackage)"
 goal: Support the storage, sharing, and sustainability of CF data sets
