@@ -9,13 +9,13 @@ objective:
 - obj-0001
 user_tasks:
 - t-0001
-- t-0002
 - t-0019
 - t-0004
 - t-0005
 - t-0006
 - t-0010
 - t-0003
+- t-0002
 requirements:
 - r-00001
 - r-00002
@@ -35,13 +35,8 @@ requirements:
 - r-00033
 ---
 
-Pam wants to build a table of the summarized metadata and summary statistics
-from each RNA-Seq dataset in the Common Fund that relates to Focal Cortical Dysplasia.
+Pam wants to build a table of the summarized metadata from each RNA-Seq dataset in the Common Fund that relates to the liver.
 
-Pam connects to the CFDE interface Web site and searches for brain data, and then filters the results to those studies that used RNASeq. They then search within these results
-for "FCD" or "Focal Cortical Dysplasia".
-Their initial search with cerebral cortex identifies GTEx and HuBMAP as containing information about gene expression in the cortex. Searching with FCD identifies KidsFirst additional cohorts that included this clinical finding.
+Pam connects to the CFDE interface Web site and decides to browse the portal by Project. They narrow the results to studies that used RNA-seq assay type and liver anatomy terms with the Refine search filters. Pam exports the search results by clicking "Export".
 
-Using links in these search results, Pam accesses the Program
-page for each dataset and requests access to the ones that fit their needs. They also send
-their final table to their postdoc, Lacey, who will do the actual analysis.
+Using data portal links on the exported manifest, Pam accesses the Common Fund Program data portals for each dataset, where they can request access to the data that fits their needs. They also send their final table to their postdoc, Lacey, who will do the actual analysis.
