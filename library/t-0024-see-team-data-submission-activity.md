@@ -1,6 +1,6 @@
 ---
 title: See team data submission activity
-completed:
+completed: "&#x2705; March 2021"
 requirements:
 - r-00029
 - r-00040

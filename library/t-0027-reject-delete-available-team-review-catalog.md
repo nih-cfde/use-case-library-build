@@ -1,6 +1,6 @@
 ---
 title: Reject/delete available team Review Catalog
-completed:
+completed: "&#x2705; March 2021"
 requirements:
 - r-00029
 ---

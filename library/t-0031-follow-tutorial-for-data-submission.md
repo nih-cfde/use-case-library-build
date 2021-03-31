@@ -1,6 +1,6 @@
 ---
 title: Follow a tutorial for data submission
-completed:
+completed: "&#x2705; March 2021"
 requirements:
 - r-99999
 ---

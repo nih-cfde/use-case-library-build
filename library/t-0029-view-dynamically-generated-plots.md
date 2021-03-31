@@ -1,6 +1,6 @@
 ---
 title: View a dynamically generated set of plots
-completed:
+completed: "&#x2705; March 2021"
 requirements:
 - r-99999
 ---

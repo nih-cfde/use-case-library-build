@@ -1,6 +1,6 @@
 ---
 title: Task to be determined
-completed:
+completed: "&#x23F3;"
 requirements:
 - r-99999
 ---

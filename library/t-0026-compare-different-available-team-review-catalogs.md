@@ -1,6 +1,6 @@
 ---
 title: Compare different available team Review Catalogs
-completed:
+completed: "&#x23F3;"
 requirements:
 - r-00029
 ---
