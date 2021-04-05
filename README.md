@@ -13,7 +13,7 @@ and places them in the context of larger goals in the Common Fund Data Ecosystem
 You can explore the library using the tabs above.
 
 We welcome new contributions.
-Please read the [contributor guidelines](./templates/CONTRIBUTING.md) before submitting a new use case.
+Please read the [contributor guidelines](https://use-cases.nih-cfde.org/CONTRIBUTING/) before submitting a new use case.
 
 
 ## Overview
