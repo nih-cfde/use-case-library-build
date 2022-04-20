@@ -4,6 +4,7 @@ channels:
     - bioconda
     - defaults
 dependencies:
+    - python=3.7
     - mkdocs=1.1.2
     - snakemake-minimal=5.20.1
     - pip
